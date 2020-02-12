@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ink-Libraries", "Ink-Libraries.csproj", "{18234A9E-6D4C-358F-5F1A-9494433DAD0A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{F26AA553-FFBA-354F-FEDB-5F4136F53EC1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-Editor", "Assembly-CSharp-Editor.csproj", "{EA5E636A-4665-3519-A771-FCF2CE948C06}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{18234A9E-6D4C-358F-5F1A-9494433DAD0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18234A9E-6D4C-358F-5F1A-9494433DAD0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18234A9E-6D4C-358F-5F1A-9494433DAD0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18234A9E-6D4C-358F-5F1A-9494433DAD0A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F26AA553-FFBA-354F-FEDB-5F4136F53EC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F26AA553-FFBA-354F-FEDB-5F4136F53EC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F26AA553-FFBA-354F-FEDB-5F4136F53EC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F26AA553-FFBA-354F-FEDB-5F4136F53EC1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA5E636A-4665-3519-A771-FCF2CE948C06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA5E636A-4665-3519-A771-FCF2CE948C06}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA5E636A-4665-3519-A771-FCF2CE948C06}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA5E636A-4665-3519-A771-FCF2CE948C06}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
