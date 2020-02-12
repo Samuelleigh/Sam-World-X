@@ -60,6 +60,7 @@
      <Compile Include="Assets\Game Specific Code\Conversation With A rock\RockConversation.cs" />
      <Compile Include="Assets\Ink\Example\Scripts\BasicInkExample.cs" />
      <Compile Include="Assets\Ink\Example\Scripts\QuitGameOnKeypress.cs" />
+     <Compile Include="Assets\Knocking.cs" />
      <Compile Include="Assets\Sound System\Sound.cs" />
      <Compile Include="Assets\SoundSystem.cs" />
      <Compile Include="Assets\UI Frame System\UI Code\FrameBase.cs" />
