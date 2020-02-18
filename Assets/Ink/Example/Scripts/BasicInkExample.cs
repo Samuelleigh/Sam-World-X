@@ -26,7 +26,7 @@ public class BasicInkExample : MonoBehaviour {
 	// This is the main function called every time the story changes. It does a few things:
 	// Destroys all the old content and choices.
 	// Continues over all the lines of text, then displays all the choices. If there are no choices, the story is finished!
-	void RefreshView () {
+	public void RefreshView () {
 		// Remove all the UI on screen
 		RemoveChildren ();
 
@@ -39,7 +39,16 @@ public class BasicInkExample : MonoBehaviour {
 			// add all lines into one piece of text
 			text += story.Continue();
 		}
-		ChangeEmote(story.currentTags);
+
+		if (story.currentTags.Count > 0)
+		{
+			if (story.currentTags[0].StartsWith("-")) { ChangeHangTime(story.currentTags); }
+
+			Debug.Log(story.currentTags[0]);
+			ChangeEmote(story.currentTags); 
+			
+		
+		}
 
 		//trim white space
 		text = text.Trim();
@@ -50,11 +59,11 @@ public class BasicInkExample : MonoBehaviour {
 		// Display all the choices, if there are any!
 		if (story.currentChoices.Count > 0) {
 			for (int i = 0; i < story.currentChoices.Count; i++) {
-				Choice choice = story.currentChoices [i];
-				Button button = CreateChoiceView (choice.text.Trim ());
+				Choice choice = story.currentChoices[i];
+				Button button = CreateChoiceView(choice.text.Trim());
 				// Tell the button what to do when we press it
-				button.onClick.AddListener (delegate {
-					OnClickChoiceButton (choice);
+				button.onClick.AddListener(delegate {
+					OnClickChoiceButton(choice);
 				});
 
 				//sam added this, after the buttons have been made
@@ -65,13 +74,29 @@ public class BasicInkExample : MonoBehaviour {
 		// If we've read all the content and there's no choices, the story is finished!
 		else {
 
-			//sam added this, after the buttons have been made
-			choicePanel.SetActive(false);
-			Button choice = CreateChoiceView("The End");
-			gameover = true;
-			choice.onClick.AddListener(delegate{
-				StartStory();
-			});
+			
+
+			if (AutoEnd == false)
+			{
+				//sam added this, after the buttons have been made
+				choicePanel.SetActive(false);
+				Button choice = CreateChoiceView("The End");
+				gameover = true;
+				choice.onClick.AddListener(delegate
+				{
+					StartStory();
+				});
+			}
+			else 
+			{
+				
+				endAfterShownText = true;
+				ChangeEmote(story.currentTags);
+				ChangeHangTime(story.currentTags);
+
+			}
+		
+		
 		}
 	}
 
@@ -196,19 +221,54 @@ public class BasicInkExample : MonoBehaviour {
 			}
 		}
 
+		if (endAfterShownText == false) { choicePanel.SetActive(true); }
+		else 
+		{
+			yield return new WaitForSeconds(hangTimeEnd);
+			knockGameLogic.ShutDoor();
+			endAfterShownText = false;
+		}
+
 		
-		choicePanel.SetActive(true);
 	}
 
 	public void ChangeEmote(List<string> tags)
 	{
 
-		if (tags.Count == 0) { emotes.ChangeEmote(""); }
+		if (tags.Count == 0) { emotes.ChangeEmote2(""); }
 
 		foreach (string str in tags)
 		{
-			emotes.ChangeEmote(str);
+			if (!str.StartsWith("-"))
+			{
+				//Debug.Log(str);
+				emotes.ChangeEmote2(str);
+			}
 		}
+	}
+
+	public void ChangeHangTime(List<string> tags) 
+	{
+		//Debug.Log(tags[0]);
+
+		if (tags.Count > 0)
+		{
+
+			if (tags[0].StartsWith("-"))
+			{
+				string temp = tags[0];
+				temp = temp.Remove(0, 1);
+
+				float hangtime = float.Parse(temp);
+
+				hangTimeEnd = hangtime;
+
+			}
+		}
+		else { hangTimeEnd = 1; }
+
+
+
 	}
 
 	public GameObject choicePanel;
@@ -238,5 +298,8 @@ public class BasicInkExample : MonoBehaviour {
 	public string[] RandomSoundNames;
 
 	public EmoteLogic emotes;
-	
+	public bool AutoEnd = true;
+	public KnockGameLogic knockGameLogic;
+	public bool endAfterShownText;
+	public float hangTimeEnd = 1.0f;
 }

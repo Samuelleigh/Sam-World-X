@@ -10,6 +10,7 @@ public class UIMaster : MonoBehaviour
     public List<GameObject> MasterLayers = new List<GameObject>();
     public List<GameObject> IndivdualFrames = new List<GameObject>();
 
+    public GameObject door;
     
 
     // Start is called before the first frame update
@@ -41,6 +42,16 @@ public class UIMaster : MonoBehaviour
         MasterLayers[newlayer].SetActive(true);
 
         CurrentLayer = newlayer;
+
+        if (door) 
+        {
+            door.transform.SetParent(MasterLayers[CurrentLayer].transform);
+            
+            
+        
+        
+        }
+
     }
     
 

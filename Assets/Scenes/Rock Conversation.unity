@@ -1115,11 +1115,7 @@ MonoBehaviour:
   - Click
   - Boy
   - Big
-<<<<<<< HEAD
-  emotes: {fileID: 878249563}
-=======
   emotes: {fileID: 147011505}
->>>>>>> 608521036e20676b061a01f3dc5bef0033076e2d
 --- !u!4 &1061286448
 Transform:
   m_ObjectHideFlags: 0
