@@ -31,14 +31,28 @@ public class BasicInkExample : MonoBehaviour {
 		RemoveChildren ();
 
 		string text = "";
-		
+		string trash = "";
 
 		// Read all the content until we can't continue any more
 		while (story.canContinue) {
-			
-			// add all lines into one piece of text
-			text += story.Continue();
+
+			//if statement is here so thatuser choice isn't repeated.
+			if (showfirstLine == false) 
+			{
+				trash = story.Continue();
+				showfirstLine = true; 			
+			}
+			else 
+			{
+				// add all lines into one piece of text
+				text += story.Continue();
+
+			}
+
 		}
+
+		//ummm I should explain this better.
+		showfirstLine = false;
 
 		if (story.currentTags.Count > 0)
 		{
@@ -302,4 +316,6 @@ public class BasicInkExample : MonoBehaviour {
 	public KnockGameLogic knockGameLogic;
 	public bool endAfterShownText;
 	public float hangTimeEnd = 1.0f;
+
+	private bool showfirstLine = true;
 }

@@ -1,7 +1,5 @@
 INCLUDE Normal
 INCLUDE BloodyNose
-INCLUDE WeridFace
-INCLUDE RemembersYou
 INCLUDE NeedsFriend
 
 
