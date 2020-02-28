@@ -391,6 +391,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Door Frame
       objectReference: {fileID: 0}
+    - target: {fileID: 735413312989727768, guid: 18d67bcbb89a347f0a5a69656d99f472,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 735413312989727769, guid: 18d67bcbb89a347f0a5a69656d99f472,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -510,6 +515,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.4646526
+      objectReference: {fileID: 0}
+    - target: {fileID: 735413314149296346, guid: 18d67bcbb89a347f0a5a69656d99f472,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1618944953356963582, guid: 18d67bcbb89a347f0a5a69656d99f472,
         type: 3}
@@ -1264,6 +1274,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d921e813131922b4da6c9dadf19475ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  AllowEmotes: 1
   Eyes: {fileID: 1608260131}
   Mouth: {fileID: 362055652}
   angryEyes: {fileID: 21300000, guid: eead8f99a7ce75e44a9addad5ac56f17, type: 3}
@@ -3903,10 +3914,10 @@ RectTransform:
   m_Father: {fileID: 53328046}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.15144348, y: -919.29004}
-  m_SizeDelta: {x: -206.05, y: 42.01}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 0.00002718, y: -816}
+  m_SizeDelta: {x: 186.96002, y: 73.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1528426151
 MonoBehaviour:
@@ -4697,9 +4708,12 @@ MonoBehaviour:
   - Big
   emotes: {fileID: 200160524}
   AutoEnd: 1
-  knockGameLogic: {fileID: 892175630}
   endAfterShownText: 0
   hangTimeEnd: 0
+  endGameLogic: {fileID: 0}
+  alwaysShowFirstLine: 0
+  knockGameLogic: {fileID: 892175630}
+  rockConversation: {fileID: 0}
 --- !u!4 &1786498401
 Transform:
   m_ObjectHideFlags: 0

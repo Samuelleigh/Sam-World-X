@@ -11,6 +11,7 @@ public class RockConversation : MonoBehaviour
     public GameObject rockParent;
     public BasicInkExample inkScript;
     public UIMaster uimaster;
+    public EndGameLogic endgameLogic;
 
     // Start is called before the first frame update
 
@@ -18,6 +19,7 @@ public class RockConversation : MonoBehaviour
     {
         inkScript = FindObjectOfType<BasicInkExample>();
         uimaster = FindObjectOfType<UIMaster>();
+        endgameLogic = FindObjectOfType<EndGameLogic>();
     }
 
     void Start()
@@ -28,15 +30,10 @@ public class RockConversation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        if (Input.GetKey("escape"))
-        {
-            QuitProgram();
-        }
-
+  
         if (uimaster.CurrentLayer == 2) 
         {
-            Invoke("QuitProgram",2f);
+            endgameLogic.EndGame();
            
         }
 
@@ -48,15 +45,17 @@ public class RockConversation : MonoBehaviour
         {
             InputFrame.SetActive(false);
         }
-        if (inkScript.gameover == true ) { uimaster.SwitchLayer(2); }
 
     }
 
-    public void QuitProgram() 
+
+    public void gameOver() 
     {
 
-        Application.Quit();
+       uimaster.SwitchLayer(2); 
+
     }
+
 
 
 }
