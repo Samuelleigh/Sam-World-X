@@ -990,18 +990,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 780266380}
   m_CullTransparentMesh: 0
---- !u!114 &878249563 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 712506510837512879, guid: bb37e2e308597fd43baca4ce590f0106,
-    type: 3}
-  m_PrefabInstance: {fileID: 1894083968}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d921e813131922b4da6c9dadf19475ac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1033404213
 GameObject:
   m_ObjectHideFlags: 0
@@ -1116,6 +1104,11 @@ MonoBehaviour:
   - Boy
   - Big
   emotes: {fileID: 147011505}
+  AutoEnd: 1
+  knockGameLogic: {fileID: 0}
+  endAfterShownText: 0
+  hangTimeEnd: 1
+  alwaysShowFirstLine: 1
 --- !u!4 &1061286448
 Transform:
   m_ObjectHideFlags: 0
@@ -1907,6 +1900,7 @@ MonoBehaviour:
   - {fileID: 313839890}
   IndivdualFrames:
   - {fileID: 1689402815}
+  door: {fileID: 0}
 --- !u!4 &1420161471
 Transform:
   m_ObjectHideFlags: 0
@@ -2161,26 +2155,31 @@ PrefabInstance:
     - target: {fileID: 1238056596452482574, guid: 34fea4bbb7a22e84f8f3c90e6c98c50a,
         type: 3}
       propertyPath: m_textInfo.characterCount
-      value: 0
+      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: 1238056596452482574, guid: 34fea4bbb7a22e84f8f3c90e6c98c50a,
         type: 3}
       propertyPath: m_textInfo.spaceCount
-      value: 0
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1238056596452482574, guid: 34fea4bbb7a22e84f8f3c90e6c98c50a,
         type: 3}
       propertyPath: m_textInfo.wordCount
-      value: 0
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1238056596452482574, guid: 34fea4bbb7a22e84f8f3c90e6c98c50a,
         type: 3}
       propertyPath: m_textInfo.lineCount
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1238056596452482574, guid: 34fea4bbb7a22e84f8f3c90e6c98c50a,
         type: 3}
       propertyPath: m_textInfo.pageCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1238056596452482574, guid: 34fea4bbb7a22e84f8f3c90e6c98c50a,
+        type: 3}
+      propertyPath: m_firstOverflowCharacterIndex
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2160105651146791225, guid: 34fea4bbb7a22e84f8f3c90e6c98c50a,
@@ -2581,12 +2580,12 @@ PrefabInstance:
     - target: {fileID: 8668131919714802243, guid: 34fea4bbb7a22e84f8f3c90e6c98c50a,
         type: 3}
       propertyPath: m_fontSize
-      value: 35.6
+      value: 27.8
       objectReference: {fileID: 0}
     - target: {fileID: 8668131919714802243, guid: 34fea4bbb7a22e84f8f3c90e6c98c50a,
         type: 3}
       propertyPath: m_fontSizeMax
-      value: 35.61
+      value: 27.8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34fea4bbb7a22e84f8f3c90e6c98c50a, type: 3}

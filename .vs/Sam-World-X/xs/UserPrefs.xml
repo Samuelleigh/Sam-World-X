@@ -1,0 +1,33 @@
+﻿<Properties StartupConfiguration="{F26AA553-FFBA-354F-FEDB-5F4136F53EC1}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scenes/Knocking.cs">
+    <Files>
+      <File FileName="Assets/Ink/Example/Scripts/BasicInkExample.cs" Line="304" Column="1" />
+      <File FileName="Assets/Scenes/Knocking.cs" Line="19" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Sam-World-X" expanded="True">
+            <Node name="Assets" expanded="True">
+              <Node name="Ink" expanded="True">
+                <Node name="Example" expanded="True">
+                  <Node name="Scripts" expanded="True" />
+                </Node>
+              </Node>
+              <Node name="Scenes" expanded="True">
+                <Node name="Knocking.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="c00484ff-9e9c-408d-b962-70d155b12a02" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

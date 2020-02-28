@@ -33,6 +33,8 @@ public class BasicInkExample : MonoBehaviour {
 		string text = "";
 		string trash = "";
 
+		if (alwaysShowFirstLine) { showfirstLine = true; }
+
 		// Read all the content until we can't continue any more
 		while (story.canContinue) {
 
@@ -317,5 +319,7 @@ public class BasicInkExample : MonoBehaviour {
 	public bool endAfterShownText;
 	public float hangTimeEnd = 1.0f;
 
+
+	public bool alwaysShowFirstLine;
 	private bool showfirstLine = true;
 }
