@@ -104,6 +104,7 @@ ExportedObj/
 
 *.VC.db
 
+*.info
 
 
 
