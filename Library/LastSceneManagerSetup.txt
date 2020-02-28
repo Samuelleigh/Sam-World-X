@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Conversation With A Rock/Rock Conversation.unity
+- path: Assets/Knock Knock/New Conversation.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
