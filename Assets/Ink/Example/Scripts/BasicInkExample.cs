@@ -241,7 +241,11 @@ public class BasicInkExample : MonoBehaviour {
 		else 
 		{
 			yield return new WaitForSeconds(hangTimeEnd);
-			knockGameLogic.ShutDoor();
+
+			//what to do when end ink
+			if (knockGameLogic) { knockGameLogic.ShutDoor(); }
+			if (rockConversation) { rockConversation.gameOver(); }
+
 			endAfterShownText = false;
 		}
 
@@ -315,11 +319,15 @@ public class BasicInkExample : MonoBehaviour {
 
 	public EmoteLogic emotes;
 	public bool AutoEnd = true;
-	public KnockGameLogic knockGameLogic;
 	public bool endAfterShownText;
 	public float hangTimeEnd = 1.0f;
-
+	public EndGameLogic endGameLogic;
 
 	public bool alwaysShowFirstLine;
 	private bool showfirstLine = true;
+
+
+	//game Logic
+	public KnockGameLogic knockGameLogic;
+	public RockConversation rockConversation;
 }
