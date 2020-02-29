@@ -18,6 +18,7 @@ public class BasicInkExample : MonoBehaviour {
 
 	// Creates a new Story object with the compiled story which we can then play!
 	public void StartStory () {
+		showNextLine = true;
 		story = new Story (inkJSONAsset.text);
         if(OnCreateStory != null) OnCreateStory(story);
 		RefreshView();
@@ -33,28 +34,36 @@ public class BasicInkExample : MonoBehaviour {
 		string text = "";
 		string trash = "";
 
-		if (alwaysShowFirstLine) { showfirstLine = true; }
+		if (alwaysShowPlayerChoice) { showNextLine = true; }
 
 		// Read all the content until we can't continue any more
-		while (story.canContinue) {
+		while (story.canContinue)
+        {
 
-			//if statement is here so thatuser choice isn't repeated.
-			if (showfirstLine == false) 
-			{
-				trash = story.Continue();
-				showfirstLine = true; 			
+			Debug.Log(showNextLine);
+
+				if (showNextLine == true)
+				{
+				   // Debug.Log(text);
+				    text += story.Continue();
+				   // Debug.Log(text);
+
+
 			}
-			else 
-			{
-				// add all lines into one piece of text
-				text += story.Continue();
+				else
+				{
+				
+				    trash = story.Continue();
+				    showNextLine = true;
+				   // Debug.Log(trash);
 
 			}
-
+            
+		
 		}
 
-		//ummm I should explain this better.
-		showfirstLine = false;
+		
+		
 
 		if (story.currentTags.Count > 0)
 		{
@@ -114,10 +123,14 @@ public class BasicInkExample : MonoBehaviour {
 		
 		
 		}
+
+
+		//showNextLine = false;
 	}
 
 	// When we click the choice button, tell the story to choose that choice!
 	void OnClickChoiceButton (Choice choice) {
+		showNextLine = false;
 		lastpressedbuttonText = choice.text;
 		FindObjectOfType<SoundSystem>().PlayRandomSound(RandomSoundNames);
 		story.ChooseChoiceIndex (choice.index);
@@ -323,8 +336,8 @@ public class BasicInkExample : MonoBehaviour {
 	public float hangTimeEnd = 1.0f;
 	public EndGameLogic endGameLogic;
 
-	public bool alwaysShowFirstLine;
-	private bool showfirstLine = true;
+	public bool alwaysShowPlayerChoice;
+	private bool showNextLine = false;
 
 
 	//game Logic

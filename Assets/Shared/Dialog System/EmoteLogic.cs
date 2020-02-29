@@ -33,7 +33,7 @@ public class EmoteLogic : MonoBehaviour
         {
 
             // Debug.Log("ww");
-            Debug.Log(emote);
+           // Debug.Log(emote);
 
             if (emote == "")
             {

@@ -1,8 +1,8 @@
 ﻿<Properties StartupConfiguration="{F26AA553-FFBA-354F-FEDB-5F4136F53EC1}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scenes/Knocking.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Knock Knock/KnockGameLogic.cs">
     <Files>
-      <File FileName="Assets/Ink/Example/Scripts/BasicInkExample.cs" Line="304" Column="1" />
-      <File FileName="Assets/Scenes/Knocking.cs" Line="19" Column="1" />
+      <File FileName="Assets/Shared/Dialog System/EmoteLogic.cs" Line="36" Column="14" />
+      <File FileName="Assets/Knock Knock/KnockGameLogic.cs" Line="295" Column="52" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -14,8 +14,11 @@
                   <Node name="Scripts" expanded="True" />
                 </Node>
               </Node>
-              <Node name="Scenes" expanded="True">
-                <Node name="Knocking.cs" selected="True" />
+              <Node name="Knock Knock" expanded="True">
+                <Node name="KnockGameLogic.cs" selected="True" />
+              </Node>
+              <Node name="Shared" expanded="True">
+                <Node name="Dialog System" expanded="True" />
               </Node>
             </Node>
           </Node>
@@ -25,7 +28,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="c00484ff-9e9c-408d-b962-70d155b12a02" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="6c430b88-335f-4bfc-8736-4c47612bf9ab" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
