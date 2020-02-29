@@ -1108,7 +1108,7 @@ MonoBehaviour:
   endAfterShownText: 0
   hangTimeEnd: 1
   endGameLogic: {fileID: 0}
-  alwaysShowFirstLine: 1
+  alwaysShowPlayerChoice: 1
   knockGameLogic: {fileID: 0}
   rockConversation: {fileID: 1176070534}
 --- !u!4 &1061286448

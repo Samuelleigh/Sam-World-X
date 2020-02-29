@@ -294,6 +294,7 @@ public class KnockGameLogic : MonoBehaviour
         KnockInputScript.door.SetActive(true);
         KnockInputScript.opendoor.SetActive(false);
         phase = 0;
+        FindObjectOfType<SoundSystem>().PlaySound("doorshut");
 
         if (currentCharacter.name == "needsfriend") { ui.SwitchLayer(2); Debug.Log("End Of Game"); }
         else {

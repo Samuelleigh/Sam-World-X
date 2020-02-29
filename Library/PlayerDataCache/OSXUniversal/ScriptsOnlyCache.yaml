@@ -7,6 +7,7 @@ ScriptsOnlyBuild:
     Assembly-CSharp.dll:
     - BasicInkExample
     - EmoteLogic
+    - EndGameLogic
     - FrameBase
     - MoveFrame
     - RockConversation
@@ -41,7 +42,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Text
     - UnityEngine.UI.VerticalLayoutGroup
   sceneClasses:
-    Assets/Scenes/Rock Conversation.unity:
+    Assets/Conversation With A Rock/Rock Conversation.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -77,41 +78,43 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9960}
     - Class: 114
-      Script: {instanceID: 10040}
+      Script: {instanceID: 9990}
     - Class: 114
-      Script: {instanceID: 10114}
+      Script: {instanceID: 10042}
     - Class: 114
-      Script: {instanceID: 10154}
+      Script: {instanceID: 10116}
     - Class: 114
-      Script: {instanceID: 10274}
+      Script: {instanceID: 10156}
     - Class: 114
-      Script: {instanceID: 10374}
+      Script: {instanceID: 10276}
     - Class: 114
-      Script: {instanceID: 10398}
+      Script: {instanceID: 10376}
     - Class: 114
-      Script: {instanceID: 10504}
+      Script: {instanceID: 10400}
     - Class: 114
-      Script: {instanceID: 10818}
+      Script: {instanceID: 10506}
     - Class: 114
-      Script: {instanceID: 10916}
+      Script: {instanceID: 10820}
     - Class: 114
-      Script: {instanceID: 11052}
+      Script: {instanceID: 10918}
     - Class: 114
-      Script: {instanceID: 11056}
+      Script: {instanceID: 11054}
     - Class: 114
-      Script: {instanceID: 11070}
+      Script: {instanceID: 11058}
     - Class: 114
-      Script: {instanceID: 11088}
+      Script: {instanceID: 11072}
     - Class: 114
-      Script: {instanceID: 11266}
+      Script: {instanceID: 11090}
     - Class: 114
-      Script: {instanceID: 11330}
+      Script: {instanceID: 11268}
     - Class: 114
-      Script: {instanceID: 11522}
+      Script: {instanceID: 11332}
     - Class: 114
-      Script: {instanceID: 11748}
+      Script: {instanceID: 11524}
     - Class: 114
-      Script: {instanceID: 11768}
+      Script: {instanceID: 11750}
+    - Class: 114
+      Script: {instanceID: 11770}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -227,6 +230,12 @@ ScriptsOnlyBuild:
     className: TMP_InputField
   - hash:
       serializedVersion: 2
+      Hash: 91f9316684655da49f4eea8de28c6c3e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: EndGameLogic
+  - hash:
+      serializedVersion: 2
       Hash: 7ab0e790220bdca831fdd886b339039d
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -257,7 +266,7 @@ ScriptsOnlyBuild:
     className: PhysicsRaycaster
   - hash:
       serializedVersion: 2
-      Hash: c1b56a7e8881a2a044bcb405351245b2
+      Hash: 818745794bc5295ae2761d984f3978be
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: EmoteLogic
@@ -341,7 +350,7 @@ ScriptsOnlyBuild:
     className: Selectable
   - hash:
       serializedVersion: 2
-      Hash: 2ff025832c32ca53490e657e70c64257
+      Hash: 65cb18af92d4c374ae843ed2ae860bd6
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: BasicInkExample
@@ -467,7 +476,7 @@ ScriptsOnlyBuild:
     className: Physics2DRaycaster
   - hash:
       serializedVersion: 2
-      Hash: 0f3269af53781e67b0bccc34eef8ec47
+      Hash: d1f87712399a37c91d7b8e8da39a8458
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: RockConversation
@@ -623,5 +632,5 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   platform: 2
   scenePathNames:
-  - Assets/Scenes/Rock Conversation.unity
+  - Assets/Conversation With A Rock/Rock Conversation.unity
   playerPath: /Users/samuelleigh/Documents/GitHub/Sam-World-X/RockConversationMac.app

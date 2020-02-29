@@ -554,12 +554,22 @@ PrefabInstance:
     - target: {fileID: 2953380319554643588, guid: 18d67bcbb89a347f0a5a69656d99f472,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -33
+      value: -34.50299
       objectReference: {fileID: 0}
     - target: {fileID: 2953380319554643588, guid: 18d67bcbb89a347f0a5a69656d99f472,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0.40005493
+      value: -0.2400055
+      objectReference: {fileID: 0}
+    - target: {fileID: 2953380319554643588, guid: 18d67bcbb89a347f0a5a69656d99f472,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -10.87
+      objectReference: {fileID: 0}
+    - target: {fileID: 2953380319554643588, guid: 18d67bcbb89a347f0a5a69656d99f472,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -67.375
       objectReference: {fileID: 0}
     - target: {fileID: 3485857622486535116, guid: 18d67bcbb89a347f0a5a69656d99f472,
         type: 3}
@@ -3916,8 +3926,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0.00002718, y: -816}
-  m_SizeDelta: {x: 186.96002, y: 73.6}
+  m_AnchoredPosition: {x: 0.00002718, y: -854.4}
+  m_SizeDelta: {x: 187, y: 37}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1528426151
 MonoBehaviour:
@@ -4590,6 +4600,12 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
+  - name: doorshut
+    clip: {fileID: 8300000, guid: 5a3f038b5c29e6f4d89ff87f6e59a04a, type: 3}
+    volume: 0.56
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
 --- !u!4 &1692173617
 Transform:
   m_ObjectHideFlags: 0
@@ -4711,7 +4727,7 @@ MonoBehaviour:
   endAfterShownText: 0
   hangTimeEnd: 0
   endGameLogic: {fileID: 0}
-  alwaysShowFirstLine: 0
+  alwaysShowPlayerChoice: 0
   knockGameLogic: {fileID: 892175630}
   rockConversation: {fileID: 0}
 --- !u!4 &1786498401
