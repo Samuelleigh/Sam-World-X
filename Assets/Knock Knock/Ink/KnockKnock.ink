@@ -1,36 +1,55 @@
 INCLUDE Normal
-INCLUDE BloodyNose
-INCLUDE NeedsFriend
-
+INCLUDE Package
+INCLUDE Help
+INCLUDE Remember
+INCLUDE Final
 
 VAR reaction = ""
 
-//for ending the script, set the time before the end to be in th
+*Annoyed
 ->normal.annoyed
-this is here to make sure ink doesn't run out of content
-*I don't want to run out
-->END
+*Neutral
+->normal.neutral
+*Expecting
+->normal.expectingfriend
+*final
+->needsfriend.start
 
-==start==
-jyugfiyg
-*Knock Politely
-*Knock Urgently
-*Knock Rythmatically
--
-->END
 
-==test==
-This is a test yall
-*wow
-*amazing
-*bugs
--
-eiuh
-*youknow#e1.5
-*thuis
-*sucks
--
-*[SetCloseTime] 
-#e3 #happy
-->END
+=testing
 
++ Set Reaction to annoyed
+~ reaction = "annoyed"
+->testing
++Set Reaction to Neutral
+~ reaction = "neutral"
+->testing
++ Set Reaction to expecting
+~ reaction = "Expecting"
+->testing
+
+*package
+    **AnnoyedPackage
+->package.annoyedPackage
+->package.neutralPackage
+->package.expectingPackage
+->package.WherePackage
+->package.why
+->package.signHere
+->package.WhereTruck
+->package.annoyedinjury
+->package.
+->package.
+->package.
+->package.
+->package.
+->package.
+->package.
+->package.
+
+
+{ reaction: 
+- "annoyed":
+- "neutral": 
+- "Expecting":
+}

@@ -1,0 +1,128 @@
+===Remember===
+->END
+=annoyedremeber
+No, why would I? #annoyed
+->mainbranch
+
+->END
+=neutralRemeber
+...I'm going to be frank, I have never seen you before in my life.
+->mainbranch
+
+=expectingRemeber
+Uh, I'm sorry but, could you remind me? #concerned
+->mainbranch
+
+=mainbranch
+*What? We literally just spoke.
+    ->justSpoke
+*You saved my life.
+    ->savedLife
+*I'm your brother.
+    ->brother
+
+->END
+
+
+=justSpoke
+  I think I would of remebered that. #annoyed
+        *You just went inside to call an ambulance and then you never came back.
+        umm, do you need an ambulance. #concerned
+            **Yes, I have a concussion.
+            Oh, ok, I'll just go inside and get my phone. ->END
+            **Ok, I get it, you're getting revenge, cool move man.
+            I seriously don't remember you.
+                ***Sure man, sure.
+                ... ->END #annoyed
+                ***I think you're the one who needs an ambulance
+                I'm going to shut the door now.
+                    ****no no no wait.
+                    . ->END #-0.1
+                    ****Coward!
+                    . ->END #-0.1
+                ***hmm, this is quite strange.
+                    You sure are. ->END
+        *You got mad at me for not delivering a package.
+            ...you have a package for me? 
+                **No
+                So you knocked, on my door, pretended to have a package...but didn't.
+                    ***Exactly.
+                    Yeah, I would find that annoying. 
+                    ->END
+                **Yes.
+                Oh, ok, I wasn't expecting anything today, are you sure you've got the right address.
+                    ***This 29 KingsWood Lane?
+                        Nope, it's 15 Kay Spur street.
+                    ***Are you darren smith?
+                       Nope. He lives on the other side of town.
+                    ---
+                    ***Well I guess that doesn't matter anyway, because as I said I don't have anything for you.
+                    Whatever dude. ->END #annoyed
+        *We literally just talked about you not remembering me.
+        ...->END
+
+=strange
+
+->END
+=needambulance
+->END
+
+
+=savedLife
+{ reaction: 
+- "annoyed": I've never seen you in my life. ->savedlifeAnnoyed
+- "neutral": ... ->savedLifeExpecting
+- "Expecting": umm, sorry?->savedLifeExpecting
+}
+
+
+=savedlifeAnnoyed
+*Really? This is how you treat me. 
+    What did you think was going to happen? #annoyed
+    **That you would treat me with respect.
+        You're the one that knocked on my door, Go away! ->END #annoyed
+    **That we would have a nice chat.
+    Well maybe I would if you weren't so annoying, next time, try knocking with respect. ->END #annoyed
+*Sorry, I'll go.
+->END
+
+=savedLifeExpecting
+*You don't remember me?
+    ummm, I'm really really sorry, but I think you have the wrong person. I've never saved anyone in my life. #concerned
+        **You did, you just didn't know it.
+        Then I shouldn't be thanked.#concerned
+            ***Why not?
+                Because I don't deserve it, If I saved your life it wasn't because of any heroic action.#concerned
+                ****It was heroic to me.
+                      I don't even know what it was. #annoyed
+                      *****Me neither.
+                      Please leave. #concerned
+                        ******I understand.
+                        Thank you. ->END #concerned
+                        ******No.
+                        Goodbye. ->END #concerned
+            ***Perhaps, But I still want to.#concerned
+            Oh...sorry I'm...uhh, a little busy right now...ugh thank you, for beliving in me. #concerned
+            ->END 
+            ***Yes you're right.
+            ...#sad
+            ->END 
+    
+=brother
+My brother is dead. 
+    *I'm your other brother.
+    { reaction: 
+- "annoyed": ... I hate you. ->END #angry
+- "neutral": ...->END
+- "Expecting": ... ->END
+}
+    *I'm sorry
+    { reaction: 
+- "annoyed": Sure, whatever. ->END #angry
+- "neutral": ...->END
+- "Expecting": I don't know if this was some kind of joke to you, but it's not funny. ->END
+}
+    *No he's not.
+    ... ->END #angry
+
+

@@ -12,6 +12,9 @@ public class KnockGameLogic : MonoBehaviour
     public GameObject DialogChoices;
     public UIMaster ui;
 
+    public GameObject door;
+    public GameObject kofi;
+
     public Character currentCharacter;
     public string characterName;
 
@@ -48,7 +51,7 @@ public class KnockGameLogic : MonoBehaviour
     {
         PlaceInQue++;
         currentCharacter = manager.CharacterList[CharacterQue[PlaceInQue]];
-        Debug.Log(currentCharacter.name);
+       // Debug.Log(currentCharacter.name);
     }
 
     public void KnockInput() {
@@ -138,7 +141,7 @@ public class KnockGameLogic : MonoBehaviour
         reaction = GetReaction();
         knotname = GetInkPath(reaction);
 
-        Debug.Log(knotname);
+       // Debug.Log(knotname);
 
 
         //End of setting an ink knot
@@ -165,7 +168,7 @@ public class KnockGameLogic : MonoBehaviour
         if (knocks[1] <= 2)
         {
 
-            Debug.Log(knocks[0]);
+          //  Debug.Log(knocks[0]);
             //if equal or less than 3 knocks during discovery
             if (knocks[0] <= 3)
             {
@@ -296,7 +299,13 @@ public class KnockGameLogic : MonoBehaviour
         phase = 0;
         FindObjectOfType<SoundSystem>().PlaySound("doorshut");
 
-        if (currentCharacter.name == "needsfriend") { ui.SwitchLayer(2); Debug.Log("End Of Game"); }
+        if (currentCharacter.name == "needsfriend") 
+        { 
+            ui.SwitchLayer(2);
+            door.SetActive(false);
+            kofi.SetActive(false);
+            
+            Debug.Log("End Of Game"); }
         else {
 
             GetNewCharacter();

@@ -40,22 +40,24 @@ public class BasicInkExample : MonoBehaviour {
 		while (story.canContinue)
         {
 
-			Debug.Log(showNextLine);
+			//Debug.Log(showNextLine);
 
 				if (showNextLine == true)
 				{
-				   // Debug.Log(text);
+				   
 				    text += story.Continue();
-				   // Debug.Log(text);
+				//Debug.Log(text);
+				//foreach (string str in story.currentTags) { Debug.Log(str); }
 
 
 			}
-				else
+			else
 				{
 				
 				    trash = story.Continue();
 				    showNextLine = true;
-				   // Debug.Log(trash);
+				// Debug.Log(trash);
+			//	foreach (string str in story.currentTags) { Debug.Log(str); }
 
 			}
             
@@ -63,16 +65,19 @@ public class BasicInkExample : MonoBehaviour {
 		}
 
 		
-		
-
 		if (story.currentTags.Count > 0)
 		{
+			//This changes the hangtime before shutting the door
 			if (story.currentTags[0].StartsWith("-")) { ChangeHangTime(story.currentTags); }
 
-			Debug.Log(story.currentTags[0]);
-			ChangeEmote(story.currentTags); 
-			
-		
+			//Debug.Log(story.currentTags[0]);
+			ChangeEmote(story.currentTags); 	
+		}
+
+
+		if (story.currentTags.Count == 0) 
+		{
+			ChangeEmote(story.currentTags);
 		}
 
 		//trim white space
@@ -196,6 +201,10 @@ public class BasicInkExample : MonoBehaviour {
 	
 		yield return new WaitForSeconds(charDelay);
 
+		//talking animation trigger
+		emotes.Talk();
+
+
 		//the loop for each character update.
 		while (dialogQue.Count != 0)
 		{
@@ -222,7 +231,9 @@ public class BasicInkExample : MonoBehaviour {
 				//if the next character is a fullstop. increase character delay
 				if (stext.text.EndsWith("."))
 				{
+				//	Debug.Log("Stop Talking");
 					charDelay = fullstopDelay;
+					//emotes.StopTalking();
 				}
 
 				if (stext.text.EndsWith(","))
@@ -231,16 +242,21 @@ public class BasicInkExample : MonoBehaviour {
 				}
 
 				//decieds if the mouth should talk or not
-				if (charDelay <= 0.7f)
+				if (charDelay <= 0.5f)
 				{
+					//Debug.Log("talking");
 					//mouth should continue moving, or start again
+					emotes.Talk();
 				}
 				else
 				{
+					//Debug.Log("stoptalking");
 					//mouth should stop moving.
+					emotes.StopTalking();
+
 				}
 
-				//
+				
 				yield return new WaitForSeconds(charDelay);
 
 				//reset char delay
@@ -250,9 +266,10 @@ public class BasicInkExample : MonoBehaviour {
 			}
 		}
 
-		if (endAfterShownText == false) { choicePanel.SetActive(true); }
+		if (endAfterShownText == false) { choicePanel.SetActive(true); emotes.StopTalking(); }
 		else 
 		{
+			emotes.StopTalking();
 			yield return new WaitForSeconds(hangTimeEnd);
 
 			//what to do when end ink
@@ -268,13 +285,15 @@ public class BasicInkExample : MonoBehaviour {
 	public void ChangeEmote(List<string> tags)
 	{
 
+		
 		if (tags.Count == 0) { emotes.ChangeEmote2(""); }
+	//	else { Debug.Log(tags[0]); }
 
 		foreach (string str in tags)
 		{
 			if (!str.StartsWith("-"))
 			{
-				//Debug.Log(str);
+				Debug.Log(str);
 				emotes.ChangeEmote2(str);
 			}
 		}
@@ -289,6 +308,7 @@ public class BasicInkExample : MonoBehaviour {
 
 			if (tags[0].StartsWith("-"))
 			{
+				//Debug.Log();
 				string temp = tags[0];
 				temp = temp.Remove(0, 1);
 

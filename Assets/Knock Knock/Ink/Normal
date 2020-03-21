@@ -1,382 +1,45 @@
 ===normal===
 
 =neutral
+~ reaction = "neutral"
 Hello.
 ->FirstChoice
 
 =annoyed
+WHAT IS IT! #annoyed
 ~ reaction = "annoyed"
-WHAT IS IT!
 ->FirstChoice
 
 =expectingfriend
-~ reaction = "annoyed"
-hey how's it goi...wait, sorry I thought you were someone else.
-*really why?
-Oh I have a friend that always knocks a lot at first, then just stops aburptly, I think they get that I find constant knocking really annoying.
-    **cool
-    **ok
+~ reaction = "Expecting"
+Hey how's it goi...wait, sorry I thought you were someone else.
+*Really why?
+Oh I have a friend that always knocks a lot at first, then just stops abruptly.
+    **Cool
+    **Ok
     --
-    Like I already know your at the door, you don't have to keep going on you know ->FirstChoice
-
+    ->FirstChoice
+*OK
+->FirstChoice
 =FirstChoice
 
 *I have a package for you
 { reaction: 
-- "annoyed": -> annoyedPackage
-- "neutral": -> neutralPackage
-- "Expecting": -> expectingPackage
+- "annoyed": -> package.annoyedPackage
+- "neutral": -> package.neutralPackage
+- "Expecting": -> package.expectingPackage
 }
 *I could really use your help.
-->END
+{ reaction: 
+- "annoyed":-> Help.AnnoyedHelp
+- "neutral": ->Help.neutralHelp
+- "Expecting": ->Help.expectingHelp
+}
 *Don't you remember me?
 { reaction: 
-- "annoyed":-> annoyedremeber
-- "neutral": ->neutralRemeber
-- "Expecting": ->neutralRemeber
+- "annoyed":-> Remember.annoyedremeber
+- "neutral": ->Remember.neutralRemeber
+- "Expecting": ->Remember.expectingRemeber
 }
 
-
-
-///package Zone
-
-///as in expecting a friend reaction ... package topic
-=expectingPackage
-Oh, ok, I wasn't expecting anything today, are you sure you've got the right adress.
-*This 29 KingsWood Lane?
-Nope, it's 15 Kay Spur street.
-    **oh, do you know where I can find that adress
-    Honestly, no. I don't think I've ever head of a kingswood lane, not  in this town. 
-        ***Ok, thank you anyway. 
-        no worries ->END
-        ***Could I leave the package with you then.
-        ummm......no ->END
-    **Sorry, that was what I meant to say.
-    ummm, ok. So where is the package then? ->WherePackage
-*Are you darren smith?
-    Nope. He lives the other side of town.
-    **Do you know is adress?
-    Not off by heart, I have written down inside though, If you wait I can get it. 
-        ***No that's fine
-        it's no bother. 
-            ****ok sure.
-            I'll just shut this door to stop the cold getting in ->END
-            ****OK, just could you leave the door open
-              ummm...that's a bit...goodbye. ->END
-            ****goodbye
-            oh, ok, good luck. ->END
-        ***Ok sure. 
-             I'll just shut this door to stop the cold getting in ->END
-        ***As long as you don't close that door
-        ummm...that's a bit werid...goodbye.
-        ->END
-*Yep I just checked
-oh ok...so where is the package then? ->WherePackage
-
-=neutralPackage
-oh, where is it?
-->WherePackage
-
-=annoyedPackage
-Ok...well that's no reason to knock on the door like there's a goddamn warrant for my arrest.
-*I'm sorry sir
-Sure, whatever, where is my package?
-*Is there a warrent for your arrest?
-Very funny, where is my package?
--
-->WherePackage
-
-=WherePackage
-*It's in the truck, I need you to sign for it first
-Wait Wait Wait, I never ordered anything that would require a signature.
-    **It's a new policy.
-    { reaction: 
-- "annoyed": So?
-- "neutral": Ok, well I'm not going to sign it still.
-- "Expecting": You just keep dissapointing me don't you.
-}
-
-        ***I can't give this to you don't sign.
-        Well then I don't want it. Good Day.
-        ->END
-        ***Come on sir, I'm just doing my job. 
-        ->signHere
-
-    **What did you order?
-    I'm not going to tell you that. 
-        ***Is it the size of a piano?
-        ***Is it the size of a Bug?
-          { reaction: 
-- "annoyed": No. Goodbye ->END
-- "neutral": Fine, Give me ->signHere
-- "Expecting": no, but wait ->signHere
-}
-        ***Why not?
-        It's none of your bussiness that's why!
-        ->WhereTruck
-        ---
-       { reaction: 
-- "annoyed": No. Goodbye ->END
-- "neutral": Fine, Give me ->signHere
-- "Expecting": no, but wait ->signHere
-}
-
-*Well about that...
-What about it.
-    **It broke in transit
-    oh...so why are you here then?
-        ***I just wanted to let you know.
-             { reaction: 
-            - "annoyed": sure, well thank you very much,
-            - "neutral": oh, ok. Thanks. ->END
-            - "Expecting": Well to be 
-            }
-        ***You still have to pay for it.
-         { reaction: 
-            - "annoyed": WHAT! That doesn't make any sense!
-            - "neutral": ok well I won't be doing that.
-            - "Expecting": That doesn't sound right.
-            }
-            ****It's only a 5 dollars service fee.
-              { reaction: 
-            - "annoyed": I've never head of this in my live.
-            - "neutral": I don't 
-            - "Expecting":  Look I'm busy, so tell your boss to call me later ->END
-            }
-            ****Come on sir, I'm just doing me job
-            ----
-              { reaction: 
-            - "annoyed": ummm, actually I don't think you are, I think your a pathetic con artist trying to make a quick buck. ->Caught
-            - "neutral": yeah sure, <> ->WhereTruck
-            - "Expecting": ->END
-            }
-        
-    **I don't have it.
-    Where is it then?
-        ***It's in the truck.
-        Ok. could you get it for me.
-            ****No
-            ~reaction = "annoyed"
-            exuse me!
-                *****You heard what I said.
-                    You better buck up your ideas sunshine, or I'm going to report you to your boss.
-                        ******jokes on you, I don't have a boss
-                       wait...so your just some dude that decided to bother me for no reason
-                            *******yes
-                             { reaction: 
-                            - "annoyed": You're an idiot. ->END
-                            - "neutral": ok. Bye. ->END
-                            - "Expecting": ->why
-            }
-                            *******no
-                            You're an idiot ->END
-                        ******...
-                        alright then.<> ->WhereTruck
-                *****Sorry, I meant that it's really heavy.
-                ok...well I havn't ordered anything heavy so, it can't be mine.
-                    ******oh really, sorry for bothering you.
-                    { reaction: 
-            - "annoyed": yes, thank 
-            - "neutral": oh, ok, goodbye then ->END
-            - "Expecting": it's ok, sometimes it's just nice to talk to strangers
-            }
-                    
-                        ******No
-                                oh...ok...well good thing this conversation is over then. bye ->END
-                        ******Yes
-                                Well...Goodbye.
-                                ->END
-            ****Yes
-             { reaction: 
-            - "annoyed": You're an entitled idiot. Go away. ->END
-            - "neutral": OK, thank you ->END
-            - "Expecting": ->why
-            }
-        ***I don't know. 
-            What?
-                ****I don't know
-               { reaction: 
-            - "annoyed": You're an entitled idiot. Go away. ->END
-            - "neutral": OK, thank you ->END
-            - "Expecting": ->why
-            }
-                ****It's not here.
-                
-    **You didn't order a package
-    I see...So your just some guy that decided to knock on my door then lie to me.
-        ***Yes
-        { reaction: 
-- "annoyed": You're an idiot. ->END
-- "neutral": Sure, why not? ->END
-- "Expecting": ->why
-}
-        ***No
-        You're an idiot.
-        ->END
-    
-->END
-
-=why
-Why?
-    *I was bored
-        ok, well can you be bored somewhere else
-        **Yes
-        ok...goodbye. ->END
-        **no
-        ok, so here's what I'm going to do...I'm going to shut this door, and if your not gone by the time I open it again, I'm calling the police. ->END
-    *I was lonely
-    oh...buddy.
-        **Could we just chat a bit more.
-        I'm sorry, but I'm really busy right now. Come back later and we can get you some help, ok...
-            ***I understand.
-            Again, really sorry about this.
-            ->END
-        **But I'm ok now.
-            Well, I glad I could help, I'm going back inside now. ->END
-    *I just wanted to have some fun.
-    did you?
-        **Yes
-        Well...good for you I guess, I have to go back inside now. ->END
-        **No
-        Well...sorry about that.         ->END
-        
-=signHere
-    { reaction: 
-- "annoyed": Well your not doing a great job. Where should I sign then?
-- "neutral": Fine, Give me it then.
-- "Expecting": Fine, where should I sign? 
-}
-*Just here.
-    exucese me.
-    -
-    *Right here
-    Where, your just saying "here" without pointing to anything.
-        **Sir I'm just doing my job.
-          { reaction: 
-- "annoyed": You're an idiot! ->END
-- "neutral": are you ok <> ->WhereTruck
-- "Expecting": are you ok <> ->WhereTruck
-}
-        **Oh sorry sir, just here
-        ...are you ok?
-            ***...
-            ...
-                ****...
-                hello?
-                    *****just here
-                    ...->END
-                ****Just sign here
-                umm...->END
-*oh darn, I left the papers in my truck.
-So you walked all the way up here with nothing 
-    **Look we all have  bad days
-    I mean sure but... hey,<> ->WhereTruck
-    **Yes, Sorry about that.
-     { reaction: 
-- "annoyed": You better be. ->END
-- "neutral": sure whatever. <> ->WhereTruck
-- "Expecting": are you ok? <> ->WhereTruck
-}
-    
-
-
-=WhereTruck
-Where is you're truck anyway, I don't see anything?
-*It's not really a truck, it's one of those cars parked on the street.
-Which car?
-    **The blue one.
-    That's my car.
-        ***ummm
-        ***no it's mine
-        ---
-        You're an idiot.
-        ->END
-    **The green car.
-    I don't see a green car.
-        ***are you colour blind?
-        You're an idiot
-        ->END
-        ***sorry, I'm colour blind, I meant the red one. 
-            { reaction: 
-- "annoyed": I don't belive you. Go away ->END
-- "neutral": I don't belive you. Go away ->END
-- "Expecting": Oh...sure.. ->theRedOne
-}
-    **The red one
-     { reaction: 
-- "annoyed": I don't belive you. Go away ->END
-- "neutral": Sure... ->theRedOne
-- "Expecting": Sure... ->theRedOne
-}
-
-    **...
-    You're an idiot
-        ->END
-*I crashed it. 
-{ reaction: 
-- "annoyed":Well that's just perfect isn't it. ->annoyedinjury
-- "neutral": I see, so that's why my package broke ->neutralInjury
-- "Expecting": Oh...are you ok! ->areyouok
-}
-
-=annoyedinjury
-*Sorry if my injury incovinenced you
-...your quite right, I'm sorry. You're probably not thinking straight. Do you want me to call you an ambiance.
-    **No I'm ok.
-    are you sure, you look ok but, and don't take this the wrong way, only someone with a major concioussion would act like the way you did
-        ***Good point
-        ***Not nesserely 
-        maybe, but not likely. <>
-    **Yes please
-    --
-    ok, I'm going to go inside to make the call. I'm going to shut the door so you can lean on it.
-    ->END
-
-=neutralInjury
-h
-
-//expecting injury
-=areyouok
-*no, I think I've suffered an injury. 
-Yes,
-
-Hiya
-
-
-=theRedOne
-sure
-
-=Caught
-*no
-what are you then?
-    **Very lonely
-    Wow...that's really sad.
-        ***I just needed to talk to someone
-        { reaction: 
-- "annoyed":Well go bother someone else then ->END
-- "neutral": ummm...look I'm sorry but I can't really help you. ->END
-- "Expecting":ummm...look I'm sorry but I can't really help with that. I'm sorry ->END
-}
-        
-    **A delviery truck driver.
-     You're an idiot ->END
-
-    **Your long lost cousin.
-    You're an idiot ->END
-
-*yes
-You're an idiot ->END
-
-
-=annoyedremeber
-->END
-
-=neutralRemeber
-
-
-->END
-
-
-= expectingRemeber
-->END
 

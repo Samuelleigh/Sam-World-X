@@ -37,6 +37,11 @@ public class EndGameLogic : MonoBehaviour
             FindObjectOfType<RockConversation>().gameOver();
         }
 
+        if (currentscene.name == "Knock Knock") 
+        {
+
+            QuitProgram();
+        }
 
         if (shutdownOnEnd == true)
         {

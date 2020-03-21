@@ -1,0 +1,290 @@
+===Help==
+
+=AnnoyedHelp
+I'm really busy at the moment so it better be important. #annoyed
+*It is.
+Ok, what do you need ->WhatDoYouNeed 
+*It isn't.
+...Find someone else to annoy then. ->END
+
+
+->END
+
+=neutralHelp
+uhh, could you perhaps ask someone else? 
+*It's really important
+Fine, what do you need?
+->WhatDoYouNeed
+*It won't take that long
+Fine, what do you need? 
+->WhatDoYouNeed
+*Yes, I can.
+->END
+
+=expectingHelp
+Sure, what do you need?
+->WhatDoYouNeed
+    
+    
+
+=WhatDoYouNeed
+*I crashed my truck
+ { reaction: 
+- "annoyed": ok...well, that sucks, but you look fine to me. ->areyouok
+- "neutral": wow, are you ok? ->areyouok #concerned
+- "Expecting": wow, are you ok? ->areyouok #concerned
+}
+
+*I need a cup of sugar.
+    { reaction: 
+- "annoyed": You knocked violently on my door for a cup of sugar? ->annoyedsugar  #annoyed
+- "neutral": umm, no offense, but I've never seen you before, who are you? ->neverSeen #concerned
+- "Expecting": ok sure, how much do you need. ->howmuch #concerned
+}
+*I have no money could I borrow 20$.
+ { reaction: 
+- "annoyed": ... ->END #concerned
+- "neutral": ->END
+- "Expecting": ugh. I'm really sorry...but no. ->END #concerned
+}
+
+=neverSeen
+*I just moved in down the street.
+Really? Which number are you?
+->whichnum
+
+*Why does that matter?
+ { reaction: 
+    - "annoyed": Because I don't know who you are! ->neverseen2 #annoyed
+    - "neutral": uh, sure...how much do you need? ->howmuch 
+    - "Expecting": I guess you're right, how much do you need? ->howmuch
+    }
+
+=whichnum
+
+    *-1
+    That's not a real number. #annoyed
+        **duh
+    ... ->END #annoyed
+        **It was a joke.
+         { reaction: 
+- "annoyed": Not funny. Which house did you move into? ->whichnum #annoyed
+- "neutral": oh. So which house are you at really? ->whichnum 
+- "Expecting": oh, sorry, yes of course. But seriously which house. ->whichnum
+}
+        **It's a special new house in an alternative dimension.
+            ...
+            ***Nice to meet you, I'm running for mayor and would love to talk to you about policy.
+            ->END
+    *95
+     { reaction: 
+- "annoyed": That's like...the other side of town #concerned
+- "neutral": uh, sure...Don't know why you couldn't have just asked your neighbor instead. 
+- "Expecting": ok cool.
+}
+        **Everyone else was out. 
+        I don't think that's true. #concerned
+            ***Why does that matter? I'm here now.
+            { reaction: 
+    - "annoyed": I don't know who you are so, it kinda does. ->neverseen2 #annoyed
+    - "neutral":I don't know who you are so, it kinda does. ->neverseen2 #annoyed
+    - "Expecting": I guess your right? ->howmuch
+    }
+            ***Why would I lie about that?
+            { reaction: 
+            - "annoyed": I don't know, why does anyone do anything ->doanything #annoyed
+             - "neutral":I don't know, why does anyone do anything ->doanything #annoyed
+             - "Expecting": I guess your right? ->howmuch
+             }
+        **Are you going to give me some sugar or not.
+        { reaction: 
+- "annoyed": no...->END #angry
+- "neutral": uh, sure...how much? ->howmuch #concerned
+- "Expecting": uh, sure...how much? ->howmuch #concerned
+}
+    *24
+    ...That's this house. 
+        **Yes, I live with you now.
+        ... ->END #concerned
+        **Yes, Get out of my house right now
+        ...no ->END #angry
+        **So?
+        ...->END
+    *23
+    I think I would of noticed if my next door neighbor moved out. #concerned
+        **I guess not.
+            { reaction: 
+    - "annoyed": hmm...How much do you need? ->howmuch #annoyed
+    - "neutral": uh, sure...how much do you need? ->howmuch #annoyed
+    - "Expecting": I have been pretty wrapped up in my own drama recently. How much sugar do you need? ->howmuch #concerned
+    }
+        **I'm house sitting.
+        oh, that makes sense, How much sugar do you need. ->howmuch 
+        
+*{!howmuch}I'm just someone who needs sugar.
+ { reaction: 
+    - "annoyed": hmm...How much do you need? ->howmuch
+    - "neutral": uh, sure...how much do you need? ->howmuch
+    - "Expecting": uh, sure...how much do you need? ->howmuch
+    }
+
+
+=neverseen2
+*So you can't help people you don't know.
+    Well I didn't mean that. 
+    **No I get it, your too busy to help out a neighbour in need. 
+     ->END
+    **It's fine, I wouldn't want to take help from someone that clearly loathed me.
+    ... #annoyed
+        ***But I want you too know that if this was a real emergency, I would be dead.
+        ---
+        ...Are you done.#annoyed
+            ***yes.
+            .->END #-0.5
+            ***no.
+            . ->END #-0.5
+            
+=doanything
+*oohhh very Camus.
+    how?
+    **uhh, I don't know...Just kinda, felt like something he would say.
+    oh, ok. Do you know what else Camus would do in this situation?
+        ***no? What?
+    ->END
+    
+
+=annoyedsugar
+*It's an emergency.
+What do you mean? #concerned
+    **I have to bake a cake RIGHT NOW!
+    That's your emergency? I thought you were diabetic or something. #annoyed
+        ***nope, I just need to bake a cake and I have no sugar.
+        ok...sure, whatever, how much do you need? ->howmuch
+        ***Yes, that as well.
+        ...->END
+        ***I don't understand?
+        How? That's literally the only emergency that could possibly be helped with sugar.  #annoyed
+            ****I don't think that's how being diabetic works.
+            Well I'm sorry if me trying to help wasn't logical enough for you.   #annoyed
+                *****Whatever, can I have some sugar now.
+                No. ->END #angry
+            ****I'm sorry for misleading you.
+                You better be, you complete idiot. #angry
+                *****alright, you can calm down now.
+                ->annoyedsugarVoilent
+                *****Are you going to give me sugar or not.
+                ...no ->END  #angry
+*Yes, sorry for misleading you.
+whatever...how much do you need. ->howmuch #annoyed
+*I wouldn't say I knocked "violently".
+->annoyedsugarVoilent
+
+        
+=annoyedsugarVoilent
+I just wanted to make a point that you shouldn't disrupt people's lives for no reason. #annoyed
+    **great job dude, you really showed me.
+    you know what...->END #annoyed
+    **...
+    I have my own things I need to deal with so if your going to intrude in my life in such an annoying way, it better be important #annoyed
+    ***Yes, I'm an adult. I know this.
+    clearly not.#annoyed
+         ****Dude, your not even real, so stop trying to make me feel bad.
+        ...wow...just wow. ->END 
+        ****...
+        ...I'm out of sugar anyway. ->END
+    ***...
+    You know I've been having family trouble recently, I thought someone had DIED! #angry
+        ****Dude, your not even real, so stop trying to make me feel bad.
+        ...wow...just wow. ->END
+        ****I'm sorry.
+        good...and I guess i'm sorry for going off at you, I've been on edge recently.#annoyed
+            *****Can I have some sugar?
+            ...actually...I'm out of sugar. ->END
+    ***What? so I can't ever talk to any stranger ever.
+    NOT IF YOUR GOING TO ACT LIKE THAT! ->END #angry
+
+=howmuch
+
+*Just a teaspoon.
+{ reaction: 
+- "annoyed":Really? ok, I'll get you one but I want my teaspoon back. ->END
+- "neutral": Are you sure?
+- "Expecting": Really why? 
+}
+--
+    **That's how much I need.
+    sure, I'll go inside to get you some.->END
+    **Actually, you could just give me a cup, and I'll just measure out the correct amount.
+    Sounds good, I'll go inside and get you some. ->END
+                
+*6 Bags.
+{ reaction: 
+- "annoyed": ...no. ->END
+- "neutral": Are you joking? #annoyed
+*No.
+->donthavethatmuch
+*Not really.
+->donthavethatmuch
+*Not at all.
+->donthavethatmuch
+- "Expecting": Are you sure you need that much?
+*Yes.
+->donthavethatmuch
+*Yep.
+->donthavethatmuch
+*100% need that much sugar.
+->donthavethatmuch
+}
+
+*{!whichnum}Sorry, I should of introduced myself first, I just moved in yesterday,
+oh, ok. Which house do you live in?
+->whichnum
+
+
+
+=donthavethatmuch
+Well I don't have 6 bags of sugar, so I think you might need to go to the shops.
+    *Good idea.
+    { reaction: 
+- "annoyed":Glad I could help. ->END#annoyed
+- "neutral": Glad I could help. ->END
+- "Expecting":  Glad I could help. ->END #happy
+}
+    *Please, I really need a big ol heap of that sweet-tasting, soluble, carbohydrate.
+    ... ->END #annoyed
+=areyouok
+
+*Yes I'm fine
+That's good, is there anything you need?
+    **I need to use your landline.
+    I don't have a landline anymore, I could go get my smartphone.
+        ***That'll be great.
+        Ok, I'll go get it. ->END #happy
+        ->END
+        ***No need, I'll just ask someone else.
+         { reaction: 
+        - "annoyed":Ok. Good luck.->END 
+        - "neutral":Ok. Good luck. ->END
+        - "Expecting": Are you sure, it's no bother.
+        }
+            ****I'm afraid of germs so...
+            oh, ok...well good luck. ->END
+    **No
+    oh...ok. 
+        ***Goodbye.
+        bye? I guess. ->END
+*No, I need medical assistance.
+I'll go inside and call the hospital. I'll shut the door so you can lean up against it.
+    **No! Wait! Stop!
+    What is it? #concerned
+        ***Everytime you go back inside you forget everything.
+        ...You must have a concussion. I'll be back in a second.
+            ****At least let me come inside to sit down.
+            I'll only be a couple seconds, see you in a bit.
+            ->END
+            ****Fine, be like that then.
+            Yep, you definitely need help.#annoyed
+            ->END
+    **Ok, I'll be here.
+        Good lad.
+        ->END
