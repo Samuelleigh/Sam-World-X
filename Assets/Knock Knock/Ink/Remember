@@ -25,7 +25,7 @@ Uh, I'm sorry but, could you remind me? #concerned
 
 
 =justSpoke
-  I think I would of remebered that. #annoyed
+  I think I would of remembered that. #annoyed
         *You just went inside to call an ambulance and then you never came back.
         umm, do you need an ambulance. #concerned
             **Yes, I have a concussion.
@@ -36,7 +36,7 @@ Uh, I'm sorry but, could you remind me? #concerned
                 ... ->END #annoyed
                 ***I think you're the one who needs an ambulance
                 I'm going to shut the door now.
-                    ****no no no wait.
+                    ****No no no wait.
                     . ->END #-0.1
                     ****Coward!
                     . ->END #-0.1

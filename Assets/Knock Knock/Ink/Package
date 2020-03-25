@@ -7,7 +7,7 @@ Sorry, this is 15 Kay Spur street.
     **Do you know where I can find that address?
     Honestly, no. I don't think I've ever heard of Kingswood Lane, not in this town. 
         ***Ok, thank you anyway. 
-        no worries ->END
+        No worries ->END
         ***Could I leave the package with you then.
         ummm......no ->END
     **Sorry, that was what I meant to say.
@@ -23,14 +23,14 @@ Sorry, this is 15 Kay Spur street.
             ****OK, just could you leave the door open
               ummm...that's a bit...goodbye. ->END #concerned
             ****Goodbye.
-            oh, ok, good luck. ->END
+            Oh, ok, good luck. ->END
         ***OK sure. 
              I'll just shut this door to stop the cold getting in ->END
         ***As long as you don't close that door
         ummm...that's a bit weird...goodbye. #concerned
         ->END
 *Yep I just checked.
-oh ok...so where is the package then? ->WherePackage
+Oh ok...so where is the package then? ->WherePackage
 
 =neutralPackage
 Oh, where is it?
@@ -43,9 +43,9 @@ Sure, whatever, where is my package? #annoyed
 *Is there a warrant for your arrest?
 Very funny, where is my package?#annoyed
 *What, so I can't knock creativly?
-    You call that racket creative. #annoyed
-    **Can I have an example of what would be more creative?
-    Really? Ok. I have one friend that quickly 6 times, then just stops. That's at least something. #annoyed
+    You call that racket creative? #annoyed
+    **Can you suggest a better way of knocking creatively?
+    Really? Ok. I have one friend that quickly 6 times, then just stops. That's at least something.
         ***Thank you
         Sure. Whatever. Where is my package? #annoyed
     **Yes
@@ -113,7 +113,7 @@ What about it.
         ***You still have to pay for it.
          { reaction: 
             - "annoyed": WHAT! That doesn't make any sense! #Angry
-            - "neutral": ok well I won't be doing that.
+            - "neutral": Ok well I won't be doing that.
             - "Expecting": That doesn't sound right.
             }
             ****It's only a 5 dollars service fee.
@@ -131,8 +131,8 @@ What about it.
             ****Please sir, I'm just doing me job.
               { reaction: 
             - "annoyed": ummm, actually I don't think you are, I think your a pathetic con artist trying to make a quick buck. ->Caught #angry
-            - "neutral": yeah sure, <> ->WhereTruck
-            - "Expecting": yes I guess you're right. Is cash ok? ->cashok
+            - "neutral": Yeah sure, <> ->WhereTruck
+            - "Expecting": Yes I guess you're right. Is cash ok? ->cashok
             }
                 
         
@@ -145,24 +145,24 @@ What about it.
             Excuse me!#angry
                 *****You heard what I said.
                     You better buck up your ideas sunshine, or I'm going to report you to your boss.#angry
-                        ******jokes on you, I don't have a boss
+                        ******Jokes on you, I don't have a boss
                        So, you're just some dude that decided to bother me for no reason#angry
                             *******yes
                              { reaction: 
                             - "annoyed": You're an idiot. ->END#angry
-                            - "neutral": ok. Bye. ->END
+                            - "neutral": Ok. Bye. ->END
                             - "Expecting": ->why
             }
                             *******no
                             You're an idiot ->END #annoyed
                         ******...
-                        alright then.<> ->WhereTruck
+                        Alright then.<> ->WhereTruck
                 *****Sorry, I meant that it's really heavy.
                 ok...well I haven't ordered anything heavy, so it can't be mine. #annoyed
                     ******Really? Sorry for bothering you.
                     { reaction: 
             - "annoyed": Thank You for wasting my time, next time, don't knock like a mad man. ->END #annoyed
-            - "neutral": oh, ok, goodbye then ->END
+            - "neutral": oh, ok, goodbye then. ->END
             - "Expecting": it's ok, sometimes it's just nice to talk to strangers.
             }
                     
@@ -179,24 +179,24 @@ What about it.
             }
         ***I don't know. 
             What?#annoyed
-                ****I don't know
+                ****I don't know.
                { reaction: 
             - "annoyed": YES I HEARD I YOU! WHAT DO YOU MEAN MY PACKAGE ISN'T HERE! #angry
                     *It's not here.
                     How about this, when the package gets here, you can knock on my door and waste more of my time, goodbye. ->END
             - "neutral": I'm confused, What exactly are you trying to tell me? #annoyed
-                    *That your package isn't here
+                    *That your package isn't here.
                     ->END
                     *That there was an error, so I don't have the package you ordered.
-                    Ok, well I didn't even order a package, so you may have the wrong person. goodbye ->END
+                    Ok, well I didn't even order a package, so you may have the wrong person. Goodbye. ->END
             - "Expecting":  I'm confused, What exactly are you trying to tell me? #concerned
-                *That your package isn't here
+                *That your package isn't here.
                     ->END
                     *That there was an error, so I don't have the package you ordered.
                     Isn't there some sort of automated system for letting me know this stuff. #concerned
-                        **I just wanted to make sure
+                        **I just wanted to make sure.
                         ah, Thanks for that. ->END #concerned
-                        **yes, but I forgot about that
+                        **Yes, but I forgot about that.
                         well, thanks anyway ->END#concerned
             }
                 
@@ -216,13 +216,13 @@ What about it.
 
 =why
 Why?
-    *I was bored
-        ok, well can you be bored somewhere else #annoyed
-        **Yes
-        ok...goodbye. ->END
-        **no
-        ok, so here's what I'm going to do...I'm going to shut this door, and if you're not gone by the time I open it again, I'm calling the police. ->END #annoyed
-    *I was lonely
+    *I was bored.
+        Ok, well can you be bored somewhere else #annoyed
+        **Yes.
+        Ok...goodbye. ->END
+        **no.
+        Ok, so here's what I'm going to do...I'm going to shut this door, and if you're not gone by the time I open it again, I'm calling the police. ->END #annoyed
+    *I was lonely.
     oh...buddy.#concerned
         **Could we just chat a bit more.
         I'm sorry, but I'm really busy right now. Come back later and we can get you some help, ok...#concerned
@@ -232,10 +232,10 @@ Why?
         **But I'm ok now.
             Well, I'm glad I could help, I'm going back inside now. ->END
     *I just wanted to have some fun.
-    did you?
-        **Yes
+    Did you?
+        **Yes.
         Well...good for you I guess, I have to go back inside now. ->END#annoyed
-        **No
+        **No.
         Well...sorry about that.->END#annoyed
         
 =signHere
@@ -252,28 +252,28 @@ Why?
         **Sir I'm just doing my job.
           { reaction: 
 - "annoyed": You're an idiot. ->END #angry
-- "neutral": are you ok? <> ->WhereTruck #concerned
-- "Expecting": are you ok? <> ->WhereTruck#concerned
+- "neutral": Are you ok? <> ->WhereTruck #concerned
+- "Expecting": Are you ok? <> ->WhereTruck#concerned
 }
         **Oh sorry sir, just here
-        ...are you ok? #concerned
+        ...Are you ok? #concerned
             ***...
             ...
                 ****...
                 hello?#concerned
-                    *****just here
+                    *****Just here.
                     ...->END #concerned
-                ****Just sign here
+                ****Just sign here.
                 umm...->END #concerned
-*oh darn, I left the papers in my truck.
+*Oh darn, I left the papers in my truck.
 So you walked all the way up here with nothing #annoyed
-    **Look we all have  bad days
+    **We all have bad days sometimes.
     Sure, <> ->WhereTruck #annoyed
     **Yes, Sorry about that.
      { reaction: 
 - "annoyed": You better be. <> ->WhereTruck #annoyed
-- "neutral": sure whatever. <> ->WhereTruck
-- "Expecting": are you ok? <> ->WhereTruck #concerned
+- "neutral": Sure whatever. <> ->WhereTruck
+- "Expecting": Are you ok? <> ->WhereTruck #concerned
 }
 
     
@@ -299,7 +299,7 @@ Which car?
         ->END
         ***Sorry, I'm colour blind, I meant the red one. 
             { reaction: 
-- "annoyed": that's not what colourblind means...go waste someone else's time->END #annoyed
+- "annoyed": That's not what colourblind means...go waste someone else's time->END #annoyed
 - "neutral": I don't believe you. Go away ->END #annoyed
 - "Expecting": Oh...sure.. ->theRedOne
 }
@@ -324,7 +324,7 @@ Which car?
 *Sorry if my injury inconvenienced you
 ...you're quite right, I'm sorry. You're probably not thinking straight. Do you want me to call you an ambulance? #concerned
     **No I'm ok.
-    are you sure, you look ok but, and don't take this the wrong way, only someone with a major concussion would act like the way you are. #concerned
+    Are you sure? Don't take this the wrong way, but only someone with a major concussion would act like the way you are. #concerned
         ***Good point
         ***Not necessarily
         maybe, but not likely. <> 
@@ -337,9 +337,9 @@ Which car?
 *Yes that is what happened.
 You're probably not thinking straight. Do you want me to call you an ambulance #concerned
     **No I'm ok.
-    Are you sure, you look ok but, and don't take this the wrong way, only someone with a major concussion would act like the way you are.#concerned
-        ***Good point
-        ***Not necessarily 
+    Are you sure? Don't take this the wrong way, but only someone with a major concussion would act like the way you are.#concerned
+        ***Good point.
+        ***Not necessarily. 
         ... <>
     **Yes please
     --
@@ -351,9 +351,9 @@ You're probably not thinking straight. Do you want me to call you an ambulance #
 =ExpectingInjury
 Do you want me to call you an ambulance #concerned
     **No I'm ok.
-    are you sure, you look ok but, and don't take this the wrong way, only someone with a major concussion would act like the way you are.#concerned
-        ***Good point
-        ***Not necessarily
+    Are you sure, don't take this the wrong way, but only someone with a major concussion would act like the way you are.#concerned
+        ***Good point.
+        ***Not necessarily.
         .... <>
     **Yes please.
     --
@@ -366,7 +366,7 @@ Why isn't it a truck?
     *Why don't you trust me?
     You figure it out. ->END #angry
     *Could You stop asking me questions?
-    Good idea ->END #annoyed
+    Good idea. ->END #annoyed
     
 
 
@@ -379,7 +379,7 @@ What are you then? #annoyed
         { reaction: 
 - "annoyed":Well go bother someone else then ->END #annoyed
 - "neutral": ummm...look I'm sorry but I can't really help you. ->END 
-- "Expecting":ummm...look I'm sorry but I can't really help with that. I'm sorry ->END
+- "Expecting":ummm...look I'm sorry but I can't really help with that. I'm sorry. ->END
 }
         
     **A delivery truck driver.
@@ -388,7 +388,7 @@ What are you then? #annoyed
     You're an idiot ->END #annoyed
 
 *yes
-You're an idiot ->END #annoyed
+You're an idiot. ->END #annoyed
 
 
 =Caught2
@@ -400,7 +400,7 @@ Well, you'll have to explain to your boss why I didn't get my package, because I
 
 =cashok
 *No
-Well forget it then ->END
+Well forget it then. ->END
 *Yes
 ->signHere
 

@@ -1,7 +1,6 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp-Editor.dll:
-    - Ink.UnityIntegration.DefaultAssetEditor
     - Ink.UnityIntegration.InkLibrary
     - Ink.UnityIntegration.InkPlayerWindow
     - Ink.UnityIntegration.InkSettings
@@ -759,4 +758,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Knock Knock/Knock Knock.unity
   - Assets/Conversation With A Rock/Rock Conversation.unity
-  playerPath: C:/Users/sleig/Desktop/Knock Knock Mac.app
+  playerPath: C:/Users/sleig/Desktop/Knock Knock Builds/Knock Knock Mac.app

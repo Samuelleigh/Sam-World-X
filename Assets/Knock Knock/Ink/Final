@@ -4,11 +4,11 @@
 ...oh it's you. #sad
     *You remember me?
     Of course I do. we've talked like 6 times. #sad
-        **Did you remember me each time?
-        **Is there actually anything behind the door?
+        **Were you pretending not to remember me before?
+        **Is there anything else behind this door?
     --
     I'm sorry, but I'm not really in the mindset to answer you.#sad
-    **what's wrong?
+    **What's wrong?
         I..just got some bad news.#sad
         ***Do you want to share it with me?
         ->getintoit
@@ -16,9 +16,9 @@
 =getintoit
     
 No, it's personal.#sad
-                ***Would you rather I leave
+                ***Would you rather I leave?
                 yes...umm...no...could you stay?#sad
-                    *****why?
+                    *****Why?
                     I just need someone to be here. ->Couldwe #sad
         
 =Couldwe
@@ -30,6 +30,6 @@ Thank you, I don't really have the energy to say anything. #sad
     ***Take as long as you need.
     Thank you. #-20.5
     ->END
-*I can't stay
-That's ok... I'm sorry. I wish you the best. #-5.0
+*I can't stay.
+That's ok... I'm sorry. I wish you the best. #-3.0
 ->END

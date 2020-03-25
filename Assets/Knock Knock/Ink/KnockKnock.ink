@@ -38,14 +38,6 @@ VAR reaction = ""
 ->package.signHere
 ->package.WhereTruck
 ->package.annoyedinjury
-->package.
-->package.
-->package.
-->package.
-->package.
-->package.
-->package.
-->package.
 
 
 { reaction: 
