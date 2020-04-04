@@ -1,0 +1,8 @@
+===OverWorld===
+  #overworld
+*IGNORE
+->NeverGoHere
+
+=NeverGoHere
+*Never go here.
+->END

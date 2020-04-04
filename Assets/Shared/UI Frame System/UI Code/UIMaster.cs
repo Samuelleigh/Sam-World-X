@@ -10,7 +10,7 @@ public class UIMaster : MonoBehaviour
     public List<GameObject> MasterLayers = new List<GameObject>();
     public List<GameObject> IndivdualFrames = new List<GameObject>();
 
-    public GameObject door;
+    public GameObject UniversalFrameParent;
     
 
     // Start is called before the first frame update
@@ -43,17 +43,30 @@ public class UIMaster : MonoBehaviour
 
         CurrentLayer = newlayer;
 
-        if (door) 
+        if (UniversalFrameParent) 
         {
-            door.transform.SetParent(MasterLayers[CurrentLayer].transform);
-            
-            
-        
-        
+            UniversalFrameParent.transform.SetParent(MasterLayers[CurrentLayer].transform);             
         }
 
     }
+
+
+    public void TurnFrameOn(int frameid) 
+    {
+
+        IndivdualFrames[frameid].SetActive(true);
     
+    
+    }
+
+
+
+    public void TurnFrameOff(int frameid)
+    {
+
+        IndivdualFrames[frameid].SetActive(false);
+    }
+
 
     // Update is called once per frame
     void Update()

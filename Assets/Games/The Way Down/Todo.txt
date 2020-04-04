@@ -1,0 +1,61 @@
+Todo: 
+
+Core Loop:
+
+	- Switching between levels and overworld DONE
+	- Choosing the next section DONE
+	- Ending the Game DONE
+	- Reset button DONE
+
+Dialog System
+
+	- Internal Varibles DONE
+	- Showing choices that you can't choose because of varible requirements DONE
+	- Make pause before moving to overworld work
+
+Display
+
+	- Showing Ink Varibles DONE
+	- Show Walking Media Window DONE
+	- Showing Media Window DONE
+	- Change Camera During section DONE
+	- Display diffrent DONE
+	- 
+	- Making Diffrent things happening a scene
+	- Change Button and Text Font
+
+Writing: 
+
+	- Start Writing DONE
+		- Finish Trade Interaction First Draft DONE
+
+3D Scenes
+
+	-Learn how to import Mixamo Characters
+	-Learn how to I
+
+Funnel:
+
+-Exposure
+
+	-Twitter
+		- Research hashtags
+		- Decide on which hashtags to use
+		- Create a twitter S
+	
+	- Reddit
+		-Research subreddits to 
+
+	- Press Outlets
+		- Rock paper
+
+	- Events
+		- IndieCade
+		- See upcoming 
+
+	- 
+
+- Intrest
+
+	- Email List Design
+	-

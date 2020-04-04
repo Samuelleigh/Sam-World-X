@@ -22,7 +22,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>Temp\bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE;UNITY_2019_2_17;UNITY_2019_2;UNITY_2019;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_INCLUDE_TESTS;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_UNET;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;ENABLE_MONO_BDWGC;RENDER_SOFTWARE_CURSOR;ENABLE_VIDEO;PLATFORM_WEBGL;UNITY_WEBGL;UNITY_WEBGL_API;UNITY_DISABLE_WEB_VERIFICATION;UNITY_GFX_USE_PLATFORM_VSYNC;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_ENGINE_CODE_STRIPPING;ENABLE_VR;ENABLE_SPATIALTRACKING;ENABLE_MONO;NET_STANDARD_2_0;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_VSTU;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_LEGACY_INPUT_MANAGER;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
+    <DefineConstants>DEBUG;TRACE;UNITY_2019_2_17;UNITY_2019_2;UNITY_2019;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;PLATFORM_ARCH_64;UNITY_64;UNITY_INCLUDE_TESTS;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;INCLUDE_DYNAMIC_GI;ENABLE_MONO_BDWGC;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;ENABLE_VIDEO;PLATFORM_STANDALONE_LINUX;PLATFORM_STANDALONE;UNITY_STANDALONE_LINUX;UNITY_STANDALONE;UNITY_STANDALONE_LINUX_API;PLAYERPREFS_SERIALIZE_TO_XML;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLUSTER_SYNC;ENABLE_CLUSTERINPUT;ENABLE_VR;ENABLE_SPATIALTRACKING;ENABLE_MODULAR_UNITYENGINE_ASSEMBLIES;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_STANDARD_2_0;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_VSTU;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_LEGACY_INPUT_MANAGER;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169</NoWarn>
@@ -48,7 +48,7 @@
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <UnityProjectGenerator>Unity/VSTU</UnityProjectGenerator>
     <UnityProjectType>Game:1</UnityProjectType>
-    <UnityBuildTarget>WebGL:20</UnityBuildTarget>
+    <UnityBuildTarget>StandaloneLinux64:24</UnityBuildTarget>
     <UnityVersion>2019.2.17f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
@@ -63,43 +63,73 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Conversation With A Rock\Scripts\RockConversation.cs" />
-    <Compile Include="Assets\First Person Drifter Controller\Scripts\FirstPersonDrifter.cs" />
-    <Compile Include="Assets\First Person Drifter Controller\Scripts\LockMouse.cs" />
-    <Compile Include="Assets\First Person Drifter Controller\Scripts\MouseLook.cs" />
+    <Compile Include="Assets\Games\Conversation With A Rock\Scripts\RockConversation.cs" />
+    <Compile Include="Assets\Games\Drawing Game\DrawingGameLogic.cs" />
+    <Compile Include="Assets\Games\Drawing Game\DrawingLevel.cs" />
+    <Compile Include="Assets\Games\Drawing Game\DrawingLevelManager.cs" />
+    <Compile Include="Assets\Games\Guessing Game\AudioManager.cs" />
+    <Compile Include="Assets\Games\Guessing Game\Data\Data_Level.cs" />
+    <Compile Include="Assets\Games\Guessing Game\Data\Data_World.cs" />
+    <Compile Include="Assets\Games\Guessing Game\Data\DataManager.cs" />
+    <Compile Include="Assets\Games\Guessing Game\SaveSystem\PlayerData.cs" />
+    <Compile Include="Assets\Games\Guessing Game\SaveSystem\SaveSystem.cs" />
+    <Compile Include="Assets\Games\Guessing Game\Scripts\CalculatorInput.cs" />
+    <Compile Include="Assets\Games\Guessing Game\Scripts\EndFrame.cs" />
+    <Compile Include="Assets\Games\Guessing Game\Scripts\FrameBase.cs" />
+    <Compile Include="Assets\Games\Guessing Game\Scripts\GameLogic.cs" />
+    <Compile Include="Assets\Games\Guessing Game\Scripts\LevelBarScript.cs" />
+    <Compile Include="Assets\Games\Guessing Game\Scripts\LevelLogic.cs" />
+    <Compile Include="Assets\Games\Guessing Game\Scripts\LevelSelect.cs" />
+    <Compile Include="Assets\Games\Guessing Game\Scripts\Promotions.cs" />
+    <Compile Include="Assets\Games\Guessing Game\Scripts\TrackerBar.cs" />
+    <Compile Include="Assets\Games\Guessing Game\Scripts\TrackerFrame.cs" />
+    <Compile Include="Assets\Games\Guessing Game\Scripts\VarWindowScript.cs" />
+    <Compile Include="Assets\Games\Guessing Game\Scripts\WorldSelect.cs" />
+    <Compile Include="Assets\Games\Knock Knock\Scripts\Character.cs" />
+    <Compile Include="Assets\Games\Knock Knock\Scripts\CharacterManager.cs" />
+    <Compile Include="Assets\Games\Knock Knock\Scripts\KnockGameLogic.cs" />
+    <Compile Include="Assets\Games\Knock Knock\Scripts\Knocking.cs" />
+    <Compile Include="Assets\Games\The Way Down\WayDownGame.cs" />
+    <Compile Include="Assets\Games\The Way Down\WayDownInk.cs" />
+    <Compile Include="Assets\Games\The Way Down\WDLevel.cs" />
+    <Compile Include="Assets\Games\The Way Down\WDLevelManager.cs" />
     <Compile Include="Assets\Ink\Example\Scripts\BasicInkExample.cs" />
     <Compile Include="Assets\Ink\Example\Scripts\QuitGameOnKeypress.cs" />
-    <Compile Include="Assets\Knock Knock\Character.cs" />
-    <Compile Include="Assets\Knock Knock\CharacterManager.cs" />
-    <Compile Include="Assets\Knock Knock\KnockGameLogic.cs" />
-    <Compile Include="Assets\Knock Knock\Knocking.cs" />
+    <Compile Include="Assets\ScribbleDrivel\RateScribbleDrivel.cs" />
+    <Compile Include="Assets\ScribbleDrivel\Scripts\ChangeBrushSettings.cs" />
+    <Compile Include="Assets\ScribbleDrivel\Scripts\DrawScript.cs" />
     <Compile Include="Assets\Shared\Dialog System\DialogLogicBasic.cs" />
     <Compile Include="Assets\Shared\Dialog System\Emotion System\EmoteLogic.cs" />
     <Compile Include="Assets\Shared\Dialog System\Emotion System\Emotion.cs" />
     <Compile Include="Assets\Shared\Dialog System\Emotion System\EmotionManager.cs" />
     <Compile Include="Assets\Shared\Dialog System\EndGameLogic.cs" />
+    <Compile Include="Assets\Shared\First Person Drifter Controller\Scripts\FirstPersonDrifter.cs" />
+    <Compile Include="Assets\Shared\First Person Drifter Controller\Scripts\LockMouse.cs" />
+    <Compile Include="Assets\Shared\First Person Drifter Controller\Scripts\MouseLook.cs" />
     <Compile Include="Assets\Shared\Sound System\Sound.cs" />
     <Compile Include="Assets\Shared\SoundSystem.cs" />
-    <Compile Include="Assets\Shared\UI Frame System\UI Code\FrameBase.cs" />
     <Compile Include="Assets\Shared\UI Frame System\UI Code\MoveFrame.cs" />
     <Compile Include="Assets\Shared\UI Frame System\UI Code\UIMaster.cs" />
-    <Compile Include="Assets\WebScript.cs" />
+    <Compile Include="Assets\Shared\WebScript.cs" />
     <None Include="Assets\Shared\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\Shared\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\Shared\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
     <None Include="Assets\Shared\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
-    <None Include="Assets\First Person Drifter Controller\info.txt" />
+    <None Include="Assets\Games\The Way Down\Todo.txt" />
+    <None Include="Assets\Shared\First Person Drifter Controller\info.txt" />
     <None Include="Assets\Shared\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
     <None Include="Assets\Shared\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
     <None Include="Assets\Shared\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\Shared\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Mobile.shader" />
     <None Include="Assets\Shared\TextMesh Pro\Resources\Shaders\TMP_SDF Overlay.shader" />
     <None Include="Assets\Shared\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
+    <None Include="Assets\ScribbleDrivel\Fonts\Fontdiner_Swanky\FontdinerSwanky_LICENSE.txt" />
     <None Include="Assets\Shared\TextMesh Pro\Resources\Shaders\TMPro_Surface.cginc" />
     <None Include="Assets\Shared\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\Shared\TextMesh Pro\Resources\Shaders\TMP_Bitmap.shader" />
     <None Include="Assets\Shared\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
     <None Include="Assets\Shared\TextMesh Pro\Resources\Shaders\TMP_SDF.shader" />
+    <None Include="Assets\ScribbleDrivel\Readme.txt" />
     <None Include="Assets\Shared\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile.shader" />
     <None Include="Assets\Shared\TextMesh Pro\Resources\Shaders\TMP_Sprite.shader" />
     <None Include="Assets\Shared\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />
@@ -136,6 +166,12 @@
     <Reference Include="UnityEditor.UI">
       <HintPath>C:/Users/sleig/Sam-World-X/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
+    <Reference Include="Cinemachine">
+      <HintPath>C:/Users/sleig/Sam-World-X/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
+    </Reference>
+    <Reference Include="com.unity.cinemachine.editor">
+      <HintPath>C:/Users/sleig/Sam-World-X/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/2019.2.17f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
     </Reference>
@@ -159,6 +195,12 @@
     </Reference>
     <Reference Include="UnityEngine.ClothModule">
       <HintPath>C:/Program Files/2019.2.17f1/Editor/Data/Managed/UnityEngine/UnityEngine.ClothModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ClusterInputModule">
+      <HintPath>C:/Program Files/2019.2.17f1/Editor/Data/Managed/UnityEngine/UnityEngine.ClusterInputModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ClusterRendererModule">
+      <HintPath>C:/Program Files/2019.2.17f1/Editor/Data/Managed/UnityEngine/UnityEngine.ClusterRendererModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.CoreModule">
       <HintPath>C:/Program Files/2019.2.17f1/Editor/Data/Managed/UnityEngine/UnityEngine.CoreModule.dll</HintPath>
@@ -300,9 +342,6 @@
     </Reference>
     <Reference Include="UnityEngine.VideoModule">
       <HintPath>C:/Program Files/2019.2.17f1/Editor/Data/Managed/UnityEngine/UnityEngine.VideoModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.WebGLModule">
-      <HintPath>C:/Program Files/2019.2.17f1/Editor/Data/PlaybackEngines/WebGLSupport/Managed/UnityEngine.WebGLModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.WindModule">
       <HintPath>C:/Program Files/2019.2.17f1/Editor/Data/Managed/UnityEngine/UnityEngine.WindModule.dll</HintPath>
