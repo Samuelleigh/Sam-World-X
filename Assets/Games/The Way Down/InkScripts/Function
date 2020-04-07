@@ -1,0 +1,38 @@
+===function intialsetup===
+~ KneeCaps = 4
+~ Age = 3
+~ Body = 100
+~ Awareness = 10
+~ Mood = "Neutral"
+~ Strange = "Eyeballs"
+~ StrangeAmount = 0
+
+===function addKneecaps(x)===
+~ KneeCaps = KneeCaps + x
+
+===function subKneecaps(x)==
+~ KneeCaps = KneeCaps - x
+
+===function addAge(x)===
+~ Age = Age + x
+
+===function subAge(x)===
+~ Age = Age - x
+
+===function addAwareness(x)===
+~ Awareness = Awareness + x
+
+===function subAwareness(x)===
+~ Awareness = Awareness - x
+
+===function ChangeMood(x)===
+~ Mood = x
+
+===function ChangeStrange(x)===
+~ Strange = x
+
+===function addStrangeAmount(x)===
+~ StrangeAmount = StrangeAmount + x
+
+===function subStrangeAmount(x)===
+~ StrangeAmount = StrangeAmount - x

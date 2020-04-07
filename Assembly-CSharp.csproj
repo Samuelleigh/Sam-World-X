@@ -89,10 +89,10 @@
     <Compile Include="Assets\Games\Knock Knock\Scripts\CharacterManager.cs" />
     <Compile Include="Assets\Games\Knock Knock\Scripts\KnockGameLogic.cs" />
     <Compile Include="Assets\Games\Knock Knock\Scripts\Knocking.cs" />
-    <Compile Include="Assets\Games\The Way Down\WayDownGame.cs" />
-    <Compile Include="Assets\Games\The Way Down\WayDownInk.cs" />
-    <Compile Include="Assets\Games\The Way Down\WDLevel.cs" />
-    <Compile Include="Assets\Games\The Way Down\WDLevelManager.cs" />
+    <Compile Include="Assets\Games\The Way Down\Scripts\WayDownGame.cs" />
+    <Compile Include="Assets\Games\The Way Down\Scripts\WayDownInk.cs" />
+    <Compile Include="Assets\Games\The Way Down\Scripts\WDLevel.cs" />
+    <Compile Include="Assets\Games\The Way Down\Scripts\WDLevelManager.cs" />
     <Compile Include="Assets\Ink\Example\Scripts\BasicInkExample.cs" />
     <Compile Include="Assets\Ink\Example\Scripts\QuitGameOnKeypress.cs" />
     <Compile Include="Assets\ScribbleDrivel\RateScribbleDrivel.cs" />
@@ -136,6 +136,9 @@
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/sleig/Sam-World-X/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Cinemachine">
+      <HintPath>C:/Users/sleig/Sam-World-X/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.VSCode.Editor">
       <HintPath>C:/Users/sleig/Sam-World-X/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
@@ -160,17 +163,14 @@
     <Reference Include="Unity.2D.Tilemap.Editor">
       <HintPath>C:/Users/sleig/Sam-World-X/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="com.unity.cinemachine.editor">
+      <HintPath>C:/Users/sleig/Sam-World-X/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.TextMeshPro">
       <HintPath>C:/Users/sleig/Sam-World-X/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>C:/Users/sleig/Sam-World-X/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="Cinemachine">
-      <HintPath>C:/Users/sleig/Sam-World-X/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
-    </Reference>
-    <Reference Include="com.unity.cinemachine.editor">
-      <HintPath>C:/Users/sleig/Sam-World-X/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/2019.2.17f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>

@@ -6,12 +6,37 @@ Core Loop:
 	- Choosing the next section DONE
 	- Ending the Game DONE
 	- Reset button DONE
+	- check for particular conditions before loading content DONE
+	- Update level list to have sections be included in multiple locations DONE
 
 Dialog System
 
 	- Internal Varibles DONE
 	- Showing choices that you can't choose because of varible requirements DONE
-	- Make pause before moving to overworld work
+	- Make pause before moving to overworld work DONE
+	- Update variables being used. DONE
+	- Make Ink function for setting up the variables DONE
+	- Make Ink function for figuring out how much to increase / decrease varibles. DONE
+		-Make more nuanced effects in regard to effects of mood on these changes.
+
+Testing:
+
+	-ability to check any specifc level first  DONE
+
+Potion System:
+
+	- Make the Inventory Frame DONE
+	- Make Place Holder assets/prefabs  DONE
+	- Consuming Potions and there effects
+		- displaying and destorying potions DONE
+		- Randomizing the effect that will happen DONE
+		- Causing that thing to happen in ink DONE
+		- Helpful tip telling you what happened. DONE
+		- Having the current avaible option change when you use a potion DONE
+		- acquiring potions from inside ink.   DONE
+		- Specifying which potion to spawn in.
+		- Displaying diffrent graphics depending on the potion
+		- Changing the 
 
 Display
 
@@ -20,19 +45,34 @@ Display
 	- Showing Media Window DONE
 	- Change Camera During section DONE
 	- Display diffrent DONE
-	- 
-	- Making Diffrent things happening a scene
-	- Change Button and Text Font
+	- Making Diffrent things happening a scene DONE
+	- Change Button and Text Font DONE
 
 Writing: 
 
 	- Start Writing DONE
 		- Finish Trade Interaction First Draft DONE
+		
+	- Create outline for how the experience will go.
+		- Specifc, low writing interactions
+
+	- Wirte 5 short encounters (First Pass)
+		(looks like I'll be making quite a few short interactions that impact varables)
+		- Staring Person (they have too much awarenss)
+
 
 3D Scenes
 
-	-Learn how to import Mixamo Characters
-	-Learn how to I
+	- Learn how to import Mixamo Characters DONE
+	- Learn how to handle the animation DONE
+	- Triggering animations with ink tags DONE
+
+
+
+
+
+
+
 
 Funnel:
 

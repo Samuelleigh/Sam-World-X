@@ -1,0 +1,10 @@
+===function potion1===
+~ KneeCaps = KneeCaps +11
+===function potion2===
+~ KneeCaps = KneeCaps+12
+===function potion3===
+~ KneeCaps = KneeCaps+13
+===function potion4===
+~ KneeCaps = KneeCaps+14
+===function potion5===
+~ KneeCaps = KneeCaps +15

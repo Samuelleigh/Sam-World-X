@@ -1,0 +1,96 @@
+->1stare
+===1stare==
+In the distance, a being is standing still, looking towards you, but not at you.
+*Approach them.
+->approach
+*Ignore them.
+->leave1
+
+==approach
+You stand in front of them, They don't change
+*Ask them what's wrong.
+They don't respond, but you notice their breathing change.
+    **"I know you can hear me."
+    **"It's ok if you don't want to talk"
+    **"Your a creep, you know that"
+    --
+    ->sobbing
+*Shove them to the ground
+->push
+*{Awareness > 10} Look at what the being is holding.
+They are holding a potion.
+    **Take it, and leave.
+    ->OverWorld
+    **Take it, and feed it to the being.
+    The being, for a brief moment, looks hopeful. But then nothing happens.
+        ->OverWorld
+
+==push
+The being provides no resistance, you hear there skull crack when they hit the ground.
+    ~addAwareness(5)
+    **Recoil in shock.
+    ~addAwareness(5)
+    ->dead
+    **Try not to let it phase you.
+    ->dead
+
+==sobbing
+The being starts to sob quielty
+*I'm not moving until you say something
+    The being doesn't react.
+    **Wait 5 minutes
+        The being doesn't move at all, the sobbing has ended.
+        ***Wait an hour
+        Still the being does nothing.
+            ****Wait a day.
+            The being does nothing.
+                *****Wait a year
+                The being does nothing.
+                    ******Wait 100 years
+                    The being does nothing.
+                        *******Wait a million years
+                        The being does nothing.
+                            ********Wait until the end of time
+                             The being does nothing.
+                            ->death.EndTime
+                            ********Leave
+                              ->leave2
+                        *******Leave
+                          ->leave2
+                    ******Leave
+                ->leave2
+                *****Leave
+                ->leave2
+            ****Leave
+            You figure that this being is worth any more of your time.
+            ->OverWorld
+        ***Leave
+        You 
+        ->OverWorld
+        
+    **Push the being
+    ->push
+    
+*I'm leaving, have a nice life.
+The being continues to stair.
+->OverWorld
+
+
+==dead
+You stare at the body, it looks like they have a potion in there hand.
+    *Take it.
+    As you reach down, you hear the beings last breath. 
+      ~addAwareness(10)
+    ->OverWorld
+    *Don't you dare.
+    You killed them, it was your fault. 
+    ->OverWorld
+    ~addAwareness(5)
+
+==leave2
+After all this time, you leave without saying a word.
+->OverWorld
+
+==leave1
+You walk past them. 
+->OverWorld

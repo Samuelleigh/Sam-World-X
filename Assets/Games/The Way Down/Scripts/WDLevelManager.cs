@@ -6,5 +6,5 @@ public class WDLevelManager : MonoBehaviour
 {
 
     public List<WDLevel> Levels;
-
+    public WDLevel deathlevel;
 }

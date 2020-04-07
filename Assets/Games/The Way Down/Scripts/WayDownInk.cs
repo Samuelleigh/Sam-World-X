@@ -31,6 +31,7 @@ public class WayDownInk : MonoBehaviour
 	// Continues over all the lines of text, then displays all the choices. If there are no choices, the story is finished!
 	public void RefreshView()
 	{
+
 		// Remove all the UI on screen
 		RemoveChildren();
 
@@ -76,21 +77,48 @@ public class WayDownInk : MonoBehaviour
 			if (story.currentTags[0].StartsWith("-")) { ChangeVaribles(story.currentTags); }
 
 			//if the current ink Knot is overworld switch to this, corountine controls the hang time.
-			if (story.currentTags[0] == "overworld")
+			if (story.currentTags.Contains("overworld"))
 			{				
 				Debug.Log("move back to overworld");
 				//wayDownLogic.MoveToOverworld();
-				Invoke("MoveToOverworldDelay", 2);
+				goBackWhenTextFinish = true;
+				
 			}
-			if (story.currentTags[0] == "end")
+			if (story.currentTags.Contains("end"))
 			{
 				Debug.Log("end");
 				wayDownLogic.GameOver();
 			}
-			if (story.currentTags[0] == "m") 
+			if (story.currentTags.Contains("m")) 
 			{
+				int i = story.currentTags.IndexOf("m");
 				Debug.Log("new media");
-				wayDownLogic.ShowMedia(Convert.ToInt32(story.currentTags[1]));		
+				wayDownLogic.ShowMedia(Convert.ToInt32(story.currentTags[i+1]));		
+			
+			}
+			if (story.currentTags[0] == "h")
+			{
+				Debug.Log("Hide media");
+				wayDownLogic.HideMedia();
+
+			}
+			if (story.currentTags.Contains("p")) 
+			{
+				int i = story.currentTags.IndexOf("p");
+				wayDownLogic.CreatePotionButton((Convert.ToInt32(story.currentTags[i+1])));
+				
+			}
+
+			//in ink, have the corrisponding animator number in the tag after a, and the name of the animation in in the next tag.
+
+			if (story.currentTags.Contains("a")) 
+			{
+				int tag = story.currentTags.IndexOf("a");
+
+				int animatorID = Convert.ToInt32(story.currentTags[tag + 1]);
+				string triggername = story.currentTags[tag + 2];
+
+				wayDownLogic.TriggerAnimation(animatorID, triggername, false);
 			
 			}
 
@@ -158,12 +186,19 @@ public class WayDownInk : MonoBehaviour
 	// When we click the choice button, tell the story to choose that choice!
 	void OnClickChoiceButton(Choice choice)
 	{
+		//Here so that when a potion is uded, it will reload the ink to make sure the correct choices are implemented.
+		SaveMomentBeforeState();
+		lastchoice = choice;
+
+
 		showNextLine = false;
 		lastpressedbuttonText = choice.text;
 		FindObjectOfType<SoundSystem>().PlayRandomSound(RandomSoundNames);
 		story.ChooseChoiceIndex(choice.index);
 		RefreshView();
 	}
+
+
 
 	// Creates a textbox showing the the line of text
 	void CreateContentView(string text)
@@ -234,6 +269,9 @@ public class WayDownInk : MonoBehaviour
 			GameObject.Destroy(textPanel.transform.GetChild(i).gameObject);
 		}
 
+		
+		
+
 	}
 
 	public IEnumerator CharDelay(TextMeshProUGUI stext)
@@ -258,6 +296,9 @@ public class WayDownInk : MonoBehaviour
 
 			
 				stext.text += next;
+
+			if (instantTextScroll == false)
+			{
 
 				//if the next character is a fullstop. increase character delay
 				if (stext.text.EndsWith("."))
@@ -292,8 +333,18 @@ public class WayDownInk : MonoBehaviour
 
 				//reset char delay
 				charDelay = 0.01f;
-
+			}
+			
 		
+		}
+
+		instantTextScroll = false;
+
+		if (goBackWhenTextFinish == true) 
+		{
+			Invoke("MoveToOverworldDelay", 2);
+			goBackWhenTextFinish = false;
+
 		}
 
 		//This is perhaps a bit messy, but endAftershown text should only be true when the game is about to end
@@ -372,6 +423,20 @@ public class WayDownInk : MonoBehaviour
 		wayDownLogic.MoveToOverworld();
 	}
 
+	public void SaveMomentBeforeState() 
+	{
+
+		lastState = story.state.ToJson();
+
+	}
+
+	public void ReevaultateInk() 
+	{
+		Debug.Log("reloaded? " + lastchoice.index);
+		story.state.LoadJson(lastState);
+		
+	}
+
 	public GameObject choicePanel;
 	public GameObject textPanel;
 
@@ -402,11 +467,17 @@ public class WayDownInk : MonoBehaviour
 	public bool AutoEnd = true;
 	public bool endAfterShownText;
 	public float hangTimeEnd = 1.0f;
+	public bool goBackWhenTextFinish = false;
 	public EndGameLogic endGameLogic;
 
 	public bool alwaysShowPlayerChoice;
-	private bool showNextLine = false;
+	public bool showNextLine = false;
 	private bool MoveToOverworld = false;
+
+	public string lastState;
+	public Choice lastchoice;
+
+	public bool instantTextScroll = false;
 
 
 	//game Logic

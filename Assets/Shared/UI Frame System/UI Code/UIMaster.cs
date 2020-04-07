@@ -45,7 +45,9 @@ public class UIMaster : MonoBehaviour
 
         if (UniversalFrameParent) 
         {
-            UniversalFrameParent.transform.SetParent(MasterLayers[CurrentLayer].transform);             
+            UniversalFrameParent.transform.SetParent(MasterLayers[CurrentLayer].transform);
+            IndivdualFrames[2].transform.SetParent(MasterLayers[CurrentLayer].transform);
+            
         }
 
     }
