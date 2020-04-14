@@ -7,7 +7,7 @@ public class WDLevel
 {
 
     public string EventName;
-    public List<int> sectionNumbers;
+    public int sectionNumbers;
     public List<Transform> cameraTransform;
     public List<Animator> Animators;
 

@@ -8,6 +8,7 @@ public class SoundSystem : MonoBehaviour
 {
 
     public Sound[] sounds;
+    public Sound[] music;
     public static SoundSystem instance;
 
     // Start is called before the first frame update
@@ -24,8 +25,7 @@ public class SoundSystem : MonoBehaviour
         }
         DontDestroyOnLoad(gameObject);
 
-        foreach (Sound s in sounds) 
-        
+        foreach (Sound s in sounds)       
         {
             s.source = gameObject.AddComponent<AudioSource>();
             s.source.clip = s.clip;
@@ -34,6 +34,18 @@ public class SoundSystem : MonoBehaviour
             s.source.pitch = s.pitch;
             s.source.loop = s.loop;
         }
+
+
+        foreach (Sound s in music)
+        {
+            s.source = gameObject.AddComponent<AudioSource>();
+            s.source.clip = s.clip;
+
+            s.source.volume = s.volume;
+            s.source.pitch = s.pitch;
+            s.source.loop = s.loop;
+        }
+
     }
 
     public void PlaySound(string name) 
@@ -50,6 +62,23 @@ public class SoundSystem : MonoBehaviour
         s.source.Play();   
     
     }
+
+    public void PlayMusic(string name)
+    {
+
+        Debug.Log("play music");
+        Sound s = Array.Find(music, sound => sound.name == name);
+
+        if (s == null)
+        {
+            Debug.LogWarning("Sound: " + name + " not found");
+            return;
+        }
+
+        s.source.Play();
+
+    }
+
 
     public void PlayRandomSound(string[] soundNames) 
     {

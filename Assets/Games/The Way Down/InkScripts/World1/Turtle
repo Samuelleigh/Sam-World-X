@@ -1,0 +1,92 @@
+===Turtle===
+The tower approaches.
+
+//TODO: REWRITE BUT MAKE THE TURTLE ONLY SPEAK SUPER SLOWLY.
+
+
+
+==Talk
+The turtle at the bottom of the stack is humming quitely to himself.
+*Approuch.
+*Sneak up on the turtle, attempt to climb.
+-
+The being looks at you. "ah another one, how inter"
+
+
+==climb
+You 
+
+=silentclimb
+From the back you start to grab onto the the turtles shell, you manage to climb up on it's shell
+*Make too much noise.
+*Don't make any noise.
+-
+The turtle speaks "you know I can feel you right?"
+*Say nothing.
+"I don't mind, seriously, but I know some of the other turtles do. Trust me, you don't want to fall off."
+    *Continue climbing.
+    "Ok, well, I guess I can't stop you, Can I give you just one piece of advice?"
+        **"yes"
+        **"no"
+        **Remain silent
+        --
+        "Make sure you climb high enough so that you die when you fall off, you don't want to be stuck being half alive"
+        **Climb down.
+        Good choice, my friend, Good choice. Come round to see me and we can talk."
+        ->ClimbTalk
+        **Keep Climbing
+        As you wish friends.
+    *
+*Appologise.
+
+
+=ClimbTalk
+"hello, nice to meet you, thank you for stop" 
+*I wanted a challenge
+*I wanted to jump off.
+The turtle looks a little sad. "I'm sorry, that you felt that way, not that I can blame you, there isn't much to do down here"
+    **Clarify it was fun.
+    "oh, you must be a new born"
+        ***"what do you mean"
+        ***"I have you know I'm {Age}"
+        "belive it or not, but that's pretty young compared to most beings.
+            ****Tell me more. 
+            "Perhaps that isn't the best idea, When I talk to beings, they eventutually try to jump off this tower.
+                *****Please Explain.
+                    ->PleaseExplain
+                *****ok, please don't.
+                    "thanks for understanding"
+                    ->WhatShouldWeThen
+            ****I'm not some kid.
+            "trust me, you don't want to 
+            
+=PleaseExplain            
+
+*if people have been jumpping off you, where are the 
+What do you think you've been walking?
+    **I don't understand
+    Every being that has ever existed, eventutually returns to the ground. oftern by choice.
+    
+
+
+*How did life grow down here.
+"I don't know, but how does life grow anywhere"
+        
+=WhatShouldWeThen
+*Should 
+*
+*Oh this small being told me to give you this.
+"that's really funny, "
+
+
+=SmallBeing
+"keep it, that small being has been annoying me forever"
+*They seemed to speak highly of you.
+I'm sure they have, they've been around me long enough.
+    **Why hasn't the being gone insane then.
+    "it's quite bizarre, that being in particular doesn't seem to ever actually listen to anything I say. They just keep 
+    **
+
+
+
+

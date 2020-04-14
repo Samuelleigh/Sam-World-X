@@ -17,7 +17,6 @@ Dialog System
 	- Update variables being used. DONE
 	- Make Ink function for setting up the variables DONE
 	- Make Ink function for figuring out how much to increase / decrease varibles. DONE
-		-Make more nuanced effects in regard to effects of mood on these changes.
 
 Testing:
 
@@ -30,15 +29,19 @@ Potion System:
 	- Consuming Potions and there effects
 		- displaying and destorying potions DONE
 		- Randomizing the effect that will happen DONE
-		- Causing that thing to happen in ink DONE
-		- Helpful tip telling you what happened. DONE
+		- Causing that thing to happen in Ink DONE
 		- Having the current avaible option change when you use a potion DONE
-		- acquiring potions from inside ink.   DONE
-		- Specifying which potion to spawn in.
-		- Displaying diffrent graphics depending on the potion
-		- Changing the 
-
-Display
+		- acquiring potions from inside Ink.   DONE
+		- Specifying which potion to spawn in Ink.  DONE
+		- Fix potion not being able to used on first screen of a new knot! DONE 
+		- Displaying diffrent graphics depending on the potion DONE
+		- Make sure that potions work if comsumed while in the overworld. DONE
+		- Helpful tip telling you what happened. DONE
+		- Make temp potion graphics DONE
+		- Decide what the messages actually are.
+		- Make more nuanced effects in regard to effects of mood on these changes. 
+		
+Display:
 
 	- Showing Ink Varibles DONE
 	- Show Walking Media Window DONE
@@ -53,13 +56,49 @@ Writing:
 	- Start Writing DONE
 		- Finish Trade Interaction First Draft DONE
 		
-	- Create outline for how the experience will go.
-		- Specifc, low writing interactions
+	- Create outline for how the experience will go. EH,NOT NEEDED
 
-	- Wirte 5 short encounters (First Pass)
+	- Wirte 7 short encounters (First Pass)
 		(looks like I'll be making quite a few short interactions that impact varables)
-		- Staring Person (they have too much awarenss)
+		- Starting Event DONE
+		- Trader DONE
+		- Staring DONE
+		- laughing Friends
+		- Turtle
+		- End Event 
 
+	- Edit interactions: Variable Interactions
+		
+		- Starting Event 
+		- Trader
+		- Staring 
+		- laughing Friends
+		- Turtle
+		- End Event 
+
+	-Edit interactions: Camera Interactions
+		
+		- Starting Event 
+		- Trader
+		- Staring 
+		- laughing Friends
+		- Turtle
+		- End Event 
+
+	- Edit Interactions: 2nd Writing Pass
+		
+		- Starting Event 
+		- Trader
+		- Staring 
+		- Laughing Friends
+		- Turtle
+		- End Event 
+
+Music:
+
+	- Create Music System
+	- Create Music Tag system in ink.
+	- Create Sound Effect Tag System.
 
 3D Scenes
 
@@ -68,10 +107,9 @@ Writing:
 	- Triggering animations with ink tags DONE
 
 
+Non-essential bugs:
 
-
-
-
+	- Using a potion on the first choice causes the effect to not be applied.
 
 
 Funnel:

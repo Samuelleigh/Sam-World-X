@@ -1,0 +1,97 @@
+===rockThrow===
+You come across a pile of bodies. 
+*Inspect bodies
+You see that a lot of the bodies have no wounds, but all have a single rock lodged in their skulls.
+    **Deeper.
+    You notice that some of them are looking at you. 
+        ***Deeper
+        Actually all of them. 
+        ****...
+        ->Getback
+    **Pull back.
+    ->Getback
+*Run Away
+    You turn and run. 
+    ->OverWorld
+
+
+==Getback
+"GET BACK RIGHT NOW!" The being
+*"No"
+->ontheheap
+*"Right away".
+You step back a fair distance. The being looks suprised. "DON'T MOVE!"
+    **Stop moving
+    "Good, Now I want you too be very clear...I don't want to hurt you"
+    ->convo
+    **Run away
+    You turn and run. You feel an impact in your back, it hurts but doesn't slow you down.
+    ->OverWorld
+
+==convo
+*...
+->convo2
+*"Do you want to trade?"
+"DON'T SPEAK!" 
+    **...
+    ->convo2
+    **"ok"
+    ->ontheheap
+
+==convo2
+"This is my land, and you're not allowed in" 
+    *...
+    "You see this line, this is my lands boarder, if you cross it I'll kill you"
+        **...
+        "So I recomend you turn 90 degress, and start walking"
+            ***Do as he says
+            ->MovingOn
+            ***"where does the line end?"
+                "It doesn't. GET A MOVE ON!"
+                ****Get a move on.
+                ->MovingOn
+                ****"what right do you have to this land?"
+                "ONE MORE WORD AND I'LL KILL  YOU!"
+                    *****"I.."
+                    ->ontheheap
+                    *****Follow there intrustions
+                    ->MovingOn
+            ***"May I ask a question?"
+            "NO! START WALKING PUNK!"
+                ****Start walking.
+                ->MovingOn
+                ****Defy them.
+                You take a single step over the line.
+                ->ontheheap
+    
+==MovingOn
+As you walk, the being stays in place, they shout "Don't stop until you find the end"
+    *Do as they say.
+    You do as they say...for a long time...but then you get bored
+        **Defy them.
+        Oh look, nothing happened.
+        ->OverWorld
+        **Better not, just in case.
+        ->betternotriskit
+
+==betternotriskit
+You walk for a long time.
+*Defy them
+oh look, nothing happened.
+->OverWorld
+*Still too risky
+->betternotriskit
+
+==ontheheap
+*ou89-85
+*Jnakwkjl
+*ael;gaihna
+*regsfe
+-
+Everything is gone, you don't understand. 
+*Never get up again.
+It is a shame. #END
+->OverWorld
+*Wait for help.
+Eventully someone finds you, they remove the rock from your skull, and feed you a potion. You try to thank them, but they're gone before you're healed. 
+->OverWorld

@@ -47,7 +47,8 @@ public class UIMaster : MonoBehaviour
         {
             UniversalFrameParent.transform.SetParent(MasterLayers[CurrentLayer].transform);
             IndivdualFrames[2].transform.SetParent(MasterLayers[CurrentLayer].transform);
-            
+            IndivdualFrames[3].transform.SetParent(MasterLayers[CurrentLayer].transform);
+
         }
 
     }

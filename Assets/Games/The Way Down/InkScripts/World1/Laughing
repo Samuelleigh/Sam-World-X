@@ -1,0 +1,93 @@
+->Laughing
+===Laughing===
+Two Beings are chatting to each other, they look like they've been laughing.
+*Hello friends
+->Friends
+*What's so funny?
+->funny
+*Do you want to trade?
+->Tradelaugh
+
+==Friends
+One of the beings turns towards you "hi friend, how has your day been so far"
+    *"Pretty good"
+    "oh, it's pretty good is it."
+        **"yes"
+        "same, yes, same. It has been, pretty good. Yes" the other being's mouth is twitching. 
+        **"that's what I said"
+        The being turns to his friend "ooo that's what he said, yes, he's beeing having a good day is what he said"
+        --
+        ->yours
+    *"Awful"
+    "oh, poor baby, bad day?"
+        **"that's what I said"
+        "I know"
+        ->yours
+        **"thanks for your concern"
+        "no worry"
+        ->yours
+    *"Averdge"
+    "no, no no, you had a good day, you had a good day"
+        **"No I didn't'
+        you had a good day 
+        ->yours
+        **ummm
+        ->yours
+        
+==yours
+  ***"How was your day?"
+            "oh, my day, yes, I would to have, say, it was the same,very, pretty good day."
+                ****Do you want to trade?
+                Both beings look at each other, "Trade, Why?"
+                ->Tradelaugh
+            ***What are you doing?
+            "me, what I'm doing?" the other being looks like they're going to burst into laughter.
+                ****"yes, what are you doing!"
+                ****"you heard me"
+                ----
+                I'm being a little jitterblaster, reach into my pocket. There is a tounge in there."...The other being can barely contain themselves. 
+                    *****Walk Away.
+                    You walk away. 
+                    ->OverWorld
+                    *****Say Something. 
+                    but what. 
+                        ******"You're a bully"
+                        ******"I'm glad you found that funny"
+                        ------
+                                They're both laughing so hard they don't hear you.
+                                ********walk away
+                                ->OverWorld
+                        ******"Do you want to trade?"
+                        ->Tradelaugh
+                    
+==funny
+"oh, nothing, we just saw you in the distance and.."
+    *"...and what"
+    "It's nothing, really. It wasn't funny. I'm sorry."
+        **"I might find it funny"
+        **"I can handle in"
+        --
+        The beings friend looks like their about to burtst out laughing "no no no, it wasn't funny, it wasn't, it wasn't funny"
+            ***"Tell me or I'll punch you"
+            "oh no, he'll punch me, he'll punch me" The other being is sucking in their checks.  
+                ****Punch them.
+                You punch them, it doesn't do anything. The other being falls to ground laughing.
+                    *****umm...
+                    "Oooo, big boy hit me, big boy hit me, oh no" 
+                        ******Leave
+                        You storm off.
+                        ->OverWorld
+                ****walk away
+                ->OverWorld
+        **"ok, do you want to trade?"
+        "Trade, why?"
+        ->Tradelaugh
+ 
+
+
+==Tradelaugh
+"what do you mean?" 
+*I'll give you something, if you give me something"
+    I don't want to do that.
+    **Walk away
+    ->OverWorld

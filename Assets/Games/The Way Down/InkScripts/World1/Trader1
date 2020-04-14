@@ -10,7 +10,7 @@ A being approaches you, they seem eager to talk to you.#m #1 #a #1 #walking
 
 
 ==Engage
-But what shall you say? #m #0 #a #1 #praying
+But what shall you say? #m #0 #a #1
     *"What do you want?"
          "I want to help you, that's all". The being nerviously smiles.
          **"Why?"
@@ -86,7 +86,7 @@ But what shall you say? #m #0 #a #1 #praying
 =TradeExplain
                 I want to give what you desire, and in return, I want to take what you no-longer need"
                     *So a trade?
-                    Their eyes light up, "so your aware of my practice"
+                    Their eyes light up, "so you're aware of my practice"
                         **Yes, but I see no reason why I should partipate.
                         Their eyes dull slightly, "perhaps I shall convince you"
                             ***You have my attention

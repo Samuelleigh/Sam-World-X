@@ -15,6 +15,8 @@ public class WayDownInk : MonoBehaviour
 		// Remove the default message
 		RemoveChildren();
 		//StartStory();
+
+		soundsystem = FindObjectOfType<SoundSystem>();
 	}
 
 	// Creates a new Story object with the compiled story which we can then play!
@@ -23,6 +25,9 @@ public class WayDownInk : MonoBehaviour
 		showNextLine = true;
 		story = new Story(inkJSONAsset.text);
 		if (OnCreateStory != null) OnCreateStory(story);
+
+
+
 		RefreshView();
 	}
 
@@ -108,10 +113,15 @@ public class WayDownInk : MonoBehaviour
 				wayDownLogic.CreatePotionButton((Convert.ToInt32(story.currentTags[i+1])));
 				
 			}
+			if (story.currentTags.Contains("music"))
+			{
+				int i = story.currentTags.IndexOf("music");
+				soundsystem.PlayMusic(story.currentTags[i + 1]);
+			}
 
-			//in ink, have the corrisponding animator number in the tag after a, and the name of the animation in in the next tag.
+				//in ink, have the corrisponding animator number in the tag after a, and the name of the animation in in the next tag.
 
-			if (story.currentTags.Contains("a")) 
+				if (story.currentTags.Contains("a")) 
 			{
 				int tag = story.currentTags.IndexOf("a");
 
@@ -190,7 +200,7 @@ public class WayDownInk : MonoBehaviour
 		SaveMomentBeforeState();
 		lastchoice = choice;
 
-
+		wayDownLogic.justReturnedFromOverworld = false;
 		showNextLine = false;
 		lastpressedbuttonText = choice.text;
 		FindObjectOfType<SoundSystem>().PlayRandomSound(RandomSoundNames);
@@ -485,5 +495,5 @@ public class WayDownInk : MonoBehaviour
 	//public RockConversation rockConversation;
 
 	public WayDownGame wayDownLogic;
-	
+	public SoundSystem soundsystem;
 }

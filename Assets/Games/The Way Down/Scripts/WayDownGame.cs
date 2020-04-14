@@ -28,6 +28,7 @@ public class WayDownGame : MonoBehaviour
     public Button potionPrefrab;
     public GameObject inventory;
     private List<int> EffectID = new List<int> {1,2,3,4,5};
+    public bool justReturnedFromOverworld = true;
 
 
 
@@ -47,7 +48,9 @@ public class WayDownGame : MonoBehaviour
     public TextMeshProUGUI strangeAmountText;
 
     private bool createPotion = true;
+    public List<Sprite> PotionSprites;
 
+    public TextMeshProUGUI infotext;
 
     private void Awake()
     {
@@ -83,7 +86,8 @@ public class WayDownGame : MonoBehaviour
     public void StartGame() 
     {
 
-        //randomize potions
+
+        //randomize potion Effects
         for (int i = 0; i < EffectID.Count; i++)
         {
             int temp = EffectID[i];
@@ -92,9 +96,17 @@ public class WayDownGame : MonoBehaviour
             EffectID[randomIndex] = temp;
         }
 
+        //Randomize potion Sprites
+        for (int i = 0; i <PotionSprites.Count; i++)
+        {
+            Sprite temp = PotionSprites[i];
+            int randomIndex = Random.Range(i, PotionSprites.Count);
+            PotionSprites[i] = PotionSprites[randomIndex];
+            PotionSprites[randomIndex] = temp;
+        }
 
 
-        //turn on varible frame
+       //turn on varible frame
         VaribleFrame.SetActive(true);
         InventoryFrame.SetActive(true);
 
@@ -104,6 +116,8 @@ public class WayDownGame : MonoBehaviour
         gameState = GameState.Start;
         currentLevel = levelManager.Levels[startingInteraction];
         ink.StartStory();
+
+
 
         //obserbe
 
@@ -115,17 +129,24 @@ public class WayDownGame : MonoBehaviour
         });
 
         ink.story.EvaluateFunction("intialsetup");
+
+        ink.story.ChoosePathString("scapegoat");
+        ink.SaveMomentBeforeState();
+
         LoadLevel();
 
     }
 
     public void LoadLevel() 
     {
+
+        gameState = GameState.Content;
         if (deadNextTurn == false)
         {
 
             ui.SwitchLayer(2);
             ink.story.ChoosePathString(currentLevel.EventName);
+            Debug.Log(currentLevel.EventName);
             ink.RefreshView();
         }
         else 
@@ -138,9 +159,15 @@ public class WayDownGame : MonoBehaviour
 
     public void MoveToOverworld() 
     {
+        gameState = GameState.Overworld;
+
         Debug.Log("move back to overworld");
         HideMedia();
         potentiallevels.Clear();
+
+        ink.story.ChoosePathString("scapegoat");
+        ink.SaveMomentBeforeState();
+        justReturnedFromOverworld = true;
 
         ui.SwitchLayer(1);
 
@@ -153,7 +180,7 @@ public class WayDownGame : MonoBehaviour
         foreach (WDLevel level in levelManager.Levels) 
         {
 
-            if (level.sectionNumbers.Contains(currentsectionID)) 
+            if (level.sectionNumbers == currentsectionID) 
             {
                 potentiallevels.Add(level);
             
@@ -171,7 +198,7 @@ public class WayDownGame : MonoBehaviour
 
     public void GameOver() 
     {
-
+        gameState = GameState.End;
         ui.SwitchLayer(3);
         VaribleFrame.SetActive(false);
         InventoryFrame.SetActive(false);
@@ -260,6 +287,8 @@ public class WayDownGame : MonoBehaviour
 
             button.interactable = true;
 
+            button.GetComponent<Image>().sprite = PotionSprites[potionID];
+
             button.onClick.AddListener(delegate
             {
                 ConsumePotion(button, potionID);
@@ -268,11 +297,19 @@ public class WayDownGame : MonoBehaviour
         
     }
 
+    public void ShowText(string s) 
+    {
+
+        ui.TurnFrameOn(3);
+        infotext.text = s;
+    
+    
+    }
+
 
     public void ConsumePotion(Button button, int choice) 
     {
 
-       
         ink.story.state.LoadJson(ink.lastState);
 
         switch (EffectID[choice]) 
@@ -280,34 +317,51 @@ public class WayDownGame : MonoBehaviour
             case 1:
                 Debug.Log(EffectID[choice]);
                 ink.story.EvaluateFunction("potion1");
+                ShowText("KneeCaps Increased by 5");
                 break;
             case 2:
                 Debug.Log(EffectID[choice]);
                 ink.story.EvaluateFunction("potion2");
+                ShowText("5 millions people found");
                 break;
             case 3:
                 Debug.Log(EffectID[choice]);
                 ink.story.EvaluateFunction("potion3");
+                ShowText("5 millions people found");
                 break;
             case 4:
                 Debug.Log(EffectID[choice]);
                 ink.story.EvaluateFunction("potion4");
+                ShowText("5 millions people found");
                 break;
             case 5:
                 Debug.Log(EffectID[choice]);
                 ink.story.EvaluateFunction("potion5");
+                ShowText("5 millions people found");
                 break;
         }
 
-        ink.showNextLine = false;
-        ink.lastpressedbuttonText = ink.lastchoice.text;
-        ink.SaveMomentBeforeState();
-        ink.story.ChooseChoiceIndex(ink.lastchoice.index);
+        
 
-        createPotion = false;
-        ink.instantTextScroll = true;
-        ink.RefreshView();
-        createPotion = true;
+        if (gameState == GameState.Content)
+        {
+            if (justReturnedFromOverworld == false)
+            {
+                ink.showNextLine = false;
+                ink.lastpressedbuttonText = ink.lastchoice.text;
+                ink.SaveMomentBeforeState();
+                ink.story.ChooseChoiceIndex(ink.lastchoice.index);
+            }
+            else
+            {
+                ink.story.ChoosePathString(currentLevel.EventName);
+            }
+
+            createPotion = false;
+            ink.instantTextScroll = true;
+            ink.RefreshView();
+            createPotion = true;
+        }
 
 
         Destroy(button.gameObject);
