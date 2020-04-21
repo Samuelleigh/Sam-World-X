@@ -1,0 +1,8 @@
+===TheLaw===
+~Strange = "Law"
+A giant, destroyed, structure lies in front of you. A guard is blocking entry. A corpse is left in front of the guard.
+    *Can I go inside?
+    No.
+        **Why not?
+        "This entrance was assigned to them" he points to the corpse.
+->OverWorld

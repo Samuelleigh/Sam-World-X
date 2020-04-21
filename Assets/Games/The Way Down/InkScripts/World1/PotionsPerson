@@ -1,0 +1,46 @@
+===potionsperson===
+~Strange = "Inside"
+A being is holding many potions.
+    *Grab one.
+    The being pretends not to notice.
+        **Can I have this?
+           ->Take
+        **  leave
+            ->OverWorld
+    *Where did you get all those potions?
+        I made them, to help people.
+        **Why?
+        It's good to help people,
+            ***What do they do?
+                I don't know. But It's better than nothing.
+                ****Can I have one?
+                ->Take
+        **Can I have one?
+        ->Take
+
+    
+==Take
+Take whatever you need, I can always make more.
+            ***Take 4
+            You Take 4
+                ****Say thank you.
+                "Your welcome"
+                ->OverWorld
+                ****Leave
+                ->OverWorld
+            ***Take 2
+            You Take 2
+              ****Say thank you.
+                "your welcome"
+                ->OverWorld
+                ****Leave
+                ->OverWorld
+            ***Take 0 
+               ****Say thank you.
+                "You're welcome" :)
+                ->OverWorld
+                ****Leave
+                ->OverWorld
+
+->END
+

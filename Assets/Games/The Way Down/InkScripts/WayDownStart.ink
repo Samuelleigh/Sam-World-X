@@ -1,11 +1,16 @@
 INCLUDE Utility/Overworld
 INCLUDE Start/StartHome
+
 INCLUDE World1/Stare
 INCLUDE World1/RockThrow
 INCLUDE World1/Laughing
 INCLUDE World1/TurtleFollower
-INCLUDE World1/TheMass
 INCLUDE World1/Turtle
+INCLUDE World1/PotionsPerson
+INCLUDE World1/Builder
+INCLUDE World1/TheLaw
+INCLUDE Endings/OutofContent
+
 INCLUDE Conclude
 INCLUDE Test1
 INCLUDE Encounter2
@@ -38,7 +43,7 @@ VAR PotionSlot6 = 0
 ~ Mood = "Neutral"
 ~ Strange = "Eyeballs"
 ~ StrangeAmount = 0
-->Laughing
+->Turtle
 
 
 ===Start
@@ -56,6 +61,6 @@ This is where the game starts #m #1
         ***dd
     ~KneeCaps = 4
     **amazing. {KneeCaps > 3: X}
-    **cool
+    **coold
     -
     ->OverWorld 

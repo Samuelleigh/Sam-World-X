@@ -1,0 +1,14 @@
+===TurtleRedo===
+As you approach the tower, you notice that it is not made with stone, but of many turtles, stacked on top of each other.
+-
+The turtle at the bottom of the stack is humming quitely to himself. They can't see you.
+*Approuch.
+->approachTurtle2
+*Sneak up on the turtle, and attempt to climb the tower.
+->climb
+
+==approachTurtle2==
+The turtle looks at you as you approach, you see a 
+
+
+

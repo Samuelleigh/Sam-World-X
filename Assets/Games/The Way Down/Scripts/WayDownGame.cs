@@ -177,18 +177,18 @@ public class WayDownGame : MonoBehaviour
 
  
 
-        foreach (WDLevel level in levelManager.Levels) 
-        {
+      //  foreach (WDLevel level in levelManager.Levels) 
+      //  {
 
-            if (level.sectionNumbers == currentsectionID) 
-            {
-                potentiallevels.Add(level);
+           // if (level.sectionNumbers == currentsectionID) 
+           // {
+          //      potentiallevels.Add(level);
             
-            }
+           // }
 
-        }
+       // }
 
-        currentLevel = potentiallevels[Random.Range(0, potentiallevels.Count)];
+        currentLevel = levelManager.Levels[currentsectionID];
       
 
         StartCoroutine(OverWorldWait(3));
@@ -317,27 +317,27 @@ public class WayDownGame : MonoBehaviour
             case 1:
                 Debug.Log(EffectID[choice]);
                 ink.story.EvaluateFunction("potion1");
-                ShowText("KneeCaps Increased by 5");
+                ShowText("KneeCaps Increased by 100");
                 break;
             case 2:
                 Debug.Log(EffectID[choice]);
                 ink.story.EvaluateFunction("potion2");
-                ShowText("5 millions people found");
+                ShowText("Body has been increased");
                 break;
             case 3:
                 Debug.Log(EffectID[choice]);
                 ink.story.EvaluateFunction("potion3");
-                ShowText("5 millions people found");
+                ShowText("Age minus 100");
                 break;
             case 4:
                 Debug.Log(EffectID[choice]);
                 ink.story.EvaluateFunction("potion4");
-                ShowText("5 millions people found");
+                ShowText("Mood Changed");
                 break;
             case 5:
                 Debug.Log(EffectID[choice]);
                 ink.story.EvaluateFunction("potion5");
-                ShowText("5 millions people found");
+                ShowText("I keep finding myself.");
                 break;
         }
 

@@ -1,95 +1,126 @@
 ===1stare==
-In the distance, a being is standing still, looking towards you, but not at you.
+~Strange = "Movement"
+In the distance a being is still. They are looking towards you, but not on purpose.
 *Approach them.
+~addStrangeAmount(5)
 ->approach
 *Ignore them.
 ->leave1
 
 ==approach
-You stand in front of them, They don't change
+You stand in front of them, They don't react. You can hear them breathing.
+~addAwareness(3)
 *Ask them what's wrong.
-They don't respond, but you notice their breathing change.
+They don't respond, their breathing quickens.
     **"I know you can hear me."
-    **"It's ok if you don't want to talk"
-    **"Your a creep, you know that"
+    ~addAwareness(5)
+    **"It's OK if you don't want to talk."
+    **"Stop acting like a creep."
     --
     ->sobbing
 *Shove them to the ground
+~addStrangeAmount(5)
 ->push
-*{Awareness > 10} Look at what the being is holding.
+*Look at what the being is holding.
+~addAwareness(1)
 They are holding a potion.
     **Take it, and leave.
+    ~addStrangeAmount(2)
     ->OverWorld
     **Take it, and feed it to the being.
     The being, for a brief moment, looks hopeful. But then nothing happens.
         ->OverWorld
 
 ==push
-The being provides no resistance, you hear there skull crack when they hit the ground.
+The being provides no resistance, they hit the ground, You hear their skull crack open.
     ~addAwareness(5)
     **Recoil in shock.
     ~addAwareness(5)
     ->dead
     **Try not to let it phase you.
+    ~subStrangeAmount(5)
     ->dead
 
 ==sobbing
-The being starts to sob quielty
-*I'm not moving until you say something
+The being starts to sob quietly.
+*I'm not moving until you say something.
+~subStrangeAmount(5)
     The being doesn't react.
-    **Wait 5 minutes
+    **Wait 5 minutes.
+    ~addAge(1)
+    ~subStrangeAmount(5)
         The being doesn't move at all, the sobbing has ended.
-        ***Wait an hour
-        Still the being does nothing.
+        ***Wait an hour.
+        ~addAge(3)
+        ~subStrangeAmount(5)
+        The being does nothing.
             ****Wait a day.
+            ~addAge(100)
+            ~subStrangeAmount(5)
             The being does nothing.
-                *****Wait a year
+                *****Wait a year.
+                ~addAge(13001)
+                ~subStrangeAmount(5)
                 The being does nothing.
-                    ******Wait 100 years
-                    The being does nothing.
-                        *******Wait a million years
+                    ******Wait 100 years.
+                    ~addAge(14241)
+                    ~subStrangeAmount(5)
+                    Still, The being does nothing.
+                        *******Wait for a million years.
+                        ~addAge(198794)
+                        ~subStrangeAmount(5)
                         The being does nothing.
-                            ********Wait until the end of time
+                            ********Wait until the end of time.
+                            ~addAge(19879434)
+                            ~subStrangeAmount(5)
                              The being does nothing.
                             ->death.EndTime
-                            ********Leave
+                            ********Leave.
+                            ~addStrangeAmount(1)
                               ->leave2
-                        *******Leave
+                        *******Leave.
+                        ~addStrangeAmount(1)
                           ->leave2
-                    ******Leave
+                    ******Leave.
+                    ~addStrangeAmount(1)
                 ->leave2
-                *****Leave
+                *****Leave.
+                ~addStrangeAmount(1)
                 ->leave2
-            ****Leave
-            You figure that this being is worth any more of your time.
+            ****Leave.
+            ~addStrangeAmount(1)
+            You conclude that this being is worth any more of your time.
             ->OverWorld
-        ***Leave
-        You 
+        ***Leave.
+        ~addStrangeAmount(1)
+        You conclude that this being is worth any more of your time.
         ->OverWorld
-        
     **Push the being
+    ~addStrangeAmount(10)
     ->push
-    
-*I'm leaving, have a nice life.
-The being continues to stair.
+*"I'm leaving, have a nice life."
+The being continues to stare.
 ->OverWorld
 
 
 ==dead
-You stare at the body, it looks like they have a potion in there hand.
+You stare at the body, it looks like they have a potion in their hand.
     *Take it.
     As you reach down, you hear the beings last breath. 
       ~addAwareness(10)
     ->OverWorld
     *Don't you dare.
+    ~addAwareness(10)
     You killed them, it was your fault. 
     ->OverWorld
     ~addAwareness(5)
 
 ==leave2
 After all this time, you leave without saying a word.
+~addAwareness(1)
 ->OverWorld
 
 ==leave1
 You walk past them. 
+~subStrangeAmount(4)
 ->OverWorld

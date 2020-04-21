@@ -1,10 +1,10 @@
 ===function potion1===
 ~ KneeCaps = KneeCaps +11
 ===function potion2===
-~ KneeCaps = KneeCaps+12
+~ Body = Body * 0.3
 ===function potion3===
-~ KneeCaps = KneeCaps+13
+~ Age = Age - 100
 ===function potion4===
-~ KneeCaps = KneeCaps+14
+~ Mood = "N/A"
 ===function potion5===
-~ KneeCaps = KneeCaps +15
+~ StrangeAmount = StrangeAmount * 2

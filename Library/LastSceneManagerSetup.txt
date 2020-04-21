@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Games/The Way Down/Way Down.unity
+- path: Assets/Games/SamLeigh.xyz/Website.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

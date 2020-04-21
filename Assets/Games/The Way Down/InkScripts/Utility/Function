@@ -13,6 +13,12 @@
 ===function subKneecaps(x)==
 ~ KneeCaps = KneeCaps - x
 
+===function addBody(x)===
+~ Body = Body + x
+
+===function subBody(x)==
+~ Body = Body - x
+
 ===function addAge(x)===
 ~ Age = Age + x
 

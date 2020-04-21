@@ -1,0 +1,30 @@
+===Outofcontent===
+You find a house, it seems to be the same one you left, all those years ago. Do you enter? 
+*I can't go back.
+Why not?
+    **I left for a reason.
+    --
+    Fair, but just so you know, there isn't anything else beyond this house.
+        ***I would rather walk forever than go back.
+         And that is what you do. #END
+        ->Conclusion
+        ***Maybe it's best for me to return home.
+           ->enter
+*Sure.
+->enter
+
+
+==enter
+ But for how long?
+            ***Until I forget everything.
+            ->enddyd
+            ***Until I'm ready to go out again.
+            ->enddyd
+            ***Until the world changes.
+            ->enddyd
+            
+            
+==enddyd  
+And that is what you do. #END
+*End
+->END

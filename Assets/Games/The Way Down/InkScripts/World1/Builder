@@ -1,0 +1,12 @@
+===Builder===
+~Strange = "Crumbs"
+A being is picking up crumbs from the ground, and trying to form them into some kind of mound.
+*What are you doing? 
+My Best.
+    **What are you trying to do?
+    Build a new world.
+        ***How long have you been doing this.
+            Too long.
+            ****Do you think you have a chance?
+                I have to try.
+->OverWorld
