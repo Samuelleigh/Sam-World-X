@@ -7,6 +7,8 @@ using TMPro;
 public class WebsiteUI : MonoBehaviour
 {
     public TextMeshProUGUI linkText;
+    public GameObject crosshair;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -33,4 +35,18 @@ public class WebsiteUI : MonoBehaviour
         linkText.gameObject.SetActive(false);
     
     }
+
+    public void HideCrosshair() 
+    {
+        crosshair.SetActive(false);
+    
+    }
+
+    public void ShowCrosshair()
+    {
+        crosshair.SetActive(true);
+
+    }
+
+
 }

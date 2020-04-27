@@ -9,10 +9,13 @@ public class LockMouse : MonoBehaviour
     public MouseLook m1;
     public MouseLook m2;
     public GameObject test;
+    public WebsiteUI ui;
 
 	void Start()
 	{
+        ui = FindObjectOfType<WebsiteUI>();
         Cursor.lockState = CursorLockMode.Locked;
+        LockMouseLook();
     }
 
     void Update()
@@ -21,18 +24,27 @@ public class LockMouse : MonoBehaviour
     	if( Input.GetMouseButtonDown(0) && Time.timeScale > 0.0f )
     	{
     		Cursor.lockState = CursorLockMode.Locked;
+            ui.ShowCrosshair();
             m1.enabled = true;
             m2.enabled = true;
         }
     
     	// unlock when escape is hit
-        if  ( Input.GetKeyDown(KeyCode.Escape) )
+        if  ( Input.GetKeyDown(KeyCode.LeftShift) )
         {
 
-            Cursor.lockState = CursorLockMode.None;
-            m1.enabled = false;
-            m2.enabled = false;
+            LockMouseLook();
         }
+    }
+
+    public void LockMouseLook() 
+    {
+        Cursor.lockState = CursorLockMode.None;
+        ui.HideCrosshair();
+        m1.enabled = false;
+        m2.enabled = false;
+
+
     }
 
 }

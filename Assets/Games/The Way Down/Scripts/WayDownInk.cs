@@ -109,8 +109,10 @@ public class WayDownInk : MonoBehaviour
 			}
 			if (story.currentTags.Contains("p")) 
 			{
+
 				int i = story.currentTags.IndexOf("p");
 				wayDownLogic.CreatePotionButton((Convert.ToInt32(story.currentTags[i+1])));
+			
 				
 			}
 			if (story.currentTags.Contains("music"))
@@ -130,6 +132,22 @@ public class WayDownInk : MonoBehaviour
 
 				wayDownLogic.TriggerAnimation(animatorID, triggername, false);
 			
+			}
+			if (story.currentTags.Contains("p4"))
+			{
+
+				wayDownLogic.CreatePotionButton(1);
+				wayDownLogic.CreatePotionButton(2);
+				wayDownLogic.CreatePotionButton(3);
+				wayDownLogic.CreatePotionButton(4);
+
+			}
+			if (story.currentTags.Contains("p2"))
+			{
+
+				wayDownLogic.CreatePotionButton(3);
+				wayDownLogic.CreatePotionButton(4);
+
 			}
 
 

@@ -238,7 +238,7 @@ public class WayDownGame : MonoBehaviour
         if (name == "Age") { ageText.text = varIs.ToString(); }
         if (name == "Body") { bodyText.text = varIs.ToString(); CheckGameOver(varIs,0, 10000); }
         if (name == "Awareness") { awarenessText.text = varIs.ToString(); CheckGameOver(varIs,0, 100); }
-        if (name == "Mood") { moodText.text = varIs.ToString(); }
+       // if (name == "Mood") { moodText.text = varIs.ToString(); }
         if (name == "Strange") { strangeText.text = varIs.ToString(); }
         if (name == "StrangeAmount") { strangeAmountText.text = varIs.ToString(); }
 

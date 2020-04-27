@@ -10,7 +10,10 @@ ScriptsOnlyBuild:
     - LinkObject
     - LockMouse
     - MouseLook
+    - TextObject
     - WebsiteUI
+    DoodleStudio95.dll:
+    - DoodleStudio95.ShadowCastingSprite
     Unity.2D.Tilemap.Editor.dll:
     - UnityEditor.Tilemaps.GridPaintingState
     - UnityEditor.Tilemaps.GridPaletteBrushes
@@ -66,6 +69,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 89
+      Script: {instanceID: 0}
     - Class: 90
       Script: {instanceID: 0}
     - Class: 92
@@ -79,37 +84,41 @@ ScriptsOnlyBuild:
     - Class: 109
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 9746}
+      Script: {instanceID: 9762}
     - Class: 114
-      Script: {instanceID: 10096}
+      Script: {instanceID: 9870}
     - Class: 114
-      Script: {instanceID: 10358}
+      Script: {instanceID: 10010}
     - Class: 114
-      Script: {instanceID: 10724}
+      Script: {instanceID: 10126}
     - Class: 114
-      Script: {instanceID: 10774}
+      Script: {instanceID: 10390}
     - Class: 114
-      Script: {instanceID: 10934}
+      Script: {instanceID: 10760}
     - Class: 114
-      Script: {instanceID: 11450}
+      Script: {instanceID: 10810}
     - Class: 114
-      Script: {instanceID: 11758}
+      Script: {instanceID: 10852}
     - Class: 114
-      Script: {instanceID: 11778}
+      Script: {instanceID: 10972}
     - Class: 114
-      Script: {instanceID: 12082}
+      Script: {instanceID: 11488}
     - Class: 114
-      Script: {instanceID: 12168}
+      Script: {instanceID: 11796}
     - Class: 114
-      Script: {instanceID: 12446}
+      Script: {instanceID: 11816}
     - Class: 114
-      Script: {instanceID: 12754}
+      Script: {instanceID: 12122}
     - Class: 114
-      Script: {instanceID: 16682}
+      Script: {instanceID: 12208}
     - Class: 114
-      Script: {instanceID: 16892}
+      Script: {instanceID: 12488}
     - Class: 114
-      Script: {instanceID: 17554}
+      Script: {instanceID: 12518}
+    - Class: 114
+      Script: {instanceID: 12540}
+    - Class: 114
+      Script: {instanceID: 12806}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 124
@@ -132,7 +141,15 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 224
       Script: {instanceID: 0}
+    - Class: 258
+      Script: {instanceID: 0}
   scriptHashData:
+  - hash:
+      serializedVersion: 2
+      Hash: 51738e1295add52dbe3fe8a64182db3e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: DoodleStudio95Examples
+    className: Worm
   - hash:
       serializedVersion: 2
       Hash: 4bc4346a71a8df53a6b106f68ef3a190
@@ -177,6 +194,30 @@ ScriptsOnlyBuild:
     className: TMP_Dropdown
   - hash:
       serializedVersion: 2
+      Hash: 72b50b64edfea8bbf47dcd4a83e8f7f1
+    assemblyName: DoodleStudio95.dll
+    namespaceName: DoodleStudio95
+    className: DoodleAnimationFile
+  - hash:
+      serializedVersion: 2
+      Hash: a852f7f3f4ef5a7bbd3570aa45b3f1d3
+    assemblyName: DoodleStudio95.dll
+    namespaceName: DoodleStudio95
+    className: DoodleAnimator
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: DoodleStudio95.dll
+    namespaceName: DoodleStudio95
+    className: FitSpriteInParentUI
+  - hash:
+      serializedVersion: 2
+      Hash: 7bd7352cfd1ec3c39b6736d62c33bd88
+    assemblyName: DoodleStudio95.dll
+    namespaceName: DoodleStudio95
+    className: ShadowCastingSprite
+  - hash:
+      serializedVersion: 2
       Hash: 39555befb76daaf2b482d27b6dc99c2a
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -219,6 +260,12 @@ ScriptsOnlyBuild:
     className: GroupTrack
   - hash:
       serializedVersion: 2
+      Hash: 248c0b78fa34dbef6b4795956866beff
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: FirstPersonClicking
+  - hash:
+      serializedVersion: 2
       Hash: a5781dc71a671b1ad2b38de19f24b71f
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -247,6 +294,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
     className: TouchInputModule
+  - hash:
+      serializedVersion: 2
+      Hash: d5b1dbc331b8dd5bb46ebad9ef20e948
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: DoodleStudio95Examples
+    className: SleepUntilTouched
   - hash:
       serializedVersion: 2
       Hash: c80bc562de10fdbf8b2e9bcb89d80421
@@ -283,6 +336,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: EndGameLogic
+  - hash:
+      serializedVersion: 2
+      Hash: 0d36c2fc9119a67d76d12138f9fcba61
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: DoodleStudio95Examples
+    className: SimpleFollowingCamera
   - hash:
       serializedVersion: 2
       Hash: 7ab0e790220bdca831fdd886b339039d
@@ -435,6 +494,12 @@ ScriptsOnlyBuild:
     className: MoveFrame
   - hash:
       serializedVersion: 2
+      Hash: 76182caa3c8824470038e92c2cdca87b
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: DoodleStudio95Examples
+    className: WormArea
+  - hash:
+      serializedVersion: 2
       Hash: caa533b001ae39b864ba8425019e2268
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -457,6 +522,12 @@ ScriptsOnlyBuild:
     assemblyName: Cinemachine.dll
     namespaceName: Cinemachine
     className: NoiseSettings
+  - hash:
+      serializedVersion: 2
+      Hash: 0d85f4fda1e0e70cd92c084d12f05cdc
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: DoodleStudio95Examples
+    className: RespawnOnOppositeEnd
   - hash:
       serializedVersion: 2
       Hash: a452ad9fca300a9a915253342935772d
@@ -505,6 +576,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Selectable
+  - hash:
+      serializedVersion: 2
+      Hash: 671fcd004fda4c939cf6e788166280ea
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: LinkObject
   - hash:
       serializedVersion: 2
       Hash: 380d3ba99e2d836ad5d66bded133d128
@@ -669,7 +746,7 @@ ScriptsOnlyBuild:
     className: CinemachineTargetGroup
   - hash:
       serializedVersion: 2
-      Hash: 874375767e2b80b39b9a7f9202c36737
+      Hash: 70a4460c1abb97c6516d6ac8e52be8a2
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: LockMouse
@@ -903,6 +980,12 @@ ScriptsOnlyBuild:
     className: CinemachineHardLookAt
   - hash:
       serializedVersion: 2
+      Hash: 72e3587c0806498975a09346e4342b98
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: DoodleStudio95Examples
+    className: FPS
+  - hash:
+      serializedVersion: 2
       Hash: f1cdddb651619dcff1ac16dec911061e
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -939,10 +1022,34 @@ ScriptsOnlyBuild:
     className: TMP_StyleSheet
   - hash:
       serializedVersion: 2
+      Hash: 7f4240d449cc59836ea6bc42922fd38b
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: DoodleStudio95Examples
+    className: BirdCharacter
+  - hash:
+      serializedVersion: 2
+      Hash: 8fcc079cd767409af7fc94637b2ed7bd
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: TextObject
+  - hash:
+      serializedVersion: 2
+      Hash: a77e85796c11521f320a0276212e84ca
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: WebsiteUI
+  - hash:
+      serializedVersion: 2
       Hash: bce297c1df28b9d5c0ea49c5a7e82eaa
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Knocking
+  - hash:
+      serializedVersion: 2
+      Hash: 2f4b0fb5266e51c3fd27ddb5285f9585
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: DoodleStudio95Examples
+    className: ChainAnimations
   - hash:
       serializedVersion: 2
       Hash: 6b5f70caa58500807b2b3cae73cdb9f7
@@ -997,6 +1104,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_SubMesh
+  - hash:
+      serializedVersion: 2
+      Hash: d703a4968380dd41822b2f8c8893609d
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: DoodleStudio95Examples
+    className: TriggerTransition
   - hash:
       serializedVersion: 2
       Hash: 1351a1bf2c4086539cf0063006375478
@@ -1071,6 +1184,12 @@ ScriptsOnlyBuild:
     className: ToggleGroup
   - hash:
       serializedVersion: 2
+      Hash: b8bf4a4b727a250c549fd174535762ec
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: DoodleStudio95Examples
+    className: WalkingCharacter
+  - hash:
+      serializedVersion: 2
       Hash: a4eee6b13a17752cfe9887d3c9ca2f6b
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -1081,25 +1200,7 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: df2de5f2bce24b85ae36cc9bc3a2ef3f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: FirstPersonClicking
-  - hash:
-      serializedVersion: 2
-      Hash: 671fcd004fda4c939cf6e788166280ea
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: LinkObject
-  - hash:
-      serializedVersion: 2
-      Hash: f62ca30e4c69ec87aac0769798328623
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: WebsiteUI
   platform: 20
   scenePathNames:
   - Assets/Games/SamLeigh.xyz/Website.unity
-  playerPath: C:/Users/sleig/Desktop/Knock Knock Builds/Web5
+  playerPath: C:/Users/sleig/Desktop/Sam's Test Website/SamWebsite
