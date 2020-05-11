@@ -107,6 +107,9 @@ ExportedObj/
 *.info
 
 
+*.mp4
+
+
 
 # Unity3D generated meta files
 

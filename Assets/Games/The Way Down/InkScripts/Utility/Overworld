@@ -3,6 +3,11 @@
 *IGNORE
 ->NeverGoHere
 
+=hide
+  #overworld #h
+*IGNORE
+->NeverGoHere
+
 =NeverGoHere
 *Never go here.
 ->END

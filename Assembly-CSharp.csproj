@@ -96,6 +96,15 @@
     <Compile Include="Assets\Games\Guessing Game\Scripts\TrackerFrame.cs" />
     <Compile Include="Assets\Games\Guessing Game\Scripts\VarWindowScript.cs" />
     <Compile Include="Assets\Games\Guessing Game\Scripts\WorldSelect.cs" />
+    <Compile Include="Assets\Games\Jigsaw\Scripts\JigLevelManager.cs" />
+    <Compile Include="Assets\Games\Jigsaw\Scripts\JigSave.cs" />
+    <Compile Include="Assets\Games\Jigsaw\Scripts\JigsawGameLogic.cs" />
+    <Compile Include="Assets\Games\Jigsaw\Scripts\JigsawLevel.cs" />
+    <Compile Include="Assets\Games\Jigsaw\Scripts\JigsawMenu.cs" />
+    <Compile Include="Assets\Games\Jigsaw\Scripts\JigsawPieceDrag.cs" />
+    <Compile Include="Assets\Games\Jigsaw\Scripts\JigsawPieceScript.cs" />
+    <Compile Include="Assets\Games\Jigsaw\Scripts\PuzzleEnviromentStuff.cs" />
+    <Compile Include="Assets\Games\Jigsaw\Scripts\SnapPiece.cs" />
     <Compile Include="Assets\Games\Knock Knock\Scripts\Character.cs" />
     <Compile Include="Assets\Games\Knock Knock\Scripts\CharacterManager.cs" />
     <Compile Include="Assets\Games\Knock Knock\Scripts\KnockGameLogic.cs" />
@@ -106,10 +115,12 @@
     <Compile Include="Assets\Games\SamLeigh.xyz\Scripts\LinkObject.cs" />
     <Compile Include="Assets\Games\SamLeigh.xyz\Scripts\TextObject.cs" />
     <Compile Include="Assets\Games\SamLeigh.xyz\Scripts\WebsiteUI.cs" />
+    <Compile Include="Assets\Games\The Way Down\Scripts\CamTest.cs" />
     <Compile Include="Assets\Games\The Way Down\Scripts\WayDownGame.cs" />
     <Compile Include="Assets\Games\The Way Down\Scripts\WayDownInk.cs" />
     <Compile Include="Assets\Games\The Way Down\Scripts\WDLevel.cs" />
     <Compile Include="Assets\Games\The Way Down\Scripts\WDLevelManager.cs" />
+    <Compile Include="Assets\Games\The Way Down\Scripts\WDRefrences.cs" />
     <Compile Include="Assets\Ink\Example\Scripts\BasicInkExample.cs" />
     <Compile Include="Assets\Ink\Example\Scripts\QuitGameOnKeypress.cs" />
     <Compile Include="Assets\ScribbleDrivel\RateScribbleDrivel.cs" />
@@ -125,6 +136,7 @@
     <Compile Include="Assets\Shared\UI Frame System\UI Code\MoveFrame.cs" />
     <Compile Include="Assets\Shared\UI Frame System\UI Code\UIMaster.cs" />
     <Compile Include="Assets\Shared\WebScript.cs" />
+    <None Include="Assets\Games\Jigsaw\Todo.txt" />
     <None Include="Assets\Shared\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\Shared\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\Doodle Studio 95\Assets\Shaders\Sprite-ShadowCasting.shader" />

@@ -75,6 +75,15 @@ public class WayDownGame : MonoBehaviour
         varNames.Add("Mood");
         varNames.Add("Strange");
         varNames.Add("StrangeAmount");
+
+        if (levelManager.debug == true) 
+        {
+        
+            StartGame();
+            ui.SwitchLayer(2);
+
+
+        }
     }
 
     // Update is called once per frame
@@ -85,7 +94,7 @@ public class WayDownGame : MonoBehaviour
 
     public void StartGame() 
     {
-
+       
 
         //randomize potion Effects
         for (int i = 0; i < EffectID.Count; i++)
@@ -116,7 +125,7 @@ public class WayDownGame : MonoBehaviour
         gameState = GameState.Start;
         currentLevel = levelManager.Levels[startingInteraction];
         ink.StartStory();
-
+        
 
 
         //obserbe
@@ -264,7 +273,7 @@ public class WayDownGame : MonoBehaviour
     public void CheckGameOver(object current,int min, int max)
     {
 
-        Debug.Log((int)current + " "  );
+     //   Debug.Log((int)current + " "  );
 
         if (deadNextTurn == false)
         {

@@ -1,16 +1,17 @@
 ===potionsperson===
 ~Strange = "Inside"
-A being is holding many potions.
+A being is holding many potions. #m #0 #a #1 #old
     *Grab one.#p #1
     The being pretends not to notice.
         **Can I have this?
            ->Take
         **  leave
             ->OverWorld
-    *Where did you get all those potions?
+    *Where did you get all those potions? 
         I made them, to help people.
         **Why?
         It's good to help people,
+        ~addAwareness(10)
             ***What do they do?
                 I don't know. But It's better than nothing.
                 ****Can I have one?
@@ -20,7 +21,7 @@ A being is holding many potions.
 
     
 ==Take
-Take whatever you need, I can always make more.
+Take whatever you need, I can always make more. #m #1
             ***Take 4 #p4
             You Take 4
                 ****Say thank you.

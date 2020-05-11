@@ -11,17 +11,30 @@ public class UIMaster : MonoBehaviour
     public List<GameObject> IndivdualFrames = new List<GameObject>();
 
     public GameObject UniversalFrameParent;
-    
+
 
     // Start is called before the first frame update
+    private void Awake()
+    {
+        foreach (GameObject current in MasterLayers)
+        {
+            current.SetActive(false);
+        }
+
+        SwitchLayer(0);
+    }
+
     void Start()
     {
-        foreach (GameObject current in MasterLayers) 
+           
+    }
+
+    public void TurnOffAll() 
+    {
+        foreach (GameObject current in MasterLayers)
         {
-            current.SetActive(false);    
+            current.SetActive(false);
         }
-     
-        SwitchLayer(0);             
     }
 
     public void PreviousLayer() 

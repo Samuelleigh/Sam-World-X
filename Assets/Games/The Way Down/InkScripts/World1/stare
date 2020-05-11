@@ -1,14 +1,14 @@
 ===1stare==
 ~Strange = "Movement"
-In the distance a being is still. They are looking towards you, but not on purpose.
+In the distance a being is still. They are looking towards you, but not on purpose. #m #0 #a #1 #idle
 *Approach them.
-~addStrangeAmount(5)
+~addStrangeAmount(6)
 ->approach
 *Ignore them.
 ->leave1
 
 ==approach
-You stand in front of them, They don't react. You can hear them breathing.
+You stand in front of them, They don't react. You can hear them breathing.  #m #1 #a #1 #idle
 ~addAwareness(3)
 *Ask them what's wrong.
 They don't respond, their breathing quickens.
@@ -18,7 +18,7 @@ They don't respond, their breathing quickens.
     **"Stop acting like a creep."
     --
     ->sobbing
-*Shove them to the ground
+*Shove them to the ground 
 ~addStrangeAmount(5)
 ->push
 *Look at what the being is holding.
@@ -32,7 +32,7 @@ They are holding a potion.
         ->OverWorld
 
 ==push
-The being provides no resistance, they hit the ground, You hear their skull crack open.
+The being provides no resistance, they hit the ground, You hear their skull crack open.  #m #2 #a #1 #pushedtofloor
     ~addAwareness(5)
     **Recoil in shock.
     ~addAwareness(5)
@@ -42,7 +42,7 @@ The being provides no resistance, they hit the ground, You hear their skull crac
     ->dead
 
 ==sobbing
-The being starts to sob quietly.
+The being starts to sob quietly. #m #2
 *I'm not moving until you say something.
 ~subStrangeAmount(5)
     The being doesn't react.
@@ -104,11 +104,11 @@ The being continues to stare.
 
 
 ==dead
-You stare at the body, it looks like they have a potion in their hand.
+You stare at the body, it looks like they have a potion in their hand. #m #3
     *Take it.
     As you reach down, you hear the beings last breath. 
       ~addAwareness(10)
-    ->OverWorld
+    ->OverWorld.hide
     *Don't you dare.
     ~addAwareness(10)
     You killed them, it was your fault. 
@@ -116,11 +116,11 @@ You stare at the body, it looks like they have a potion in their hand.
     ~addAwareness(5)
 
 ==leave2
-After all this time, you leave without saying a word.
+After all this time, you leave without saying a word. #h
 ~addAwareness(1)
 ->OverWorld
 
 ==leave1
-You walk past them. 
+You walk past them. //nothing
 ~subStrangeAmount(4)
 ->OverWorld

@@ -1,8 +1,8 @@
 ===TheLaw===
 ~Strange = "Photo ID"
-A giant, destroyed, structure lies in front of you. A guard is blocking entry. A corpse is left in front of the guard.
+A giant, destroyed, structure lies in front of you. A guard is blocking entry. A corpse is left in front of the guard. //establishing shot of the structure
     *Can I go inside?
     No.
         **Why not?
-        "This entrance was assigned to them" he points to the corpse.
+        "This entrance was assigned to them" he points to the corpse. //close up of the corpse
 ->OverWorld

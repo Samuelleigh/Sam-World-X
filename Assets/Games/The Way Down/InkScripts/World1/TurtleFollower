@@ -1,17 +1,23 @@
 ===Turtlefollower===
-In the distance, you see a tower, extending towards the sky.
-*Walk to it.
-You walk towards it, you notice it's odd shape.
-    **Look up.
-    The tower is so tall, it looks like it extends forever.
+~ Strange = "???"
+In the distance, you see a tower, extending towards the sky. #m #0
+//Shot of the turtle tower, you can barely make it out.
+*Look up.
+    The tower is so tall, it looks like it extends forever.#m #1
+    ~ addAwareness(10)
+    **Walk towards it
     ->almost
 *Ignore it.
-->almost
+->jab
 
 ==almost
-As the tower draws closer, you notice giant limbs jut out, some look like they're trying to swim.
+As the tower draws closer, you notice giant limbs jut out, some look like they're trying to swim. #m #2
     *Walk further.
-    Something jabs at your foot, you look to see a small being jab at your foot.
+     ~ addAwareness(10)
+    ->jab
+    
+==jab
+    Something jabs at your foot, you look to see a small being jab at your foot. #m #3
         **"What do you want?"
         "Are you going to talk to the final turtle?"
             ***The what?
@@ -23,16 +29,17 @@ As the tower draws closer, you notice giant limbs jut out, some look like they'r
             ***Yes
                 ->goodgood
         **Kick them aside
-        You lightly kick the being to the ground, they look unharmed. "Fine, be like that then"
+         ~ addKneecaps(1)
+        You lightly kick the being to the ground, they look unharmed. "Fine, be like that then" #m #4
             ***Continue walking.
             ->OverWorld
             
 ==goodgood
     Good Good, I talk so much with him, whenever I can, in between the times he tells me to do something of course.
             *"Will he ask me to do something?"
-            Depends, most of his followers give up on him eventually.
+            Depends, most of his followers give up on him eventually, so he might not bother anymore.
                             **"Doesn't sound like that good a leader."
-                            It is inevitable, we all live so long down here.
+                            It is inevitable for people to give, we all live so long down here.
                             ->GivehimThis.
                             **"Why haven't you?"
                             I don't know, I think I'm just more committed.
@@ -58,7 +65,7 @@ As the tower draws closer, you notice giant limbs jut out, some look like they'r
                     ******sure, whatever.
                     "that's the spirit...<>->Givehimthishurt
                     ******Why.
-                    I don't know, I just know that when I've seen people thinking, they tend to...off themselves, Eventually.
+                    I don't know, I just know that when I've seen people thinking, they tend to...die...Eventually.
                         *******I'll keep that in mind
                         ->Givehimthishurt
                         *******Why?
@@ -77,10 +84,10 @@ The being chuckles. "Everyone needs a hobby I guess, <>
 ->GivehimThis
 
 ==Givehimthishurt
-In any case, when you reach him, can you give him this"
-    *Take potion
+In any case, when you reach him, can you give him this" 
+    *Take potion #p #3
         "it's very important to me if you give this to him"
-        ***Didn't you hear that I was going to kill him.
+        **Didn't you hear that I was going to kill him.
             "I know, I know, but in case you change your mind."
             ->OverWorld
     

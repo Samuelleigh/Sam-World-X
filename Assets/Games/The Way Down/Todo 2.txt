@@ -18,21 +18,73 @@ CONTENT CREATION:
 		
 		- Stare DONE
 		- Rock Throw DONE
-		- Laughing 
-		- Turtle Follower
-		- Turtle
-		- Potions Person
-		- Builder
-		- The Law
-		- Trader
+		- Laughing DONE
+		- Turtle Follower DONE
+		- Turtle DONE
+		- Potions Person DONE
+		- Builder DONE
+		- The Law DONE
+		- Trader DONE
 
 	Visuals: 
 
-	- Add Visuals To all interactions.
+	- Fix Canvas and Font DONE
+	- Mark Places for new shots. DONE
+	- Create debug tool For fast editing DONE
+		- Fast load an encounter DONE
+		- One click swtich camera DONE
+	- Finish adding small changes to the visual system to make it work right DONE
 
-	Final Pass: 
+	// "M" tag changes the camera
+	// "h" hides the camera
+	// "a" signifies to change an animation, the next one is which animator, then it's what trigger to do.
 
-	- Change anything that doesn't seem right.
+		- Add Visuals To all interactions.
+
+		- Trader DONE
+		- Stare DONE
+		- Laughing DONE
+		- Turtle Follower DONE
+		- Potions Person DONE
+
+		Wednesday:
+
+		- Rock throw DONE
+		- The Law DONE (not doing)
+		- Builder DONE
+		- Turtle DONE
+
+		Thursday:
+
+
+
+		Friday:
+
+		- Do a 2nd writing pass for each encounter.
+		- Change anything that doesn't seem right.		
+		- Make music / Implement music
+		- Send to play testers
+		- Bug Test
+		- Create store assets
+			- itch.io
+			- newgrounds
+		- Create 
+			
+
+		Saturday:
+
+
+		Sunday:
+
+		- LOCK IN VISUALS
+
+		Promotional Stuff
+
+	
+
+		- Create 
+
+
 		
 PROMOTION: 
 

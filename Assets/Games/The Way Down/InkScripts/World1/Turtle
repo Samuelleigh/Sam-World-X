@@ -1,8 +1,6 @@
 ===Turtle===
 ~Strange = "Turtle"
-As you approach the tower, you notice that it is not made with stone, but of many turtles, stacked on top of each other.
--
-The turtle at the bottom of the stack is humming quietly to himself. They can't see you.
+As you approach the tower, you notice that it is not made with stone, but of many turtles, stacked on top of each other. The turtle at the bottom of the stack is humming quietly to himself. They can't see you. #m #0 
 *Approach the final turtle.
 ->approachT
 *Attempt to climb the tower.
@@ -11,7 +9,7 @@ The turtle at the bottom of the stack is humming quietly to himself. They can't 
 //IF START BY APPROACH==============================
 
 ==approachT
-"hello, nice to meet you...". The turtle is friendly, and has many scars across it's face.
+"hello, nice to meet you...". The turtle is friendly, and has many scars across it's face.  #m #1
 ~ addAwareness(1)
 *"Can I climb up the tower?"
     ->AskClimb
@@ -79,7 +77,7 @@ The turtle at the bottom of the stack is humming quietly to himself. They can't 
 
 
 ==climb
-From the back you start to grab onto the the turtles shell, you manage to climb up on its shell
+From the back you start to grab onto the the turtles shell, you manage to climb up on its shell #m #2
 *Make too much noise.
 *Don't make any noise.
 -
@@ -111,7 +109,7 @@ The turtle says "you know I can feel you on my skin right?"
 
 
 =ClimbTalk
-"hello, nice to meet you...". The turtle is friendly, and has many scars across it's face.
+"hello, nice to meet you...". The turtle is friendly, and has many scars across it's face. #m #1
     *...
     -
     "just so we start on the right foot, could I ask you why you wanted to..climb..us."
@@ -146,7 +144,7 @@ The turtle says "you know I can feel you on my skin right?"
 
 
 =ContinueToClimb
-You Continue to climb up the tower of turtles. Eventually you...
+You Continue to climb up the tower of turtles. Eventually you... #m #3
 *Reach the top.
 It takes forever, but you eventually reach the top. #END
 ->END
@@ -222,7 +220,7 @@ That's funny, considering that all they do is talk, and never listen.
     ->endconvisation
 
 ==endconvisation
-The turtle smiles, notices his smile, then frowns.
+The turtle smiles, notices his smile, then frowns. //change the shot to something really dissonant.
     *What's wrong?
     ~ addAwareness(4)
     "it's been lovely talking, but I think it's best that you go now"

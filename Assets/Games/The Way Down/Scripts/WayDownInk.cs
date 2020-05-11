@@ -101,7 +101,7 @@ public class WayDownInk : MonoBehaviour
 				wayDownLogic.ShowMedia(Convert.ToInt32(story.currentTags[i+1]));		
 			
 			}
-			if (story.currentTags[0] == "h")
+			if (story.currentTags.Contains("h"))
 			{
 				Debug.Log("Hide media");
 				wayDownLogic.HideMedia();
@@ -125,12 +125,21 @@ public class WayDownInk : MonoBehaviour
 
 				if (story.currentTags.Contains("a")) 
 			{
-				int tag = story.currentTags.IndexOf("a");
 
-				int animatorID = Convert.ToInt32(story.currentTags[tag + 1]);
-				string triggername = story.currentTags[tag + 2];
+				int animatorID = 0;
+				string triggername ="";
 
-				wayDownLogic.TriggerAnimation(animatorID, triggername, false);
+				for (int i= 0; i < story.currentTags.Count; i++) 
+				{
+					if (story.currentTags[i] == "a") 
+					{
+						animatorID = Convert.ToInt32(story.currentTags[i + 1]);
+						triggername = story.currentTags[i + 2];
+						wayDownLogic.TriggerAnimation(animatorID, triggername, false);
+					}
+				
+				
+				}
 			
 			}
 			if (story.currentTags.Contains("p4"))

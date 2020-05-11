@@ -1,15 +1,16 @@
 ===rockThrow===
 ~Strange = "Land"
-You come across a pile of bodies. 
+You come across a pile of bodies. #m #0
 *Inspect bodies
 ~addAwareness(10)
-You see that a lot of the bodies with various wounds. They all have a single rock lodged into their skulls.
+You see that a lot of the bodies with various wounds. They all have a single rock lodged into their skulls. #m #1
     **Look Deeper.
     ~addAwareness(10)
-    You notice that some of them are looking at you. 
+    You notice that some of them are looking at you. #m #2
         ***Deeper
          ~addAwareness(100)
-        They look like they don't recognize you.
+        They look like they don't recognize you. #m #3 
+        //A look at how they look at you
         ****...
         ->Getback
     **Recoil
@@ -17,12 +18,12 @@ You see that a lot of the bodies with various wounds. They all have a single roc
     ->Getback
 *Run Away
   ~addAwareness(1)
-    You turn and run. 
-    ->OverWorld
+    You turn and run. #h
+    ->OverWorld.hide
 
 
 ==Getback
-"GET BACK RIGHT NOW!" The rock in the beings hand is sharp.
+"GET BACK RIGHT NOW!" The rock in the beings hand is sharp. #m #4 #a #1 #threatthrow
 *"No"
 ->ontheheap
 *"Right away".
@@ -32,7 +33,7 @@ You step back a fair distance. The being looks surprised. "DON'T MOVE!"
     ->convo
     **Run away
     ~subBody(100)
-    You turn and run. You feel an impact in your back, it hurts but doesn't slow you down.
+    You turn and run. You feel an impact in your back, it hurts but doesn't slow you down. #h
     ->OverWorld
 
 ==convo
@@ -48,10 +49,11 @@ You step back a fair distance. The being looks surprised. "DON'T MOVE!"
 ==convo2
 "This is my land, and you're not allowed in" 
     *...
-    "You see this line, this is my land's border, if you cross it I'll kill you"
+    "You see this line, this is my land's border, if you cross it I'll kill you" #m #5
+    //Focus on the line, next choice go back to rock guy
         **...
         ~subStrangeAmount(5)
-        "So I recommend you turn 90 degrees, and start walking"
+        "So I recommend you turn 90 degrees, and start walking" #m # 4
             ***Do as he says.
                  ~subStrangeAmount(5)
             ->MovingOn
@@ -82,38 +84,39 @@ You step back a fair distance. The being looks surprised. "DON'T MOVE!"
                 ->ontheheap
     
 ==MovingOn
-As you walk, the being stays in place, they shout "Don't stop until you find the end"
+As you walk, the being stays in place, they shout "Don't stop until you find the end" #h
     *Do as they say.
       ~subStrangeAmount(5)
-    You do as they say...for a long time...but then you get bored
+    You do as they say...for a long time...but then you get bored //nothign
         **Defy them.
           ~addStrangeAmount(1000)
-        You take a step across the line, nothing happens. You continue on as normal.
+        You take a step across the line, nothing happens. You continue on as normal. #h
         ->OverWorld
         **Better not, just in case.
           ~subStrangeAmount(5)
         ->betternotriskit
 
 ==betternotriskit
-You walk for a long time.
+You walk for a long time. #h
 ~ subStrangeAmount(-10)
 *Defy them
 ~addStrangeAmount(1000)
- You take a step across the line, the being is too far away ,nothing happens. You continue on as normal.
+ You take a step across the line, the being is too far away ,nothing happens. You continue on as normal.#h
 ->OverWorld
 *Still too risky
  ~subStrangeAmount(5)
 ->betternotriskit
-
+#m #7
 ==ontheheap
 ~ subBody(5000)
 ~ subStrangeAmount(1500)
+#h
 *ou89-85
 *Jnakwkjl
 *ael;gaihna
 *regsfe
 -
-Everything is gone, you don't understand. 
+Everything is gone, you don't understand. #m #5
 *Never get up again.
      ~subStrangeAmount(10000)
 It is a shame. #END
@@ -121,7 +124,7 @@ It is a shame. #END
 *Wait for help.
 ~ addStrangeAmount(50)
 ~ addBody(4950)
-Eventually, a being removes the rock from your skull, and feeds you a potion.
+Eventually, a being removes the rock from your skull, and feeds you a potion. #h
     **...
     The being apologises for hurting you, all that time ago.
         ***Accept Apology.

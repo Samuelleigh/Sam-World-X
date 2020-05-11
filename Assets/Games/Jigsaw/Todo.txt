@@ -1,0 +1,181 @@
+
+Todo List:
+
+2 - 3 may:
+
+Jigsaws:
+
+- Randomizing the pieces DONE
+- Checking if every piece is in the right space DONE
+- Have scenes with multiple cameras DONE
+- Having multiple grid sizes
+- Multiple pages
+- make it so Pieces don't start in grid.
+- 
+
+Game Flow:
+
+- Basic level select DONE
+- Actual Gameplay Flow DONE
+- back button DONE
+- win state graphics
+
+Menu: 
+
+- Back 
+
+Social:
+
+- Make a gif and tweet
+
+4th May:
+
+- Stream working on discord
+- Have diffrent grid sizes (3x3, 4x4, 3x4, 5x5) DONE
+	-Resizing each piece DONE
+	-making diffrent piece ratios work DONE
+- intial sound effect logic
+
+5th may:
+
+-Resizing the camera rendered at. 
+-Randomly move pieces around a little at the start
+-Sound effects randomization
+	- find effects for picking it up
+	- find effects for putting it down
+	- find effects for snapping it in place
+- 
+- Info screen for each level
+- 4 Vidoes for social meida
+- 
+
+
+6th May:
+
+- Make 3 Videos for twitter DONE
+	- Spinny Logo DONE
+	- 3D logo DONE
+
+
+7th May:
+
+- Add puzzle shifting mechanic
+	-Make the base number id shift IN PROGRESS
+	-Make the results of the shift work. DONE
+	-Make it so that the 0,0 tile is in the correct place in order to win DONE 
+	-Turn the shift options on and off in jigsaw level class DONE
+	- Make the griadent thin slice puzzle and film for twitter DONE
+
+8th May: 
+
+	- Content Content Content
+	- Enable/Disable shift in level. DONE
+	- Fix non equal ratio puzzles DONE
+	- Randomly move tiles around a bit at start
+
+	- randomly move tiles around a bit at start DONE
+	- Edit videos for twitter DONE
+
+9th May: 
+
+	- 
+
+11th May:
+	
+	- Multiple puzzles in the same level DONE
+	- Video Levels DONE
+
+12th May:
+
+	- Dancing Levels
+	- More info on levels
+	- Levels stored in scriptable objects
+
+13th May: 
+
+
+
+14th May:
+
+	- Play around with shaders
+	- 
+
+15th May:
+
+16th May: 
+
+	- Screen Shot Saturday
+
+18th May: 
+
+	- Release the game
+		- itch.io 
+		- Newgrounds
+
+Video Topics:
+
+p1:
+
+	- Spiny Logo X
+	- 3D spinny Logo (3, 4 by 4 puzzles, same scene by diffrent ) X
+	- Thin pieces
+	- 1 piece jigsaw 
+	- 100 piece jigsaw
+
+p2:
+	- Dancing Person
+	- Unity video
+		- The sky
+		- Me solving a jigsaw puzzle
+		- My dog
+
+p3:
+
+	- Multiple puzzles in the same level
+	- TV static
+	- Enjoy
+
+Intial Release:
+
+	- 100 jigsaw puzzles
+		- 10 worlds (in no particular order)
+			- Spin me right round
+			- Fun with shaders
+			- Video
+			- Super easy
+			- Interactive
+			- 
+
+	- Info on each
+
+
+	- Basic Save Load Feature DONE
+
+	- Quick move tool bar
+		- move all tiles left
+		- move all tiels right
+		- move all tiles up
+		- move all tiles down
+		- Preview goal button (hold down to show result)
+
+	- multi tile select
+	- Randomly move pieces at the start
+
+Big Release Features: (3$)
+
+	- Reworked UI
+		- Hide some pieces
+		- Piece s
+	- Puzzle info on menu 
+	- Diffrent game mode
+		- One by One
+		- Hardcore mode
+		- Time limit
+		- Time 
+		- Health system
+		- Speed run mode
+	- 200 Total Puzzles
+	- Level filter system
+		- By author intent
+		- by Type
+		- By Type

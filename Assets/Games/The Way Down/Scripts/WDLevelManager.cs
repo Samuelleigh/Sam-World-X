@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class WDLevelManager : MonoBehaviour
 {
+    public bool debug = false;
+    public string debugEvent;
 
     public List<WDLevel> Levels;
     public WDLevel deathlevel;
@@ -17,24 +19,25 @@ public class WDLevelManager : MonoBehaviour
     private void Awake()
     {
 
-        for (int i = 0; i < Levels.Count; i++) 
+
+        for (int i = 0; i < Levels.Count; i++)
         {
 
 
-            if (Levels[i].EventName == "Group1") 
+            if (Levels[i].EventName == "Group1")
             {
                 int r = Random.Range(0, Group1Levels.Count);
                 Levels[i] = Group1Levels[r];
                 Group1Levels.RemoveAt(r);
-                       
+
             }
 
             if (Levels[i].EventName == "Group2")
             {
 
                 int r = Random.Range(0, Group2Levels.Count);
-                Levels[i] = Group1Levels[r];
-                Group1Levels.RemoveAt(r);
+                Levels[i] = Group2Levels[r];
+                Group2Levels.RemoveAt(r);
 
 
             }
@@ -44,8 +47,8 @@ public class WDLevelManager : MonoBehaviour
             {
 
                 int r = Random.Range(0, Group3Levels.Count);
-                Levels[i] = Group1Levels[r];
-                Group1Levels.RemoveAt(r);
+                Levels[i] = Group3Levels[r];
+                Group3Levels.RemoveAt(r);
 
 
             }
@@ -55,7 +58,23 @@ public class WDLevelManager : MonoBehaviour
 
         }
 
+        if (debug == true)
+        {
+
+
+            for (int i = 0; i < Levels.Count; i++)
+            {
+
+                if (Levels[i].EventName == debugEvent)
+                {
+
+                    Levels[0] = Levels[i];
+                }
+
+            }
+
+
+        }
 
     }
-
 }
