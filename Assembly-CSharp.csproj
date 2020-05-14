@@ -103,6 +103,7 @@
     <Compile Include="Assets\Games\Jigsaw\Scripts\JigsawMenu.cs" />
     <Compile Include="Assets\Games\Jigsaw\Scripts\JigsawPieceDrag.cs" />
     <Compile Include="Assets\Games\Jigsaw\Scripts\JigsawPieceScript.cs" />
+    <Compile Include="Assets\Games\Jigsaw\Scripts\JigsawScriptObject.cs" />
     <Compile Include="Assets\Games\Jigsaw\Scripts\PuzzleEnviromentStuff.cs" />
     <Compile Include="Assets\Games\Jigsaw\Scripts\SnapPiece.cs" />
     <Compile Include="Assets\Games\Knock Knock\Scripts\Character.cs" />
@@ -145,6 +146,7 @@
     <None Include="Assets\Doodle Studio 95\Assets\Shaders\DrawPreview.shader" />
     <None Include="Assets\Shared\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
     <None Include="Assets\Games\The Way Down\Todo.txt" />
+    <None Include="Assets\Games\Jigsaw\Level Idea Bucket.txt" />
     <None Include="Assets\Games\SamLeigh.xyz\First Person Drifter Controller\info.txt" />
     <None Include="Assets\Doodle Studio 95\Assets\Shaders\Standard-DoubleSided.shader" />
     <None Include="Assets\Shared\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />

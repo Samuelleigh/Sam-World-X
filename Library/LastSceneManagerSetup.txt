@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Games/Jigsaw/JigsawMain.unity
+- path: Assets/Games/Jigsaw/JigSawMenu.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

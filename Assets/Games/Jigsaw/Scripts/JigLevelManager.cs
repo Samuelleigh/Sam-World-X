@@ -7,6 +7,7 @@ public class JigLevelManager : MonoBehaviour
     public int debugID;
     public bool debug = true;
     public int playID;
+    public int altID = 0;
 
     public List<JigsawLevel> Jigsaws;
     public JigsawLevel DebugLevel;

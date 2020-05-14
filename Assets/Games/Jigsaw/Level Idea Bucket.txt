@@ -1,0 +1,123 @@
+
+Level Idea Bucket:
+
+(levels are split into mechanical requirements (except ))
+
+Tutorials:
+
+	* tutorial where you only have to move 2 pieces together to reveal the text
+
+2D: 
+
+	* Flat logo spinning
+	* A gradient that rotates 
+	* A dvd screen saver menu
+	* A spiral 
+	* Use your webcam
+	* A checkerboard
+	* A completely tan gradient 
+	* An big letter that changes to each letter of the alphabet
+	* A series of thin lines going downwards
+	* Red lines being drawn across the screen randomly, eventually it’s impossible to tell which piece goes where
+
+
+3D: (Done)
+
+	* 3D boxes that are rotating in place, we see them from different angles
+	* A dancing man (default make human + mixamo)
+	* A series of models that are rotating around
+	* Duck rotation
+	* An environment in a reflection sphere	
+	* Just shadows on the ground
+	* Camera being moved around
+
+
+Videos: (Done)
+
+	* Also see if I can get a video of that guy drinking water
+    * Also film me solving a jigsaw puzzle
+    * Me or a couple people just staring into webcam
+    * My dog
+    * Rotating video of Ashe (multiple pictures)
+    * A fire place
+    * First person skiing
+    * Tv static
+    * Grass moving in the wind
+    * A washing machine
+    * Ocean waves
+    * Public domain black and white video
+    * An egg being fried
+	* Painting a Jackson pollock
+	* Someone coloring in a bunch of squares
+	* Zoom meeting 
+	* A video of the sky
+	* A video of some clouds
+	* A video of some running water
+
+
+
+Video with pause:
+
+	* A single circle jumping instantly around the screen, has to figure out where the circle meets up.
+
+
+Ultra Simple: (DONE)
+
+	* 
+
+
+
+Animations: (Quick)
+
+	* Planet Earth Rotating
+	* Cube Rotating
+	* A grid of cubes spining in place
+
+
+
+Unwinnable: (Easy)
+
+	*
+
+
+Text: (Easy)
+
+	* A conversation being played out in real time, about how they are trapped in a jigsaw puzzle
+
+Randomization: (Easy)
+
+	*
+
+Shaders: (Mid)
+
+	* A 3D model, but with a shader that only outlines the edges
+
+Interaction: (Mid)
+
+	* A giant eyeball that looks at your cursor 
+	* A first person environment that you 
+	* Snake game
+	* VVVVV
+
+System: (Mid)
+
+	* * An analog clock
+	* A timer that shows the system time
+
+
+Rotating Pieces: (difficult)
+
+	* 
+
+MapBox: (Difficult)
+
+
+Misc:
+
+* A completely blank puzzle, no matter what you put down, the game tells you you got it right
+* A puzzle that tests if your color blind
+* A heartbeat monitor, the more pieces you put down, the more intense it gets until it flatlines
+
+BIN: 
+
+

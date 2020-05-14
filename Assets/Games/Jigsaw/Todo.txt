@@ -30,7 +30,7 @@ Social:
 
 4th May:
 
-- Stream working on discord
+- Stream working on discord DONE
 - Have diffrent grid sizes (3x3, 4x4, 3x4, 5x5) DONE
 	-Resizing each piece DONE
 	-making diffrent piece ratios work DONE
@@ -87,18 +87,25 @@ Social:
 
 12th May:
 
-	- Dancing Levels
-	- More info on levels
-	- Levels stored in scriptable objects
+	- Fix bug where jigsawe puzzles will disappear. DONE
+	- Levels stored in scriptable objects. DONE
+	- BrainStorm Content. DONE
+	- More info on levels. DONE
+	- Add alt level system DONE
 
 13th May: 
 
-
+	- Allow snap grid to be put in the center DONE
+	- Sort ideas from easiest to hardest.
+		-Make scedual for level mechaincs
+	- Dancing Levels.
+	- CONTENT CONTENT CONTENT
+	- Exit game
+	- 
 
 14th May:
 
-	- Play around with shaders
-	- 
+	- Play around with shaders.
 
 15th May:
 

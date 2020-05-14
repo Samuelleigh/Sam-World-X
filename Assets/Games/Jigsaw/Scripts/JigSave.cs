@@ -7,7 +7,7 @@ using UnityEngine;
 public static class JigSave
 {
 
-    public static void SavePlayer(List<JigsawLevel> jig) 
+    public static void SavePlayer(List<bool> jig) 
     {
 
         BinaryFormatter formatter = new BinaryFormatter();
@@ -18,7 +18,7 @@ public static class JigSave
         stream.Close();
     }
 
-    public static List<JigsawLevel> LoadPlayer() 
+    public static List<bool> LoadPlayer() 
     {
     
     string path = Application.persistentDataPath + "/player.jigs";
@@ -27,7 +27,7 @@ public static class JigSave
             BinaryFormatter formatter = new BinaryFormatter();
             FileStream stream = new FileStream(path, FileMode.Open);
 
-            List<JigsawLevel> jigs = formatter.Deserialize(stream) as List<JigsawLevel>;
+            List<bool> jigs = formatter.Deserialize(stream) as List<bool>;
             stream.Close();
 
             return jigs;
