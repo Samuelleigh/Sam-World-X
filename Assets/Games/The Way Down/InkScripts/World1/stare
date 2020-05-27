@@ -10,7 +10,7 @@ In the distance a being is still. They are looking towards you, but not on purpo
 ==approach
 You stand in front of them, They don't react. You can hear them breathing.  #m #1 #a #1 #idle
 ~addAwareness(3)
-*Ask them what's wrong.
+*Ask what's wrong.
 They don't respond, their breathing quickens.
     **"I know you can hear me."
     ~addAwareness(5)
@@ -18,7 +18,7 @@ They don't respond, their breathing quickens.
     **"Stop acting like a creep."
     --
     ->sobbing
-*Shove them to the ground 
+*Shove the being to the ground.
 ~addStrangeAmount(5)
 ->push
 *Look at what the being is holding.
@@ -89,13 +89,13 @@ The being starts to sob quietly. #m #2
                 ->leave2
             ****Leave.
             ~addStrangeAmount(1)
-            You conclude that this being is worth any more of your time.
+            You conclude that this being isn't worth any more of your time.
             ->OverWorld
         ***Leave.
         ~addStrangeAmount(1)
-        You conclude that this being is worth any more of your time.
+        You conclude that this being isn't worth any more of your time.
         ->OverWorld
-    **Push the being
+    **Push the being.
     ~addStrangeAmount(10)
     ->push
 *"I'm leaving, have a nice life."

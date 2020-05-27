@@ -9,7 +9,7 @@ using UnityEngine.SceneManagement;
 public class JigsawLevel
 {
     public string name;
-    public List<JigsawScriptObject> jigsawLevelInfo;
+    public JigLevelScriptObject jigsawLevelInfo;
     public bool completed = false;
 
 }

@@ -1,6 +1,6 @@
 ===rockThrow===
 ~Strange = "Land"
-You come across a pile of bodies. #m #0
+You find a pile of bodies. #m #0
 *Inspect bodies
 ~addAwareness(10)
 You see that a lot of the bodies with various wounds. They all have a single rock lodged into their skulls. #m #1

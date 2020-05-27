@@ -144,6 +144,7 @@ public class WayDownInk : MonoBehaviour
 			}
 			if (story.currentTags.Contains("p4"))
 			{
+				Debug.Log("create 4 potions");
 
 				wayDownLogic.CreatePotionButton(1);
 				wayDownLogic.CreatePotionButton(2);

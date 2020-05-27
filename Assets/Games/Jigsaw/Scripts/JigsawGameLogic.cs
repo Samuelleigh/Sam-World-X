@@ -48,6 +48,10 @@ public class JigsawGameLogic : MonoBehaviour
     private int puzzlessolved = 0;
     private List<int> solvedpuzzles = new List<int>();
 
+    private int lastSolvedPuzzle;
+
+    public GameObject ComfirmClear;
+
     private void Awake()
     {
         levels = FindObjectOfType<JigLevelManager>();
@@ -57,7 +61,7 @@ public class JigsawGameLogic : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Level = levels.Jigsaws[levels.playID].jigsawLevelInfo[levels.altID];
+        Level = levels.Jigsaws[levels.playID].jigsawLevelInfo.JigLevels[levels.altID];
         solvedAmountText.text = puzzlessolved + "/" + Level.numberOfpuzzles;
 
 
@@ -216,7 +220,7 @@ public class JigsawGameLogic : MonoBehaviour
 
             xbleep = Random.Range(-50, 50);
             ybleep = Random.Range(-50, 50);
-            yoffset = 700 * (Mathf.FloorToInt(i / (Level.Xpieces * Level.Ypieces)));
+            yoffset = 600 * (Mathf.FloorToInt(i / (Level.Xpieces * Level.Ypieces)));
             add = new Vector3(xbleep, ybleep + yoffset, 0);
 
            // Debug.Log(yoffset);
@@ -259,6 +263,7 @@ public class JigsawGameLogic : MonoBehaviour
         for (int i = 0; i < Level.numberOfpuzzles; i++)
         {
             puzzleCam[i].transform.SetPositionAndRotation(p.Cameras[Level.cameraID[i]].transform.position, p.Cameras[Level.cameraID[i]].transform.rotation);
+            puzzleCam[i].transform.parent = p.Cameras[Level.cameraID[i]].transform;
         }
     }
 
@@ -283,12 +288,8 @@ public class JigsawGameLogic : MonoBehaviour
                 }
                 else
                 {
-                    for (int i = 0; i < (Level.Xpieces * Level.Ypieces); i++)
-                    {
-
-                        PuzzlePieces[i + (Level.Xpieces * Level.Ypieces) * puzzleWon].transform.parent = null;
-                        PuzzlePieces[i + (Level.Xpieces * Level.Ypieces) * puzzleWon].SetActive(false);
-                    }
+                    lastSolvedPuzzle = puzzleWon;
+                    ComfirmClear.SetActive(true);
                 }
             }
         }
@@ -420,6 +421,20 @@ public class JigsawGameLogic : MonoBehaviour
             CheckWin(i);
         }
         
+    }
+
+    public void RemoveCompletedPieces() 
+    {
+
+        for (int i = 0; i < (Level.Xpieces * Level.Ypieces); i++)
+        {
+
+            PuzzlePieces[i + (Level.Xpieces * Level.Ypieces) * lastSolvedPuzzle].transform.parent = null;
+            PuzzlePieces[i + (Level.Xpieces * Level.Ypieces) * lastSolvedPuzzle].SetActive(false);
+        }
+
+        ComfirmClear.SetActive(false);
+
     }
 
     public void ClearBoard() 

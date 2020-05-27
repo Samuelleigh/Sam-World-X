@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5485bfd46d4ed24492767cd900b16df, type: 3}
+  m_Name: Gus
+  m_EditorClassIdentifier: 
+  Name: Gus
+  JigLevels:
+  - {fileID: 11400000, guid: 4030c069ad5540e429051de0fb81797a, type: 2}
+  - {fileID: 11400000, guid: b94271a40a968af44a3fc67dcf4da4a6, type: 2}
+  - {fileID: 11400000, guid: 5d02b48cedfff7b44980471efbd3e88f, type: 2}
+  - {fileID: 11400000, guid: 7b86eb0bdb5ca3947beec77e03310bd3, type: 2}
+  Notes: 

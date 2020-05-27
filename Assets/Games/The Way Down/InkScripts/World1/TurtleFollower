@@ -5,7 +5,7 @@ In the distance, you see a tower, extending towards the sky. #m #0
 *Look up.
     The tower is so tall, it looks like it extends forever.#m #1
     ~ addAwareness(10)
-    **Walk towards it
+    **Walk towards it.
     ->almost
 *Ignore it.
 ->jab
@@ -17,7 +17,7 @@ As the tower draws closer, you notice giant limbs jut out, some look like they'r
     ->jab
     
 ==jab
-    Something jabs at your foot, you look to see a small being jab at your foot. #m #3
+    Something jabs at your foot, you look to see a small being. #m #3
         **"What do you want?"
         "Are you going to talk to the final turtle?"
             ***The what?
@@ -26,9 +26,9 @@ As the tower draws closer, you notice giant limbs jut out, some look like they'r
                     ->goodgood
                 ****No, But I will see him.
                 ->godowhat
-            ***Yes
+            ***Yes.
                 ->goodgood
-        **Kick them aside
+        **Kick them aside.
          ~ addKneecaps(1)
         You lightly kick the being to the ground, they look unharmed. "Fine, be like that then" #m #4
             ***Continue walking.
@@ -49,14 +49,14 @@ As the tower draws closer, you notice giant limbs jut out, some look like they'r
 "Then what are you going to do"
 *I'm going to kill him.
 "Why?"
-    **"He's an asshole"
-    The being looks visibly hurt, "Everyone is entitled to their opinions"
+    **"He's an asshole".
+    The being looks visibly hurt. "Everyone is entitled to their opinions".
         ->GivehimThis.
     **I want to see what happens when he dies.
     Well, not to be a buzzkill, but I already know what happens.
         ***What?
         "Well, then the next one falls on top of it.
-            ****Then I'll kill that one
+            ****Then I'll kill that one.
             "Won't you get bored?"
                 *****"No."
                 Good for you. ->GivehimThis.
@@ -70,31 +70,31 @@ As the tower draws closer, you notice giant limbs jut out, some look like they'r
                         ->Givehimthishurt
                         *******Why?
                         The being looks around nervously. They change the subject ->Givehimthishurt
-            ****Ok, well I don't care about that one.
+            ****So? I only care about the current one.
                 "right...-<>->Givehimthishurt 
         ***Don't spoil it.
         "ok...as you wish...<>->Givehimthishurt 
-    **It's about time
+    **It's about time.
     "hmmm, perhaps in a sense <> ->Givehimthishurt
-*I'm going to listen
+*I'm going to listen.
 "hmmm, interesting, I should try that next time I reach him.<> ->GivehimThis.
 
-*"I'm going to climb him"
+*"I'm going to climb him, and then the entire tower."
 The being chuckles. "Everyone needs a hobby I guess, <>
 ->GivehimThis
 
 ==Givehimthishurt
-In any case, when you reach him, can you give him this" 
-    *Take potion #p #3
-        "it's very important to me if you give this to him"
+In any case, when you reach him, can you give him this?" 
+    *Take potion. #p #3
+        "It's very important to me if you give this to him"
         **Didn't you hear that I was going to kill him.
             "I know, I know, but in case you change your mind."
             ->OverWorld
     
 
 ==GivehimThis
-"In any case, when you reach him, can you give him this"
-    *Take potion
+"In any case, when you reach him, can you give him this?"
+    *Take potion.
         "it's very important"
         **"Why can't you do it yourself?"
         I'm so much smaller than you, It'll probably take forever for me to reach him.

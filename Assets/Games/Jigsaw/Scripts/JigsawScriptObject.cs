@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-[CreateAssetMenu(fileName = "New Level",menuName = "Jigsaw Level")]
+[CreateAssetMenu(fileName = "New Level",menuName = "Jigsaw")]
 [System.Serializable]
 public class JigsawScriptObject : ScriptableObject
 {
@@ -19,4 +19,6 @@ public class JigsawScriptObject : ScriptableObject
     public int difficulty;
     public bool centerAligned = false;
 
+    [TextArea]
+    public string Notes;
 }

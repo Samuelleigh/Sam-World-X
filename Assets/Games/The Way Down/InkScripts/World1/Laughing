@@ -3,7 +3,7 @@
 //a1 is standing guy
 //a2 is sitting guy
 
-Two Beings are chatting to each other, they look like they've been laughing. #m #0 #a #1 #laughing #a #2 #sitlaugh
+Two Beings are laughing with each other. #m #0 #a #1 #laughing #a #2 #sitlaugh
 *"Hello friends"
 ->Friends
 *"What's so funny?"
@@ -12,11 +12,11 @@ Two Beings are chatting to each other, they look like they've been laughing. #m 
 ->Tradelaugh
 
 ==Friends
-One of the beings turns towards you "Hi friend, how has your day been so far?" #a #1 #idle #a #2 #sit
+One of the  beings turns towards you. "Hi friend, how has your day been so far?" #a #1 #idle #a #2 #sit
     *"Pretty good"
     "oh, it's pretty good is it?"
         **"yes"
-        "same, yes, same. It has been pretty good. Yes" the other being's mouth is twitching. 
+        "Same, yes, same. It has been pretty good. Yes" the other being's mouth is twitching. 
         **"That's what I said"
         ~subStrangeAmount(10)
         The being turns to his friend "ooo that's what he said, yes, he's being having a good day is what he said" #a #1 #laughing
@@ -24,12 +24,13 @@ One of the beings turns towards you "Hi friend, how has your day been so far?" #
         ->yours
     *"Awful"
     "oh, poor baby, bad day?"
-        **"uhhh,yeah. That's what I said."
+        **"ummm. That's what I said."
         ~subStrangeAmount(10)
         "I know"
         ->yours
-        **"Thanks for your concern."
-        "no worry" ~subStrangeAmount(10)
+        **"Thank you for your concern"
+        "no worry"
+        ~subStrangeAmount(10)
         ->yours
     *"Average"
     "no, no no, you had a good day, you had a good day"
@@ -47,14 +48,14 @@ One of the beings turns towards you "Hi friend, how has your day been so far?" #
                 ->Tradelaugh
             ***What are you doing?
             ~subStrangeAmount(10)
-            "me, what I'm doing?" the other being looks like they're going to burst into laughter.
-                ****"yes, what are you doing!"
+            "Me. What I'm doing?" the other being looks like they're going to burst into laughter.
+                ****"Yes, what are you doing!"
                 ****"Are you deaf?"
                 ~subStrangeAmount(10)
                 ----
-                I'm being a little jitter blaster, reach into my pocket. There is a tounge in there."...The other being can barely contain themselves. #a #1 #chickendance #a #2 #sitlaugh
+                I'm being a little jitter blaster, reach into my pocket. There is a tounge in there." #a #1 #chickendance #a #2 #sitlaugh
                     *****Walk Away.
-                    You walk away. //nothing
+                    You walk away, you hear roaring laughter behind you //nothing
                     ->OverWorld
                     *****Say Something. 
                     but what. 

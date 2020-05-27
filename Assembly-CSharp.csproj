@@ -75,6 +75,8 @@
     <Compile Include="Assets\Doodle Studio 95\Examples\Scripts\WalkingCharacter.cs" />
     <Compile Include="Assets\FirstPersonClicking.cs" />
     <Compile Include="Assets\Games\Conversation With A Rock\Scripts\RockConversation.cs" />
+    <Compile Include="Assets\Games\Dead Guy\DeadGuy.cs" />
+    <Compile Include="Assets\Games\Dead Guy\DeadGuyText_D.cs" />
     <Compile Include="Assets\Games\Drawing Game\DrawingGameLogic.cs" />
     <Compile Include="Assets\Games\Drawing Game\DrawingLevel.cs" />
     <Compile Include="Assets\Games\Drawing Game\DrawingLevelManager.cs" />
@@ -96,7 +98,9 @@
     <Compile Include="Assets\Games\Guessing Game\Scripts\TrackerFrame.cs" />
     <Compile Include="Assets\Games\Guessing Game\Scripts\VarWindowScript.cs" />
     <Compile Include="Assets\Games\Guessing Game\Scripts\WorldSelect.cs" />
+    <Compile Include="Assets\Games\Jigsaw\Scripts\AnimationStart.cs" />
     <Compile Include="Assets\Games\Jigsaw\Scripts\JigLevelManager.cs" />
+    <Compile Include="Assets\Games\Jigsaw\Scripts\JigLevelScriptObject.cs" />
     <Compile Include="Assets\Games\Jigsaw\Scripts\JigSave.cs" />
     <Compile Include="Assets\Games\Jigsaw\Scripts\JigsawGameLogic.cs" />
     <Compile Include="Assets\Games\Jigsaw\Scripts\JigsawLevel.cs" />
@@ -145,6 +149,7 @@
     <None Include="Assets\Shared\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
     <None Include="Assets\Doodle Studio 95\Assets\Shaders\DrawPreview.shader" />
     <None Include="Assets\Shared\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
+    <None Include="Assets\Games\The Way Down\Todo 3.txt" />
     <None Include="Assets\Games\The Way Down\Todo.txt" />
     <None Include="Assets\Games\Jigsaw\Level Idea Bucket.txt" />
     <None Include="Assets\Games\SamLeigh.xyz\First Person Drifter Controller\info.txt" />

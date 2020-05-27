@@ -62,7 +62,7 @@ public class JigsawMenu : MonoBehaviour
 
 
         int total = 0;
-        int majorlevels = 0;
+        int majorlevels = 1;
         int altnums = 0;
         string[] letters = new string[] {"","a","b","c","d", "e", "f", "g", "h", "i", "j" };
 
@@ -74,7 +74,7 @@ public class JigsawMenu : MonoBehaviour
 
             but = Instantiate(Button, contentView.transform);
 
-            but.GetComponentInChildren<TextMeshProUGUI>().text = (majorlevels) + letters[altnums] + ". " + manager.Jigsaws[i].name;
+            but.GetComponentInChildren<TextMeshProUGUI>().text = (majorlevels) + letters[altnums] + ". " + manager.Jigsaws[i].jigsawLevelInfo.Name;
             but.GetComponent<Button>().onClick.AddListener(() => Changelevel(ID,0,but));
             but.transform.SetAsLastSibling();
             buts.Add(but);
@@ -99,22 +99,22 @@ public class JigsawMenu : MonoBehaviour
 
       //  Debug.Log(jigsawID);
         loadID = jigsawID;
-        
+
         //populate the info panel data
-        InfoText[0].text = "Width: " + manager.Jigsaws[jigsawID].jigsawLevelInfo[altID].Xpieces.ToString();
-        InfoText[1].text = "Height " + manager.Jigsaws[jigsawID].jigsawLevelInfo[altID].Ypieces.ToString();
-        InfoText[2].text = "Number of puzzles:  " + manager.Jigsaws[jigsawID].jigsawLevelInfo[altID].numberOfpuzzles.ToString();
-        InfoText[3].text = "Style: " + manager.Jigsaws[jigsawID].jigsawLevelInfo[altID].style;
-        InfoText[4].text = "Difficulty: " + manager.Jigsaws[jigsawID].jigsawLevelInfo[altID].difficulty.ToString();
+        InfoText[0].text = "Width: " + manager.Jigsaws[jigsawID].jigsawLevelInfo.JigLevels[altID].Xpieces.ToString();
+        InfoText[1].text = "Height " + manager.Jigsaws[jigsawID].jigsawLevelInfo.JigLevels[altID].Ypieces.ToString();
+        InfoText[2].text = "Number of puzzles:  " + manager.Jigsaws[jigsawID].jigsawLevelInfo.JigLevels[altID].numberOfpuzzles.ToString();
+     //   InfoText[3].text = "Style: " + manager.Jigsaws[jigsawID].jigsawLevelInfo.JigLevels[altID].style;
+      //  InfoText[4].text = "Difficulty: " + manager.Jigsaws[jigsawID].jigsawLevelInfo.JigLevels[altID].difficulty.ToString();
 
 
         //Remove alts 
         for (int i = 0; i < altButtons.Count; i++) 
         {
 
-            int numberofbeing = altButtons.Count - manager.Jigsaws[jigsawID].jigsawLevelInfo.Count;
+            int numberofbeing = altButtons.Count - manager.Jigsaws[jigsawID].jigsawLevelInfo.JigLevels.Count;
 
-            if (i < manager.Jigsaws[jigsawID].jigsawLevelInfo.Count)
+            if (i < manager.Jigsaws[jigsawID].jigsawLevelInfo.JigLevels.Count)
             { altButtons[i].SetActive(true);}
             else 
             {
@@ -147,11 +147,15 @@ public class JigsawMenu : MonoBehaviour
 
     public void ChangeAlt(int altID) 
     {
-        InfoText[0].text = "Width: " + manager.Jigsaws[loadID].jigsawLevelInfo[altID].Xpieces.ToString();
-        InfoText[1].text = "Height " + manager.Jigsaws[loadID].jigsawLevelInfo[altID].Ypieces.ToString();
-        InfoText[2].text = "Number of puzzles:  " + manager.Jigsaws[loadID].jigsawLevelInfo[altID].numberOfpuzzles.ToString();
-        InfoText[3].text = "Style: " + manager.Jigsaws[loadID].jigsawLevelInfo[altID].style;
-        InfoText[4].text = "Difficulty: " + manager.Jigsaws[loadID].jigsawLevelInfo[altID].difficulty.ToString();
+
+
+
+        altLoadID = altID;
+        InfoText[0].text = manager.Jigsaws[loadID].jigsawLevelInfo.JigLevels[altID].name;
+        InfoText[1].text = "Width: " + manager.Jigsaws[loadID].jigsawLevelInfo.JigLevels[altID].Xpieces.ToString() + " " + "Height: " + manager.Jigsaws[loadID].jigsawLevelInfo.JigLevels[altID].Ypieces.ToString();
+        InfoText[2].text = "Number of puzzles:  " + manager.Jigsaws[loadID].jigsawLevelInfo.JigLevels[altID].numberOfpuzzles.ToString();
+     //   InfoText[3].text = "Style: " + manager.Jigsaws[loadID].jigsawLevelInfo.JigLevels[altID].style;
+    //    InfoText[4].text = "Difficulty: " + manager.Jigsaws[loadID].jigsawLevelInfo.JigLevels[altID].difficulty.ToString();
 
 
         foreach (GameObject obj in altButtons) 
@@ -172,6 +176,7 @@ public class JigsawMenu : MonoBehaviour
         {
 
             manager.playID = loadID;
+            manager.altID = altLoadID;
             manager.debug = false;
 
             SceneManager.LoadScene("JigsawMain", LoadSceneMode.Single);

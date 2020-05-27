@@ -51,11 +51,13 @@ public class WayDownGame : MonoBehaviour
     public List<Sprite> PotionSprites;
 
     public TextMeshProUGUI infotext;
+    public SoundSystem soundsystem;
 
     private void Awake()
     {
         levelManager = FindObjectOfType<WDLevelManager>();
         ink = FindObjectOfType<WayDownInk>();
+        soundsystem = FindObjectOfType<SoundSystem>();
     }
 
     // Start is called before the first frame update
@@ -94,7 +96,8 @@ public class WayDownGame : MonoBehaviour
 
     public void StartGame() 
     {
-       
+
+        soundsystem.PlayMusic("music");
 
         //randomize potion Effects
         for (int i = 0; i < EffectID.Count; i++)
@@ -125,7 +128,7 @@ public class WayDownGame : MonoBehaviour
         gameState = GameState.Start;
         currentLevel = levelManager.Levels[startingInteraction];
         ink.StartStory();
-        
+        HideMedia();
 
 
         //obserbe
@@ -273,14 +276,7 @@ public class WayDownGame : MonoBehaviour
     public void CheckGameOver(object current,int min, int max)
     {
 
-     //   Debug.Log((int)current + " "  );
-
-        if (deadNextTurn == false)
-        {
-            if ((int)current <= min || (int)current >= max) { deadNextTurn = true; }
-            else { deadNextTurn = false; }
-        }
-
+    
         
     }
 

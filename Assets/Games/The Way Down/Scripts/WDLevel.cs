@@ -9,5 +9,6 @@ public class WDLevel
     public string EventName;
     public List<Transform> cameraTransform;
     public List<Animator> Animators;
+    public Sound Music;
 
 }

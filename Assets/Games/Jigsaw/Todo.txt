@@ -105,15 +105,36 @@ Social:
 
 14th May:
 
-	- Play around with shaders.
+	- Make some levels
+
+	- Fix Jigsaw pieces sometimes going up to high DONE
 
 15th May:
+
+	- Change data shown on level data DONE
+	- Add comfirm button for completing a puzzle when there are more than 1 DONE
+	- Make 10 Levels 
 
 16th May: 
 
 	- Screen Shot Saturday
+	- Play around with shaders.
 
 18th May: 
+
+	- Add portfolio links and stuff to main menu
+	- 
+
+19th:
+
+	- 
+
+20th:
+
+	- 
+
+
+21st:
 
 	- Release the game
 		- itch.io 

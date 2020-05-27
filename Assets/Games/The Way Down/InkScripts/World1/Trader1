@@ -12,7 +12,7 @@ A being approaches you, they seem eager to talk to you.#m #0 #a #1 #walking
 ==Engage //change shot to somehting idk
 But what shall you say? #m #1 #a #1 #praying
     *"What do you want?"
-         "I want to help you, that's all". The being nervous smiles.
+         "I want to help you, that's all." The being trys to hide nervous smiles.
          **"Why?"
          ->why
          **"I don't need your help"
@@ -44,14 +44,14 @@ But what shall you say? #m #1 #a #1 #praying
             **"Then get the fuck away from me"
             The Being, stunned, stammers "t-t-trade?"
                 ***GET THE FUCK AWAY!
-                The being runs away
+                The being runs away.
                     ->OverWorld
-                ***"trade?"
+                ***"Trade?"
                 "trade, yes, trade" 
                     ****"I want to trade
                         The being eyes light up, surprises of how easy it was.
-                        ->StartTrade
-                    ****"what do you mean?"
+                        ->StartTrade 
+                    ****"What do you mean?"
                         "It's simple <>
                         ->TradeExplain
 
@@ -61,7 +61,7 @@ But what shall you say? #m #1 #a #1 #praying
             *I suppose so.
                 "...and would you also agree that helping people that help you is good"
                 **Yes
-                    The being is getting more excited "Excellent, my friend, I have a proposition for you" they take a nervous breath "<> ->TradeExplain
+                    The being is getting more excited "Excellent, my friend, I have a proposition for you" they take a nervous breath"<> ->TradeExplain
                 **Only if they helped me first.
                 "I see you are a Being of nuance, how very unique" Their smile seems strained...
                 ***"go on"
@@ -96,35 +96,34 @@ But what shall you say? #m #1 #a #1 #praying
                                 ->OverWorld
                         
                         **Yes, if we could start already.
-                        They can't quite seem to believe it,"right away, friend, right away" <> ->StartTrade
-                        ->StartTrade
+                        They can't quite seem to believe it,"right away, friend, right away" <> ->StartTrade 
+                      
                     *"If you want to help, why do I need to give you something"
                         Taking what you no longer need is my reward.  
                         **Sounds like a con to me.
                         The being smiles "perhaps if you allow me to describe my offers to you, then you can decide for yourself" 
                             ***Go on.
-                            "Thank you friend, thank you" <>->StartTrade
+                            "Thank you friend, thank you" <>->StartTrade 
                             ***No thank you. 
                             "I see you need time to think about it, I'll let you be on your way."  #a #1 #sad
                                 ->OverWorld
                         **I'm interested, but I have some questions
                         "yes of course, I will try my best to answer them"
-                        ->TradeQuestions
+                        ->TradeQuestions 
                         **sure, lets give it a try
                         The being's nervousness becomes visibly pleasurable <>->StartTrade
                     *I don't understand
                     "Don't Worry,  many beings similar to yourself have struggled to understand as well, do you have any questions" ->TradeQuestions
                     
 =TradeQuestions  
-#m #3
                         **Why would I bother with this?
-                        "Having different things cause different opportunities for others" ->TradeQuestions
+                        "Having different things cause different opportunities for others" ->TradeQuestions #m #3
                         **Why would you take something I wouldn't want
-                        Because I want to help you. ->TradeQuestions
+                        Because I want to help you. ->TradeQuestions #m #3
                         **So you'll give me anything I want?
-                        If I have it, and you have the thing I want to take away from you. ->TradeQuestions
+                        If I have it, and you have the thing I want to take away from you. ->TradeQuestions #m #3
                         **Perhaps an example will help me understand
-                        The trader's eyes light up. "yes, yes I agree!" ->StartTrade
+                        The trader's eyes light up. "yes, yes I agree!" ->StartTrade #m #3
                         **I don't want to engage with this activity
                         I will respect your wishes my friend. But could you grant me one last suggestion.
                             ***ok
