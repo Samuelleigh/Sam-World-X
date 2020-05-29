@@ -12,14 +12,14 @@ A being approaches you, they seem eager to talk to you.#m #0 #a #1 #walking
 ==Engage //change shot to somehting idk
 But what shall you say? #m #1 #a #1 #praying
     *"What do you want?"
-         "I want to help you, that's all." The being trys to hide nervous smiles.
+         "I want to help you, that's all." The being tries to hide nervous smiles.
          **"Why?"
          ->why
          **"I don't need your help"
          "I'm not saying you do, but since I'm offering, why not hear me out?"
             ***Sure.
             " ->TradeExplain
-            ***I don't want your help either
+            ***"I don't want your help either."
             "as you wish, but if you change your mind, I'll be here."
             ->OverWorld
     *"Are you friend or foe?"
@@ -43,7 +43,7 @@ But what shall you say? #m #1 #a #1 #praying
                         ->OverWorld
             **"Then get the fuck away from me"
             The Being, stunned, stammers "t-t-trade?"
-                ***GET THE FUCK AWAY!
+                ***GET AWAY FROM ME!
                 The being runs away.
                     ->OverWorld
                 ***"Trade?"
@@ -58,83 +58,81 @@ But what shall you say? #m #1 #a #1 #praying
 
 =why   //change shot to somehting idk
 "Helping people is a good thing to do, would you agree?" 
-            *I suppose so.
+            *"I suppose so."
                 "...and would you also agree that helping people that help you is good"
-                **Yes
+                **"Yes"
                     The being is getting more excited "Excellent, my friend, I have a proposition for you" they take a nervous breath"<> ->TradeExplain
-                **Only if they helped me first.
+                **"Only if they helped me first."
                 "I see you are a Being of nuance, how very unique" Their smile seems strained...
-                ***"go on"
+                ***"Go on"
                 "I am not so nuanced, for me, I help even those who have yet to help me."
-                    ****ok...
+                    ****"ok..."
                     ->TradeExplain
                     ****"I don't believe you"
                     "Perhaps if I explain myself, I can convince you?"
-                        *****go on.
+                        *****"Go on."
                         ->TradeExplain
-                        *****No
+                        *****"No"
                         The being, dejected, walks away.
                         ->OverWorld
-                **Just tell me what you want!
+                **"Just tell me what you want!"
                 You seem to have knocked them off balance. "<> ->TradeExplain
-            *I don't
+            *"I don't."
             The being shuffles uncomfortably, "I, don't understand"
-                **Good.
+                **"Good."
                 The being walks away, distraught.
                 ->OverWorld
                 
 =TradeExplain //change shot to somehting idk
                 I want to give what you desire, and in return, I want to take what you no-longer need"
-                    *So a trade?
+                    *"So a trade?"
                     Their eyes light up, "so you're aware of my practice"  #a #1 #excited
-                        **Yes, but I see no reason why I should participate.
+                        **"Yes, but I see no reason why I should participate."
                         Their eyes dull slightly, "perhaps I shall convince you" #a #1 #praying
-                            ***You have my attention
+                            ***"You have my attention"
                             "I see, perhaps it would be better for me to answer any questions you might have" ->TradeQuestions
-                            ***Go away.
+                            ***"Go away."
                             "I see you need time to think about it, I'll let you be on your way."  #a #1 #sad
                                 ->OverWorld
                         
-                        **Yes, if we could start already.
+                        **"Yes, can we start already."
                         They can't quite seem to believe it,"right away, friend, right away" <> ->StartTrade 
                       
-                    *"If you want to help, why do I need to give you something"
+                    *"If you want to help, why do I need to give you something."
                         Taking what you no longer need is my reward.  
-                        **Sounds like a con to me.
+                        **"Sounds like a con to me."
                         The being smiles "perhaps if you allow me to describe my offers to you, then you can decide for yourself" 
-                            ***Go on.
+                            ***"Go on."
                             "Thank you friend, thank you" <>->StartTrade 
-                            ***No thank you. 
+                            ***"No thank you." 
                             "I see you need time to think about it, I'll let you be on your way."  #a #1 #sad
                                 ->OverWorld
-                        **I'm interested, but I have some questions
-                        "yes of course, I will try my best to answer them"
+                        **"I'm interested, but I have some questions."
+                        "Yes of course, I will try my best to answer them"
                         ->TradeQuestions 
-                        **sure, lets give it a try
+                        **"Sure, lets give it a try."
                         The being's nervousness becomes visibly pleasurable <>->StartTrade
-                    *I don't understand
+                    *"I don't understand"
                     "Don't Worry,  many beings similar to yourself have struggled to understand as well, do you have any questions" ->TradeQuestions
                     
 =TradeQuestions  
-                        **Why would I bother with this?
+                        **"Why would I bother with this?"
                         "Having different things cause different opportunities for others" ->TradeQuestions #m #3
-                        **Why would you take something I wouldn't want
+                        **"Why do you want something I don't?"
                         Because I want to help you. ->TradeQuestions #m #3
-                        **So you'll give me anything I want?
-                        If I have it, and you have the thing I want to take away from you. ->TradeQuestions #m #3
-                        **Perhaps an example will help me understand
+                        **"A trail run will help me understand."
                         The trader's eyes light up. "yes, yes I agree!" ->StartTrade #m #3
-                        **I don't want to engage with this activity
+                        **"I don't want to engage with this activity"
                         I will respect your wishes my friend. But could you grant me one last suggestion.
-                            ***ok
+                            ***"ok"
                             "why not just a trial run? You don't have much to lose? I'll even immediately give you 100 kneecaps"
-                                ****Ok, sure
+                                ****"Ok, sure."
                                 ~ KneeCaps = KneeCaps + 100
                                 The traders eye's light up.<> ->StartTrade
-                                ****no.
+                                ****"no."
                                 "I see you need time to think about it, I'll let you be on your way."
                                 ->OverWorld
-                            ***No
+                            ***"No."
                               "I see you need time to think about it, I'll let you be on your way."
                                 ->OverWorld
 
@@ -153,10 +151,13 @@ You start running, and to your surprise, the nervous being runs after you. #m #0
     **Keep running
     The being trips over and falls on his face, you don't look back as you continue to run. 
     ->OverWorld.hide
-    **Stop and talk to him
+    **Stop and talk to them.
     ->Engage
 *Swing at them
-Your knuckles lightly graze the beings cheak, the being falls to the ground, you continue to run.#h
+Your knuckles lightly graze the beings cheek, they fall to the ground, you continue to run. #h
+    **I hope they're ok.
+    **Good riddance.
+    --
 ->OverWorld
 *Stop
 ->Engage
@@ -171,12 +172,17 @@ Your knuckles lightly graze the beings cheak, the being falls to the ground, you
 ==StartTrade //change shot to somehting idk
 //They explain to you all the trades that he is offering at the moment, their body visibly shaking throughout.
 The trader excitedly describes all the things that he'd be willing to give, and what they want in return.  #a #1 #excited
-*10 more kneecaps
+*10 kneecaps for 1 awareness.
  ~addKneecaps(10)
+ ~subAwareness(1)
 ->TradeSuccess
-*INPUT
+*50 body for 20 kneecaps.
+~addBody(50)
+~subKneecaps(20)
 ->TradeSuccess
-*INPUT
+*30 Age for 300 awareness.
+~addAge(30)
+~subAwareness(300)
 ->TradeSuccess
 *I don't want to do any of these?
 You see blood drain from the traders face, "oh, sorry, I was sure that at least one of these would be worth wild for you"

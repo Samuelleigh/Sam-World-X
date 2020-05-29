@@ -98,6 +98,7 @@ public class WayDownGame : MonoBehaviour
     {
 
         soundsystem.PlayMusic("music");
+        soundsystem.PlaySound("click");
 
         //randomize potion Effects
         for (int i = 0; i < EffectID.Count; i++)
@@ -122,8 +123,7 @@ public class WayDownGame : MonoBehaviour
         VaribleFrame.SetActive(true);
         InventoryFrame.SetActive(true);
 
-        CreatePotionButton(1);
-        CreatePotionButton(1);
+        
 
         gameState = GameState.Start;
         currentLevel = levelManager.Levels[startingInteraction];
@@ -139,6 +139,9 @@ public class WayDownGame : MonoBehaviour
             Debug.Log(newValue);
             myDelegate(newValue, varName);
         });
+
+        CreatePotionButton(1);
+        CreatePotionButton(2);
 
         ink.story.EvaluateFunction("intialsetup");
 
@@ -315,29 +318,35 @@ public class WayDownGame : MonoBehaviour
     public void ConsumePotion(Button button, int choice) 
     {
 
+        Debug.Log("======================================CONSUME===============================");
         ink.story.state.LoadJson(ink.lastState);
 
         switch (EffectID[choice]) 
         {
-            case 1:
+            case 0:
                 Debug.Log(EffectID[choice]);
                 ink.story.EvaluateFunction("potion1");
                 ShowText("KneeCaps Increased by 100");
                 break;
-            case 2:
+            case 1:
                 Debug.Log(EffectID[choice]);
                 ink.story.EvaluateFunction("potion2");
                 ShowText("Body has been increased");
                 break;
-            case 3:
+            case 2:
                 Debug.Log(EffectID[choice]);
                 ink.story.EvaluateFunction("potion3");
                 ShowText("Age minus 100");
                 break;
-            case 4:
+            case 3:
                 Debug.Log(EffectID[choice]);
                 ink.story.EvaluateFunction("potion4");
                 ShowText("Mood Changed");
+                break;
+            case 4:
+                Debug.Log(EffectID[choice]);
+                ink.story.EvaluateFunction("potion5");
+                ShowText("I keep finding myself.");
                 break;
             case 5:
                 Debug.Log(EffectID[choice]);

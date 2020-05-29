@@ -3,8 +3,8 @@
 You find a pile of bodies. #m #0
 *Inspect bodies
 ~addAwareness(10)
-You see that a lot of the bodies with various wounds. They all have a single rock lodged into their skulls. #m #1
-    **Look Deeper.
+The bodies have no visible wounds, except for a single rock lodged into their skulls. #m #1
+    **Look deeper.
     ~addAwareness(10)
     You notice that some of them are looking at you. #m #2
         ***Deeper
@@ -13,10 +13,10 @@ You see that a lot of the bodies with various wounds. They all have a single roc
         //A look at how they look at you
         ****...
         ->Getback
-    **Recoil
+    **Recoil.
     ~addAwareness(5)
     ->Getback
-*Run Away
+*Run Away.
   ~addAwareness(1)
     You turn and run. #h
     ->OverWorld.hide
@@ -26,14 +26,14 @@ You see that a lot of the bodies with various wounds. They all have a single roc
 "GET BACK RIGHT NOW!" The rock in the beings hand is sharp. #m #4 #a #1 #threatthrow
 *"No"
 ->ontheheap
-*"Right away".
+*Do as they say.
 You step back a fair distance. The being looks surprised. "DON'T MOVE!"
-    **Stop moving
-    "Good, Now I want you too be very clear...I don't want to hurt you"
+    **Stop moving.
+    "Good, Now I want to be very clear...I don't want to hurt you"
     ->convo
-    **Run away
+    **Run away.
     ~subBody(100)
-    You turn and run. You feel an impact in your back, it hurts but doesn't slow you down. #h
+    You turn and run. You feel a rock impact into your back, it hurts but doesn't slow you down. #h
     ->OverWorld
 
 ==convo
@@ -49,7 +49,7 @@ You step back a fair distance. The being looks surprised. "DON'T MOVE!"
 ==convo2
 "This is my land, and you're not allowed in" 
     *...
-    "You see this line, this is my land's border, if you cross it I'll kill you" #m #5
+    "You see this line, this is my land's border, if you cross it I'll kill you" #m #6
     //Focus on the line, next choice go back to rock guy
         **...
         ~subStrangeAmount(5)

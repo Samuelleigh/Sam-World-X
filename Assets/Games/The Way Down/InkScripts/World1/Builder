@@ -2,16 +2,16 @@
 ~Strange = "Crumbs"
 A being is picking up crumbs from the ground, and trying to form them into some kind of mound. #m #0 #a #1 #crouch
 //Looping shot of the being knelt on the ground, with a small mound by them. 
-*What are you doing? 
+*"What are you doing?"
 My Best.
 ~addAwareness(5)
-    **What are you trying to do?
+    **"What are you trying to do?"
     Build a new world.
     ~addAwareness(5)
-        ***How long have you been doing this.
+        ***"How long have you been doing this."
             Too long.
             ~addAwareness(5)
-            ****Do you think you have a chance?
+            ****"Do you think you have a chance?"
                 I have to try.
                 ~addAwareness(5)
 ->OverWorld

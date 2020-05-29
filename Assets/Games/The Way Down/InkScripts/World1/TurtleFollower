@@ -1,6 +1,6 @@
 ===Turtlefollower===
 ~ Strange = "???"
-In the distance, you see a tower, extending towards the sky. #m #0
+In the distance, you see a tower. #m #0
 //Shot of the turtle tower, you can barely make it out.
 *Look up.
     The tower is so tall, it looks like it extends forever.#m #1
@@ -20,13 +20,13 @@ As the tower draws closer, you notice giant limbs jut out, some look like they'r
     Something jabs at your foot, you look to see a small being. #m #3
         **"What do you want?"
         "Are you going to talk to the final turtle?"
-            ***The what?
+            ***"The what?"
                 "The final turtle of turtle tower, he's a smart one, I have so much to learn from him."
-                ****Oh, yes, I am going to talk to him.
+                ****"Oh, yes, I am going to talk to him."
                     ->goodgood
-                ****No, But I will see him.
+                ****"No, But I will see him."
                 ->godowhat
-            ***Yes.
+            ***"Yes."
                 ->goodgood
         **Kick them aside.
          ~ addKneecaps(1)
@@ -47,36 +47,36 @@ As the tower draws closer, you notice giant limbs jut out, some look like they'r
            
 ==godowhat
 "Then what are you going to do"
-*I'm going to kill him.
+*"I'm going to kill him."
 "Why?"
     **"He's an asshole".
     The being looks visibly hurt. "Everyone is entitled to their opinions".
         ->GivehimThis.
-    **I want to see what happens when he dies.
+    **"I want to see what happens when he dies."
     Well, not to be a buzzkill, but I already know what happens.
-        ***What?
+        ***"What?"
         "Well, then the next one falls on top of it.
-            ****Then I'll kill that one.
+            ****"Then I'll kill that one."
             "Won't you get bored?"
                 *****"No."
                 Good for you. ->GivehimThis.
-                *****Yes, but that won't stop me.
-                "You must be new to this world, huh. Well if your going to be like that, I would advice you don't think about it any more than you are now.
-                    ******sure, whatever.
+                *****"Yes, but that won't stop me."
+                "You must be new to this world, huh. Well if you're going to be like that, I would advise you don't think about it any more than you are now.
+                    ******"Sure, whatever."
                     "that's the spirit...<>->Givehimthishurt
-                    ******Why.
+                    ******"Why?"
                     I don't know, I just know that when I've seen people thinking, they tend to...die...Eventually.
-                        *******I'll keep that in mind
+                        *******"I'll keep that in mind."
                         ->Givehimthishurt
-                        *******Why?
+                        *******"Why?"
                         The being looks around nervously. They change the subject ->Givehimthishurt
-            ****So? I only care about the current one.
+            ****"So? I only care about the current one."
                 "right...-<>->Givehimthishurt 
-        ***Don't spoil it.
+        ***"Don't spoil it."
         "ok...as you wish...<>->Givehimthishurt 
-    **It's about time.
+    **"It's about time."
     "hmmm, perhaps in a sense <> ->Givehimthishurt
-*I'm going to listen.
+*"I'm going to listen."
 "hmmm, interesting, I should try that next time I reach him.<> ->GivehimThis.
 
 *"I'm going to climb him, and then the entire tower."
@@ -95,7 +95,7 @@ In any case, when you reach him, can you give him this?"
 ==GivehimThis
 "In any case, when you reach him, can you give him this?"
     *Take potion.
-        "it's very important"
+        "it's very important" #p #3
         **"Why can't you do it yourself?"
         I'm so much smaller than you, It'll probably take forever for me to reach him.
             ***"I'll think about it."

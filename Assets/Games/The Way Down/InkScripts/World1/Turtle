@@ -1,6 +1,6 @@
 ===Turtle===
 ~Strange = "Turtle"
-As you approach the tower, you notice that it is not made with stone, but of many turtles, stacked on top of each other. The turtle at the bottom of the stack is humming quietly to himself. They can't see you. #m #0 
+As you approach the tower, you notice that it is not made with stone, but of many turtles stacked on top of each other. The final turtle is humming quietly to himself. They can't see you. #m #0 
 *Approach the final turtle.
 ->approachT
 *Attempt to climb the tower.
@@ -9,53 +9,59 @@ As you approach the tower, you notice that it is not made with stone, but of man
 //IF START BY APPROACH==============================
 
 ==approachT
-"Hello, nice to meet you...". The turtle is friendly, and has many scars across it's face.  #m #1
+"Hello, nice to meet you...". The turtle is friendly, and has a few scars across its face.  #m #1
 ~ addAwareness(1)
 *"Can I climb up the tower?"
     ->AskClimb
-*How are you?"
+*"How are you?"
     The turtle looks surprised "I'm. ok. Thanks for asking, how are you?"
-    **I'm confused.
+    **"I'm confused."
     Why?
-        ***I don't understand this tower.
+        ***"I don't understand this tower."
         ~ addAwareness(10)
         I don't really know either. I just know we've always been this way. 
-            ****How come you haven't fallen over yet.
+            ****"How come you all haven't fallen over yet?"
             ~ addAwareness(1)
-            I don't know, good luck I guess. 
-            ->endconvisation
-        ***I don't think I'm feel.
-        ->endconvisation
-    **I'm annoyed.
-        Why?
-        ***I've been alive for so long, but I feel like I've learnt nothing.
+            I don't know, luck I guess.
+            ****"Where did this tower come from?"
+            I don't know.
+        ***"I don't think I'm real."
+            I'm sorry to hear that. You're real to me.
+                ---
+                *****"Can I climb the tower?"
+                ->AskClimb
+                *****Could you give me something to do.
+                ->climb.goals
+    **"I'm annoyed."
+        "Why?"
+        ***"I've been alive for so long, but I feel like I've learnt nothing."
         ~ addAwareness(5)
             The turtle looks nervous "I would say it's best not to think about it"
-        ***Everyone around here is weird.
+        ***"Everyone around here is weird."
         ~ addAwareness(1)
             I know, I try to remember that they're just trying to cope with...all this.
         ---
                 *****"Can I climb the tower?"
                 ->AskClimb
-                *****Could you give me something to do.
+                *****"Could you give me something to do?"
                 ->climb.goals
 
 
 =AskClimb
     The turtle's eye twitches, "I wouldn't recommend it"
-        **Why not?
+        **"Why not?"
         ~ addAwareness(3)
           Another eye twitch, "Whenever a being of your kind attempts to climb to the summit, they eventually fall down"
             ***"What if I promise not to fall"
             ~ addAwareness(6)
             The turtle takes a nervous breath "Um, just...think about it...ok"
-                ****I was joking.
+                ****"I was joking."
                 The turtle relaxes "sorry, I didn't know if...please don't hurt yourself"
-                    *****I won't.
-                    *****I'm not promising anything.
+                    *****"I won't."
+                    *****"I'm not promising anything."
                     -----
                     ->climb.young
-        **But you would allow me to do it?
+        **"But you would allow me to do it?"
         ~ addAwareness(1)
         "I can't stop you"...The turtle looks around the landscape.
             ***Climb the turtle.
@@ -77,14 +83,14 @@ As you approach the tower, you notice that it is not made with stone, but of man
 
 
 ==climb
-From the back you start to grab onto the the turtles shell, you manage to climb up on its shell #m #2
+You manage to climb up on its shell #m #2
 *Make too much noise.
 *Don't make any noise.
 -
      ~ addAwareness(1)
-The turtle says "you know I can feel you on my skin right?"
+The turtle speaks. "You know I can feel you right?"
 *Say nothing.
-"I don't mind, seriously, but If you continue to climb, know that some of the other turtles will try to throw you off. Trust me, you don't want to fall off."
+"I don't mind, seriously, but if you continue to climb, know that some of the other turtles will try to throw you off."
     **Continue climbing.
     **Get down and talk to the turtle.
     ->ClimbTalk
@@ -96,14 +102,14 @@ The turtle says "you know I can feel you on my skin right?"
         **Remain silent
         --
              ~ addAwareness(5)
-        "Make sure you climb high enough so that you die when you fall off, you don't want to be stuck being half alive"
+        "Make sure you climb high enough so that the fall will kill you. The alternative is quite upsetting."
         ***Climb down.
         "Good choice, my friend, Good choice. Come round to see me and we can talk."
         ->ClimbTalk
         ***Keep Climbing 
-        As you wish friend.
+        "As you wish."
         ->ContinueToClimb
-    *Appologise.
+    *Apologise.
     ->ClimbTalk
 
 
@@ -112,34 +118,37 @@ The turtle says "you know I can feel you on my skin right?"
 "hello, nice to meet you...". The turtle is friendly, and has many scars across it's face. #m #1
     *...
     -
-    "just so we start on the right foot, could I ask you why you wanted to..climb..us."
-    *I wanted a challenge.
-    hmm, well, you can still find challenges without putting yourself in danger.
-        **I like the danger.
+    "Just so we start on the right foot, could I ask you why you wanted to..climb..us."
+    *"I wanted a challenge."
+    "hmm, well, you can still find challenges without putting yourself in danger."
+        **"I like the danger."
         ->young
-        **Could you give me a goal then?
+        **"Could you give me a goal then?"
         ->goals
-    *I wanted to jump off.
+    *"I wanted to jump off."
     ~ addAwareness(2)
     The turtle looks a little sad. "I'm sorry, that you felt that way, not that I can blame you, there isn't much to do down here"
-        **Clarifying it was for fun.
+        **Clarify that you just wanted to have fun.
         ->young
         **...
         "It is difficult, living down here, but that doesn't mean you can't find something to do."
             ***Could you give me an idea?
             ->goals
-    *I wanted to see what's at the top.
-    Would it deter any future attempts if I said that, there's nothing much up there. Just more turtles.
+    *"I wanted to see what's at the top."
+    "Would it deter any future attempts if I said that, there's nothing much up there. Just more turtles."
     ~ addAwareness(4)
-        **How do you know that? 
+        **"How do you know that?"
         "Every so often, the weight of the tower crushs the turtle at the bottom, so I got to see what was up there."
-            ***You must be close to dieing soon?
+            ***"Aren't you scared about dying soon?"
                 ~ addAwareness(4)
-            It only happens once an infinity, so I'm not too worried. 
-                ****Stil, You must be in a lot of pain, with all those turtles on your back.
-                You get used to it, sometimes. Thank you for your concern. ->endconvisation
+            "A turtle crush only happens once in an infinity, so I'm not too worried."
+            ***"You must be in a lot of pain, with all those turtles on your back."
+                "You get used to it. Thank you for your concern."
                     ~ addAwareness(4)
-        **I still want to check for myself.
+            ---
+                      *****"Could you give me something to do?"
+                ->climb.goals
+        **"I still want to check for myself."
             ->young
 
 
@@ -156,57 +165,59 @@ It climb forever, but you eventually fall off.#END
 
 
 =young
-"oh, you must be quite young then?"
-    *"what do you mean".
+"You must be quite young then?"
+    *"What do you mean".
     ~ addAwareness(4)
     Well, if you want to survive down here for as long as the others have, you can't take risks like that.
-        **How so?
+        **"How so?"
         ~ addAwareness(4)
-        Since beings live forever, the only way they can die is by being killed. Which means that if a being takes any risk, they will eventually be killed by it.
+        Since Beings live forever, the only way they can die is by being killed. Which means that if a being takes any risk, they will eventually be killed by it.
         ~ addAwareness(4)
-            ***Sounds like life isn't worth it.
+            ***"Sounds like life isn't worth it."
             ->endconvisation
             ***How do you survive for a long time down here?
             ~ addAwareness(4)
              It's difficult, but because I'm pinned down by the weight of the tower, I don't have a choice but to continue.
-                 ****So I do?
+                 ****"So I do?"
                  ~ addAwareness(4)
                  ->endconvisation
-                 ****Have you seen what other beings do?
+                 ****"Have you seen what other beings do?"
                  ~ addAwareness(4)
                     The ones that decide to stay around seem to invent hobbies for themselves, keep themselves busy. Distracted.
                     ->endconvisation
-    *"I'll have you know i'm {~age}."
+    *"I'll have you know i'm {Age}."
     That is quite young.
-        **How old are you then? 
+        **"How old are you then?"
         ~ addAwareness(4)
-        I've always been, so it's a little different.
+        "I've always been, so it's a little different."
             ***How can that be?
             ~ addAwareness(4)
-            I don't know, but it is true.
+            "I don't know, but it is true."
             ->endconvisation
-            ***How come I've been alive.
+            ***If you've always been...where did I come from?
             ~ addAwareness(4)
-            I don't know, quite honestly I'm surprised that anything else lives down here. Life finds a way I guess.
+            I don't know, quite honestly I'm surprised that anything else lives down here.
             ->endconvisation
         
 
 
 =goals
-"I don't know, I've tried giving tasks Beings like you before. It never ends well.
-*Why?
+"I don't know, I've tried giving tasks to Beings like you before. It never ends well.
+*"Why?"
+*"That can't be"
+-
 ~ addAwareness(4)
 They complete them too quickly, then it's back to asking me for things I can't give them.
-    **Could you just give me an impossible goal then, so I don't return.
+    **"Could you just give me an impossible goal then, so I don't return."
     ~ addAwareness(4)
     I've tried that before, eventually the Being convinces themselves that they did complete the task, even when they haven't.
-        ***That won't happen to me.
+        ***"That won't happen to me."
         ~ addAwareness(4)
          ->endconvisation
-        ***Could you give me one regardless.
+        ***"Could you give me one regardless."
         ~ addAwareness(4)
         ->endconvisation
-        ***That reminds me, a small being told me to give you this.
+        ***"That reminds me, a small being told me to give you this."
         ~ addAwareness(4)
         ->SmallBeing
 
@@ -214,14 +225,14 @@ They complete them too quickly, then it's back to asking me for things I can't g
     
 =SmallBeing
 "Keep it, that small being has been annoying me forever"
-*They seemed to speak highly of you.
+*"They seemed to speak highly of you."
 That's funny, when they're with me, all they do it speak, I can never get a word in.
     **Why?
     ->endconvisation
 
 ==endconvisation
 The turtle smiles, notices his smile, then frowns. //change the shot to something really dissonant.
-    *What's wrong?
+    *"What's wrong?"
     ~ addAwareness(4)
     "It's been lovely talking, but I think it's best that you go now"
         **"Why?"
@@ -237,7 +248,7 @@ The turtle smiles, notices his smile, then frowns. //change the shot to somethin
                             ~ addAwareness(4)
                                   I hope so.
                                   ->endturlte
-                            *****"If that's true, then why are you fine.
+                            *****"If that's true, then why are you fine."
                             ~ addAwareness(4)
                             I don't know. I don't think I am. I don't have a choice if I live or die.
                             ->endturlte
@@ -247,11 +258,12 @@ The turtle smiles, notices his smile, then frowns. //change the shot to somethin
                                 ->endturlte
                         ****Then why talk to me at all?
                         ~ addAwareness(4)
-                        "Because I know your kind, it doesn't end well if I refuse to talk."
-                            *****What happens?
+                       The turtle starts to tear up. "Because I know your kind, it doesn't end well if I refuse to talk."
+                            *****"What happens?"
                             ~ addAwareness(4)
-                                The turtle looks at the ground "They, eventually, turn against me."
-                                ->endturlte
+                                "They, eventually, turn against me, ...I think it would be for the best if you moved on."
+                                ~ addAwareness(4)
+                                ->OverWorld
                             *****...
                             ~ addAwareness(4)
                                 ->endturlte

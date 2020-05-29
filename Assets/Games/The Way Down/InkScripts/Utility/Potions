@@ -5,6 +5,6 @@
 ===function potion3===
 ~ Age = Age - 100
 ===function potion4===
-~ Mood = "N/A"
+~ Body = Body - 50
 ===function potion5===
 ~ StrangeAmount = StrangeAmount * 2

@@ -3,20 +3,20 @@
 A being is holding many potions. #m #0 #a #1 #old
     *Grab one.
     The being pretends looks at you as you take the potion. #p #1
-        **Can I have this?
+        **"Can I have this?"
            ->Take
-        **Leave
+        **Leave.
             ->OverWorld
-    *Where did you get all those potions? 
+    *"Where did you get all those potions?"
         I made them.
-        **Why?
+        **"Why?"
         It's good to help people.
         ~addAwareness(10)
-            ***What do they do?
+            ***"What do they do?"
                 I don't know. But It's better than nothing.
-                ****Can I have one?
+                ****"Can I have one?"
                 ->Take
-        **Can I have one?
+        **"Can I have one?"
         ->Take
 
     

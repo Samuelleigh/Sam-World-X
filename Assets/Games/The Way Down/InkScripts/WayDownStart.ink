@@ -43,7 +43,25 @@ VAR PotionSlot6 = 0
 ~ Mood = "Neutral"
 ~ Strange = "Eyeballs"
 ~ StrangeAmount = 0
+
+*Stare
+->1stare
+*Rock Throw
+->rockThrow
+*Laughing
+->Laughing
+*Turtle followers
+->Turtlefollower
+*Turtle
 ->Turtle
+*Potions Person
+->potionsperson
+*Builder
+->Builder
+*The law
+->TheLaw
+*Trader
+->Trader1
 
 
 ===Start

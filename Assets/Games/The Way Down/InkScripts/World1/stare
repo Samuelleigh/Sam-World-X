@@ -1,6 +1,6 @@
 ===1stare==
 ~Strange = "Movement"
-In the distance a being is still. They are looking towards you, but not on purpose. #m #0 #a #1 #idle
+In the distance a Being is still. They are looking towards you, but not with purpose. #m #0 #a #1 #idle
 *Approach them.
 ~addStrangeAmount(6)
 ->approach
@@ -14,17 +14,20 @@ You stand in front of them, They don't react. You can hear them breathing.  #m #
 They don't respond, their breathing quickens.
     **"I know you can hear me."
     ~addAwareness(5)
-    **"It's OK if you don't want to talk."
+    **"It's ok if you don't want to talk."
     **"Stop acting like a creep."
     --
     ->sobbing
 *Shove the being to the ground.
 ~addStrangeAmount(5)
 ->push
-*Look at what the being is holding.
+*Look at what the Being is holding.
 ~addAwareness(1)
 They are holding a potion.
-    **Take it, and leave.
+    **Take it and leave.
+    #p #4 #h
+        ***...
+        ->OverWorld
     ~addStrangeAmount(2)
     ->OverWorld
     **Take it, and feed it to the being.
@@ -43,7 +46,7 @@ The being provides no resistance, they hit the ground, You hear their skull crac
 
 ==sobbing
 The being starts to sob quietly. #m #2
-*I'm not moving until you say something.
+*"I'm not moving until you say something."
 ~subStrangeAmount(5)
     The being doesn't react.
     **Wait 5 minutes.
@@ -74,7 +77,7 @@ The being starts to sob quietly. #m #2
                             ~addAge(19879434)
                             ~subStrangeAmount(5)
                              The being does nothing.
-                            ->death.EndTime
+                             ->OverWorld
                             ********Leave.
                             ~addStrangeAmount(1)
                               ->leave2

@@ -4,61 +4,62 @@
 //a2 is sitting guy
 
 Two Beings are laughing with each other. #m #0 #a #1 #laughing #a #2 #sitlaugh
-*"Hello friends"
+*"Hello friends!"
 ->Friends
 *"What's so funny?"
 ->funny
-*"Do you want to trade?"
-->Tradelaugh
+*Ignore them.
+As you walk away, you hear aggressive giggling. #h
+->OverWorld
 
 ==Friends
-One of the  beings turns towards you. "Hi friend, how has your day been so far?" #a #1 #idle #a #2 #sit
-    *"Pretty good"
+One of the beings turns towards you. "Hi friend, how has your day been so far?" #a #1 #idle #a #2 #sit
+    *"Pretty good."
     "oh, it's pretty good is it?"
         **"yes"
         "Same, yes, same. It has been pretty good. Yes" the other being's mouth is twitching. 
-        **"That's what I said"
+        **"That's what I said."
         ~subStrangeAmount(10)
-        The being turns to his friend "ooo that's what he said, yes, he's being having a good day is what he said" #a #1 #laughing
+        The being turns to his friend "ooo that's what he said, yes, he's been having a good day is what he said." #a #1 #laughing
         --
         ->yours
-    *"Awful"
+    *"Awful."
     "oh, poor baby, bad day?"
-        **"ummm. That's what I said."
+        **"That's what I said."
         ~subStrangeAmount(10)
         "I know"
         ->yours
         **"Thank you for your concern"
-        "no worry"
+        "No worry"
         ~subStrangeAmount(10)
         ->yours
     *"Average"
-    "no, no no, you had a good day, you had a good day"
+    "No, no no, you had a good day, you had a good day."
         **"No I didn't'
-        you had a good day 
+        You had a good day. 
         ->yours
         **ummm
         ->yours
         
 ==yours
   ***"How was your day?"
-            "oh, my day, yes, I would have, say, it was the same,very, pretty good day."
+            "My day, yes, I would have, say, it was the same,very, pretty good day."
                 ****Do you want to trade?
                 Both beings look at each other, "Trade, Why?"
                 ->Tradelaugh
-            ***What are you doing?
+            ***"What are you doing?"
             ~subStrangeAmount(10)
             "Me. What I'm doing?" the other being looks like they're going to burst into laughter.
                 ****"Yes, what are you doing!"
                 ****"Are you deaf?"
                 ~subStrangeAmount(10)
                 ----
-                I'm being a little jitter blaster, reach into my pocket. There is a tounge in there." #a #1 #chickendance #a #2 #sitlaugh
+                I'm being a little jitter blaster, reach into my pocket. There is a tonge in there." #a #1 #chickendance #a #2 #sitlaugh
                     *****Walk Away.
                     You walk away, you hear roaring laughter behind you //nothing
                     ->OverWorld
                     *****Say Something. 
-                    but what. 
+                    But what. 
                         ******"Why are you like this?"
                         ~subStrangeAmount(10)
                         ******"I'm glad you found that funny"
@@ -66,23 +67,23 @@ One of the  beings turns towards you. "Hi friend, how has your day been so far?"
                         ------
                                 They're both laughing so hard they don't hear you. 
                                 ~subStrangeAmount(10)
-                                ********walk away
+                                ********Walk away.
                                 ->OverWorld
                         ******"Do you want to trade?"
                         ~subStrangeAmount(10)
                         ->Tradelaugh
                     
 ==funny
-"oh, nothing, we just saw you in the distance and.."  #a #1 #idle #a #2 #sit
+"Oh, nothing, we just saw you in the distance and.."  #a #1 #idle #a #2 #sit
     *"...and what"
     "It's nothing, really. It wasn't funny. I'm sorry." // one being starts moving werid
-        **"I might find it funny"
-        **"I can handle in"
+        **"I might find it funny."
+        **"I can handle it."
         --
-        The beings friend looks like their about to burst out laughing "no no no, it wasn't funny, it wasn't, it wasn't funny" 
-            ***"Tell me or I'll punch you"
+        The beings friend looks like they're about to burst out laughing "no no no, it wasn't funny, it wasn't, it wasn't funny." 
+            ***"Tell me or I'll punch you."
             ~subStrangeAmount(10)
-            "oh no, he'll punch me, he'll punch me" The other being is sucking in their checks.  #a #1 #chickendance
+            "oh no, he'll punch me, he'll punch me" The other being is sucking in their checks."  #a #1 #chickendance
                 ****Punch them.
                 ~subStrangeAmount(10)
                 You punch them, it doesn't do anything. The other being falls to the ground laughing. #a #1 #chickendance #a #2 #sitlaugh
@@ -93,19 +94,31 @@ One of the  beings turns towards you. "Hi friend, how has your day been so far?"
                         ~subStrangeAmount(10)
                         You storm off.
                         ->OverWorld
-                ****walk away
+                ****Walk away.
                 ~subStrangeAmount(10)
                 ->OverWorld
-        **"ok, do you want to trade?"
+        **"Ok, do you want to trade?"
         "Trade, why?"
         ->Tradelaugh
  
 
 
 ==Tradelaugh
-"what do you mean?"  #a #1 #idle #a #2 #sit
-*I'll give you something, if you give me something"
-    I don't want to do that.
-    **Walk away
+"What do you mean?"  #a #1 #idle #a #2 #sit
+*Try to explain.
+   "I don't understand why anyone would want to do that."
+    **"Are you joking?"
+    "We're always joking dumpo, what else would we do"
+        ->OverWorld
+    **"What don't you understand."
+    **"I guess you're right. "
+    --
+    One beings looks at the other "yum yum, my birthday cake tastes my fingers" 
+    **Walk away.
     ->OverWorld
-
+    **"What do you mean?"
+    ~addAge(20)
+    The beings both laugh hysterically. Then die.#h
+    ->OverWorld
+*Don't bother, just leave.
+    ->OverWorld
