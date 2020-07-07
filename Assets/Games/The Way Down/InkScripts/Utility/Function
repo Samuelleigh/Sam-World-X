@@ -3,9 +3,8 @@
 ~ Age = 3
 ~ Body = 100
 ~ Awareness = 10
-~ Mood = "Neutral"
-~ Strange = "Eyeballs"
-~ StrangeAmount = 0
+~ Strange = "Thoughts"
+~ StrangeAmount = 1
 
 ===function addKneecaps(x)===
 ~ KneeCaps = KneeCaps + x
@@ -31,8 +30,6 @@
 ===function subAwareness(x)===
 ~ Awareness = Awareness - x
 
-===function ChangeMood(x)===
-~ Mood = x
 
 ===function ChangeStrange(x)===
 ~ Strange = x

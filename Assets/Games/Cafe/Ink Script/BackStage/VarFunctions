@@ -1,0 +1,47 @@
+===function setwintestvar1===
+~testvar1 = "win"
+
+===function setlosstestvar1===
+~testvar1 = "loss"
+
+===function setwintestvar2===
+~testvar2 = "win"
+
+===function setlosstestvar2===
+~testvar2 = "loss"
+
+===function setwinPhone===
+~Phone = "win"
+
+===function setlossPhone===
+~Phone = "loss"
+
+===function setwinSleep===
+~Sleep= "win"
+
+===function setlossSleep===
+~Sleep = "loss"
+
+===function setwinRose===
+~Rose = "win"
+
+===function setlossRose===
+~Rose = "loss"
+
+===function setwinCollapse===
+~Collapse = "win"
+
+===function setlossCollapse===
+~Collapse = "loss"
+
+===function setwinVape===
+~Vape = "win"
+
+===function setlossVape===
+~Vape= "loss"
+
+===function setwinLeave===
+~Leave = "win"
+
+===function setlossLeave===
+~Leave = "loss"

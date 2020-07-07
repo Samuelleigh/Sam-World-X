@@ -2,7 +2,7 @@
 ~Strange = "Inside"
 A being is holding many potions. #m #0 #a #1 #old
     *Grab one.
-    The being pretends looks at you as you take the potion. #p #1
+    The being smiles. #p #1
         **"Can I have this?"
            ->Take
         **Leave.

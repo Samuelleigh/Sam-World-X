@@ -40,7 +40,7 @@ public class FrameBase : MonoBehaviour
 
         if (belongsToState == State.WorldSelect) { gameLogic.ChangeState("MainMenu"); }
 
-        if (belongsToState == State.LevelSelect) { gameLogic.ChangeState("WorldSelect"); }
+        if (belongsToState == State.LevelSelect) { gameLogic.ChangeState("MainMenu"); }
 
         if (belongsToState == State.Gameplay) { gameLogic.ChangeState("LevelSelect"); }
 

@@ -1,6 +1,7 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp-Editor.dll:
+    - Ink.UnityIntegration.DefaultAssetEditor
     - Ink.UnityIntegration.InkLibrary
     - Ink.UnityIntegration.InkSettings
     Assembly-CSharp.dll:

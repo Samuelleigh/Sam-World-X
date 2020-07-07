@@ -3,7 +3,7 @@
 You find a pile of bodies. #m #0
 *Inspect bodies
 ~addAwareness(10)
-The bodies have no visible wounds, except for a single rock lodged into their skulls. #m #1
+The bodies have no signs of damage, except for a single rock lodged into each their skulls. #m #1
     **Look deeper.
     ~addAwareness(10)
     You notice that some of them are looking at you. #m #2

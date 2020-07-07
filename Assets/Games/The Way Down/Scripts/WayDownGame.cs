@@ -74,7 +74,6 @@ public class WayDownGame : MonoBehaviour
         varNames.Add("Age");
         varNames.Add("Body");
         varNames.Add("Awareness");
-        varNames.Add("Mood");
         varNames.Add("Strange");
         varNames.Add("StrangeAmount");
 
@@ -109,6 +108,11 @@ public class WayDownGame : MonoBehaviour
             EffectID[randomIndex] = temp;
         }
 
+        for (int i = 0; i < EffectID.Count; i++) 
+        {
+            Debug.Log(EffectID[i]);
+        }
+
         //Randomize potion Sprites
         for (int i = 0; i <PotionSprites.Count; i++)
         {
@@ -120,8 +124,8 @@ public class WayDownGame : MonoBehaviour
 
 
        //turn on varible frame
-        VaribleFrame.SetActive(true);
-        InventoryFrame.SetActive(true);
+       VaribleFrame.SetActive(true);
+       InventoryFrame.SetActive(true);
 
         
 
@@ -135,8 +139,9 @@ public class WayDownGame : MonoBehaviour
 
         ink.story.ObserveVariables(varNames,(string varName, object newValue) =>
         {
-            Debug.Log(varName);
-            Debug.Log(newValue);
+         //   Debug.Log("===");
+           // Debug.Log(varName);
+            //Debug.Log(newValue);
             myDelegate(newValue, varName);
         });
 
@@ -174,6 +179,11 @@ public class WayDownGame : MonoBehaviour
 
     public void MoveToOverworld() 
     {
+
+        //turn on varible frame
+       // VaribleFrame.SetActive(true);
+       // InventoryFrame.SetActive(true);
+
         gameState = GameState.Overworld;
 
         Debug.Log("move back to overworld");
@@ -324,34 +334,35 @@ public class WayDownGame : MonoBehaviour
         switch (EffectID[choice]) 
         {
             case 0:
-                Debug.Log(EffectID[choice]);
+                Debug.Log(EffectID[choice] + " KneeCaps + 11");
                 ink.story.EvaluateFunction("potion1");
-                ShowText("KneeCaps Increased by 100");
+               // ShowText("KneeCaps Increased by 100");
                 break;
             case 1:
-                Debug.Log(EffectID[choice]);
-                ink.story.EvaluateFunction("potion2");
-                ShowText("Body has been increased");
+                Debug.Log(EffectID[choice] + " KneeCaps + 11");
+                ink.story.EvaluateFunction("potion1");
+               
+                //ShowText("Body has been increased");
                 break;
             case 2:
-                Debug.Log(EffectID[choice]);
-                ink.story.EvaluateFunction("potion3");
-                ShowText("Age minus 100");
+                Debug.Log(EffectID[choice] + " Body + 1 * 0.3");
+                ink.story.EvaluateFunction("potion2");
+              //  ShowText("Age minus 100");
                 break;
             case 3:
-                Debug.Log(EffectID[choice]);
-                ink.story.EvaluateFunction("potion4");
-                ShowText("Mood Changed");
+                Debug.Log(EffectID[choice] + " Age - 100");
+                ink.story.EvaluateFunction("potion3");
+              //  ShowText("Mood Changed");
                 break;
             case 4:
-                Debug.Log(EffectID[choice]);
-                ink.story.EvaluateFunction("potion5");
-                ShowText("I keep finding myself.");
+                Debug.Log(EffectID[choice] + " Awareness + 0.1");
+                ink.story.EvaluateFunction("potion4");
+              //  ShowText("I keep finding myself.");
                 break;
             case 5:
-                Debug.Log(EffectID[choice]);
+                Debug.Log(EffectID[choice] + "strangeAmountText ammount + 1 *2");
                 ink.story.EvaluateFunction("potion5");
-                ShowText("I keep finding myself.");
+              //  ShowText("I keep finding myself.");
                 break;
         }
 

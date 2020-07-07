@@ -328,7 +328,7 @@ public class WayDownInk : MonoBehaviour
 		while (dialogQue.Count != 0)
 		{
 
-			charDelay = 0.02f;
+			charDelay = 0.018f;
 
 			string next = dialogQue.Dequeue().ToString();
 

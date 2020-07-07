@@ -12,7 +12,7 @@ A being approaches you, they seem eager to talk to you.#m #0 #a #1 #walking
 ==Engage //change shot to somehting idk
 But what shall you say? #m #1 #a #1 #praying
     *"What do you want?"
-         "I want to help you, that's all." The being tries to hide nervous smiles.
+         "I want to help you, that's all." The being tries to hide a nervous smile.
          **"Why?"
          ->why
          **"I don't need your help"
@@ -185,9 +185,9 @@ The trader excitedly describes all the things that he'd be willing to give, and 
 ~subAwareness(300)
 ->TradeSuccess
 *I don't want to do any of these?
-You see blood drain from the traders face, "oh, sorry, I was sure that at least one of these would be worth wild for you"
+You see blood drain from the traders face, "oh, sorry, I was sure that at least one of these would be worth while for you"
     **Well you were wrong
-    Hurt, the being suffles away.#m #0 #a #1 #sad
+    Hurt, the being shuffles away.#m #0 #a #1 #sad
     ->OverWorld
     **maybe next time?
     "maybe next time" they repeat while staring at the ground. "maybe next time" #m #0 #a #1 #sad

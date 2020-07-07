@@ -25,23 +25,14 @@ VAR KneeCaps = 4
 VAR Age = 3
 VAR Body = 5000
 VAR Awareness = 10
-VAR Mood = "Neutral"
-VAR Strange = "Eyeballs"
+VAR Strange = "Thoughts"
 VAR StrangeAmount = 0
-
-VAR PotionSlot1 = 0
-VAR PotionSlot2 = 0
-VAR PotionSlot3 = 0
-VAR PotionSlot4 = 0
-VAR PotionSlot5 = 0
-VAR PotionSlot6 = 0
 
 ~ KneeCaps = 4
 ~ Age = 3
 ~ Body = 5000
 ~ Awareness = 10
-~ Mood = "Neutral"
-~ Strange = "Eyeballs"
+~ Strange = "Thoughts"
 ~ StrangeAmount = 0
 
 *Stare

@@ -1,0 +1,43 @@
+/// Refrence Sheet
+/// 
+/// Narrator :0
+/// Ms acadedmic :P
+/// Gay old professor :G
+/// Sam :S
+/// Ashe :A 
+
+===Academic
+
+:P Blah Blah
+*dawd
+{ Phone: 
+- "win": :0 Phone is win
+- "loss":  :0 Phone is loss 
+- "n": :0 Phone is null
+}
+**Win
+:0 Won
+~setwinPhone()
+**:0 Lose
+~setlossPhone()
+:0 Lost
+-
+->Overworld
+
+= Subject1
+->interlude1
+
+= interlude1
+->Subject2
+
+= Subject2
+->interlude2
+
+= interlude2
+->Subject3
+
+= Subject3
+->Ending
+
+= Ending
+->Overworld

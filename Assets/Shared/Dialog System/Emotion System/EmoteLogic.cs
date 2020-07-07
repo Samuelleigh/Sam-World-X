@@ -108,15 +108,20 @@ public class EmoteLogic : MonoBehaviour
 
     public void Talk() 
     {
-       // Debug.Log("www");
-        ani.SetBool("Talking", true);
+        if (AllowEmotes == true)
+        {
+            // Debug.Log("www");
+            ani.SetBool("Talking", true);
+        }
     }
 
 
     public void StopTalking() 
     {
-    
-       ani.SetBool("Talking", false);
+        if (AllowEmotes == true)
+        {
+            ani.SetBool("Talking", false);
+        }
     }
 
     // Update is called once per frame

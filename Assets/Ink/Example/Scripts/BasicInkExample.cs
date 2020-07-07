@@ -202,7 +202,9 @@ public class BasicInkExample : MonoBehaviour {
 		yield return new WaitForSeconds(charDelay);
 
 		//talking animation trigger
-		emotes.Talk();
+	
+			emotes.Talk();
+		
 
 
 		//the loop for each character update.
@@ -284,17 +286,19 @@ public class BasicInkExample : MonoBehaviour {
 
 	public void ChangeEmote(List<string> tags)
 	{
-
-		
-		if (tags.Count == 0) { emotes.ChangeEmote2(""); }
-	//	else { Debug.Log(tags[0]); }
-
-		foreach (string str in tags)
+		if (knockGameLogic)
 		{
-			if (!str.StartsWith("-"))
+
+			if (tags.Count == 0) { emotes.ChangeEmote2(""); }
+			//	else { Debug.Log(tags[0]); }
+
+			foreach (string str in tags)
 			{
-				Debug.Log(str);
-				emotes.ChangeEmote2(str);
+				if (!str.StartsWith("-"))
+				{
+					Debug.Log(str);
+					emotes.ChangeEmote2(str);
+				}
 			}
 		}
 	}

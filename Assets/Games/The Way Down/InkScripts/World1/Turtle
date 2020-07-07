@@ -1,6 +1,6 @@
 ===Turtle===
 ~Strange = "Turtle"
-As you approach the tower, you notice that it is not made with stone, but of many turtles stacked on top of each other. The final turtle is humming quietly to himself. They can't see you. #m #0 
+As you approach the tower, you find that it is made of many turtles stacked on top of each other. They all appear to be asleep, apart from the final turtle, who is humming quietly to themself. They can't see you. #m #0 
 *Approach the final turtle.
 ->approachT
 *Attempt to climb the tower.
@@ -226,7 +226,7 @@ They complete them too quickly, then it's back to asking me for things I can't g
 =SmallBeing
 "Keep it, that small being has been annoying me forever"
 *"They seemed to speak highly of you."
-That's funny, when they're with me, all they do it speak, I can never get a word in.
+That's funny, when they're with me, all they do is speak, I can never get a word in.
     **Why?
     ->endconvisation
 

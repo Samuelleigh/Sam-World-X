@@ -1,0 +1,28 @@
+===sleepyworker===
+:P Blah Blah
+*Win
+:0 Won
+~setwintestvar1()
+*:0 Lose
+~setlosstestvar1()
+:0 Lost
+-
+->Overworld
+
+= Subject1
+->sleepyworker.interlude1
+
+= interlude1
+->Subject2
+
+= Subject2
+->interlude2
+
+= interlude2
+->Subject3
+
+= Subject3
+->Ending
+
+= Ending
+->Overworld

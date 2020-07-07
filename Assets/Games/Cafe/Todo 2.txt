@@ -1,0 +1,30 @@
+
+
+
+CAFE: TODO 2
+
+Character Creation:
+
+- Name the character
+- Create the Icons
+- Cool 
+
+Global Varibles:
+
+- Academic: Phone on / off
+- Sleepy Worker: Getting Off early? Y/N
+- The jenga Boys: Knocked over the tower? 
+- Sorority Girls: has wine Y/N
+- Loner: Leave or stay
+- The Stoner: Going to get vape Y/N
+
+- Make varibles work DONE
+- Fix bug fixes and stuff DONE
+- add narrator text to the buttons DONE
+
+
+- unlock the end if all the varibles have been triggered
+- Introduction text to tell you how to play 
+	- make spotify playlist for the game and link it in the how to play
+
+- Start writing asshole

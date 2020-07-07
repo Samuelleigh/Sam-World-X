@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 911daa76d3799d246abcab22c2c70d07, type: 3}
+  m_Name: The Loner
+  m_EditorClassIdentifier: 
+  Name: 
+  InkLink: 
+  Characters:
+  - {fileID: 11400000, guid: 35c1c2ba7f26dca4b852f4a51273e4cf, type: 2}
+  - {fileID: 11400000, guid: c677c1e93f86d834a9b12f1ed14a783a, type: 2}
+  objective: 

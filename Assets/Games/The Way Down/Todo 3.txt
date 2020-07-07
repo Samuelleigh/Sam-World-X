@@ -18,7 +18,21 @@ Bucket
 - potions not being given when you select them DONE
 
 
-26th May: 
+30th May:
 
-- Create Music System
+- Add text scroll skip button + yep
+- Maybe add slight music system
+- Get feedback on the discord rules
+- Invite people to the discord server
+- 
+
+31st May: 
+
+- 
+
+1st June: 
+
+- Make sure news is OK
+- Post the game
+
 

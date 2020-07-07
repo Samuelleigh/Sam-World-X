@@ -1,0 +1,145 @@
+
+
+Todo - Soundtrack: 
+
+
+	1. Make code
+	2. record each sound
+	3. Place in each conversation
+
+Code: 
+
+	- Soundtrack 1 ()
+	- Soundtrack 2 (less intusive)
+	- Mute 
+
+Tracks Needed: 
+
+
+	a. Intro & End:
+	- p1 >> scatter(amplify = 2)
+
+	b. Travel:
+	- p1 >> star(1,bend = PSine(8))
+
+	1. Stare:
+	- p4 >> zap(sinvar([1,sinvar([5,8],10)], 7), dur = [1/4,1/2,1/8,1/8], bass = 100, amp = 0.9, crush = 10, dbass = -1)
+
+	2. Trade:
+	- walking towards: p1 >> noise()
+	- Trading: p1 >> jbass([[-1,7,1,7,-7],[3,3,3,-4],[5,-3,5]],dur = [4,[4,4,1],4,4,[2,3]])
+	- Running away: p1 >> noise(dur = 1/2)
+
+	3. Rock Throw
+	- Look closer: Deadbodies.mp4
+	- Rock Throw: p1 >>  dab(oct = 4, dur = 1, lpf = 1800, hpf = 100, bend = [0], vip = 1000,)
+	- Walk away: Rock throw but quiter
+	- knocked out: Silent
+
+
+	4. Laughing:
+	- Laughing: p1 >> bug([[1,2],4,[9,-4,3,4],[2,4,6],[4,-12]],dur = 3, chop = 90,oct = 3, amp = 2)
+				p1 >> dirt([1,3,3,5,1], dur = 1, oct = [[4,4,5],[5,4],[4,5]], bend = [1,0,0.5])
+	- Lauhging boosted: do something in editing
+
+	5. The Law:
+	- p1 >> scatter(amplify = 2, oct = 3)
+
+	6. Looking at turtle tower:
+	- p3 >> nylon([1,1,6,5],dur = [10,8], echo = [4], echotime = 1)
+
+	7. potions:
+	- p1 >> soft([1,3], dur = [2,4,5])
+
+	8. Builder:
+	-p2 >> viola([2,4,5], dur = ([6,2]))
+
+	9. Turtle:
+	- p1 >> jbass([[-1,7,1,7,-7],[3,3,3,-4],[5,-3,5]],dur = [4,[4,4,1],4,4,[2,3]])
+
+
+
+
+	Safety:
+
+
+	p1 >> soft([1,2], dur = [2,4,5])
+
+	p2 >> razz([2,4,5], dur = ([4,1]))
+
+	p3 >> nylon([1,1,6,5],dur = [10,8], echo = [4], echotime = 1)
+
+	p1 >> bug([1,4,[9,-4],2,[4,-12],dur=4, chop = 90,oct = 3, amp = 2)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	print(SynthDefs)
+print(Player.get_attributes())
+
+
+p1 >> bug([[1,2],4,[9,-4,3,4],[2,4,6],[4,-12]],dur = 3, chop = 90,oct = 3, amp = 2)
+
+p1 >> dirt([1,3,3,5,1], dur = 1, oct = [[4,4,5],[5,4],[4,5]], bend = [1,0,0.5])
+
+p1 >> scatter(amplify = 2)
+
+p1 >> noise()
+
+p1 >> jbass([[-1,7,1,7,-7],[3,3,3,-4],[5,-3,5]],dur = [4,[4,4,1],4,4,[2,3]])
+
+p1 >>  dab(oct = 4, dur = 1, lpf = 1800, hpf = 100, bend = [0], vip = 1000,)
+
+p1 >> star(1,bend = PSine(8))
+
+p1 >> viola(PSine(16), dur = [10])
+
+p1 >> bug([1,2,3,4], dur = [1], amp = 0.5)
+
+p1 >> klank([0,5,8,10], dur = 10)
+p2 >> klank([1,3,4,5], dur = 1)
+
+p1 >> jbass([1,2,3],stutter = 0.4, dur = 1, scale = Scale.yu, bend = [-0.1,0,0,0,0,0.1], chop = 4)
+
+p1.stop()
+p2.stop()
+
+p1 >> soft([1,2], dur = [2,4,5])
+
+p2 >> razz([2,4,5], dur = ([4,1]))
+
+p3 >> nylon([1,1,6,5],dur = [10,8], echo = [4], echotime = 1)
+
+p4 >> zap(sinvar([1,sinvar([5,8],10)], 7), dur = [1/4,1/2,1/8,1/8], bass = 100, amp = 0.9, crush = 10, dbass = -1)
+
+b1 >> play("xxxx---x--", dur = sinvar([1/4,1/16]))
+b2 >> play("x[xx-]-xx", dur = linvar([1/4,1],2), amp = linvar(1/2,1))
+
+p1.stop()
+p2.stop()
+p3.stop()
+p4.stop()
+
+b1.stop()
+b2.stop()

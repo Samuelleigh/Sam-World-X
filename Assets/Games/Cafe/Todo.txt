@@ -1,0 +1,68 @@
+
+
+
+CAFE: TODO LIST 
+
+Started 6/11/2020
+
+	 - Switching between diffrent conversations.DONE
+			- Maintaining the varibles between each skip, but reseting the ink state DONE
+
+	- Make overworld buttons switch depending on wether you succedded or failed. DONE
+	
+	XXXXXX NOT DOING XXXXXXXXX
+
+	 - Set up 
+		- Constructing character portraits
+		- Constructing char
+
+	 - Conversations 
+		- Switching between characters and narrator
+			- Syntax Logic from ink DONE
+			- Wiring it up to the result 
+
+
+		- Switching between
+
+	XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+
+	- Back up 
+	- Gut character and emotion system DONE
+
+	//idea is to make a discord like interface for each conversation
+
+	Features: 
+	
+	- lines will be revealed line by line, not letter by letter. DONE
+	- Each line will be formatted correctly (portriat, name, text)
+		- custom ink synatax for character DONE
+		- Theme colours for each character DONE
+
+	- Remake Dialog script from ground up to make make it cleaner andeasyier to work with DONE
+
+		- Apply sprite to charact image DONE
+		- Image does not show up if the character is still speaking. DONE
+		- destory all text frames on start up. DONE
+		- Press Space to advance text if no clicks DONE
+	
+
+	Tuesday & wednesday:
+
+	- Special Narrator Text box DONE
+	- Button shows up to prompt spacebar DONE
+	- Dialog choices show the character you'll talk as DONE
+	- Dialog Choices create new character text when specified DONE
+	- Fix Dialog Box Formatting DONE
+
+	Thursday:
+
+	- List all varibles 
+
+
+	- Correct the thign
+
+
+	Set Up:
+
+	- Dis 

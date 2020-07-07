@@ -109,8 +109,8 @@ The being continues to stare.
 ==dead
 You stare at the body, it looks like they have a potion in their hand. #m #3
     *Take it.
-    As you reach down, you hear the beings last breath. 
-      ~addAwareness(10)
+    As you reach down, you hear the beings last breath. #p #4 #h
+        **...
     ->OverWorld.hide
     *Don't you dare.
     ~addAwareness(10)

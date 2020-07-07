@@ -1,0 +1,39 @@
+===Test1==
+:1 Bleep bloop 
+*:1 Win 
+~setwintestvar1()
+:0 The world can be %3 a werid place huh. Sure Can right. We all know what hithigns are these days. 
+I have six memoriable rons 
+:1 Blah Blah
+:1 ah Blahah Blah
+**:1 f
+**fes
+**efs
+--
+:0 ah Blahah Blahah Blahah Blah
+:1 ah Blahah Blahah Blahah Blah
+:0 ah Blahah Blahah Blah
+:2 ah Blahah Blahah Blah
+**:1 5
+**:2 second option
+--
+:1 Blah Blah
+:1 ah Blahah Blah
+:0 ah Blahah Blahah Blahah Blah
+:1 ah Blahah Blahah Blahah Blah
+:0 ah Blahah Blahah Blah
+:2 ah Blahah Blahah Blah
+**658
+:1 Blah Blah
+:1 ah Blahah Blah
+:0 ah Blahah Blahah Blahah Blah
+:1 ah Blahah Blahah Blahah Blah
+:0 ah Blahah Blahah Blah
+:2 ah Blahah Blahah Blah
+**ad
+--
+->Overworld
+*Loss
+~setlosstestvar1()
+My body is a temple
+->Overworld
