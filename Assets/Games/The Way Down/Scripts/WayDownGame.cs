@@ -96,7 +96,7 @@ public class WayDownGame : MonoBehaviour
     public void StartGame() 
     {
 
-        soundsystem.PlayMusic("music");
+       // soundsystem.PlayMusic("music");
         soundsystem.PlaySound("click");
 
         //randomize potion Effects
@@ -185,6 +185,7 @@ public class WayDownGame : MonoBehaviour
        // InventoryFrame.SetActive(true);
 
         gameState = GameState.Overworld;
+        soundsystem.PlayMusic("Travel1");
 
         Debug.Log("move back to overworld");
         HideMedia();
@@ -223,6 +224,7 @@ public class WayDownGame : MonoBehaviour
 
     public void GameOver() 
     {
+        soundsystem.PlayMusic("Null");
         gameState = GameState.End;
         ui.SwitchLayer(3);
         VaribleFrame.SetActive(false);

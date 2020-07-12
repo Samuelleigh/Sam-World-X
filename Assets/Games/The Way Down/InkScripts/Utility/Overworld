@@ -4,9 +4,21 @@
 ->NeverGoHere
 
 =hide
-  #overworld #h
+#overworld #h 
 *IGNORE
 ->NeverGoHere
+
+=laugh
+ #overworld #a #1 #chickendance #a #2 #sitlaugh #music #Laughing2
+*IGNORE
+->NeverGoHere
+
+=lastbreath
+ #overworld #p #4 #h
+*IGNORE
+->NeverGoHere
+
+
 
 =NeverGoHere
 *Never go here.

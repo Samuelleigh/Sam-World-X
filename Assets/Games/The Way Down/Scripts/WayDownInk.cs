@@ -117,8 +117,10 @@ public class WayDownInk : MonoBehaviour
 			}
 			if (story.currentTags.Contains("music"))
 			{
-				int i = story.currentTags.IndexOf("music");
-				soundsystem.PlayMusic(story.currentTags[i + 1]);
+
+					int i = story.currentTags.IndexOf("music");
+					soundsystem.PlayMusic(story.currentTags[i + 1]);
+				
 			}
 
 				//in ink, have the corrisponding animator number in the tag after a, and the name of the animation in in the next tag.
@@ -338,9 +340,15 @@ public class WayDownInk : MonoBehaviour
 			if (instantTextScroll == false)
 			{
 
+			
 				//if the next character is a fullstop. increase character delay
 				if (stext.text.EndsWith("."))
 				{
+					if (dialogQue.Count > 0 && dialogQue.Peek() == '\"')
+					{
+						Debug.Log("peaked");
+						stext.text += dialogQue.Dequeue().ToString();
+					}
 					//	Debug.Log("Stop Talking");
 					charDelay = fullstopDelay;
 					//emotes.StopTalking();
@@ -349,6 +357,11 @@ public class WayDownInk : MonoBehaviour
 				if (stext.text.EndsWith(","))
 				{
 					charDelay = 0.4f;
+				}
+
+				if (stext.text.EndsWith("\""))
+				{
+					charDelay = 0f;
 				}
 
 				//decieds if the mouth should talk or not
@@ -524,4 +537,6 @@ public class WayDownInk : MonoBehaviour
 
 	public WayDownGame wayDownLogic;
 	public SoundSystem soundsystem;
+
+	public int musicStyle;
 }

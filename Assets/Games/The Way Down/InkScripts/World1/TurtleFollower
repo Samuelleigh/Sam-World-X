@@ -1,6 +1,6 @@
 ===Turtlefollower===
 ~ Strange = "???"
-In the distance, you see a tower. #m #0
+In the distance, you see a tower. #m #0 #music # Turtlefollower1
 //Shot of the turtle tower, you can barely make it out.
 *Look up.
     The tower is so tall, it looks like it extends forever.#m #1
@@ -30,30 +30,30 @@ As the tower draws closer, you notice giant limbs jut out, some look like they'r
                 ->goodgood
         **Kick them aside.
          ~ addKneecaps(1)
-        You lightly kick the being to the ground, they look unharmed. "Fine, be like that then" #m #4
+        You lightly kick the being to the ground, they look unharmed. "Fine, be like that then." #m #4
             ***Continue walking.
             ->OverWorld
             
 ==goodgood
-    Good Good, I talk so much with him, whenever I can, in between the times he tells me to do something of course.
+    "Good Good, I talk so much with him, whenever I can. Inbetween the tasks he sets for me and his other followers of course."
             *"Will he ask me to do something?"
-            Depends, most of his followers give up on him eventually, so he might not bother anymore.
+            "Depends, most of his followers give up on him eventually, so he might not bother anymore."
                             **"Doesn't sound like that good a leader."
-                            It is inevitable for people to give, we all live so long down here.
+                            "It is inevitable for people to give, we all live so long down here. I haven't seen anyone die."
                             ->GivehimThis.
                             **"Why haven't you?"
-                            I don't know, I think I'm just more committed.
+                            "I don't know, I think I'm just more committed."
                             ->GivehimThis.
            
 ==godowhat
-"Then what are you going to do"
+"Then what are you going to do."
 *"I'm going to kill him."
 "Why?"
-    **"He's an asshole".
+    **"He's a jerk."
     The being looks visibly hurt. "Everyone is entitled to their opinions".
         ->GivehimThis.
     **"I want to see what happens when he dies."
-    Well, not to be a buzzkill, but I already know what happens.
+    "Well, not to be a buzzkill, but I already know what happens."
         ***"What?"
         "Well, then the next one falls on top of it.
             ****"Then I'll kill that one."
@@ -61,11 +61,11 @@ As the tower draws closer, you notice giant limbs jut out, some look like they'r
                 *****"No."
                 Good for you. ->GivehimThis.
                 *****"Yes, but that won't stop me."
-                "You must be new to this world, huh. Well if you're going to be like that, I would advise you don't think about it any more than you are now.
+                "You must be new to this world, huh. Well if you're going to be like that, I would advise you don't think about it any more than you are currently."
                     ******"Sure, whatever."
                     "that's the spirit...<>->Givehimthishurt
                     ******"Why?"
-                    I don't know, I just know that when I've seen people thinking, they tend to...die...Eventually.
+                    "I don't know, I just know that when I've seen Being think, they tend to...die."
                         *******"I'll keep that in mind."
                         ->Givehimthishurt
                         *******"Why?"
@@ -77,17 +77,17 @@ As the tower draws closer, you notice giant limbs jut out, some look like they'r
     **"It's about time."
     "hmmm, perhaps in a sense <> ->Givehimthishurt
 *"I'm going to listen."
-"hmmm, interesting, I should try that next time I reach him.<> ->GivehimThis.
+"hmmm, interesting, I should try that next time I see him"<> ->GivehimThis.
 
 *"I'm going to climb him, and then the entire tower."
-The being chuckles. "Everyone needs a hobby I guess, <>
+The being chuckles. "Everyone needs a hobby I guess." <>
 ->GivehimThis
 
 ==Givehimthishurt
-In any case, when you reach him, can you give him this?" 
+"In any case, when you reach him, can you give him this?" 
     *Take potion. #p #3
         "It's very important to me if you give this to him"
-        **Didn't you hear that I was going to kill him.
+        **"Didn't you hear me when I said I was going to kill him."
             "I know, I know, but in case you change your mind."
             ->OverWorld
     
@@ -95,9 +95,9 @@ In any case, when you reach him, can you give him this?"
 ==GivehimThis
 "In any case, when you reach him, can you give him this?"
     *Take potion.
-        "it's very important" #p #3
+        "It's very important" #p #3
         **"Why can't you do it yourself?"
-        I'm so much smaller than you, It'll probably take forever for me to reach him.
+        "I'm so much smaller than you, It'll take me forever to reach him."
             ***"I'll think about it."
             ->OverWorld
 

@@ -1,11 +1,11 @@
 ===Builder===
 ~Strange = "Crumbs"
-A being is picking up crumbs from the ground, and trying to form them into some kind of mound. #m #0 #a #1 #crouch
+A being is picking up crumbs from the ground, and trying to form them into some kind of mound. #m #0 #a #1 #crouch #music #Builder1
 //Looping shot of the being knelt on the ground, with a small mound by them. 
 *"What are you doing?"
 My Best.
 ~addAwareness(5)
-    **"What are you trying to do?"
+    **"What are you trying to accomplish?"
     Build a new world.
     ~addAwareness(5)
         ***"How long have you been doing this."

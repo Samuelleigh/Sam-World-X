@@ -10903,6 +10903,97 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 882410131}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &411764852
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 411764853}
+  - component: {fileID: 411764854}
+  m_Layer: 0
+  m_Name: Point Light (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &411764853
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 411764852}
+  m_LocalRotation: {x: -0.00051065866, y: 0.9994832, z: -0.02090798, w: 0.024411455}
+  m_LocalPosition: {x: -2.538, y: 0.175, z: 7.029}
+  m_LocalScale: {x: 1.207, y: 1.207, z: 1.207}
+  m_Children: []
+  m_Father: {fileID: 1701855372}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 2.394, y: 177.199, z: -0.117000006}
+--- !u!108 &411764854
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 411764852}
+  m_Enabled: 1
+  serializedVersion: 9
+  m_Type: 0
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 2.99
+  m_Range: 42.345142
+  m_SpotAngle: 54.2
+  m_InnerSpotAngle: 1
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
 --- !u!1 &412000236
 GameObject:
   m_ObjectHideFlags: 0
@@ -14708,26 +14799,7 @@ MonoBehaviour:
     cameraTransform:
     - {fileID: 859750677}
     Animators: []
-    Music:
-      name: 
-      clip: {fileID: 0}
-      volume: 0
-      pitch: 0
-      loop: 0
-      source: {fileID: 0}
-  - EventName: Group1
-    cameraTransform:
-    - {fileID: 859750677}
-    - {fileID: 0}
-    Animators:
-    - {fileID: 2143100721}
-    Music:
-      name: 
-      clip: {fileID: 0}
-      volume: 0
-      pitch: 0
-      loop: 0
-      source: {fileID: 0}
+    Music: []
   - EventName: Trader1
     cameraTransform:
     - {fileID: 859750677}
@@ -14735,33 +14807,19 @@ MonoBehaviour:
     - {fileID: 1304904305}
     Animators:
     - {fileID: 2143100721}
-    Music:
-      name: 
-      clip: {fileID: 0}
-      volume: 0
-      pitch: 0
-      loop: 0
-      source: {fileID: 0}
+    Music: []
   - EventName: Group1
     cameraTransform: []
     Animators: []
-    Music:
-      name: 
-      clip: {fileID: 0}
-      volume: 0
-      pitch: 0
-      loop: 0
-      source: {fileID: 0}
+    Music: []
   - EventName: Group1
     cameraTransform: []
     Animators: []
-    Music:
-      name: 
-      clip: {fileID: 0}
-      volume: 0
-      pitch: 0
-      loop: 0
-      source: {fileID: 0}
+    Music: []
+  - EventName: Group1
+    cameraTransform: []
+    Animators: []
+    Music: []
   - EventName: Turtlefollower
     cameraTransform:
     - {fileID: 1497939745}
@@ -14770,33 +14828,15 @@ MonoBehaviour:
     - {fileID: 1366197451}
     - {fileID: 767356493}
     Animators: []
-    Music:
-      name: 
-      clip: {fileID: 0}
-      volume: 0
-      pitch: 0
-      loop: 0
-      source: {fileID: 0}
+    Music: []
   - EventName: Group1
     cameraTransform: []
     Animators: []
-    Music:
-      name: 
-      clip: {fileID: 0}
-      volume: 0
-      pitch: 0
-      loop: 0
-      source: {fileID: 0}
+    Music: []
   - EventName: Group1
     cameraTransform: []
     Animators: []
-    Music:
-      name: 
-      clip: {fileID: 0}
-      volume: 0
-      pitch: 0
-      loop: 0
-      source: {fileID: 0}
+    Music: []
   - EventName: Turtle
     cameraTransform:
     - {fileID: 411433717}
@@ -14804,44 +14844,20 @@ MonoBehaviour:
     - {fileID: 505366140}
     - {fileID: 237892508}
     Animators: []
-    Music:
-      name: 
-      clip: {fileID: 0}
-      volume: 0
-      pitch: 0
-      loop: 0
-      source: {fileID: 0}
+    Music: []
   - EventName: Group2
     cameraTransform: []
     Animators: []
-    Music:
-      name: 
-      clip: {fileID: 0}
-      volume: 0
-      pitch: 0
-      loop: 0
-      source: {fileID: 0}
+    Music: []
   - EventName: Outofcontent
     cameraTransform: []
     Animators: []
-    Music:
-      name: 
-      clip: {fileID: 0}
-      volume: 0
-      pitch: 0
-      loop: 0
-      source: {fileID: 0}
+    Music: []
   deathlevel:
     EventName: death
     cameraTransform: []
     Animators: []
-    Music:
-      name: 
-      clip: {fileID: 0}
-      volume: 0
-      pitch: 0
-      loop: 0
-      source: {fileID: 0}
+    Music: []
   Group1Levels:
   - EventName: 1stare
     cameraTransform:
@@ -14852,7 +14868,7 @@ MonoBehaviour:
     Animators:
     - {fileID: 1877181057}
     Music:
-      name: 
+    - name: 
       clip: {fileID: 0}
       volume: 0
       pitch: 0
@@ -14869,13 +14885,7 @@ MonoBehaviour:
     - {fileID: 1390840526}
     Animators:
     - {fileID: 860275614}
-    Music:
-      name: 
-      clip: {fileID: 0}
-      volume: 0
-      pitch: 0
-      loop: 0
-      source: {fileID: 0}
+    Music: []
   - EventName: Laughing
     cameraTransform:
     - {fileID: 1692550975}
@@ -14883,50 +14893,26 @@ MonoBehaviour:
     Animators:
     - {fileID: 1333774133}
     - {fileID: 1433090105}
-    Music:
-      name: 
-      clip: {fileID: 0}
-      volume: 0
-      pitch: 0
-      loop: 0
-      source: {fileID: 0}
+    Music: []
   - EventName: potionsperson
     cameraTransform:
     - {fileID: 799126411}
     - {fileID: 1134209429}
     Animators:
     - {fileID: 850098706}
-    Music:
-      name: 
-      clip: {fileID: 0}
-      volume: 0
-      pitch: 0
-      loop: 0
-      source: {fileID: 0}
+    Music: []
   - EventName: TheLaw
     cameraTransform: []
     Animators:
     - {fileID: 850098706}
-    Music:
-      name: 
-      clip: {fileID: 0}
-      volume: 0
-      pitch: 0
-      loop: 0
-      source: {fileID: 0}
+    Music: []
   Group2Levels:
   - EventName: Builder
     cameraTransform:
     - {fileID: 1862882121}
     Animators:
     - {fileID: 925762070}
-    Music:
-      name: 
-      clip: {fileID: 0}
-      volume: 0
-      pitch: 0
-      loop: 0
-      source: {fileID: 0}
+    Music: []
   Group3Levels: []
 --- !u!1001 &555585876
 PrefabInstance:
@@ -22847,13 +22833,7 @@ MonoBehaviour:
     EventName: 
     cameraTransform: []
     Animators: []
-    Music:
-      name: 
-      clip: {fileID: 0}
-      volume: 0
-      pitch: 0
-      loop: 0
-      source: {fileID: 0}
+    Music: []
   ink: {fileID: 0}
   MediaCamera: {fileID: 812630017}
   potionPrefrab: {fileID: 6131964336979713749, guid: c7784fb34b007d64598779e28016b29f,
@@ -45934,6 +45914,127 @@ MonoBehaviour:
     pitch: 1
     loop: 1
     source: {fileID: 0}
+  - name: Builder1
+    clip: {fileID: 8300000, guid: ffb320829a456ab49a9f6e4fbf68da2e, type: 3}
+    volume: 0.303
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: Builder2
+    clip: {fileID: 8300000, guid: 25d10b850c1c84c48805747bcf4b7535, type: 3}
+    volume: 0.303
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: Laughing1
+    clip: {fileID: 8300000, guid: fdbce9ae9cc708d48b31015c71247897, type: 3}
+    volume: 0.303
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: Laughing2
+    clip: {fileID: 8300000, guid: e84782e066f190843a5404409fa538c8, type: 3}
+    volume: 0.303
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: Travel1
+    clip: {fileID: 8300000, guid: c193a189f92eddf419ec7be102384be1, type: 3}
+    volume: 0.303
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: Potion1
+    clip: {fileID: 8300000, guid: f37b5eec81da0cf4a93074d1057d2b49, type: 3}
+    volume: 0.56
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: RockThrow1
+    clip: {fileID: 8300000, guid: 15d1fae263ebe894da13b67483d2e7fb, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: RockThrow2
+    clip: {fileID: 8300000, guid: c6ad50098daaba843b71bb2260eb47fc, type: 3}
+    volume: 0.303
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: RockThrow2b
+    clip: {fileID: 8300000, guid: c6ad50098daaba843b71bb2260eb47fc, type: 3}
+    volume: 0.101
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: RockThrow3
+    clip: {fileID: 8300000, guid: de1ddb0c84b8a174ba802a7573caa96c, type: 3}
+    volume: 0.303
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: Stare1
+    clip: {fileID: 8300000, guid: 83fda18700ba4184eb8fb8cb4d317141, type: 3}
+    volume: 0.303
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: Home1
+    clip: {fileID: 8300000, guid: 5a48cc5f7de1db04ea995abccd0cb874, type: 3}
+    volume: 0.908
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: Law1
+    clip: {fileID: 8300000, guid: 41d5f76371956a945809fe8580518bc1, type: 3}
+    volume: 0.303
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: Trader1
+    clip: {fileID: 8300000, guid: 8da7a725ccf81d942ace84a09340df89, type: 3}
+    volume: 0.105
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: Trader2
+    clip: {fileID: 8300000, guid: ba1e1c70a1fdcd843ab8965ede5d2b7c, type: 3}
+    volume: 0.184
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: Trader3
+    clip: {fileID: 8300000, guid: 4b3d60d83bed71b4cbcdc1aba172f3d2, type: 3}
+    volume: 1
+    pitch: 0.54
+    loop: 1
+    source: {fileID: 0}
+  - name: Turtle1
+    clip: {fileID: 8300000, guid: 02cb1dbd82dc9f842935d814cb4fab86, type: 3}
+    volume: 0.303
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: Stare1
+    clip: {fileID: 8300000, guid: a8ec8bf011e8b804ca07a9321da2d1e6, type: 3}
+    volume: 0.303
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: Turtlefollower1
+    clip: {fileID: 8300000, guid: 525211464cb43c349a2075a29162e397, type: 3}
+    volume: 0.303
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: Null
+    clip: {fileID: 8300000, guid: 525211464cb43c349a2075a29162e397, type: 3}
+    volume: 0
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  musicSource: {fileID: 0}
 --- !u!4 &1692173617
 Transform:
   m_ObjectHideFlags: 0
@@ -46506,6 +46607,7 @@ Transform:
   - {fileID: 2002723076}
   - {fileID: 1623615235}
   - {fileID: 686944541}
+  - {fileID: 411764853}
   m_Father: {fileID: 1189725046}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -49409,8 +49511,8 @@ MonoBehaviour:
     type: 3}
   buttonPrefab: {fileID: 6131964336979713749, guid: 27dcdce8d1e8eb1449a87daa1daa9b61,
     type: 3}
-  charDelay: 0.2
-  fullstopDelay: 0.4
+  charDelay: 0.4
+  fullstopDelay: 0.6
   lastpressedbuttonText: 
   gameover: 0
   RandomSoundNames:
@@ -49428,6 +49530,7 @@ MonoBehaviour:
   instantTextScroll: 0
   wayDownLogic: {fileID: 892175630}
   soundsystem: {fileID: 0}
+  musicStyle: 0
 --- !u!1 &1787152145
 GameObject:
   m_ObjectHideFlags: 0

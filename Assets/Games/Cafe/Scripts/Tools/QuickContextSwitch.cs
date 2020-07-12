@@ -2,12 +2,12 @@
 using UnityEngine;
 using UnityEditor;
 
+#if UNITY_EDITOR
 public class QuickContextSwitch : EditorWindow
 {
 
-
     public UIMaster ui;
-
+    #if UNITY_EDITOR
     public void Awake()
     {
         ui = FindObjectOfType<UIMaster>();
@@ -61,7 +61,7 @@ public class QuickContextSwitch : EditorWindow
             ui.SwitchLayer(3);
 
         }
-
     }
+#endif
 }
-
+#endif

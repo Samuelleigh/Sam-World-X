@@ -1,6 +1,6 @@
 ===1stare==
 ~Strange = "Movement"
-In the distance a Being is still. They are looking towards you, but not with purpose. #m #0 #a #1 #idle
+In the distance, a Being is still. They are looking towards you, but not with purpose. #m #0 #a #1 #idle #music #Stare1
 *Approach them.
 ~addStrangeAmount(6)
 ->approach
@@ -8,7 +8,7 @@ In the distance a Being is still. They are looking towards you, but not with pur
 ->leave1
 
 ==approach
-You stand in front of them, They don't react. You can hear them breathing.  #m #1 #a #1 #idle
+You stand in front of them, they don't react. You can hear them breathing.  #m #1 #a #1 #idle
 ~addAwareness(3)
 *Ask what's wrong.
 They don't respond, their breathing quickens.
@@ -35,7 +35,7 @@ They are holding a potion.
         ->OverWorld
 
 ==push
-The being provides no resistance, they hit the ground, You hear their skull crack open.  #m #2 #a #1 #pushedtofloor
+The being provides no resistance, they hit the ground. You hear their skull crack open.  #m #2 #a #1 #pushedtofloor
     ~addAwareness(5)
     **Recoil in shock.
     ~addAwareness(5)
@@ -81,24 +81,42 @@ The being starts to sob quietly. #m #2
                             ********Leave.
                             ~addStrangeAmount(1)
                               ->leave2
+                              ********Push the Being.
+                        ~addStrangeAmount(10)
+                        ->push
                         *******Leave.
                         ~addStrangeAmount(1)
                           ->leave2
+                        *******Push the Being.
+                        ~addStrangeAmount(10)
+                        ->push
                     ******Leave.
                     ~addStrangeAmount(1)
-                ->leave2
+                    ->leave2
+                    ******Push the Being.
+                    ~addStrangeAmount(10)
+                    ->push
                 *****Leave.
                 ~addStrangeAmount(1)
                 ->leave2
+                *****Push the Being.
+            ~addStrangeAmount(10)
+            ->push
             ****Leave.
             ~addStrangeAmount(1)
             You conclude that this being isn't worth any more of your time.
             ->OverWorld
+            ****Push the Being.
+            ~addStrangeAmount(10)
+            ->push
         ***Leave.
         ~addStrangeAmount(1)
         You conclude that this being isn't worth any more of your time.
         ->OverWorld
-    **Push the being.
+        ***Push the Being.
+        ~addStrangeAmount(10)
+        ->push
+    **Push the Being.
     ~addStrangeAmount(10)
     ->push
 *"I'm leaving, have a nice life."
@@ -110,8 +128,7 @@ The being continues to stare.
 You stare at the body, it looks like they have a potion in their hand. #m #3
     *Take it.
     As you reach down, you hear the beings last breath. #p #4 #h
-        **...
-    ->OverWorld.hide
+    ->OverWorld.lastbreath
     *Don't you dare.
     ~addAwareness(10)
     You killed them, it was your fault. 

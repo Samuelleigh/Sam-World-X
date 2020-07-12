@@ -3,7 +3,7 @@
 //a1 is standing guy
 //a2 is sitting guy
 
-Two Beings are laughing with each other. #m #0 #a #1 #laughing #a #2 #sitlaugh
+Two Beings are laughing with each other. #m #0 #a #1 #laughing #a #2 #sitlaugh #music #Laughing1
 *"Hello friends!"
 ->Friends
 *"What's so funny?"
@@ -15,30 +15,31 @@ As you walk away, you hear aggressive giggling. #h
 ==Friends
 One of the beings turns towards you. "Hi friend, how has your day been so far?" #a #1 #idle #a #2 #sit
     *"Pretty good."
-    "oh, it's pretty good is it?"
-        **"yes"
+    "Oh, it's pretty good is it?"
+        **"Yes"
         "Same, yes, same. It has been pretty good. Yes" the other being's mouth is twitching. 
         **"That's what I said."
         ~subStrangeAmount(10)
-        The being turns to his friend "ooo that's what he said, yes, he's been having a good day is what he said." #a #1 #laughing
+        The being turns to his friend "oooo that's what he said, yes, he's been having a good day is what he said." #a #1 #laughing
         --
         ->yours
     *"Awful."
-    "oh, poor baby, bad day?"
+    "Oh, poor baby, bad day?"
         **"That's what I said."
         ~subStrangeAmount(10)
         "I know"
         ->yours
-        **"Thank you for your concern"
-        "No worry"
+        **"Thank you for your concern."
+        "No worrys."
         ~subStrangeAmount(10)
         ->yours
     *"Average"
     "No, no no, you had a good day, you had a good day."
-        **"No I didn't'
-        You had a good day. 
+        **"No. I didn't."
+        "You had a good day." 
         ->yours
-        **ummm
+        **"I guess you're right?"
+        "I know."
         ->yours
         
 ==yours
@@ -54,7 +55,7 @@ One of the beings turns towards you. "Hi friend, how has your day been so far?" 
                 ****"Are you deaf?"
                 ~subStrangeAmount(10)
                 ----
-                I'm being a little jitter blaster, reach into my pocket. There is a tonge in there." #a #1 #chickendance #a #2 #sitlaugh
+                I'm being a little jitter blaster, reach into my pocket. There is a tasty in there." #a #1 #chickendance #a #2 #sitlaugh #music #Laughing2
                     *****Walk Away.
                     You walk away, you hear roaring laughter behind you //nothing
                     ->OverWorld
@@ -74,19 +75,22 @@ One of the beings turns towards you. "Hi friend, how has your day been so far?" 
                         ->Tradelaugh
                     
 ==funny
-"Oh, nothing, we just saw you in the distance and.."  #a #1 #idle #a #2 #sit
+"Oh, nothing, we just saw you in the distance, talking with that other being, and.."  #a #1 #idle #a #2 #sit
     *"...and what"
     "It's nothing, really. It wasn't funny. I'm sorry." // one being starts moving werid
         **"I might find it funny."
-        **"I can handle it."
+        **"You can tell me, I can handle it."
+        **"Ok, do you want to trade?"
+        "Trade, why?"
+        ->Tradelaugh
         --
-        The beings friend looks like they're about to burst out laughing "no no no, it wasn't funny, it wasn't, it wasn't funny." 
+        The being's friend looks like they're about to burst out laughing. "No no no, it wasn't funny, it wasn't, it wasn't funny." 
             ***"Tell me or I'll punch you."
             ~subStrangeAmount(10)
-            "oh no, he'll punch me, he'll punch me" The other being is sucking in their checks."  #a #1 #chickendance
+            "Oh no, he'll punch me, he'll punch me" The other being is sucking in their checks."  #a #1 #chickendance  #music #Laughing2
                 ****Punch them.
                 ~subStrangeAmount(10)
-                You punch them, it doesn't do anything. The beings are consuming themselves with laughter. #a #1 #chickendance #a #2 #sitlaugh
+                You punch them, it doesn't do anything. The beings laugh harder. #a #1 #chickendance #a #2 #sitlaugh
                     *****umm...
                     ~subStrangeAmount(10)
                     "Oooo, big boy hit me, big boy hit me, oh no" #m #1
@@ -97,28 +101,28 @@ One of the beings turns towards you. "Hi friend, how has your day been so far?" 
                 ****Walk away.
                 ~subStrangeAmount(10)
                 ->OverWorld
-        **"Ok, do you want to trade?"
-        "Trade, why?"
-        ->Tradelaugh
+            ***Change the subject.
+                ->yours
+        
  
 
 
 ==Tradelaugh
-"What do you mean?"  #a #1 #idle #a #2 #sit
+"What do you mean?"  #a #1 #idle #a #2 #sit #music #Laughing1
 *Try to explain.
    "I don't understand why anyone would want to do that."
     **"Are you joking?"
-    "We're always joking dumpo, what else would we do"
+    "We're always joking dumpo, what else would we do."
         ->OverWorld
     **"What don't you understand."
-    **"I guess you're right. "
+    **"I guess you're right."
     --
-    One beings looks at the other "yum yum, my birthday cake tastes my fingers" 
+    One beings looks at the other "yum yum, my birthday cake tastes like my inside fingers." 
     **Walk away.
     ->OverWorld
     **"What do you mean?"
     ~addAge(20)
-    The beings both laugh hysterically. Then die.#h
-    ->OverWorld
+    The beings both laugh hysterically. Then die. #a #1 #chickendance #a #2 #sitlaugh #music #Laughing2
+    ->OverWorld.laugh
 *Don't bother, just leave.
     ->OverWorld
