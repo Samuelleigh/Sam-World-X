@@ -24,8 +24,8 @@ As the tower draws closer, you notice giant limbs jut out, some look like they'r
                 "The final turtle of turtle tower, he's a smart one, I have so much to learn from him."
                 ****"Oh, yes, I am going to talk to him."
                     ->goodgood
-                ****"No, But I will see him."
-                ->godowhat
+                ****"Maybe I will, maybe I won't."
+                    The Being ignores you. <> ->goodgood
             ***"Yes."
                 ->goodgood
         **Kick them aside.
@@ -100,6 +100,10 @@ The being chuckles. "Everyone needs a hobby I guess." <>
         "I'm so much smaller than you, It'll take me forever to reach him."
             ***"I'll think about it."
             ->OverWorld
+
+
+===fragme2nt
+->OverWorld
 
 
 

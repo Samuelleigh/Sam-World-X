@@ -165,7 +165,10 @@ public class JigsawGameLogic : MonoBehaviour
 
         }
 
-        Invoke("MoveCamera", 0.1f);
+
+        
+
+        //Invoke("MoveCamera", 0f);
         Invoke("TurnOfflayoutGroup", 0.1f);
 
         if (level.centerAligned) 
@@ -175,6 +178,8 @@ public class JigsawGameLogic : MonoBehaviour
 
         }
 
+
+        MoveCamera();
 
     }
 

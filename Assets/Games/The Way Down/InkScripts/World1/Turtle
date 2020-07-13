@@ -115,7 +115,7 @@ The turtle speaks. "You know I can feel you right?"
 
 
 =ClimbTalk
-"Hello, nice to meet you..." The turtle is friendly, and has many scars across it's face. #m #1
+"Hello, nice to meet you." The turtle is friendly, and has many scars across it's face. #m #1
     *...
     -
     "Just so we start on the right foot, could I ask you why you wanted to..climb..us."
@@ -242,13 +242,13 @@ The turtle smiles, notices his smile, then frowns. //change the shot to somethin
                         ****"You're wrong, I'm not in pain"
                         ~ addAwareness(4)
                         Maybe not today, but eventually the awareness will get to you, as it gets to everyone.
-                            *****"It won't get to me"
+                            *****"It won't get to me" 
                             ~ addAwareness(4)
                                   I hope so.
                                   ->endturlte
                             *****"If that's true, then why are you fine."
                             ~ addAwareness(4)
-                            "I don't know. I don't think I am. I don't have a choice if I live or die."
+                            "I don't know. I don't think I am."
                             ->endturlte
                             *****"If it's inevitable, then why does it matter when exactly it happens."
                             ~ addAwareness(4)

@@ -34,7 +34,7 @@ You step back. The Being looks surprised. "DON'T MOVE!"
     **Run away.
     ~subBody(100)
     You turn and run. You feel a rock impact into your back, it hurts but doesn't slow you down. #h
-    ->OverWorld
+    ->OverWorld.hide
 
 ==convo
 *...

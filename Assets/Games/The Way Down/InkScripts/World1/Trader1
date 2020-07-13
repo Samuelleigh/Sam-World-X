@@ -17,38 +17,23 @@ But what shall you say? #m #1 #a #1 #praying #music #Trader3
          ->why
          **"I don't need your help."
          "I'm not implying that you do, but since I'm offering, why not hear me out?"
-            ***Sure.
+            ***"Sure."
             "->TradeExplain
             ***"I don't want your help either."
             "As you wish. If you change your mind, I'll be here."
             ->OverWorld
-    *"Are you friend or foe?"
+    *"Get away from me!"
         "Friend, I wish to help."
-        **Why?
+        **"Why?"
         ->why
-    *"Have I seen you before?"
-        "It's unlikely." the trader responds, slightly nervous.
-            **"Then why are you approaching me."
-            I just want to help you.
-                ***Why?
-                ->why
-            **"Then why do I remember you."
-            "I wouldn't think about it too hard...it's not worth it."
-                ***"What do you mean?"
-                "Friend, I want to help you, but not in this way, please."
-                    ****"How do you want to help me?"
-                    ->TradeExplain
-                    ****"No, tell me why."
-                        The being runs away.
-                        ->OverWorld.hide
-            **"Then get the fuck away from me."
+        **"Then get away from me!"
             The Being, stunned, stammers "t-t-trade?"
                 ***"GET AWAY FROM ME!"
                 The being runs away.
                     ->OverWorld.hide
                 ***"Trade?"
-                "trade, yes, trade." 
-                    ****"I want to trade
+                "Trade, yes, trade." 
+                    ****"I want to trade"
                         The being eyes light up, surprises of how easy it was.
                         ->StartTrade 
                     ****"What do you mean?"
@@ -76,7 +61,7 @@ But what shall you say? #m #1 #a #1 #praying #music #Trader3
                         The being, dejected, walks away.
                         ->OverWorld.hide
                 **"Just tell me what you want!"
-                You briefly knock them off balance. "<> ->TradeExplain
+                You briefly knock them off balance. "<>->TradeExplain
             *"I don't."
             The being shuffles uncomfortably, "I... don't understand."
                 **"Good."
@@ -97,7 +82,7 @@ But what shall you say? #m #1 #a #1 #praying #music #Trader3
                         
                         **"Yes, can we start already."
                         They can't quite seem to believe it, "Right away, friend, right away." <> ->StartTrade 
-                    *"If you want to help, why do I need to give you something."
+                    *"If you want to help, why do I need to give you something?"
                         "Taking what you no longer need is my reward."  
                         **"Sounds like a con to me."
                         The being smiles. "Perhaps if you allow me to describe my offers to you, then you can decide for yourself." 
@@ -112,13 +97,17 @@ But what shall you say? #m #1 #a #1 #praying #music #Trader3
                         **"Sure, lets give it a try."
                         The beings nervousness melts into pleasure. <>->StartTrade
                     *"I don't understand."
-                    "Don't worry,  many beings similar to yourself have struggled to understand as well, do you have any questions" ->TradeQuestions
+                    "Don't worry, many beings similar to yourself have struggled to understand as well, do you have any questions" ->TradeQuestions
                     
 =TradeQuestions  
                         **"Why would I bother with this?"
                         "If we all focused on trading things, this world will become a better place." ->TradeQuestions #m #3
-                        **"A trail run could help me understand."
-                        The trader's eyes light up. "yes, yes I agree!" ->StartTrade #m #3
+                        **"What is this world?"
+                          ~ addAwareness(10)
+                        The being looks nervious. "Friend, I want to help you, answering that will not help. Please."
+                        ->TradeQuestions
+                        **"Could we trade now?"
+                        The trader's eyes light up. "yes, yes we can!" ->StartTrade #m #3
                         **"I don't want to engage with this activity."
                         "I will respect your wishes my friend. But could you allow me to make one last suggestion."
                             ***"Ok."
@@ -146,7 +135,7 @@ You start running, and to your surprise, the being runs after you. #m #0 #a #1 #
 *Keep running.
     The being keeps running. They call out "I only want to help you."
     **Keep running.
-    The being trips over and falls on his face, you don't look back as you continue to run. 
+    The being trips over and falls on their face, you don't look back as you continue to run. 
     ->OverWorld.hide
     **Stop and talk to them.
     ->Engage
@@ -185,7 +174,7 @@ The trader excitedly describes all the things that they'd be willing to give, an
 You see blood drain from the traders face, "oh, sorry, I was sure that at least one of these would be pleasing to you."
     **"You were wrong."
     Hurt, the being shuffles away.#m #0 #a #1 #sad
-    ->OverWorld
+    ->OverWorld.hide
     **"Maybe next time?"
     "Maybe next time." They look at the ground. "Maybe next time." #m #0 #a #1 #sad
     ->OverWorld
@@ -201,6 +190,27 @@ As the exchange is completed, the Trader's excitement dissolves. #m #0 #a #1 #sa
 
 ->OverWorld
 
+
+
+=fgrufh
+
+    *"Have I seen you before?"
+        "It's unlikely." the trader responds, slightly nervous.
+            **"Then why are you approaching me."
+            I just want to help you.
+                ***Why?
+                ->DONE
+               // ->why
+            **"Then why do I remember you."
+            "I wouldn't think about it too hard...it's not worth it."
+                ***"What do you mean?"
+                "Friend, I want to help you, but not in this way, please."
+                    ****"How do you want to help me?"
+                    ->DONE
+                 //   ->TradeExplain
+                    ****"No, tell me why."
+                        The being runs away.
+                        ->OverWorld.hide
 
 //This trader wants to trade, every line he manages to say gives him another shot of convincing his "victim" to play 
 //along.

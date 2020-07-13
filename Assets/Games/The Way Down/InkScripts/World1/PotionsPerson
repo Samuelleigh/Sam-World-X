@@ -21,7 +21,7 @@ A being is holding many potions. #m #0 #a #1 #old #music #Potion1
 
     
 ==Take
-Take whatever you need, I can always make more. #m #1
+Take whatever you need. But please leave some for others. #m #1
             ***Take 4
             You Take 4 #p4
                 ****Say thank you.

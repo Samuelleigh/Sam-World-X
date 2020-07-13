@@ -3,17 +3,17 @@
 //a1 is standing guy
 //a2 is sitting guy
 
-Two Beings are laughing with each other. #m #0 #a #1 #laughing #a #2 #sitlaugh #music #Laughing1
-*"Hello friends!"
+Two Beings are laughing with each other. Everytime they look at you they howl louder. #m #0 #a #1 #laughing #a #2 #sitlaugh #music #Laughing1
+*Strike up a conversation.
 ->Friends
-*"What's so funny?"
+*"Why are you laughing at me?"
 ->funny
-*Ignore them.
-As you walk away, you hear aggressive giggling. #h
+*Run away.
+As you run away, you hear aggressive giggling. #h
 ->OverWorld
 
 ==Friends
-One of the beings turns towards you. "Hi friend, how has your day been so far?" #a #1 #idle #a #2 #sit
+Before you can speak, one of the beings turns towards you. "Hi friend, how has your day been so far?" #a #1 #idle #a #2 #sit
     *"Pretty good."
     "Oh, it's pretty good is it?"
         **"Yes"
@@ -30,7 +30,7 @@ One of the beings turns towards you. "Hi friend, how has your day been so far?" 
         "I know"
         ->yours
         **"Thank you for your concern."
-        "No worrys."
+        "No worries."
         ~subStrangeAmount(10)
         ->yours
     *"Average"
@@ -48,9 +48,9 @@ One of the beings turns towards you. "Hi friend, how has your day been so far?" 
                 ****Do you want to trade?
                 Both beings look at each other, "Trade, Why?"
                 ->Tradelaugh
-            ***"What are you doing?"
+    ***"What are you doing?"
             ~subStrangeAmount(10)
-            "Me. What I'm doing?" the other being looks like they're going to burst into laughter.
+            "Me. What I'm doing?" The other being looks like they're about to break.
                 ****"Yes, what are you doing!"
                 ****"Are you deaf?"
                 ~subStrangeAmount(10)
@@ -75,10 +75,9 @@ One of the beings turns towards you. "Hi friend, how has your day been so far?" 
                         ->Tradelaugh
                     
 ==funny
-"Oh, nothing, we just saw you in the distance, talking with that other being, and.."  #a #1 #idle #a #2 #sit
+"Oh, it's nothing, we just saw you in the distance, talking with that other being, and.."  #a #1 #idle #a #2 #sit
     *"...and what"
     "It's nothing, really. It wasn't funny. I'm sorry." // one being starts moving werid
-        **"I might find it funny."
         **"You can tell me, I can handle it."
         **"Ok, do you want to trade?"
         "Trade, why?"
@@ -87,7 +86,7 @@ One of the beings turns towards you. "Hi friend, how has your day been so far?" 
         The being's friend looks like they're about to burst out laughing. "No no no, it wasn't funny, it wasn't, it wasn't funny." 
             ***"Tell me or I'll punch you."
             ~subStrangeAmount(10)
-            "Oh no, he'll punch me, he'll punch me" The other being is sucking in their checks."  #a #1 #chickendance  #music #Laughing2
+            "Oh no, he'll punch me, he'll punch me." The other being is sucking in their cheeks.  #a #1 #chickendance  #music #Laughing2
                 ****Punch them.
                 ~subStrangeAmount(10)
                 You punch them, it doesn't do anything. The beings laugh harder. #a #1 #chickendance #a #2 #sitlaugh
