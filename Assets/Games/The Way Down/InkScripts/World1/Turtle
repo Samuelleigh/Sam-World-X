@@ -215,7 +215,7 @@ It climb forever, but you eventually fall off.#END
         ***"Could you give me one regardless."
         ~ addAwareness(4)
         ->endconvisation
-        ***"That reminds me, a small being told me to give you this."
+        ***{goodgood}"That reminds me, a small being told me to give you this."
         ~ addAwareness(4)
         ->SmallBeing
 
