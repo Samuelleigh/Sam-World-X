@@ -23,9 +23,18 @@ public class EndGameLogic : MonoBehaviour
         {
             QuitProgram();
         }
+        if (Input.GetKey("f"))
+        {
+            ToggleFullScreen();
+        }
 
     }
 
+    public void ToggleFullScreen()
+    {
+
+        Screen.fullScreen = !Screen.fullScreen;
+    }
 
 
     public void EndGame()

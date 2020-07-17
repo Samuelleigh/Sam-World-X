@@ -91,6 +91,8 @@ public class WayDownGame : MonoBehaviour
     void Update()
     {
         
+       
+
     }
 
     public void StartGame() 
@@ -325,6 +327,7 @@ public class WayDownGame : MonoBehaviour
     
     
     }
+
 
 
     public void ConsumePotion(Button button, int choice) 
