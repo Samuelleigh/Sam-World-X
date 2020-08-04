@@ -12,6 +12,11 @@ public class JigsawPieceScript : MonoBehaviour
     public Vector2Int targetSpace;
     public GameObject child;
     public JigsawGameLogic gm;
+    public Rect st;
+    public Transform parent;
+
+    public float x;
+    public float y;
 
     private void Awake()
     {
@@ -24,7 +29,7 @@ public class JigsawPieceScript : MonoBehaviour
         
     }
 
-    public void SetMask(int targetX, int targetY, float cellsizeX, float cellsizeY, int puzzleid) 
+    public void SetMask(int targetX, int targetY, float cellsizeX, float cellsizeY, int puzzleid, Vector2 rawsize) 
     {
 
 
@@ -32,20 +37,37 @@ public class JigsawPieceScript : MonoBehaviour
         targetSpace.y = (targetY);
         targetSpace.x = (targetX);
 
+        child.GetComponent<RectTransform>().sizeDelta = rawsize;
 
+       float xOffset = (rawsize.x/2 - (cellsizeX  * targetSpace.x));
+       float yOffset = (-rawsize.y/2 + (cellsizeY * targetSpace.y));
 
-       float xOffset = (cellsizeX * targetSpace.x);
-       float yOffset = (cellsizeY* targetSpace.y);
+        float x = xOffset;
+        float y = yOffset;
 
-       float x = child.transform.localPosition.x - xOffset;
-       float y = child.transform.localPosition.y + yOffset;
+        //  float x = child.transform.localPosition.x - xOffset;
+        // float y = child.transform.localPosition.y + yOffset;
 
         Vector3 v = new Vector3(x, y, 0);
 
+        child.GetComponent<RectTransform>().anchoredPosition = v;
+        
+    }
 
+    public void InstantPutBack()
+    {
+        gameObject.transform.SetParent(parent);
+        gameObject.GetComponent<RectTransform>().anchoredPosition = new Vector3(x, y, 0);
+      
+        
+    }
 
-        child.transform.localPosition = v;
+    public void SaveStartTransform()
+    {
+        parent = gameObject.transform.parent;
 
+        x = gameObject.GetComponent<RectTransform>().anchoredPosition.x;
+        y = gameObject.GetComponent<RectTransform>().anchoredPosition.y;
 
     }
 

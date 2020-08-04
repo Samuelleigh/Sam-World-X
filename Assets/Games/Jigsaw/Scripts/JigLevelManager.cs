@@ -1,5 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
+using System.IO;
 using UnityEngine;
 
 public class JigLevelManager : MonoBehaviour
@@ -8,6 +10,7 @@ public class JigLevelManager : MonoBehaviour
     public bool debug = true;
     public int playID;
     public int altID = 0;
+    public string path;
 
     public List<JigsawLevel> Jigsaws;
     public JigsawLevel DebugLevel;
@@ -27,11 +30,14 @@ public class JigLevelManager : MonoBehaviour
     
         if (debug == true)
         {
-            DebugLevel = Jigsaws[debugID];
+            //DebugLevel = Jigsaws[debugID];
         }
 
 
     }
+
+    
+
 
     public void Start()
     {

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24ce8093fa15eea4093ec8e92352281b, type: 3}
   m_Name: Old Gay Professor
   m_EditorClassIdentifier: 
-  CharacterName: Alfred Newman
+  CharacterName: John Newman
   Inkshorthand: G
   ProfileImage: {fileID: 21300000, guid: 7c28e30dd8ba6f84090c519e275ad2f4, type: 3}
   ColourTheme: {r: 0, g: 0, b: 0, a: 0}

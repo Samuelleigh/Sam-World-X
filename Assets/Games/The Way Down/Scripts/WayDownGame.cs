@@ -53,6 +53,8 @@ public class WayDownGame : MonoBehaviour
     public TextMeshProUGUI infotext;
     public SoundSystem soundsystem;
 
+    public List<GameObject> levelSets;
+
     private void Awake()
     {
         levelManager = FindObjectOfType<WDLevelManager>();
@@ -97,6 +99,8 @@ public class WayDownGame : MonoBehaviour
 
     public void StartGame() 
     {
+
+       // for (int i = 0; i < levelSets.Count; i++) { levelSets[i].SetActive(false); }
 
        // soundsystem.PlayMusic("music");
         soundsystem.PlaySound("click");
@@ -203,22 +207,31 @@ public class WayDownGame : MonoBehaviour
 
         currentsectionID++;
 
- 
 
-      //  foreach (WDLevel level in levelManager.Levels) 
-      //  {
 
-           // if (level.sectionNumbers == currentsectionID) 
-           // {
-          //      potentiallevels.Add(level);
-            
-           // }
+        //  foreach (WDLevel level in levelManager.Levels) 
+        //  {
 
-       // }
+        // if (level.sectionNumbers == currentsectionID) 
+        // {
+        //      potentiallevels.Add(level);
+
+        // }
+
+        // }
+
+        if (currentLevel.EventScenes != null)
+        {
+            currentLevel.EventScenes.SetActive(false);
+        }
 
         currentLevel = levelManager.Levels[currentsectionID];
-      
 
+
+        if (currentLevel.EventScenes != null)
+        {
+            currentLevel.EventScenes.SetActive(true);
+        }
         StartCoroutine(OverWorldWait(3));
 
     

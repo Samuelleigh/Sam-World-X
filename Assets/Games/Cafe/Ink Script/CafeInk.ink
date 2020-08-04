@@ -1,6 +1,7 @@
 INCLUDE Test/Test1
 INCLUDE Test/Test2
 
+INCLUDE FrontStage/Intro
 INCLUDE FrontStage/Academic
 INCLUDE FrontStage/SleepyWorker
 INCLUDE FrontStage/SorotiyGirls

@@ -15,6 +15,9 @@ MonoBehaviour:
   name: Logo Rotate
   Xpieces: 5
   Ypieces: 5
+  puzzleResolution: 0
+  XCustom: 800
+  YCustom: 800
   SceneName: LogoSpin
   numberOfpuzzles: 2
   cameraID: 0000000002000000

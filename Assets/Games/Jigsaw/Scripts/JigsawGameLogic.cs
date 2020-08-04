@@ -4,6 +4,9 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.Video;
+using System.IO;
+using UnityEditor;
 
 public enum ShiftDirection { up,down,left,right, no}
 
@@ -12,7 +15,7 @@ public class JigsawGameLogic : MonoBehaviour
     public bool Debugbool;
     public JigLevelManager levels;
     public UIMaster ui;
-    public List<RenderTexture> renderTexture;
+    public List<RenderTexture> renderTexture = new List<RenderTexture>();
 
     //jigsaw scriptable object stuff
     public JigsawScriptObject Level;
@@ -52,8 +55,19 @@ public class JigsawGameLogic : MonoBehaviour
 
     public GameObject ComfirmClear;
 
+    public Vector2 boardSize;
+    public int resoultionX;
+    public int resoultionY;
+
+    public GameObject loadingscreen;
+
+    public VideoClip resourceVideo;
+
+    public GameObject playergizmos;
+
     private void Awake()
     {
+        loadingscreen.SetActive(true);
         levels = FindObjectOfType<JigLevelManager>();
         ui = FindObjectOfType<UIMaster>();
     }
@@ -61,11 +75,11 @@ public class JigsawGameLogic : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
+        StartCoroutine(LoadingScreen());
         Level = levels.Jigsaws[levels.playID].jigsawLevelInfo.JigLevels[levels.altID];
         solvedAmountText.text = puzzlessolved + "/" + Level.numberOfpuzzles;
 
-
-      
 
         if (levels.debug) { ui.SwitchLayer(1); LoadLevel(Level); }
         else { ui.SwitchLayer(1); LoadLevel(Level); }
@@ -85,10 +99,45 @@ public class JigsawGameLogic : MonoBehaviour
     public void LoadLevel(JigsawScriptObject level)
     {
 
+
         SceneManager.LoadScene(level.SceneName, LoadSceneMode.Additive);
 
+        //Set up the Render texture
+        switch (level.puzzleResolution) 
+        {
+            case PuzzleResolution._700x700:
+                resoultionX = 700;
+                resoultionY = 700;
+                break;
+            case PuzzleResolution._500x500:
+                resoultionX = 500;
+                resoultionY = 500;
+                Debug.Log("d");
+                break;
+            case PuzzleResolution.Custom:
+                resoultionX = level.XCustom;
+                resoultionY = level.YCustom;
+                break;
+            case PuzzleResolution _700x300:
+                resoultionX = 700;
+                resoultionY = 300;
+                break;
+            default:
+                break;
+        }
+
+        //new render texture for each puzzle
+
+        for (int i = 0; i < puzzleCam.Count; i++)
+        {
+            puzzleCam[i].GetComponent<Camera>().depthTextureMode = DepthTextureMode.Depth;
+            puzzleCam[i].GetComponent<Camera>().targetTexture.Release();
+            puzzleCam[i].GetComponent<Camera>().targetTexture = new RenderTexture(resoultionX, resoultionY, 24, RenderTextureFormat.Default);
+            renderTexture.Add(puzzleCam[i].GetComponent<Camera>().targetTexture);
+        }
+
         //if cetner alighned
-        
+        boardSize = new Vector2(resoultionX, resoultionY);
 
 
         //turn on features
@@ -98,9 +147,12 @@ public class JigsawGameLogic : MonoBehaviour
         }
 
         totalPieces = level.Xpieces * level.Ypieces;
-        cellSizeX = renderTexture[0].height / level.Xpieces;
-        cellSizeY = renderTexture[0].width / level.Ypieces;
+        cellSizeX = resoultionX / level.Xpieces;
+        cellSizeY = resoultionY / level.Ypieces;
 
+
+
+        snapboard.GetComponent<RectTransform>().sizeDelta = boardSize;
         intialPuzzleGrid.cellSize = new Vector2(cellSizeX, cellSizeY);
         intialSnapGrid.cellSize = new Vector2(cellSizeX, cellSizeY);
         //for the number of pieces instantiate each piece, set the cell cordinate during this
@@ -130,8 +182,9 @@ public class JigsawGameLogic : MonoBehaviour
                 //Set the size of the piece to be cell
                 newpiece.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, cellSizeY);
                 newpiece.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, cellSizeX);
-                newpiece.GetComponent<JigsawPieceScript>().SetMask(x, y, cellSizeX, cellSizeY, I);
+                newpiece.GetComponent<JigsawPieceScript>().SetMask(x, y, cellSizeX, cellSizeY, I, boardSize);
                 newpiece.GetComponentInChildren<RawImage>().texture = r;
+                
 
                 PuzzlePieces.Add(newpiece);
             }
@@ -169,18 +222,20 @@ public class JigsawGameLogic : MonoBehaviour
 
         
        Invoke("MoveCamera", 1f);
-       Invoke("TurnOfflayoutGroup", 0.1f);
+
+        
+       Invoke("TurnOfflayoutGroup", 1f);
 
         if (level.centerAligned) 
         {
             Vector3 v = new Vector3(can.GetComponent<RectTransform>().rect.width / 2, can.GetComponent<RectTransform>().rect.height / 2, 0);
-            nonPieces.GetComponentInParent<RectTransform>().position = v;       
+            nonPieces.GetComponentInParent<RectTransform>().position = v;
+                
 
         }
 
-        
-
-
+      
+    
 
     }
 
@@ -220,18 +275,22 @@ public class JigsawGameLogic : MonoBehaviour
         float ybleep;
         float yoffset;
 
-        for (int i = 0; i < PuzzlePieces.Count; i++)
-        {
-         
+       
+        //Randomizing the location 
+            for (int i = 0; i < PuzzlePieces.Count; i++)
+            {
 
-            xbleep = Random.Range(-50, 50);
-            ybleep = Random.Range(-50, 50);
-            yoffset = 600 * (Mathf.FloorToInt(i / (Level.Xpieces * Level.Ypieces)));
-            add = new Vector3(xbleep, ybleep + yoffset, 0);
 
-           // Debug.Log(yoffset);
-            box.transform.GetChild(i).transform.position += add;
-        }
+                xbleep = Random.Range(-50, 50);
+                ybleep = Random.Range(-50, 50);
+                yoffset = 600 * (Mathf.FloorToInt(i / (Level.Xpieces * Level.Ypieces)));
+                add = new Vector3(xbleep, ybleep + yoffset, 0);
+
+                // Debug.Log(yoffset);
+                box.transform.GetChild(i).transform.position += add;
+                
+            }
+        
 
 
         if (Level.centerAligned)
@@ -258,6 +317,14 @@ public class JigsawGameLogic : MonoBehaviour
 
         }
 
+        foreach (GameObject jig in PuzzlePieces) 
+        {
+            jig.GetComponent<JigsawPieceScript>().SaveStartTransform();
+        
+        }
+
+        playergizmos.GetComponent<HorizontalLayoutGroup>().enabled = false;
+        playergizmos.transform.SetParent(ui.MasterLayers[1].transform);
 
     }
 
@@ -447,6 +514,13 @@ public class JigsawGameLogic : MonoBehaviour
     {
 
         SceneManager.LoadScene("JigsawMain", LoadSceneMode.Single);
+    }
+
+    public IEnumerator LoadingScreen() 
+    {
+        yield return new WaitForSeconds(1);
+        loadingscreen.SetActive(false);
+       
     }
 }
 

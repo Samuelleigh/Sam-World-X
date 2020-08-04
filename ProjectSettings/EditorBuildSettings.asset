@@ -8,49 +8,49 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Games/SamLeigh.xyz/Website.unity
     guid: 1cc640a85a220234781e7e1e819a4cbb
-  - enabled: 0
-    path: Assets/Games/Jigsaw/JigsawMain.unity
-    guid: 9fe9e0c009390954d8fd82ade27eab11
-  - enabled: 0
-    path: Assets/Games/Jigsaw/Level Data/4_3D Logo Box Spin/JigTest.unity
-    guid: 0b16a98c0fc38d544b31f2e509ed4eb8
-  - enabled: 0
+  - enabled: 1
     path: Assets/Games/Jigsaw/JigSawMenu.unity
     guid: 2aa017de91089f147bc6ed3ecb322ce7
-  - enabled: 0
+  - enabled: 1
+    path: Assets/Games/Jigsaw/JigsawMain.unity
+    guid: 9fe9e0c009390954d8fd82ade27eab11
+  - enabled: 1
+    path: Assets/Games/Jigsaw/Level Data/4_3D Logo Box Spin/JigTest.unity
+    guid: 0b16a98c0fc38d544b31f2e509ed4eb8
+  - enabled: 1
     path: Assets/Games/Jigsaw/Level Data/1_SpinLogo/LogoSpin.unity
     guid: 5c209e07be9f39248b419023619957d9
-  - enabled: 0
+  - enabled: 1
     path: Assets/Games/Jigsaw/Level Data/OLD/Puzzle Levels/Video.unity
     guid: 6ccfe11592267b4468744c3d2fa9609a
-  - enabled: 0
+  - enabled: 1
     path: Assets/Games/Jigsaw/Level Data/2_Gradiant Spin/GradiantSpin.unity
     guid: 128fab6a7a1b13141a259e80c354ffcb
-  - enabled: 0
+  - enabled: 1
     path: Assets/Games/Jigsaw/Level Data/3_Gradiant Cycle/GradiantCycle.unity
     guid: 695434f9c5116e643b514096b925b223
-  - enabled: 0
+  - enabled: 1
     path: Assets/Games/Jigsaw/Level Data/5_Gus/Gus.unity
     guid: 304bcc68710a21848826d2cef1c115e4
-  - enabled: 0
+  - enabled: 1
     path: Assets/Games/Jigsaw/Level Data/6_TV Static/Tv Static.unity
     guid: 6717f25ea4e7b7949aa35fad96a4e7e4
-  - enabled: 0
+  - enabled: 1
     path: Assets/Games/Jigsaw/Level Data/6_TV Static/Tv Static 1.unity
     guid: 14b87734ace146241836ce652f128304
-  - enabled: 0
+  - enabled: 1
     path: Assets/Games/Jigsaw/Level Data/7_Bird/Bird.unity
     guid: 325f814af7474964d90a1dcd9cc9d586
-  - enabled: 0
+  - enabled: 1
     path: Assets/Games/Jigsaw/Level Data/8_DuckRotation/Duck Rotation.unity
     guid: b9f088c84bd00aa41ab0638375bc4f19
-  - enabled: 0
+  - enabled: 1
     path: Assets/Games/Jigsaw/Level Data/9_MakeHuman/Make Human.unity
     guid: 452c6dc76f63bec43bd7c7f941d52b1c
-  - enabled: 0
+  - enabled: 1
     path: Assets/Games/Jigsaw/Level Data/10_publicDomain/PublicDomain.unity
     guid: 29d4ec7574006e0488f41f3a1e8c0e04
-  - enabled: 1
+  - enabled: 0
     path: Assets/Games/The Way Down/Way Down.unity
     guid: b296614dc6fbea44aa0db861a1b6b458
   m_configObjects: {}

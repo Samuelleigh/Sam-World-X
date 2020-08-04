@@ -1,0 +1,38 @@
+
+Lost Eye:
+
+Todo: 
+
+1. Create a level structure. 
+	a. Take level Structure from Jigsaw Puzzles
+	b. Create level Class
+	c. Create 
+
+2. Gameplay
+	a. Check if colours match
+		- by Checking if each colour hits it
+		- if the player is in a certain range of the 2nd eye
+		- Snap the player to the 2nd Eyes transform when it's close.
+
+		https://answers.unity.com/questions/526681/see-if-a-color-is-within-a-threshold.html
+
+Bucket:
+
+Structural:
+
+	- Level Select
+	- Level Flow
+
+Gameplay:
+
+	- Turn off 
+	- Level Types
+
+Difficult:
+
+	- Script to compare if both textures are "mostly" the same
+
+UI: 
+
+	- Tutorial
+	- 

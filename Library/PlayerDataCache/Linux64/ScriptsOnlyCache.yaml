@@ -415,7 +415,7 @@ ScriptsOnlyBuild:
     className: CinemachineExternalCamera
   - hash:
       serializedVersion: 2
-      Hash: 8e137e781c1c8fdf48d199a42e825bca
+      Hash: b894187680be1bf6d43ade992cde437b
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: WayDownGame
@@ -1129,7 +1129,7 @@ ScriptsOnlyBuild:
     className: FPS
   - hash:
       serializedVersion: 2
-      Hash: a18d2d77e8e344855c432efa64356963
+      Hash: dc91739d5699411d8e7b47565efd8f50
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: WDLevelManager
@@ -1376,4 +1376,5 @@ ScriptsOnlyBuild:
   platform: 24
   scenePathNames:
   - Assets/Games/The Way Down/Way Down.unity
-  playerPath: C:/Users/sleig/Desktop/The Way Down Builds/Linux/LinuxBuild.x86_64
+  playerPath: C:/Users/sleig/Desktop/The Way Down Builds/The Way Down Linux/The Way
+    Down Linux.x86_64

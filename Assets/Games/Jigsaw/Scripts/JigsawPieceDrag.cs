@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class JigsawPieceDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
+public class JigsawPieceDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler, IPointerClickHandler
 {
 
     public GameObject main;
@@ -25,11 +25,21 @@ public class JigsawPieceDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, I
         
     }
 
+    public void OnPointerClick(PointerEventData eventData) // 3
+    {
+        if (Input.GetMouseButtonUp(1))
+        {
+            Debug.Log("left Click");
+            jig.InstantPutBack();
+
+        }
+    }
+
+
+
     public void OnBeginDrag(PointerEventData eventData)
     {
 
-
-    
         offset = new Vector2(Input.mousePosition.x, Input.mousePosition.y) - (new Vector2(main.transform.position.x, main.transform.position.y));
         main.transform.SetAsLastSibling();
         gameObject.transform.SetParent(gm.box.transform);

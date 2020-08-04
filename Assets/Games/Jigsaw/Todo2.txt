@@ -1,4 +1,23 @@
 TODO:
 
-- Fix Jigsaw piece glitch
-- Fix 
+- Fix Jigsaw piece glitch DONE
+- Add in breif Loading PlaceCard
+- Fix Levels should define which aspect ratio / resoultion you should want 
+	- Custom Ratios ect DONE
+	- Custom Resolutions DONE
+	- Better centering of the work on the screen
+
+
+- Piece polish
+	- left click to put back DONE
+	- better location on spawn
+		- Move center location pieces down a bit.
+	- Move the gizmos better when center aligned
+
+
+
+- Make Custom Level Maker
+	- File Path Loading Videos
+
+	- Custom Level Toggle
+	- Custom 
