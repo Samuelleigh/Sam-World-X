@@ -120,6 +120,15 @@ MonoBehaviour:
   targetSpace: {x: 0, y: 0}
   child: {fileID: 4656891098888110279}
   gm: {fileID: 0}
+  st:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 0
+  parent: {fileID: 0}
+  x: 0
+  y: 0
 --- !u!225 &4656891098015967079
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -131,7 +140,7 @@ CanvasGroup:
   m_Alpha: 1
   m_Interactable: 1
   m_BlocksRaycasts: 1
-  m_IgnoreParentGroups: 1
+  m_IgnoreParentGroups: 0
 --- !u!114 &78198566204167991
 MonoBehaviour:
   m_ObjectHideFlags: 0

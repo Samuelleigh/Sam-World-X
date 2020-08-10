@@ -120,9 +120,9 @@
     <Compile Include="Assets\Games\Jigsaw\Scripts\JigsawMenu.cs" />
     <Compile Include="Assets\Games\Jigsaw\Scripts\JigsawPieceDrag.cs" />
     <Compile Include="Assets\Games\Jigsaw\Scripts\JigsawPieceScript.cs" />
+    <Compile Include="Assets\Games\Jigsaw\Scripts\JigsawSceneObject.cs" />
     <Compile Include="Assets\Games\Jigsaw\Scripts\JigsawScriptObject.cs" />
     <Compile Include="Assets\Games\Jigsaw\Scripts\PuzzleEnviromentStuff.cs" />
-    <Compile Include="Assets\Games\Jigsaw\Scripts\ResouceVideoReplacer.cs" />
     <Compile Include="Assets\Games\Jigsaw\Scripts\SnapPiece.cs" />
     <Compile Include="Assets\Games\Jigsaw\Scripts\VideoPathScript.cs" />
     <Compile Include="Assets\Games\Jigsaw\Scripts\YoutubeDownload.cs" />

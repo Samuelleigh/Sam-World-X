@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum PuzzleResolution {_700x700,_500x500,_700x300,Custom};
+public enum PuzzleResolution {_800x800,_700x700,_500x500,_700x300,Custom};
 
 [CreateAssetMenu(fileName = "New Level",menuName = "Jigsaw")]
 [System.Serializable]

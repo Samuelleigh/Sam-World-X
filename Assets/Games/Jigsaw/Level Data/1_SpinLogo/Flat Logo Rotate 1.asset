@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: Flat Logo Rotate 1
   m_EditorClassIdentifier: 
   name: Logo Rotate
-  Xpieces: 10
-  Ypieces: 10
-  puzzleResolution: 3
-  XCustom: 1280
-  YCustom: 720
+  Xpieces: 3
+  Ypieces: 3
+  puzzleResolution: 0
+  XCustom: 1200
+  YCustom: 800
   SceneName: LogoSpin
   numberOfpuzzles: 1
   cameraID: 00000000

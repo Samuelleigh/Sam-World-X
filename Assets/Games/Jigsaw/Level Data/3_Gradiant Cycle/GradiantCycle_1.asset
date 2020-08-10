@@ -15,6 +15,9 @@ MonoBehaviour:
   name: Gradiant Cycle
   Xpieces: 20
   Ypieces: 1
+  puzzleResolution: 0
+  XCustom: 800
+  YCustom: 800
   SceneName: GradiantCycle
   numberOfpuzzles: 1
   cameraID: 00000000

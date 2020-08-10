@@ -33,6 +33,11 @@ public class JigsawPieceDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, I
             jig.InstantPutBack();
 
         }
+        if (Input.GetMouseButtonUp(0))
+        {
+            jig.transform.SetParent(gm.ui.MasterLayers[1].transform);
+
+        }
     }
 
 
@@ -42,7 +47,8 @@ public class JigsawPieceDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, I
 
         offset = new Vector2(Input.mousePosition.x, Input.mousePosition.y) - (new Vector2(main.transform.position.x, main.transform.position.y));
         main.transform.SetAsLastSibling();
-        gameObject.transform.SetParent(gm.box.transform);
+        //gameObject.transform.SetParent(gm.box.transform);
+        jig.transform.SetParent(gm.ui.MasterLayers[1].transform);
 
         SoundSystem.instance.PlaySound("click");
 
@@ -82,13 +88,19 @@ public class JigsawPieceDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, I
                 }
                 else
                 {
-                    gameObject.transform.SetParent(gm.box.transform);
+                    gameObject.transform.SetParent(gm.ui.MasterLayers[1].transform);
 
                 }
 
             }
-        
-        
+            if (raycastResultList[i].gameObject.name == "Viewport") 
+            {
+                Debug.Log("snap back to content");
+                gameObject.transform.SetParent(gm.box.transform);
+
+            }
+            Debug.Log(raycastResultList[i].gameObject.name);
+
         }
 
       //  Debug.Log(eventData.pointerCurrentRaycast.gameObject.name);

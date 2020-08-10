@@ -64,6 +64,11 @@ public class JigsawGameLogic : MonoBehaviour
     public VideoClip resourceVideo;
 
     public GameObject playergizmos;
+    public GameObject ScrollViewStuff;
+
+    public int Xpieces;
+    public int Ypieces;
+   public  PuzzleResolution puzzleRez;
 
     private void Awake()
     {
@@ -99,12 +104,32 @@ public class JigsawGameLogic : MonoBehaviour
     public void LoadLevel(JigsawScriptObject level)
     {
 
-
         SceneManager.LoadScene(level.SceneName, LoadSceneMode.Additive);
 
-        //Set up the Render texture
-        switch (level.puzzleResolution) 
+      
+
+        if (levels.customMode)
         {
+            Xpieces = levels.CustomX;
+            Ypieces = levels.CustomY;
+            puzzleRez = levels.Customrez;
+
+        }
+        else 
+        {
+            Xpieces = level.Xpieces;
+            Ypieces = level.Ypieces;
+            puzzleRez = level.puzzleResolution;
+
+        }
+
+        //Set up the Render texture
+        switch (puzzleRez) 
+        {
+            case PuzzleResolution._800x800:
+                resoultionX = 800;
+                resoultionY = 800;
+                break;
             case PuzzleResolution._700x700:
                 resoultionX = 700;
                 resoultionY = 700;
@@ -145,11 +170,11 @@ public class JigsawGameLogic : MonoBehaviour
         {
             shiftFrame.SetActive(false);
         }
-
-        totalPieces = level.Xpieces * level.Ypieces;
-        cellSizeX = resoultionX / level.Xpieces;
-        cellSizeY = resoultionY / level.Ypieces;
-
+        
+            totalPieces = Xpieces * Ypieces;
+            cellSizeX = resoultionX / Xpieces;
+            cellSizeY = resoultionY / Ypieces;
+        
 
 
         snapboard.GetComponent<RectTransform>().sizeDelta = boardSize;
@@ -172,8 +197,8 @@ public class JigsawGameLogic : MonoBehaviour
             {
                 //Spawn puzzle pieces
                 GameObject newpiece = Instantiate(piece, box.transform);
-                y = Mathf.CeilToInt(i / level.Xpieces);
-                x = i - (y * level.Xpieces);
+                y = Mathf.CeilToInt(i / Xpieces);
+                x = i - (y * Xpieces);
               //  Debug.Log(x + " " + y);
 
                 //set the puzzle piece ID
@@ -193,12 +218,24 @@ public class JigsawGameLogic : MonoBehaviour
 
         }
 
+        GridLayoutGroup glg;
+        glg = snapboard.GetComponent<GridLayoutGroup>();
+        glg.constraint = GridLayoutGroup.Constraint.FixedRowCount;  //**
+        glg.constraintCount = Ypieces;
+
+        if (Ypieces == 1) 
+        {
+            glg.constraint = GridLayoutGroup.Constraint.FixedColumnCount;
+            glg.constraintCount = Xpieces;
+        }
+
         for (int i = 0; i < totalPieces; i++) 
         {
 
             GameObject snap = Instantiate(snapObj, snapboard.transform);
             snap.GetComponent<SnapPiece>().x = x;
             snap.GetComponent<SnapPiece>().y = y;
+         
 
             snap.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, cellSizeX);
             snap.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, cellSizeY);
@@ -226,16 +263,26 @@ public class JigsawGameLogic : MonoBehaviour
         
        Invoke("TurnOfflayoutGroup", 1f);
 
-        if (level.centerAligned) 
-        {
-            Vector3 v = new Vector3(can.GetComponent<RectTransform>().rect.width / 2, can.GetComponent<RectTransform>().rect.height / 2, 0);
-            nonPieces.GetComponentInParent<RectTransform>().position = v;
+      //  if (level.centerAligned) 
+       // {
+         //   Vector3 v = new Vector3(can.GetComponent<RectTransform>().rect.width / 2, can.GetComponent<RectTransform>().rect.height / 2, 0);
+         //   nonPieces.GetComponentInParent<RectTransform>().position = v;
                 
 
+       // }
+
+        if (resoultionY < 800)
+        {
+            resoultionY = 800;
         }
 
-      
-    
+            if (resoultionX > 800) 
+        {
+            ScrollViewStuff.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, 1750 - resoultionX);
+        }
+
+        ScrollViewStuff.GetComponent<ScrollRect>().horizontal = false;
+        ScrollViewStuff.GetComponent<ScrollRect>().vertical = false;
 
     }
 
@@ -269,12 +316,14 @@ public class JigsawGameLogic : MonoBehaviour
 
         box.GetComponent<GridLayoutGroup>().enabled = false;
 
+        
 
         Vector3 add;
         float xbleep;
         float ybleep;
         float yoffset;
 
+        float totalX = 0;
        
         //Randomizing the location 
             for (int i = 0; i < PuzzlePieces.Count; i++)
@@ -283,39 +332,47 @@ public class JigsawGameLogic : MonoBehaviour
 
                 xbleep = Random.Range(-50, 50);
                 ybleep = Random.Range(-50, 50);
-                yoffset = 600 * (Mathf.FloorToInt(i / (Level.Xpieces * Level.Ypieces)));
-                add = new Vector3(xbleep, ybleep + yoffset, 0);
+               // yoffset = 600 * (Mathf.FloorToInt(i / (Level.Xpieces * Level.Ypieces)));
+                add = new Vector3(xbleep, ybleep, 0);
 
-                // Debug.Log(yoffset);
-                box.transform.GetChild(i).transform.position += add;
+           
+       
+            box.transform.GetChild(i).transform.position += add;
+
+            if (box.transform.GetChild(i).GetComponent<RectTransform>().anchoredPosition.x > totalX) 
+            {
+                totalX = box.transform.GetChild(i).GetComponent<RectTransform>().anchoredPosition.x;
+               box.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, totalX + cellSizeX / 2 + 10);
+                Debug.Log(totalX);               
+            }
                 
             }
         
 
 
-        if (Level.centerAligned)
-        {
-            Vector3 v = new Vector3(can.GetComponent<RectTransform>().rect.width / 2, can.GetComponent<RectTransform>().rect.height / 2, 0);
-            nonPieces.GetComponentInParent<RectTransform>().position = v;
+        //if (Level.centerAligned)
+        //{
+        //    Vector3 v = new Vector3(can.GetComponent<RectTransform>().rect.width / 2, can.GetComponent<RectTransform>().rect.height / 2, 0);
+        //    nonPieces.GetComponentInParent<RectTransform>().position = v;
 
-            RectTransform r;
-            for (int i = 0; i < PuzzlePieces.Count; i++)
-            {
+        //    RectTransform r;
+        //    for (int i = 0; i < PuzzlePieces.Count; i++)
+        //    {
 
-                r = PuzzlePieces[i].GetComponent<RectTransform>();
+        //        r = PuzzlePieces[i].GetComponent<RectTransform>();
 
-                Debug.Log(r.position.x);
-                if (r.position.x < 1350)
-                {
-                   Debug.Log(PuzzlePieces[i].transform.position.x - 800);
-                    r.position = new Vector3(r.position.x - 800, r.position.y,0);
+        //        Debug.Log(r.position.x);
+        //        if (r.position.x < 1350)
+        //        {
+        //           Debug.Log(PuzzlePieces[i].transform.position.x - 800);
+        //            r.position = new Vector3(r.position.x - 800, r.position.y,0);
                         
-                    ///   rect.Set(r.rect.x - 800, r.rect.y, r.rect.width, r.rect.height);
+        //            ///   rect.Set(r.rect.x - 800, r.rect.y, r.rect.width, r.rect.height);
 
-                }
-            }
+        //        }
+        //    }
 
-        }
+        //}
 
         foreach (GameObject jig in PuzzlePieces) 
         {
@@ -323,8 +380,37 @@ public class JigsawGameLogic : MonoBehaviour
         
         }
 
+
+        //player Gizmo Section
+
         playergizmos.GetComponent<HorizontalLayoutGroup>().enabled = false;
-        playergizmos.transform.SetParent(ui.MasterLayers[1].transform);
+        playergizmos.GetComponent<ContentSizeFitter>().enabled = false;
+
+        Debug.Log(playergizmos.transform.childCount);
+
+        Transform[] t = new Transform[3];
+
+        for (int i = 0; i < playergizmos.transform.childCount; i++) 
+        {
+            t[i] = playergizmos.transform.GetChild(i);
+
+        }
+
+        for (int i = 0; i < t.Length; i++) 
+        {
+            t[i].SetParent(ui.MasterLayers[1].transform);
+            t[i].SetAsLastSibling();
+        
+        
+
+        }
+
+  
+
+      
+
+
+
 
     }
 
@@ -374,6 +460,7 @@ public class JigsawGameLogic : MonoBehaviour
     public void BackToMenu()
     {
 
+        levels.customMode = false;
         levels.Jigsaws[levels.playID].completed = win;
         levels.debug = false;
 
@@ -420,9 +507,9 @@ public class JigsawGameLogic : MonoBehaviour
                 //increment  location 
                 IDList[i]++;
                 //if increment causes the piece to skip to next line, push it back the current number
-                if (IDList[i] % Level.Xpieces == 0)
+                if (IDList[i] % Xpieces == 0)
                 {
-                    IDList[i] = IDList[i] - Level.Xpieces;
+                    IDList[i] = IDList[i] - Xpieces;
                 }
             }
         }
@@ -436,9 +523,9 @@ public class JigsawGameLogic : MonoBehaviour
 
             }
 
-            for (int i = 0; i < IDList.Count; i += Level.Xpieces)
+            for (int i = 0; i < IDList.Count; i += Xpieces)
             {
-                IDList[i] += Level.Xpieces;
+                IDList[i] += Xpieces;
             }
         }
 
@@ -448,11 +535,11 @@ public class JigsawGameLogic : MonoBehaviour
             for (int i = 0; i < IDList.Count; i++)
             {
                 //decrement  location 
-                IDList[i] += Level.Xpieces;
+                IDList[i] += Xpieces;
                 //if increment causes the piece to skip to next line, push it back the current number
-                if ((IDList[i]) >= (Level.Xpieces * Level.Ypieces))
+                if ((IDList[i]) >= (Xpieces * Ypieces))
                 {
-                    IDList[i] -= Level.Xpieces * Level.Ypieces;
+                    IDList[i] -= Xpieces * Ypieces;
                 }
             }
         }
@@ -463,11 +550,11 @@ public class JigsawGameLogic : MonoBehaviour
             for (int i = 0; i < IDList.Count; i++)
             {
                 //decrement  location 
-                IDList[i] -= Level.Xpieces;
+                IDList[i] -= Xpieces;
                 //if increment causes the piece to skip to next line, push it back the current number
                 if (IDList[i] < 0)
                 {
-                    IDList[i] += Level.Xpieces * Level.Ypieces;
+                    IDList[i] += Xpieces * Ypieces;
                 }
             }
 
@@ -499,11 +586,11 @@ public class JigsawGameLogic : MonoBehaviour
     public void RemoveCompletedPieces() 
     {
 
-        for (int i = 0; i < (Level.Xpieces * Level.Ypieces); i++)
+        for (int i = 0; i < (Xpieces * Ypieces); i++)
         {
 
-            PuzzlePieces[i + (Level.Xpieces * Level.Ypieces) * lastSolvedPuzzle].transform.parent = null;
-            PuzzlePieces[i + (Level.Xpieces * Level.Ypieces) * lastSolvedPuzzle].SetActive(false);
+            PuzzlePieces[i + (Xpieces * Ypieces) * lastSolvedPuzzle].transform.parent = null;
+            PuzzlePieces[i + (Xpieces * Ypieces) * lastSolvedPuzzle].SetActive(false);
         }
 
         ComfirmClear.SetActive(false);

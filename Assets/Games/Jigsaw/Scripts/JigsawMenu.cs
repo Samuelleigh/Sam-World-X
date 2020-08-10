@@ -18,6 +18,7 @@ public class JigsawMenu : MonoBehaviour
     public JigsawScriptObject choosenJigsaw;
 
     public List<TextMeshProUGUI> InfoText;
+    public List<GameObject> infoCustom;
     public TextMeshProUGUI playbuttontext;
 
     public int loadID = -1;
@@ -25,7 +26,14 @@ public class JigsawMenu : MonoBehaviour
     public bool allowsave = false;
     public bool thingselected = false;
 
+    public bool customizeMode = false;
+    public GameObject filepathFrame;
+    public GameObject CustomInfoFrame;
+    public GameObject socialFrame;
+
     public List<bool> aa = new List<bool>();
+
+    public TMP_InputField filePathInput;
 
     private void Awake()
     {
@@ -36,6 +44,8 @@ public class JigsawMenu : MonoBehaviour
     {
 
         infoView.SetActive(false);
+        filepathFrame.SetActive(false);
+        customizeMode = false;
 
         if (allowsave)
         {
@@ -92,6 +102,10 @@ public class JigsawMenu : MonoBehaviour
     public void Changelevel(int jigsawID, int altID, GameObject obj)
     {
 
+        choosenJigsaw = manager.Jigsaws[jigsawID].jigsawLevelInfo.JigLevels[altID];
+
+        socialFrame.SetActive(false);
+
         thingselected = true;
         playbuttontext.text = "Click Here to Start";
 
@@ -100,13 +114,29 @@ public class JigsawMenu : MonoBehaviour
       //  Debug.Log(jigsawID);
         loadID = jigsawID;
 
-        //populate the info panel data
-        InfoText[0].text = "Width: " + manager.Jigsaws[jigsawID].jigsawLevelInfo.JigLevels[altID].Xpieces.ToString();
-        InfoText[1].text = "Height " + manager.Jigsaws[jigsawID].jigsawLevelInfo.JigLevels[altID].Ypieces.ToString();
-        InfoText[2].text = "Number of puzzles:  " + manager.Jigsaws[jigsawID].jigsawLevelInfo.JigLevels[altID].numberOfpuzzles.ToString();
-     //   InfoText[3].text = "Style: " + manager.Jigsaws[jigsawID].jigsawLevelInfo.JigLevels[altID].style;
-      //  InfoText[4].text = "Difficulty: " + manager.Jigsaws[jigsawID].jigsawLevelInfo.JigLevels[altID].difficulty.ToString();
+        if (customizeMode == false)
+        {
 
+            //populate the info panel data
+            InfoText[0].text = manager.Jigsaws[jigsawID].jigsawLevelInfo.JigLevels[altID].name.ToString();
+            InfoText[1].text = manager.Jigsaws[jigsawID].jigsawLevelInfo.JigLevels[altID].Xpieces.ToString();
+            InfoText[2].text = manager.Jigsaws[jigsawID].jigsawLevelInfo.JigLevels[altID].Ypieces.ToString();
+            InfoText[3].text = manager.Jigsaws[jigsawID].jigsawLevelInfo.JigLevels[altID].puzzleResolution.ToString().Substring(1);
+            InfoText[4].text = "Number of puzzles:  " + manager.Jigsaws[jigsawID].jigsawLevelInfo.JigLevels[altID].numberOfpuzzles.ToString();
+        }
+        else 
+        {
+            InfoText[0].text = manager.Jigsaws[jigsawID].jigsawLevelInfo.JigLevels[altID].name.ToString();
+            InfoText[4].text = "Number of puzzles:  " + manager.Jigsaws[jigsawID].jigsawLevelInfo.JigLevels[altID].numberOfpuzzles.ToString();
+
+            infoCustom[0].GetComponent<TMP_InputField>().text = manager.Jigsaws[jigsawID].jigsawLevelInfo.JigLevels[altID].Xpieces.ToString();
+            infoCustom[1].GetComponent<TMP_InputField>().text = manager.Jigsaws[jigsawID].jigsawLevelInfo.JigLevels[altID].Ypieces.ToString();       
+            infoCustom[2].GetComponent<TMP_Dropdown>().value = choosenJigsaw.puzzleResolution.GetHashCode();
+
+            
+
+
+        }
 
         //Remove alts 
         for (int i = 0; i < altButtons.Count; i++) 
@@ -151,14 +181,25 @@ public class JigsawMenu : MonoBehaviour
 
 
         altLoadID = altID;
-        InfoText[0].text = manager.Jigsaws[loadID].jigsawLevelInfo.JigLevels[altID].name;
-        InfoText[1].text = "Width: " + manager.Jigsaws[loadID].jigsawLevelInfo.JigLevels[altID].Xpieces.ToString() + " " + "Height: " + manager.Jigsaws[loadID].jigsawLevelInfo.JigLevels[altID].Ypieces.ToString();
-        InfoText[2].text = "Number of puzzles:  " + manager.Jigsaws[loadID].jigsawLevelInfo.JigLevels[altID].numberOfpuzzles.ToString();
-     //   InfoText[3].text = "Style: " + manager.Jigsaws[loadID].jigsawLevelInfo.JigLevels[altID].style;
-    //    InfoText[4].text = "Difficulty: " + manager.Jigsaws[loadID].jigsawLevelInfo.JigLevels[altID].difficulty.ToString();
+        choosenJigsaw = manager.Jigsaws[loadID].jigsawLevelInfo.JigLevels[altID];
+
+        InfoText[0].text = manager.Jigsaws[loadID].jigsawLevelInfo.JigLevels[altID].name.ToString();
+        InfoText[1].text = manager.Jigsaws[loadID].jigsawLevelInfo.JigLevels[altID].Xpieces.ToString();
+        InfoText[2].text = manager.Jigsaws[loadID].jigsawLevelInfo.JigLevels[altID].Ypieces.ToString();
+        InfoText[3].text = manager.Jigsaws[loadID].jigsawLevelInfo.JigLevels[altID].puzzleResolution.ToString().Substring(1);
+        InfoText[4].text = "Number of puzzles:  " + manager.Jigsaws[loadID].jigsawLevelInfo.JigLevels[altID].numberOfpuzzles.ToString();
+
+        if (customizeMode == true)
+        {
+
+            infoCustom[0].GetComponent<TMP_InputField>().text = choosenJigsaw.Xpieces.ToString();
+            infoCustom[1].GetComponent<TMP_InputField>().text = choosenJigsaw.Ypieces.ToString();
+            infoCustom[2].GetComponent<TMP_Dropdown>().value = choosenJigsaw.puzzleResolution.GetHashCode();
+
+        }
 
 
-        foreach (GameObject obj in altButtons) 
+            foreach (GameObject obj in altButtons) 
         {
             obj.GetComponent<Image>().color = Color.white;
         }
@@ -170,7 +211,15 @@ public class JigsawMenu : MonoBehaviour
 
     public void Startlevel()
     {
+        if (customizeMode == true) 
+        {
+            manager.customMode = true;
+           // infoCustom[0].GetComponent<TMP_InputField>().text = choosenJigsaw.Xpieces.ToString();
+           // infoCustom[1].GetComponent<TMP_InputField>().text = choosenJigsaw.Ypieces.ToString();
+           // infoCustom[2].GetComponent<TMP_Dropdown>().value = choosenJigsaw.puzzleResolution.GetHashCode();
 
+
+        }
 
         if (loadID != -1 && thingselected == true)
         {
@@ -182,8 +231,133 @@ public class JigsawMenu : MonoBehaviour
             SceneManager.LoadScene("JigsawMain", LoadSceneMode.Single);
 
         }
+
+        
     }
 
+    public void ChangeCustomMode() 
+    {
+
+        customizeMode = !customizeMode;
+
+
+
+        if (customizeMode == true)
+        {
+            filepathFrame.SetActive(true);
+
+            InfoText[1].gameObject.SetActive(false);
+            InfoText[2].gameObject.SetActive(false);
+            InfoText[3].gameObject.SetActive(false);
+
+            infoCustom[0].SetActive(true);
+            infoCustom[1].SetActive(true);
+            infoCustom[2].SetActive(true);
+
+            infoCustom[0].GetComponent<TMP_InputField>().text = choosenJigsaw.Xpieces.ToString();
+            infoCustom[1].GetComponent<TMP_InputField>().text = choosenJigsaw.Ypieces.ToString();
+            infoCustom[2].GetComponent<TMP_Dropdown>().value = choosenJigsaw.puzzleResolution.GetHashCode();
+
+           
+
+            if (manager.path != null) { 
+            filePathInput.text = manager.path;
+        }
+
+        }
+
+        if (customizeMode == false) 
+        {
+            filepathFrame.SetActive(false);
+
+            InfoText[1].gameObject.SetActive(true);
+            InfoText[2].gameObject.SetActive(true);
+            InfoText[3].gameObject.SetActive(true);
+
+            infoCustom[0].SetActive(false);
+            infoCustom[1].SetActive(false);
+            infoCustom[2].SetActive(false);
+
+        }
+
+    }
+
+
+    public void ChangeCustomX()
+    {
+
+        bool ifSuccess = int.TryParse(infoCustom[0].GetComponent<TMP_InputField>().text, out int result);
+
+        if (ifSuccess) 
+        {
+            manager.CustomX = int.Parse(infoCustom[0].GetComponent<TMP_InputField>().text);
+
+            if (manager.CustomX <= 0) 
+            {
+                manager.CustomX = 1;
+                infoCustom[0].GetComponent<TMP_InputField>().text = manager.CustomX.ToString();
+
+
+            }
+            if(manager.CustomX > 20) 
+            {
+                manager.CustomX = 20;
+                infoCustom[0].GetComponent<TMP_InputField>().text = manager.CustomX.ToString();
+            }
+          
+        }
+        else
+        {
+            manager.CustomY = 1;
+            infoCustom[0].GetComponent<TMP_InputField>().text = 1.ToString();
+
+        }
+    }
+
+    public void ChangeCustomY()
+    {
+
+        bool ifSuccess = int.TryParse(infoCustom[1].GetComponent<TMP_InputField>().text, out int result);
+
+        if (ifSuccess)
+        {
+            manager.CustomY = int.Parse(infoCustom[1].GetComponent<TMP_InputField>().text);
+            if (manager.CustomY <= 0)
+            {
+                manager.CustomY = 1;
+                infoCustom[1].GetComponent<TMP_InputField>().text = manager.CustomY.ToString();
+
+
+            }
+            if (manager.CustomY > 20)
+            {
+                manager.CustomY = 20;
+                infoCustom[1].GetComponent<TMP_InputField>().text = manager.CustomY.ToString();
+            }
+
+        }
+        else 
+        {
+            manager.CustomY = 1;
+            infoCustom[1].GetComponent<TMP_InputField>().text = 1.ToString();
+
+        }
+
+    
+
+    }
+
+    public void ChangeCustomRez()
+    {
+        manager.Customrez = (PuzzleResolution)infoCustom[2].GetComponent<TMP_Dropdown>().value;
+
+    }
+
+    public void CheckIfFileExists() 
+    {
+
+       
+    }
 
 
     // Update is called once per frame

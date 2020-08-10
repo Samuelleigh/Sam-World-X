@@ -11,9 +11,18 @@ public class JigLevelManager : MonoBehaviour
     public int playID;
     public int altID = 0;
     public string path;
+    public bool customMode;
+
 
     public List<JigsawLevel> Jigsaws;
     public JigsawLevel DebugLevel;
+
+    public int CustomX;
+    public int CustomY;
+    public PuzzleResolution Customrez;
+
+    public bool customFile;
+
 
     private void Awake()
     {
@@ -36,9 +45,7 @@ public class JigLevelManager : MonoBehaviour
 
     }
 
-    
-
-
+ 
     public void Start()
     {
        

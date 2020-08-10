@@ -1,8 +1,8 @@
 TODO:
 
 - Fix Jigsaw piece glitch DONE
-- Add in breif Loading PlaceCard
-- Fix Levels should define which aspect ratio / resoultion you should want 
+- Add in breif Loading PlaceCard DONE
+- Fix Levels should define which aspect ratio / resoultion you should want Done
 	- Custom Ratios ect DONE
 	- Custom Resolutions DONE
 	- Better centering of the work on the screen
@@ -10,14 +10,55 @@ TODO:
 
 - Piece polish
 	- left click to put back DONE
-	- better location on spawn
-		- Move center location pieces down a bit.
-	- Move the gizmos better when center aligned
-
-
+	- better location on spawn DONE
 
 - Make Custom Level Maker
-	- File Path Loading Videos
+	- File Path Loading Videos DONE
 
-	- Custom Level Toggle
-	- Custom 
+	- Custom Level Toggle DONE
+	- Custom Level Options Change the Puzzle DONE
+
+
+- UI FIXES
+
+	- Implement a scroll view component for Left aligned DONE
+		- Make it work for center aligned as well
+	- Make the scroll view aestetically good. DONE
+
+
+	- Test it with a varitety of resolutions
+
+
+	SYSTEMS FINISH LINE: 
+
+	- Fix shifting breaks when on custom level DONE
+	- Make path Loading panel change green when you have a correct file path DONE
+	- Remove quotes when copying file path. DONE
+	- Larger horizontal scroll thingy DONE
+	- Fix Piece area being smaller bug DONE
+
+	- Make script that changes object material to either video or image DONE
+	- Fix Illegal character thing in field input. DONE
+	- automatically take away the captials of the png DONE
+	- add how to section for the file path. DONE
+	- Center Screen UI Option
+	- Save / Load System
+	- change file path options apppearing when not releveant to the level 
+	- update the level scenes objects with the jigsaw object script
+	- Fix boarder graphic
+	- Fix jigsaw sometimes not solving
+
+	- Settings
+		- First Menu Screen
+		- Center Screen UI Option
+		- Creative mode
+
+	-Controls 
+		
+		- Shift click move multiple pieces 
+		- Controls Explaination
+
+	Content Creation:
+
+	- 100 levels
+	- Order levels

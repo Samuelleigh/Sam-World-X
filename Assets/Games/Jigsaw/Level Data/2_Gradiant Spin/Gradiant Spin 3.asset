@@ -12,9 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 357420eebc2d1ce42ba00a2bfa08eb15, type: 3}
   m_Name: Gradiant Spin 3
   m_EditorClassIdentifier: 
-  name: This is slightly diffrent than the last one I swear
+  name: Slightly Diffrent
   Xpieces: 5
   Ypieces: 5
+  puzzleResolution: 0
+  XCustom: 0
+  YCustom: 0
   SceneName: GradiantSpin
   numberOfpuzzles: 2
   cameraID: 0000000002000000
