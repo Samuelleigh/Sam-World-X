@@ -1,0 +1,9 @@
+TODO: 
+
+- Fix the door knock animation
+- Place the dialog box at the bottom of the scene, appearing only after the text has appeared.
+- Get the game onto my phone.
+- Adverts after every other door shut. 
+- Start / End Screen.
+- Generealy add more juice to things. 
+- "what what wah" dialog sounds. 

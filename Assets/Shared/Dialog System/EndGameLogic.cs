@@ -19,15 +19,17 @@ public class EndGameLogic : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey("escape"))
+        if (Application.platform == RuntimePlatform.WindowsEditor || Application.platform == RuntimePlatform.OSXPlayer || Application.platform == RuntimePlatform.LinuxPlayer)
         {
-            QuitProgram();
+            if (Input.GetKey("escape"))
+            {
+                QuitProgram();
+            }
+            if (Input.GetKey("f"))
+            {
+                ToggleFullScreen();
+            }
         }
-        if (Input.GetKey("f"))
-        {
-            ToggleFullScreen();
-        }
-
     }
 
     public void ToggleFullScreen()

@@ -130,24 +130,13 @@ public class JigsawGameLogic : MonoBehaviour
                 resoultionX = 800;
                 resoultionY = 800;
                 break;
-            case PuzzleResolution._700x700:
-                resoultionX = 700;
-                resoultionY = 700;
+            case PuzzleResolution._1248x702:
+                resoultionX = 1248;
+                resoultionY = 702;
                 break;
-            case PuzzleResolution._500x500:
-                resoultionX = 500;
-                resoultionY = 500;
-                Debug.Log("d");
-                break;
-            case PuzzleResolution.Custom:
-                resoultionX = level.XCustom;
-                resoultionY = level.YCustom;
-                break;
-            case PuzzleResolution _700x300:
-                resoultionX = 700;
-                resoultionY = 300;
-                break;
-            default:
+            case PuzzleResolution._450x800:
+                resoultionX = 450;
+                resoultionY = 800;
                 break;
         }
 
@@ -423,6 +412,9 @@ public class JigsawGameLogic : MonoBehaviour
         {
             puzzleCam[i].transform.SetPositionAndRotation(p.Cameras[Level.cameraID[i]].transform.position, p.Cameras[Level.cameraID[i]].transform.rotation);
             puzzleCam[i].transform.parent = p.Cameras[Level.cameraID[i]].transform;
+            puzzleCam[i].GetComponent<Camera>().orthographic = p.Cameras[Level.cameraID[i]].GetComponent<Camera>().orthographic;
+            puzzleCam[i].GetComponent<Camera>().orthographic = p.Cameras[Level.cameraID[i]].GetComponent<Camera>().orthographic;
+            puzzleCam[i].GetComponent<Camera>().nearClipPlane = p.Cameras[Level.cameraID[i]].GetComponent<Camera>().nearClipPlane;
         }
     }
 
@@ -594,6 +586,23 @@ public class JigsawGameLogic : MonoBehaviour
         }
 
         ComfirmClear.SetActive(false);
+
+    }
+
+    public void Clean() 
+    {
+        for (int i = 0; i < PuzzlePieces.Count; i++) 
+        {
+
+            if (PuzzlePieces[i].transform.parent.name != "SnapPiece(Clone)") 
+            {
+                PuzzlePieces[i].GetComponent<JigsawPieceScript>().InstantPutBack();
+             
+            
+            }
+
+
+        }
 
     }
 

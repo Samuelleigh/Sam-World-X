@@ -12,4 +12,5 @@ public class DrawingLevel
     public bool haslink;
     public string linkURL;
     public string buttontext;
+    public AudioClip audioclip;
 }

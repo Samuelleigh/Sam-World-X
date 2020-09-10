@@ -9,6 +9,7 @@ public class JigsawSceneObject : MonoBehaviour
 {
 
     public JigLevelManager manager;
+    public JigsawGameLogic gm;
     public VideoPlayer vid;
 
     public Texture m_MainTexture;
@@ -17,6 +18,7 @@ public class JigsawSceneObject : MonoBehaviour
     private void Awake()
     {
         manager = FindObjectOfType<JigLevelManager>();
+        gm = FindObjectOfType<JigsawGameLogic>();
         
     }
 
@@ -26,12 +28,52 @@ public class JigsawSceneObject : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
+        if (manager.customFile == false) 
+        {
+            if (gameObject.GetComponent<VideoPlayer>() == null)
+            {
+                vid = gameObject.AddComponent<VideoPlayer>();
+            }
+            else
+            {
+                vid = gameObject.GetComponent<VideoPlayer>();
+
+            }
+
+            Debug.Log("df");
+
+            if (gm.Level.videoClip) {
+
+                vid.SetDirectAudioMute(0, true);
+                vid.clip = gm.Level.videoClip;
+                vid.audioOutputMode = VideoAudioOutputMode.None;
+                vid.isLooping = true;
+
+
+            }
+            else if (gm.Level.puzzleTexture) 
+            {
+                m_MainTexture = gm.Level.puzzleTexture;
+                m_Renderer = GetComponent<MeshRenderer>();
+
+                m_Renderer.material.EnableKeyword("_NORMALMAP");
+                m_Renderer.material.EnableKeyword("_EMISSION");
+                m_Renderer.material.EnableKeyword("_METALLICGLOSSMAP");
+
+                Material mat = new Material(Shader.Find("Unlit/Texture"));
+                mat.SetTexture("_MainTex", m_MainTexture);
+                mat.SetTexture("_EMISSION", m_MainTexture);
+
+                m_Renderer.material = mat;
+            }
+
+
+        }
+
 
         if (manager.customFile == true && manager.customMode == true) 
         {
-
-            StartCoroutine(GetImageFile());
 
             if (Path.GetExtension(manager.path) == ".mp4")
             {
@@ -45,17 +87,36 @@ public class JigsawSceneObject : MonoBehaviour
                 
                 }
 
+
+
+                                
+                Renderer rend = GetComponent<Renderer>();
+
+                rend.material.EnableKeyword("_NORMALMAP");
+                rend.material.EnableKeyword("_EMISSION");
+                rend.material.EnableKeyword("_METALLICGLOSSMAP");
+
+
+
+                rend.material = new Material(Shader.Find("Unlit/Texture"));
+
+                vid.SetDirectAudioMute(0, true);
                 vid.targetMaterialRenderer = gameObject.GetComponent<Renderer>();
+                vid.audioOutputMode = VideoAudioOutputMode.None;
                 vid.source = VideoSource.Url;
                 vid.isLooping = true;
 
                 vid.url = manager.path;
+
+                
 
 
             }
            
             if ( Path.GetExtension(manager.path) == ".png" || Path.GetExtension(manager.path) == ".PNG")
             {
+
+                StartCoroutine(GetImageFile());
 
                 if (gameObject.GetComponent<VideoPlayer>() == true)
                 {
@@ -69,6 +130,9 @@ public class JigsawSceneObject : MonoBehaviour
         
         }
 
+
+       
+       
     }
 
     IEnumerator GetImageFile()
@@ -86,16 +150,17 @@ public class JigsawSceneObject : MonoBehaviour
         m_Renderer.material.EnableKeyword("_METALLICGLOSSMAP");
 
 
-        Material mat = new Material(Shader.Find("Specular"));
+        Material mat = new Material(Shader.Find("Unlit/Texture"));
         mat.SetTexture("_MainTex", m_MainTexture);
+        mat.SetTexture("_EMISSION", m_MainTexture);
+
+      
 
         m_Renderer.material = mat;
+        
 
         Debug.Log("gg");
 
-        //"C:\Users\sleig\Desktop\adw.png"
-
-        //"C:\Users\sleig\Desktop\adw.png"
     }
 
 

@@ -41,24 +41,159 @@ TODO:
 	- Fix Illegal character thing in field input. DONE
 	- automatically take away the captials of the png DONE
 	- add how to section for the file path. DONE
-	- Center Screen UI Option
-	- Save / Load System
-	- change file path options apppearing when not releveant to the level 
-	- update the level scenes objects with the jigsaw object script
-	- Fix boarder graphic
-	- Fix jigsaw sometimes not solving
 
-	- Settings
-		- First Menu Screen
-		- Center Screen UI Option
-		- Creative mode
+	- change file path options apppearing when not releveant to the level DONE
+	- update the level scenes objects with the jigsaw object script DONE
+	- Change the resolutions to actually be good (square, video, veritcle) DONE
 
-	-Controls 
-		
-		- Shift click move multiple pieces 
-		- Controls Explaination
+
+	- Fix jigsaw sometimes not solving when all pieces are in correct place
+	- Add Jpge option for file path system.
+	- if web build do not allow path build
+
 
 	Content Creation:
 
-	- 100 levels
-	- Order levels
+	===========Tuesday==============
+
+		1. Normal Video
+			- square DONE
+			- Landcape FONE
+			- Verticle DONE
+
+		2. Skew	DONE
+			- Left Eye "?"
+			- Right Eye "?"
+			- Up "?"
+			- Down "?"
+			- Left Eye / Right Eye "?"
+			
+		3. Cycle DONE
+
+		4. Mirrored  DONE
+			- 1 half Mirrored simply "?"
+			- other half mirroed "?"
+			- A lot of mirrors "?"
+			- sure more mirros "?"
+
+		5. Rotate DONE
+			- Rotating around clock wise "?"
+			- Two puzzles roating around clockwise "?"
+			- 3d rotate "?"
+			- more 3D roating around "?"
+		
+		//	- DVD SceenSaver		
+		
+		6. Duck Rotation   DONE
+			- Rotating around "?"
+			- many roating around "?"
+
+		
+		7. 3D Box Rotating DONE
+
+
+		8. Horrizon line Play Around DONE
+
+
+	==============Wednesday=================
+
+		9. Sphere Mesh
+			- Normal shere mesh "?"
+			- Roating around "?"
+			- Zoomed in "?"
+			- bubbles bubbles "?"
+
+		10. Wobbly Mesh
+			- https://www.youtube.com/watch?v=eJEpeUH1EMg 
+			- Static "?"
+			- Animating "?"
+
+		11. Text
+			- Scrolling through lorem ipusm text "?"
+			- Cycling through individual characters "?"
+			- Roating around "?"
+
+		12. Dancing Person 
+			- normal dance "?"
+			- Camera attached to head  "?"
+			- Close up dance "?"
+
+		13. Low Rez
+			- Video at 16 bit "?"
+			- Video at 32 bit "?"
+			- Video at 8 bit "?"
+
+Release: 
+
+	-  itch.io
+		- Thumbnail  
+		- Copy
+		- Title
+		- Screen Shots
+		- file icon
+		- Price
+		- 
+
+
+=========== Final Level Check List ============
+
+Fix :
+
+	- Bitsy Resoultion
+	- Dance Backround video
+
+Choose Videos For:
+
+	 - The Basics
+	 - Skew
+	 - Cycle
+	 - Mirror
+	 - Sphere
+	 - Dance
+	 - Bitsy
+
+Set Level Info:
+
+	- Basically all of them
+
+m
+
+
+
+=========== ONLY CONTINUE IF YOU STILL THINK THERE IS INTREST===========
+
+
+	Extra Features:
+
+	- Rotation of pieces
+	- Shift click move multiple pieces
+	- Creative mode 
+	- Puzzle Completion Stats
+	- Center Screen UI Option
+	- Challenge Mode
+	- Save / Load System
+	- Import meshs
+
+	
+	Main menu Screen:
+
+		- Controls
+		- Level select
+		- Settings
+			- Center Screen UI Option
+			- Change backround colour
+			- Delete save
+		-	Final Polish
+
+	- Fix boarder graphic
+
+
+		21. City Skyline
+
+		22. Clock
+
+		23. Turntable (for ground backround)
+
+		24. Depth (paper diorama)
+
+		25. Responds to mouse postion

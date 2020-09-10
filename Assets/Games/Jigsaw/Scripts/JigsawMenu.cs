@@ -35,6 +35,7 @@ public class JigsawMenu : MonoBehaviour
 
     public TMP_InputField filePathInput;
 
+
     private void Awake()
     {
         manager = FindObjectOfType<JigLevelManager>();
@@ -104,7 +105,7 @@ public class JigsawMenu : MonoBehaviour
 
         choosenJigsaw = manager.Jigsaws[jigsawID].jigsawLevelInfo.JigLevels[altID];
 
-        socialFrame.SetActive(false);
+       // socialFrame.SetActive(false);
 
         thingselected = true;
         playbuttontext.text = "Click Here to Start";
@@ -172,6 +173,14 @@ public class JigsawMenu : MonoBehaviour
 
         obj.GetComponent<Image>().color = Color.grey;
 
+        if (manager.Jigsaws[loadID].jigsawLevelInfo.JigLevels[altLoadID].allowCustomFile && customizeMode == true)
+        {
+            filepathFrame.SetActive(true);
+        }
+        else 
+        {
+            filepathFrame.SetActive(false);
+        }
 
     }
 
@@ -205,6 +214,15 @@ public class JigsawMenu : MonoBehaviour
         }
 
         altButtons[altID].GetComponent<Image>().color = Color.grey;
+
+        if (manager.Jigsaws[loadID].jigsawLevelInfo.JigLevels[altLoadID].allowCustomFile && customizeMode == true)
+        {
+            filepathFrame.SetActive(true);
+        }
+        else
+        {
+            filepathFrame.SetActive(false);
+        }
 
 
     }
@@ -244,7 +262,11 @@ public class JigsawMenu : MonoBehaviour
 
         if (customizeMode == true)
         {
-            filepathFrame.SetActive(true);
+
+            if (manager.Jigsaws[loadID].jigsawLevelInfo.JigLevels[altLoadID].allowCustomFile)
+            {
+                filepathFrame.SetActive(true);
+            }
 
             InfoText[1].gameObject.SetActive(false);
             InfoText[2].gameObject.SetActive(false);
@@ -260,14 +282,19 @@ public class JigsawMenu : MonoBehaviour
 
            
 
-            if (manager.path != null) { 
+            if (manager.path != null)
+            { 
             filePathInput.text = manager.path;
-        }
+            }
 
         }
 
         if (customizeMode == false) 
         {
+
+            
+
+
             filepathFrame.SetActive(false);
 
             InfoText[1].gameObject.SetActive(true);

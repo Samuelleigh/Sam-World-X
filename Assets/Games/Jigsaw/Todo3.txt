@@ -1,0 +1,24 @@
+Todo 3:
+
+- Add a Clean Up Feature DONE
+- Add a tutorial Window DONE
+- Re-balance Jigsaw puzzles 
+- Make all the things better yo
+
+Itch.io:
+
+- Make the itch.io store page
+- Make the 
+
+
+
+Extra Features:
+
+	- Rotation of pieces
+	- Shift click move multiple pieces
+	- Creative mode 
+	- Puzzle Completion Stats
+	- Center Screen UI Option
+	- Challenge Mode
+	- Save / Load System
+	- Import meshs

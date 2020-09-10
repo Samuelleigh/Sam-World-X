@@ -81,7 +81,7 @@ public class JigsawPieceDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, I
             // Debug.Log(raycastResultList[i]);
             if (raycastResultList[i].gameObject.name == "SnapPiece(Clone)")
             {
-                if (raycastResultList[i].gameObject.transform.childCount ==0)
+                if (raycastResultList[i].gameObject.transform.childCount == 0)
                 {
                     SnapToPiece(raycastResultList[i].gameObject);               
                     gm.CheckWin(jig.puzzleID);

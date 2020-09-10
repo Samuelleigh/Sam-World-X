@@ -8341,29 +8341,30 @@ MonoBehaviour:
   sounds:
   - name: click
     clip: {fileID: 8300000, guid: 5a3f038b5c29e6f4d89ff87f6e59a04a, type: 3}
-    volume: 0.56
+    volume: 0.3
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Boy
     clip: {fileID: 8300000, guid: 06adeb4df2b9d2244a77acee1ae1438c, type: 3}
-    volume: 0.56
+    volume: 0.3
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Big
     clip: {fileID: 8300000, guid: dc151d60dc764e649a4cbab1faed055d, type: 3}
-    volume: 0.56
+    volume: 0.3
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: hia
     clip: {fileID: 8300000, guid: 188e5ca9ec774a240b2b74a6c086386a, type: 3}
-    volume: 0.56
+    volume: 0.3
     pitch: 1
     loop: 0
     source: {fileID: 0}
   music: []
+  musicSource: {fileID: 0}
 --- !u!4 &1033404215
 Transform:
   m_ObjectHideFlags: 0
