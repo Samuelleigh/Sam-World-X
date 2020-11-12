@@ -1,0 +1,139 @@
+Todo: CONTENT STAGE DONE!
+
+Core Loop:
+
+	- Switching between levels and overworld DONE
+	- Choosing the next section DONE
+	- Ending the Game DONE
+	- Reset button DONE
+	- check for particular conditions before loading content DONE
+	- Update level list to have sections be included in multiple locations DONE
+
+Dialog System
+
+	- Internal Varibles DONE
+	- Showing choices that you can't choose because of varible requirements DONE
+	- Make pause before moving to overworld work DONE
+	- Update variables being used. DONE
+	- Make Ink function for setting up the variables DONE
+	- Make Ink function for figuring out how much to increase / decrease varibles. DONE
+
+Testing:
+
+	-ability to check any specifc level first  DONE
+
+Potion System:
+
+	- Make the Inventory Frame DONE
+	- Make Place Holder assets/prefabs  DONE
+	- Consuming Potions and there effects
+		- displaying and destorying potions DONE
+		- Randomizing the effect that will happen DONE
+		- Causing that thing to happen in Ink DONE
+		- Having the current avaible option change when you use a potion DONE
+		- acquiring potions from inside Ink.   DONE
+		- Specifying which potion to spawn in Ink.  DONE
+		- Fix potion not being able to used on first screen of a new knot! DONE 
+		- Displaying diffrent graphics depending on the potion DONE
+		- Make sure that potions work if comsumed while in the overworld. DONE
+		- Helpful tip telling you what happened. DONE
+		- Make temp potion graphics DONE
+		- Decide what the messages actually are.
+		- Make more nuanced effects in regard to effects of mood on these changes. 
+		
+Display:
+
+	- Showing Ink Varibles DONE
+	- Show Walking Media Window DONE
+	- Showing Media Window DONE
+	- Change Camera During section DONE
+	- Display diffrent DONE
+	- Making Diffrent things happening a scene DONE
+	- Change Button and Text Font DONE
+
+Writing: 
+
+	- Start Writing DONE
+		- Finish Trade Interaction First Draft DONE
+		
+	- Create outline for how the experience will go. EH,NOT NEEDED
+
+	- Wirte 7 short encounters (First Pass)
+		(looks like I'll be making quite a few short interactions that impact varables)
+		- Starting Event DONE
+		- Trader DONE
+		- Staring DONE
+		- laughing Friends
+		- Turtle
+		- End Event 
+
+	- Edit interactions: Variable Interactions
+		
+		- Starting Event 
+		- Trader
+		- Staring 
+		- laughing Friends
+		- Turtle
+		- End Event 
+
+	-Edit interactions: Camera Interactions
+		
+		- Starting Event 
+		- Trader
+		- Staring 
+		- laughing Friends
+		- Turtle
+		- End Event 
+
+	- Edit Interactions: 2nd Writing Pass
+		
+		- Starting Event 
+		- Trader
+		- Staring 
+		- Laughing Friends
+		- Turtle
+		- End Event 
+
+Music:
+
+	- Create Music System
+	- Create Music Tag system in ink.
+	- Create Sound Effect Tag System.
+
+3D Scenes
+
+	- Learn how to import Mixamo Characters DONE
+	- Learn how to handle the animation DONE
+	- Triggering animations with ink tags DONE
+
+
+Non-essential bugs:
+
+	- Using a potion on the first choice causes the effect to not be applied.
+
+
+Funnel:
+
+-Exposure
+
+	-Twitter
+		- Research hashtags
+		- Decide on which hashtags to use
+		- Create a twitter S
+	
+	- Reddit
+		-Research subreddits to 
+
+	- Press Outlets
+		- Rock paper
+
+	- Events
+		- IndieCade
+		- See upcoming 
+
+	- 
+
+- Intrest
+
+	- Email List Design
+	-

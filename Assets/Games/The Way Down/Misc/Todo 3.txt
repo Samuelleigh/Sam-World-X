@@ -1,0 +1,38 @@
+
+Todo:
+
+Bucket
+
+- Add music to each encounter
+
+- remove sound effect on first enocunter
+- potions not being given when you select them
+
+- In throwing rock interaction, make sure backround is clear when the being tries to attack yuou
+
+
+25th May:
+
+- Fix media window on first encounter (should not be shownig up) DONE
+- remove death from stats DONE
+- potions not being given when you select them DONE
+
+
+30th May:
+
+- Add text scroll skip button + yep
+- Maybe add slight music system
+- Get feedback on the discord rules
+- Invite people to the discord server
+- 
+
+31st May: 
+
+- 
+
+1st June: 
+
+- Make sure news is OK
+- Post the game
+
+

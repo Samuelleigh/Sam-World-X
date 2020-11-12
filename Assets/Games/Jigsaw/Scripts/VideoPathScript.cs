@@ -13,6 +13,9 @@ namespace MovingJigsaw
         public TMP_InputField field;
         public Image tick;
 
+
+        //detects the pasted file path then corrects it.
+
         private void Awake()
         {
             manager = FindObjectOfType<JigLevelManager>();
@@ -26,7 +29,6 @@ namespace MovingJigsaw
                 {
 
                     field.text = field.text.Substring(1, field.text.Length - 2);
-
                 }
             }
             if (field.text.EndsWith("PNG"))
@@ -37,9 +39,6 @@ namespace MovingJigsaw
             }
 
 
-
-
-
             if (field.text == "")
             {
                 manager.customFile = false;
@@ -47,7 +46,6 @@ namespace MovingJigsaw
             }
             else if (File.Exists(field.text))
             {
-
 
                 if (Path.GetExtension(field.text) == ".mp4" || Path.GetExtension(field.text) == ".png")
                 {

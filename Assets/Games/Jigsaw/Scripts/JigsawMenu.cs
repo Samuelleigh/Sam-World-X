@@ -45,7 +45,6 @@ namespace MovingJigsaw
         // Start is called before the first frame update
         void Start()
         {
-
             infoView.SetActive(false);
             filepathFrame.SetActive(false);
             customizeMode = false;
@@ -73,7 +72,6 @@ namespace MovingJigsaw
                 }
             }
 
-
             int total = 0;
             int majorlevels = 1;
             int altnums = 0;
@@ -84,7 +82,6 @@ namespace MovingJigsaw
                 GameObject but;
                 int ID = i;
 
-
                 but = Instantiate(Button, contentView.transform);
 
                 but.GetComponentInChildren<TextMeshProUGUI>().text = (majorlevels) + letters[altnums] + ". " + manager.Jigsaws[i].jigsawLevelInfo.Name;
@@ -94,17 +91,15 @@ namespace MovingJigsaw
                 total++;
 
                 if (manager.Jigsaws[i].completed == true) { but.GetComponent<Image>().color = Color.green; }
+                
                 majorlevels++;
             }
 
             contentView.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, total * 100);
-
-            // delegate { Changelevel(i - 1); }
         }
 
         public void Changelevel(int jigsawID, int altID, GameObject obj)
         {
-
             choosenJigsaw = manager.Jigsaws[jigsawID].jigsawLevelInfo.JigLevels[altID];
 
             thingselected = true;
@@ -141,7 +136,6 @@ namespace MovingJigsaw
             //Remove alts 
             for (int i = 0; i < altButtons.Count; i++)
             {
-
                 int numberofbeing = altButtons.Count - manager.Jigsaws[jigsawID].jigsawLevelInfo.JigLevels.Count;
 
                 if (i < manager.Jigsaws[jigsawID].jigsawLevelInfo.JigLevels.Count)
@@ -150,14 +144,11 @@ namespace MovingJigsaw
                 {
                     altButtons[i].SetActive(false);
                 }
-
-
             }
 
 
             for (int i = 0; i < manager.Jigsaws.Count; i++)
             {
-
                 if (manager.Jigsaws[i].completed == true)
                 {
                     buts[i].GetComponent<Image>().color = Color.green;
@@ -185,9 +176,6 @@ namespace MovingJigsaw
 
         public void ChangeAlt(int altID)
         {
-
-
-
             altLoadID = altID;
             choosenJigsaw = manager.Jigsaws[loadID].jigsawLevelInfo.JigLevels[altID];
 
@@ -199,13 +187,10 @@ namespace MovingJigsaw
 
             if (customizeMode == true)
             {
-
                 infoCustom[0].GetComponent<TMP_InputField>().text = choosenJigsaw.Xpieces.ToString();
                 infoCustom[1].GetComponent<TMP_InputField>().text = choosenJigsaw.Ypieces.ToString();
                 infoCustom[2].GetComponent<TMP_Dropdown>().value = choosenJigsaw.puzzleResolution.GetHashCode();
-
             }
-
 
             foreach (GameObject obj in altButtons)
             {
@@ -223,7 +208,6 @@ namespace MovingJigsaw
                 filepathFrame.SetActive(false);
             }
 
-
         }
 
         public void Startlevel()
@@ -231,35 +215,24 @@ namespace MovingJigsaw
             if (customizeMode == true)
             {
                 manager.customMode = true;
-                // infoCustom[0].GetComponent<TMP_InputField>().text = choosenJigsaw.Xpieces.ToString();
-                // infoCustom[1].GetComponent<TMP_InputField>().text = choosenJigsaw.Ypieces.ToString();
-                // infoCustom[2].GetComponent<TMP_Dropdown>().value = choosenJigsaw.puzzleResolution.GetHashCode();
-
-
             }
 
             if (loadID != -1 && thingselected == true)
             {
-
                 manager.playID = loadID;
                 manager.altID = altLoadID;
                 manager.debug = false;
 
                 SceneManager.LoadScene("JigsawMain", LoadSceneMode.Single);
-
             }
-
-
         }
 
         public void ChangeCustomMode()
         {
-
             customizeMode = !customizeMode;
 
             if (customizeMode == true)
             {
-
                 if (manager.Jigsaws[loadID].jigsawLevelInfo.JigLevels[altLoadID].allowCustomFile)
                 {
                     filepathFrame.SetActive(true);
@@ -277,8 +250,6 @@ namespace MovingJigsaw
                 infoCustom[1].GetComponent<TMP_InputField>().text = choosenJigsaw.Ypieces.ToString();
                 infoCustom[2].GetComponent<TMP_Dropdown>().value = choosenJigsaw.puzzleResolution.GetHashCode();
 
-
-
                 if (manager.path != null)
                 {
                     filePathInput.text = manager.path;
@@ -288,8 +259,6 @@ namespace MovingJigsaw
 
             if (customizeMode == false)
             {
-
-
                 filepathFrame.SetActive(false);
 
                 InfoText[1].gameObject.SetActive(true);
@@ -299,15 +268,12 @@ namespace MovingJigsaw
                 infoCustom[0].SetActive(false);
                 infoCustom[1].SetActive(false);
                 infoCustom[2].SetActive(false);
-
             }
-
         }
 
 
         public void ChangeCustomX()
         {
-
             bool ifSuccess = int.TryParse(infoCustom[0].GetComponent<TMP_InputField>().text, out int result);
 
             if (ifSuccess)
@@ -318,15 +284,12 @@ namespace MovingJigsaw
                 {
                     manager.CustomX = 1;
                     infoCustom[0].GetComponent<TMP_InputField>().text = manager.CustomX.ToString();
-
-
                 }
                 if (manager.CustomX > 20)
                 {
                     manager.CustomX = 20;
                     infoCustom[0].GetComponent<TMP_InputField>().text = manager.CustomX.ToString();
                 }
-
             }
             else
             {
@@ -338,7 +301,6 @@ namespace MovingJigsaw
 
         public void ChangeCustomY()
         {
-
             bool ifSuccess = int.TryParse(infoCustom[1].GetComponent<TMP_InputField>().text, out int result);
 
             if (ifSuccess)
@@ -348,44 +310,23 @@ namespace MovingJigsaw
                 {
                     manager.CustomY = 1;
                     infoCustom[1].GetComponent<TMP_InputField>().text = manager.CustomY.ToString();
-
-
                 }
                 if (manager.CustomY > 20)
                 {
                     manager.CustomY = 20;
                     infoCustom[1].GetComponent<TMP_InputField>().text = manager.CustomY.ToString();
                 }
-
             }
             else
             {
                 manager.CustomY = 1;
                 infoCustom[1].GetComponent<TMP_InputField>().text = 1.ToString();
-
             }
-
-
-
         }
 
         public void ChangeCustomRez()
         {
             manager.Customrez = (PuzzleResolution)infoCustom[2].GetComponent<TMP_Dropdown>().value;
-
-        }
-
-        public void CheckIfFileExists()
-        {
-
-
-        }
-
-
-        // Update is called once per frame
-        void Update()
-        {
-
         }
     }
 }

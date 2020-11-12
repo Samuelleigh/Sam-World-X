@@ -16,15 +16,7 @@ namespace MovingJigsaw
 
         void Awake()
         {
-
             gm = FindObjectOfType<JigsawGameLogic>();
-
-        }
-
-        // Start is called before the first frame update
-        void Start()
-        {
-
         }
 
         public void OnPointerClick(PointerEventData eventData) // 3
@@ -38,11 +30,8 @@ namespace MovingJigsaw
             if (Input.GetMouseButtonUp(0))
             {
                 jig.transform.SetParent(gm.ui.MasterLayers[1].transform);
-
             }
         }
-
-
 
         public void OnBeginDrag(PointerEventData eventData)
         {
@@ -62,8 +51,6 @@ namespace MovingJigsaw
             {
                 main.transform.position = new Vector2(Input.mousePosition.x, Input.mousePosition.y) - offset;
             }
-
-
         }
 
         public void OnEndDrag(PointerEventData eventData)
@@ -93,7 +80,6 @@ namespace MovingJigsaw
                         gameObject.transform.SetParent(gm.ui.MasterLayers[1].transform);
 
                     }
-
                 }
                 if (raycastResultList[i].gameObject.name == "Viewport")
                 {
@@ -102,40 +88,14 @@ namespace MovingJigsaw
 
                 }
                 Debug.Log(raycastResultList[i].gameObject.name);
-
             }
-
-            //  Debug.Log(eventData.pointerCurrentRaycast.gameObject.name);
-
-
-
-
-            // if mouse is over a gridsquare, then parent piece to that object, set local postion to zero, then check if level has been one
-            if (eventData.pointerCurrentRaycast.gameObject.name == "SnapPiece(Clone)")
-            {
-
-                Debug.Log("wow");
-
-            }
-
-            //  if () { }
-
-
-
         }
 
         public void SnapToPiece(GameObject piece)
         {
             gameObject.transform.position = piece.transform.position;
             gameObject.transform.SetParent(piece.gameObject.transform);
-
         }
 
-
-        // Update is called once per frame
-        void Update()
-        {
-
-        }
     }
 }

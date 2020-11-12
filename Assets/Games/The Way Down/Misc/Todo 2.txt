@@ -1,0 +1,92 @@
+Todo: 
+
+
+SYSTEMS:
+
+- Finializing What Potions Do.
+
+
+CONTENT CREATION:
+
+	Editing: ()
+
+	- Make Basic edits to all interactions DONE
+	- Add Varibles Effects to choices. DONE
+	- Edit Writing. DONE
+
+	- Edit varible changes in writing.
+		
+		- Stare DONE
+		- Rock Throw DONE
+		- Laughing DONE
+		- Turtle Follower DONE
+		- Turtle DONE
+		- Potions Person DONE
+		- Builder DONE
+		- The Law DONE
+		- Trader DONE
+
+	Visuals: 
+
+	- Fix Canvas and Font DONE
+	- Mark Places for new shots. DONE
+	- Create debug tool For fast editing DONE
+		- Fast load an encounter DONE
+		- One click swtich camera DONE
+	- Finish adding small changes to the visual system to make it work right DONE
+
+	// "M" tag changes the camera
+	// "h" hides the camera
+	// "a" signifies to change an animation, the next one is which animator, then it's what trigger to do.
+
+		- Add Visuals To all interactions.
+
+		- Trader DONE
+		- Stare DONE
+		- Laughing DONE
+		- Turtle Follower DONE
+		- Potions Person DONE
+
+		Wednesday:
+
+		- Rock throw DONE
+		- The Law DONE (not doing)
+		- Builder DONE
+		- Turtle DONE
+
+		Thursday:
+
+
+
+		Friday:
+
+		- Do a 2nd writing pass for each encounter.
+		- Change anything that doesn't seem right.		
+		- Make music / Implement music
+		- Send to play testers
+		- Bug Test
+		- Create store assets
+			- itch.io
+			- newgrounds
+		- Create 
+			
+
+		Saturday:
+
+
+		Sunday:
+
+		- LOCK IN VISUALS
+
+		Promotional Stuff
+
+	
+
+		- Create 
+
+
+		
+PROMOTION: 
+
+	- 
+	

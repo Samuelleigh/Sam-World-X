@@ -26,16 +26,8 @@ namespace MovingJigsaw
             gm = FindObjectOfType<JigsawGameLogic>();
         }
 
-
-        void Start()
-        {
-
-        }
-
         public void SetMask(int targetX, int targetY, float cellsizeX, float cellsizeY, int puzzleid, Vector2 rawsize)
         {
-
-
             puzzleID = puzzleid;
             targetSpace.y = (targetY);
             targetSpace.x = (targetX);
@@ -47,9 +39,6 @@ namespace MovingJigsaw
 
             float x = xOffset;
             float y = yOffset;
-
-            //  float x = child.transform.localPosition.x - xOffset;
-            // float y = child.transform.localPosition.y + yOffset;
 
             Vector3 v = new Vector3(x, y, 0);
 
@@ -74,10 +63,5 @@ namespace MovingJigsaw
 
         }
 
-        // Update is called once per frame
-        void Update()
-        {
-
-        }
     }
 }

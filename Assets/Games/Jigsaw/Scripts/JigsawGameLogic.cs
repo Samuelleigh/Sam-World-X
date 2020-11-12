@@ -92,24 +92,14 @@ namespace MovingJigsaw
             if (levels.debug) { ui.SwitchLayer(1); LoadLevel(Level); }
             else { ui.SwitchLayer(1); LoadLevel(Level); }
 
-            //   puzzleCam = GameObject.Find("Puzzle Camera");
             ShiftAllPieces(ShiftDirection.no);
         }
-
-        // Update is called once per frame
-        void Update()
-        {
-
-        }
-
 
 
         public void LoadLevel(JigsawScriptObject level)
         {
 
             SceneManager.LoadScene(level.SceneName, LoadSceneMode.Additive);
-
-
 
             if (levels.customMode)
             {
@@ -168,10 +158,10 @@ namespace MovingJigsaw
             cellSizeY = resoultionY / Ypieces;
 
 
-
             snapboard.GetComponent<RectTransform>().sizeDelta = boardSize;
             intialPuzzleGrid.cellSize = new Vector2(cellSizeX, cellSizeY);
             intialSnapGrid.cellSize = new Vector2(cellSizeX, cellSizeY);
+
             //for the number of pieces instantiate each piece, set the cell cordinate during this
 
             int x = 0;
@@ -187,11 +177,13 @@ namespace MovingJigsaw
 
                 for (int i = 0; i < totalPieces; i++)
                 {
+
                     //Spawn puzzle pieces
+
                     GameObject newpiece = Instantiate(piece, box.transform);
                     y = Mathf.CeilToInt(i / Xpieces);
                     x = i - (y * Xpieces);
-                    //  Debug.Log(x + " " + y);
+           
 
                     //set the puzzle piece ID
                     newpiece.GetComponent<JigsawPieceScript>().ID = i;
@@ -206,13 +198,11 @@ namespace MovingJigsaw
                     PuzzlePieces.Add(newpiece);
                 }
 
-                // Invoke("TurnOfflayoutGroup", 0.1f);
-
             }
 
             GridLayoutGroup glg;
             glg = snapboard.GetComponent<GridLayoutGroup>();
-            glg.constraint = GridLayoutGroup.Constraint.FixedRowCount;  //**
+            glg.constraint = GridLayoutGroup.Constraint.FixedRowCount;  
             glg.constraintCount = Ypieces;
 
             if (Ypieces == 1)
@@ -234,34 +224,18 @@ namespace MovingJigsaw
 
             }
 
-            //second Puzzle 
+ 
 
-
-            //randomize 
+            //randomize Piece Starting Location
             for (int i = 0; i < totalPieces * 2; i++)
             {
-
                 int randomIndex = Random.Range(0, box.transform.childCount);
                 PuzzlePieces[randomIndex].transform.SetAsLastSibling();
-
-
             }
 
 
-
-
             Invoke("MoveCamera", 1f);
-
-
             Invoke("TurnOfflayoutGroup", 1f);
-
-            //  if (level.centerAligned) 
-            // {
-            //   Vector3 v = new Vector3(can.GetComponent<RectTransform>().rect.width / 2, can.GetComponent<RectTransform>().rect.height / 2, 0);
-            //   nonPieces.GetComponentInParent<RectTransform>().position = v;
-
-
-            // }
 
             if (resoultionY < 800)
             {
@@ -290,17 +264,14 @@ namespace MovingJigsaw
             Debug.Log(offset);
             for (int i = 0; i < numofpieces; i++)
             {
-
                 if (PuzzlePieces[i + offset].transform.parent != snapboard.transform.GetChild(i))
                 {
                     tempwinVar = false;
                 }
-
             }
 
             win = tempwinVar;
             Winlevel(win, puzzlebeingchecked);
-
         }
 
         public void TurnOfflayoutGroup()
@@ -308,26 +279,18 @@ namespace MovingJigsaw
 
             box.GetComponent<GridLayoutGroup>().enabled = false;
 
-
-
             Vector3 add;
-            float xbleep;
-            float ybleep;
-            float yoffset;
-
+            float xOffset;
+            float yOffset;
+     
             float totalX = 0;
 
             //Randomizing the location 
             for (int i = 0; i < PuzzlePieces.Count; i++)
             {
-
-
-                xbleep = Random.Range(-50, 50);
-                ybleep = Random.Range(-50, 50);
-                // yoffset = 600 * (Mathf.FloorToInt(i / (Level.Xpieces * Level.Ypieces)));
-                add = new Vector3(xbleep, ybleep, 0);
-
-
+                xOffset = Random.Range(-50, 50);
+                yOffset = Random.Range(-50, 50);
+                add = new Vector3(xOffset, yOffset, 0);
 
                 box.transform.GetChild(i).transform.position += add;
 
@@ -335,53 +298,21 @@ namespace MovingJigsaw
                 {
                     totalX = box.transform.GetChild(i).GetComponent<RectTransform>().anchoredPosition.x;
                     box.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, totalX + cellSizeX / 2 + 10);
-                   // Debug.Log(totalX);
+                  
                 }
-
             }
 
-
-
-            //if (Level.centerAligned)
-            //{
-            //    Vector3 v = new Vector3(can.GetComponent<RectTransform>().rect.width / 2, can.GetComponent<RectTransform>().rect.height / 2, 0);
-            //    nonPieces.GetComponentInParent<RectTransform>().position = v;
-
-            //    RectTransform r;
-            //    for (int i = 0; i < PuzzlePieces.Count; i++)
-            //    {
-
-            //        r = PuzzlePieces[i].GetComponent<RectTransform>();
-
-            //        Debug.Log(r.position.x);
-            //        if (r.position.x < 1350)
-            //        {
-            //           Debug.Log(PuzzlePieces[i].transform.position.x - 800);
-            //            r.position = new Vector3(r.position.x - 800, r.position.y,0);
-
-            //            ///   rect.Set(r.rect.x - 800, r.rect.y, r.rect.width, r.rect.height);
-
-            //        }
-            //    }
-
-            //}
+            //Save Start Jigsaw location for piece reset.
 
             foreach (GameObject jig in PuzzlePieces)
             {
                 jig.GetComponent<JigsawPieceScript>().SaveStartTransform();
-
             }
-
-
-            //player Gizmo Section
 
             playergizmos.GetComponent<HorizontalLayoutGroup>().enabled = false;
             playergizmos.GetComponent<ContentSizeFitter>().enabled = false;
 
-            Debug.Log(playergizmos.transform.childCount);
-
             Transform[] t = new Transform[3];
-
             for (int i = 0; i < playergizmos.transform.childCount; i++)
             {
                 t[i] = playergizmos.transform.GetChild(i);
@@ -393,17 +324,7 @@ namespace MovingJigsaw
                 t[i].SetParent(ui.MasterLayers[1].transform);
                 t[i].SetAsLastSibling();
 
-
-
             }
-
-
-
-
-
-
-
-
         }
 
         public void MoveCamera()
@@ -447,26 +368,19 @@ namespace MovingJigsaw
                     }
                 }
             }
-
-
         }
 
 
         public void BackToMenu()
         {
-
             levels.customMode = false;
             levels.Jigsaws[levels.playID].completed = win;
             levels.debug = false;
-
             List<bool> tempbool = new List<bool>();
 
             for (int i = 0; i < levels.Jigsaws.Count; i++) { tempbool.Add(levels.Jigsaws[i].completed); }
 
-
-
             JigSave.SavePlayer(tempbool);
-
             SceneManager.LoadScene("JigsawMenu", LoadSceneMode.Single);
 
         }
@@ -491,8 +405,6 @@ namespace MovingJigsaw
             {
                 IDList.Add(i);
             }
-
-
 
             if (shift == ShiftDirection.left)
             {
@@ -555,13 +467,11 @@ namespace MovingJigsaw
 
             }
 
-
             temp = new List<GameObject>();
 
             for (int i = 0; i < snapboard.transform.childCount; i++)
             {
                 temp.Add(snapboard.transform.GetChild(i).gameObject);
-                //  temp[IDList[i]].transform.SetParent(snapboard.transform);
             }
 
 
@@ -580,7 +490,6 @@ namespace MovingJigsaw
 
         public void RemoveCompletedPieces()
         {
-
             for (int i = 0; i < (Xpieces * Ypieces); i++)
             {
 
@@ -589,29 +498,21 @@ namespace MovingJigsaw
             }
 
             ComfirmClear.SetActive(false);
-
         }
 
         public void Clean()
         {
             for (int i = 0; i < PuzzlePieces.Count; i++)
             {
-
                 if (PuzzlePieces[i].transform.parent.name != "SnapPiece(Clone)")
                 {
                     PuzzlePieces[i].GetComponent<JigsawPieceScript>().InstantPutBack();
-
-
                 }
-
-
             }
-
         }
 
         public void ClearBoard()
         {
-
             SceneManager.LoadScene("JigsawMain", LoadSceneMode.Single);
         }
 
@@ -619,7 +520,6 @@ namespace MovingJigsaw
         {
             yield return new WaitForSeconds(1);
             loadingscreen.SetActive(false);
-
         }
     }
 }

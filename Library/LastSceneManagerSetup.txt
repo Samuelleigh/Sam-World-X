@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Games/Jigsaw/JigSawMenu.unity
+- path: Assets/Games/The Way Down/Way Down.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

@@ -29,8 +29,6 @@ namespace TheWayDown
 			story = new Story(inkJSONAsset.text);
 			if (OnCreateStory != null) OnCreateStory(story);
 
-
-
 			RefreshView();
 		}
 
@@ -51,86 +49,65 @@ namespace TheWayDown
 			// Read all the content until we can't continue any more
 			while (story.canContinue)
 			{
-
 				if (showNextLine == true)
 				{
-
 					text += story.Continue();
-
-					//Debug.Log(text);
-					//foreach (string str in story.currentTags) { Debug.Log(str); }
-
 
 				}
 				else
 				{
-
 					trash = story.Continue();
 					showNextLine = true;
-					// Debug.Log(trash);
-					//	foreach (string str in story.currentTags) { Debug.Log(str); }
-
 				}
-
-
 			}
 
 
 			if (story.currentTags.Count > 0)
-			{
-
-				//Debug.Log(story.currentTags[0]);
-
-				//This changes the hangtime before shutting the door
+			{			
 				if (story.currentTags[0].StartsWith("-")) { ChangeVaribles(story.currentTags); }
 
 				//if the current ink Knot is overworld switch to this, corountine controls the hang time.
-				if (story.currentTags.Contains("overworld"))
-				{
-					Debug.Log("move back to overworld");
-					//wayDownLogic.MoveToOverworld();
-					goBackWhenTextFinish = true;
 
+				if (story.currentTags.Contains("overworld"))
+				{		
+					goBackWhenTextFinish = true;
 				}
+
 				if (story.currentTags.Contains("end"))
 				{
 					Debug.Log("end");
 					wayDownLogic.GameOver();
 				}
+
 				if (story.currentTags.Contains("m"))
 				{
 					int i = story.currentTags.IndexOf("m");
 					Debug.Log("new media");
 					wayDownLogic.ShowMedia(Convert.ToInt32(story.currentTags[i + 1]));
-
 				}
+
 				if (story.currentTags.Contains("h"))
 				{
 					Debug.Log("Hide media");
 					wayDownLogic.HideMedia();
-
 				}
+
 				if (story.currentTags.Contains("p"))
 				{
-
 					int i = story.currentTags.IndexOf("p");
 					wayDownLogic.CreatePotionButton((Convert.ToInt32(story.currentTags[i + 1])));
-
-
 				}
+
 				if (story.currentTags.Contains("music"))
 				{
-
 					int i = story.currentTags.IndexOf("music");
 					soundsystem.PlayMusic(story.currentTags[i + 1]);
-
 				}
 
 				//in ink, have the corrisponding animator number in the tag after a, and the name of the animation in in the next tag.
 
 				if (story.currentTags.Contains("a"))
 				{
-
 					int animatorID = 0;
 					string triggername = "";
 
@@ -142,11 +119,10 @@ namespace TheWayDown
 							triggername = story.currentTags[i + 2];
 							wayDownLogic.TriggerAnimation(animatorID, triggername, false);
 						}
-
-
 					}
 
 				}
+
 				if (story.currentTags.Contains("p4"))
 				{
 					Debug.Log("create 4 potions");
@@ -159,19 +135,14 @@ namespace TheWayDown
 				}
 				if (story.currentTags.Contains("p2"))
 				{
-
 					wayDownLogic.CreatePotionButton(3);
 					wayDownLogic.CreatePotionButton(4);
-
 				}
-
-
-
 			}
-
 
 			//trim white space
 			text = text.Trim();
+
 			// Display the text on screen!
 			CreateContentView(text);
 
@@ -197,9 +168,6 @@ namespace TheWayDown
 			// If we've read all the content and there's no choices, the story is finished!
 			else
 			{
-
-
-
 				if (AutoEnd == false)
 				{
 					//sam added this, after the buttons have been made
@@ -213,18 +181,12 @@ namespace TheWayDown
 				}
 				else
 				{
-
 					endAfterShownText = true;
 					ChangeEmote(story.currentTags);
 					ChangeVaribles(story.currentTags);
-
 				}
-
 			}
-
-
-
-			//showNextLine = false;
+		
 		}
 
 		// When we click the choice button, tell the story to choose that choice!
@@ -242,8 +204,6 @@ namespace TheWayDown
 			RefreshView();
 		}
 
-
-
 		// Creates a textbox showing the the line of text
 		void CreateContentView(string text)
 		{
@@ -260,8 +220,6 @@ namespace TheWayDown
 
 			StopAllCoroutines();
 			StartCoroutine(CharDelay(storyText));
-
-			//storyText.text = text;
 
 		}
 
@@ -294,7 +252,6 @@ namespace TheWayDown
 			HorizontalLayoutGroup layoutGroup = choice.GetComponent<HorizontalLayoutGroup>();
 			layoutGroup.childForceExpandHeight = false;
 
-
 			return choice;
 		}
 
@@ -313,22 +270,14 @@ namespace TheWayDown
 				GameObject.Destroy(textPanel.transform.GetChild(i).gameObject);
 			}
 
-
-
-
 		}
 
 		public IEnumerator CharDelay(TextMeshProUGUI stext)
 		{
 
-
 			//edit charDelay in inspector to change OPENING pause.
 
 			yield return new WaitForSeconds(charDelay);
-
-			//talking animation trigger
-			//emotes.Talk();
-
 
 			//the loop for each character update.
 			while (dialogQue.Count != 0)
@@ -368,29 +317,11 @@ namespace TheWayDown
 						charDelay = 0f;
 					}
 
-					//decieds if the mouth should talk or not
-					if (charDelay <= 0.5f)
-					{
-						//Debug.Log("talking");
-						//mouth should continue moving, or start again
-						//emotes.Talk();
-					}
-					else
-					{
-						//Debug.Log("stoptalking");
-						//mouth should stop moving.
-						//emotes.StopTalking();
-
-					}
-
-
 					yield return new WaitForSeconds(charDelay);
 
 					//reset char delay
 					charDelay = 0.01f;
 				}
-
-
 			}
 
 			instantTextScroll = false;
@@ -399,15 +330,13 @@ namespace TheWayDown
 			{
 				Invoke("MoveToOverworldDelay", 2);
 				goBackWhenTextFinish = false;
-
 			}
 
 			//This is perhaps a bit messy, but endAftershown text should only be true when the game is about to end
 			if (endAfterShownText == false)
-			{
-				//	Debug.Log("buttons turn on");
+			{			
 				choicePanel.SetActive(true);
-				//emotes.StopTalking(); 
+			
 			}
 			else
 			{
@@ -416,34 +345,19 @@ namespace TheWayDown
 
 				//what to do when end ink
 				if (wayDownLogic) { wayDownLogic.GameOver(); }
-
 				endAfterShownText = false;
 			}
-
-
-		}
-
-		public void BackToOverworldSetUp()
-		{
-
-
 		}
 
 		public void ChangeEmote(List<string> tags)
 		{
-
-
-			if (tags.Count == 0)
-			{ //emotes.ChangeEmote2("");
-			}
-			//	else { Debug.Log(tags[0]); }
 
 			foreach (string str in tags)
 			{
 				if (!str.StartsWith("-"))
 				{
 					Debug.Log(str);
-					//emotes.ChangeEmote2(str);
+					
 				}
 			}
 		}
@@ -480,9 +394,7 @@ namespace TheWayDown
 
 		public void SaveMomentBeforeState()
 		{
-
 			lastState = story.state.ToJson();
-
 		}
 
 		public void ReevaultateInk()
@@ -517,8 +429,7 @@ namespace TheWayDown
 		public bool gameover = false;
 
 		public string[] RandomSoundNames;
-
-		//public EmoteLogic emotes;
+	
 		public bool AutoEnd = true;
 		public bool endAfterShownText;
 		public float hangTimeEnd = 1.0f;
@@ -533,11 +444,6 @@ namespace TheWayDown
 		public Choice lastchoice;
 
 		public bool instantTextScroll = false;
-
-
-		//game Logic
-		//public KnockGameLogic knockGameLogic;
-		//public RockConversation rockConversation;
 
 		public WayDownGame wayDownLogic;
 		public SoundSystem soundsystem;

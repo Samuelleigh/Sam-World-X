@@ -25,10 +25,6 @@ namespace MovingJigsaw
 
         }
 
-
-
-
-        // Start is called before the first frame update
         void Start()
         {
 
@@ -41,20 +37,16 @@ namespace MovingJigsaw
                 else
                 {
                     vid = gameObject.GetComponent<VideoPlayer>();
-
                 }
 
                 Debug.Log("df");
 
                 if (gm.Level.videoClip)
                 {
-
                     vid.SetDirectAudioMute(0, true);
                     vid.clip = gm.Level.videoClip;
                     vid.audioOutputMode = VideoAudioOutputMode.None;
                     vid.isLooping = true;
-
-
                 }
                 else if (gm.Level.puzzleTexture)
                 {
@@ -71,8 +63,6 @@ namespace MovingJigsaw
 
                     m_Renderer.material = mat;
                 }
-
-
             }
 
 
@@ -88,20 +78,13 @@ namespace MovingJigsaw
                     else
                     {
                         vid = gameObject.GetComponent<VideoPlayer>();
-
                     }
-
-
-
 
                     Renderer rend = GetComponent<Renderer>();
 
                     rend.material.EnableKeyword("_NORMALMAP");
                     rend.material.EnableKeyword("_EMISSION");
                     rend.material.EnableKeyword("_METALLICGLOSSMAP");
-
-
-
                     rend.material = new Material(Shader.Find("Unlit/Texture"));
 
                     vid.SetDirectAudioMute(0, true);
@@ -111,9 +94,6 @@ namespace MovingJigsaw
                     vid.isLooping = true;
 
                     vid.url = manager.path;
-
-
-
 
                 }
 
@@ -134,9 +114,6 @@ namespace MovingJigsaw
 
             }
 
-
-
-
         }
 
         IEnumerator GetImageFile()
@@ -148,7 +125,6 @@ namespace MovingJigsaw
 
             m_Renderer = GetComponent<MeshRenderer>();
 
-
             m_Renderer.material.EnableKeyword("_NORMALMAP");
             m_Renderer.material.EnableKeyword("_EMISSION");
             m_Renderer.material.EnableKeyword("_METALLICGLOSSMAP");
@@ -158,20 +134,8 @@ namespace MovingJigsaw
             mat.SetTexture("_MainTex", m_MainTexture);
             mat.SetTexture("_EMISSION", m_MainTexture);
 
-
-
             m_Renderer.material = mat;
 
-
-            Debug.Log("gg");
-
-        }
-
-
-        // Update is called once per frame
-        void Update()
-        {
-            //  m_Renderer.material.mainTexture = m_MainTexture;
-        }
+        }  
     }
 }

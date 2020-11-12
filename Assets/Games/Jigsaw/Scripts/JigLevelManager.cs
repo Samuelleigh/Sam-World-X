@@ -38,20 +38,11 @@ namespace MovingJigsaw
                 Destroy(gameObject);
             }
 
-
             if (debug == true)
             {
                 //DebugLevel = Jigsaws[debugID];
             }
-
-
-        }
-
-
-        public void Start()
-        {
-
-        }
+        }    
     }
 }
 
