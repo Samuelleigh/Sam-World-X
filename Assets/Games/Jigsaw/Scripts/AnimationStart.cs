@@ -2,24 +2,27 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AnimationStart : MonoBehaviour
+namespace MovingJigsaw
 {
-    public Animator ani;
-    public string starttrigger;
-    private void Awake()
+    public class AnimationStart : MonoBehaviour
     {
-        ani = gameObject.GetComponent<Animator>();
-    }
+        public Animator ani;
+        public string starttrigger;
+        private void Awake()
+        {
+            ani = gameObject.GetComponent<Animator>();
+        }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        ani.SetTrigger(starttrigger);
-    }
+        // Start is called before the first frame update
+        void Start()
+        {
+            ani.SetTrigger(starttrigger);
+        }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        // Update is called once per frame
+        void Update()
+        {
+
+        }
     }
 }

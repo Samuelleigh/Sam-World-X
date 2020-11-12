@@ -4,169 +4,174 @@ using UnityEngine;
 using System.IO;
 using UnityEngine.Video;
 using UnityEngine.UI;
+using MovingJigsaw;
 
-public class JigsawSceneObject : MonoBehaviour
+namespace MovingJigsaw
 {
-
-    public JigLevelManager manager;
-    public JigsawGameLogic gm;
-    public VideoPlayer vid;
-
-    public Texture m_MainTexture;
-    Renderer m_Renderer;
-
-    private void Awake()
-    {
-        manager = FindObjectOfType<JigLevelManager>();
-        gm = FindObjectOfType<JigsawGameLogic>();
-        
-    }
-
-    
-
-
-    // Start is called before the first frame update
-    void Start()
+    public class JigsawSceneObject : MonoBehaviour
     {
 
-        if (manager.customFile == false) 
+        public JigLevelManager manager;
+        public JigsawGameLogic gm;
+        public VideoPlayer vid;
+
+        public Texture m_MainTexture;
+        Renderer m_Renderer;
+
+        private void Awake()
         {
-            if (gameObject.GetComponent<VideoPlayer>() == null)
-            {
-                vid = gameObject.AddComponent<VideoPlayer>();
-            }
-            else
-            {
-                vid = gameObject.GetComponent<VideoPlayer>();
-
-            }
-
-            Debug.Log("df");
-
-            if (gm.Level.videoClip) {
-
-                vid.SetDirectAudioMute(0, true);
-                vid.clip = gm.Level.videoClip;
-                vid.audioOutputMode = VideoAudioOutputMode.None;
-                vid.isLooping = true;
-
-
-            }
-            else if (gm.Level.puzzleTexture) 
-            {
-                m_MainTexture = gm.Level.puzzleTexture;
-                m_Renderer = GetComponent<MeshRenderer>();
-
-                m_Renderer.material.EnableKeyword("_NORMALMAP");
-                m_Renderer.material.EnableKeyword("_EMISSION");
-                m_Renderer.material.EnableKeyword("_METALLICGLOSSMAP");
-
-                Material mat = new Material(Shader.Find("Unlit/Texture"));
-                mat.SetTexture("_MainTex", m_MainTexture);
-                mat.SetTexture("_EMISSION", m_MainTexture);
-
-                m_Renderer.material = mat;
-            }
-
+            manager = FindObjectOfType<JigLevelManager>();
+            gm = FindObjectOfType<JigsawGameLogic>();
 
         }
 
 
-        if (manager.customFile == true && manager.customMode == true) 
+
+
+        // Start is called before the first frame update
+        void Start()
         {
 
-            if (Path.GetExtension(manager.path) == ".mp4")
+            if (manager.customFile == false)
             {
                 if (gameObject.GetComponent<VideoPlayer>() == null)
                 {
                     vid = gameObject.AddComponent<VideoPlayer>();
                 }
-                else 
+                else
                 {
-                    vid = gameObject.GetComponent<VideoPlayer>();                
-                
+                    vid = gameObject.GetComponent<VideoPlayer>();
+
+                }
+
+                Debug.Log("df");
+
+                if (gm.Level.videoClip)
+                {
+
+                    vid.SetDirectAudioMute(0, true);
+                    vid.clip = gm.Level.videoClip;
+                    vid.audioOutputMode = VideoAudioOutputMode.None;
+                    vid.isLooping = true;
+
+
+                }
+                else if (gm.Level.puzzleTexture)
+                {
+                    m_MainTexture = gm.Level.puzzleTexture;
+                    m_Renderer = GetComponent<MeshRenderer>();
+
+                    m_Renderer.material.EnableKeyword("_NORMALMAP");
+                    m_Renderer.material.EnableKeyword("_EMISSION");
+                    m_Renderer.material.EnableKeyword("_METALLICGLOSSMAP");
+
+                    Material mat = new Material(Shader.Find("Unlit/Texture"));
+                    mat.SetTexture("_MainTex", m_MainTexture);
+                    mat.SetTexture("_EMISSION", m_MainTexture);
+
+                    m_Renderer.material = mat;
                 }
 
 
-
-                                
-                Renderer rend = GetComponent<Renderer>();
-
-                rend.material.EnableKeyword("_NORMALMAP");
-                rend.material.EnableKeyword("_EMISSION");
-                rend.material.EnableKeyword("_METALLICGLOSSMAP");
-
-
-
-                rend.material = new Material(Shader.Find("Unlit/Texture"));
-
-                vid.SetDirectAudioMute(0, true);
-                vid.targetMaterialRenderer = gameObject.GetComponent<Renderer>();
-                vid.audioOutputMode = VideoAudioOutputMode.None;
-                vid.source = VideoSource.Url;
-                vid.isLooping = true;
-
-                vid.url = manager.path;
-
-                
-
-
             }
-           
-            if ( Path.GetExtension(manager.path) == ".png" || Path.GetExtension(manager.path) == ".PNG")
+
+
+            if (manager.customFile == true && manager.customMode == true)
             {
 
-                StartCoroutine(GetImageFile());
-
-                if (gameObject.GetComponent<VideoPlayer>() == true)
+                if (Path.GetExtension(manager.path) == ".mp4")
                 {
-                    vid = gameObject.AddComponent<VideoPlayer>();
-                    Destroy(vid);
+                    if (gameObject.GetComponent<VideoPlayer>() == null)
+                    {
+                        vid = gameObject.AddComponent<VideoPlayer>();
+                    }
+                    else
+                    {
+                        vid = gameObject.GetComponent<VideoPlayer>();
+
+                    }
+
+
+
+
+                    Renderer rend = GetComponent<Renderer>();
+
+                    rend.material.EnableKeyword("_NORMALMAP");
+                    rend.material.EnableKeyword("_EMISSION");
+                    rend.material.EnableKeyword("_METALLICGLOSSMAP");
+
+
+
+                    rend.material = new Material(Shader.Find("Unlit/Texture"));
+
+                    vid.SetDirectAudioMute(0, true);
+                    vid.targetMaterialRenderer = gameObject.GetComponent<Renderer>();
+                    vid.audioOutputMode = VideoAudioOutputMode.None;
+                    vid.source = VideoSource.Url;
+                    vid.isLooping = true;
+
+                    vid.url = manager.path;
+
+
+
+
                 }
 
-                StartCoroutine(GetImageFile());
+                if (Path.GetExtension(manager.path) == ".png" || Path.GetExtension(manager.path) == ".PNG")
+                {
+
+                    StartCoroutine(GetImageFile());
+
+                    if (gameObject.GetComponent<VideoPlayer>() == true)
+                    {
+                        vid = gameObject.AddComponent<VideoPlayer>();
+                        Destroy(vid);
+                    }
+
+                    StartCoroutine(GetImageFile());
+
+                }
 
             }
-        
+
+
+
+
+        }
+
+        IEnumerator GetImageFile()
+        {
+            WWW www = new WWW(manager.path);
+            while (!www.isDone)
+                yield return null;
+            m_MainTexture = www.texture;
+
+            m_Renderer = GetComponent<MeshRenderer>();
+
+
+            m_Renderer.material.EnableKeyword("_NORMALMAP");
+            m_Renderer.material.EnableKeyword("_EMISSION");
+            m_Renderer.material.EnableKeyword("_METALLICGLOSSMAP");
+
+
+            Material mat = new Material(Shader.Find("Unlit/Texture"));
+            mat.SetTexture("_MainTex", m_MainTexture);
+            mat.SetTexture("_EMISSION", m_MainTexture);
+
+
+
+            m_Renderer.material = mat;
+
+
+            Debug.Log("gg");
+
         }
 
 
-       
-       
-    }
-
-    IEnumerator GetImageFile()
-    {
-        WWW www = new WWW(manager.path);
-        while (!www.isDone)
-            yield return null;
-        m_MainTexture = www.texture;
-
-        m_Renderer = GetComponent<MeshRenderer>();
-
-
-        m_Renderer.material.EnableKeyword("_NORMALMAP");
-        m_Renderer.material.EnableKeyword("_EMISSION");
-        m_Renderer.material.EnableKeyword("_METALLICGLOSSMAP");
-
-
-        Material mat = new Material(Shader.Find("Unlit/Texture"));
-        mat.SetTexture("_MainTex", m_MainTexture);
-        mat.SetTexture("_EMISSION", m_MainTexture);
-
-      
-
-        m_Renderer.material = mat;
-        
-
-        Debug.Log("gg");
-
-    }
-
-
-    // Update is called once per frame
-    void Update()
-    {
-      //  m_Renderer.material.mainTexture = m_MainTexture;
+        // Update is called once per frame
+        void Update()
+        {
+            //  m_Renderer.material.mainTexture = m_MainTexture;
+        }
     }
 }

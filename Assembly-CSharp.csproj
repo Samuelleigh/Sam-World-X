@@ -130,6 +130,7 @@
     <Compile Include="Assets\Games\Knock Knock\Scripts\CharacterManager.cs" />
     <Compile Include="Assets\Games\Knock Knock\Scripts\KnockGameLogic.cs" />
     <Compile Include="Assets\Games\Knock Knock\Scripts\Knocking.cs" />
+    <Compile Include="Assets\Games\Knock Knock\Scripts\Moved to diffrent project\KnockKnockGameLogicMobile.cs" />
     <Compile Include="Assets\Games\LowFI-3D\Scripts\LowFiLevels.cs" />
     <Compile Include="Assets\Games\LowFI-3D\Scripts\LowFiManager.cs" />
     <Compile Include="Assets\Games\LowFI-3D\Scripts\LowFiMenu.cs" />

@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEditor;
+using TheWayDown;
 
 [CustomEditor(typeof(CamTest))]
 public class MediaCamSnapTo : Editor

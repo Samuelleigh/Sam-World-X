@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
 public class EndGameLogic : MonoBehaviour
 {
 
@@ -19,8 +18,7 @@ public class EndGameLogic : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Application.platform == RuntimePlatform.WindowsEditor || Application.platform == RuntimePlatform.OSXPlayer || Application.platform == RuntimePlatform.LinuxPlayer)
-        {
+       
             if (Input.GetKey("escape"))
             {
                 QuitProgram();
@@ -29,7 +27,7 @@ public class EndGameLogic : MonoBehaviour
             {
                 ToggleFullScreen();
             }
-        }
+        
     }
 
     public void ToggleFullScreen()

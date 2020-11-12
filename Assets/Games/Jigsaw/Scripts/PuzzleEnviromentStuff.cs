@@ -2,20 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PuzzleEnviromentStuff : MonoBehaviour
+namespace MovingJigsaw
 {
-
-    public List<GameObject> Cameras;
-
-    // Start is called before the first frame update
-    void Start()
+    public class PuzzleEnviromentStuff : MonoBehaviour
     {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        public List<GameObject> Cameras;
+
+        // Start is called before the first frame update
+        void Start()
+        {
+
+        }
+
+        // Update is called once per frame
+        void Update()
+        {
+
+        }
     }
 }

@@ -5,12 +5,15 @@ using UnityEngine.SceneManagement;
 
 
 
-[System.Serializable]
-public class JigsawLevel
+namespace MovingJigsaw
 {
-    public string name;
-    public JigLevelScriptObject jigsawLevelInfo;
-    public bool completed = false;
-    public bool loadFromResource = false;
+    [System.Serializable]
+    public class JigsawLevel
+    {
+        public string name;
+        public JigLevelScriptObject jigsawLevelInfo;
+        public bool completed = false;
+        public bool loadFromResource = false;
 
+    }
 }

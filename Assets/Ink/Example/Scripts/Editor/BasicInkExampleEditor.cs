@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEditor;
 using Ink.UnityIntegration;
 using Ink.Runtime;
+using KnockKnock;
 
 [CustomEditor(typeof(BasicInkExample))]
 public class BasicInkExampleEditor : Editor {

@@ -2,20 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CharacterManager : MonoBehaviour
+namespace KnockKnock
 {
-
-    public List<Character> CharacterList;
-
-    // Start is called before the first frame update
-    void Start()
+    public class CharacterManager : MonoBehaviour
     {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        public List<Character> CharacterList;
+
     }
 }

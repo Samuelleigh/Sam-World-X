@@ -4,42 +4,45 @@ using System.Runtime.Serialization.Formatters.Binary;
 using System.Collections.Generic;
 using UnityEngine;
 
-public static class JigSave
+namespace MovingJigsaw
 {
-
-    public static void SavePlayer(List<bool> jig) 
+    public static class JigSave
     {
 
-        BinaryFormatter formatter = new BinaryFormatter();
-        string path = Application.persistentDataPath + "/player.jigs";
-        FileStream stream = new FileStream(path, FileMode.Create);
-
-        formatter.Serialize(stream, jig);
-        stream.Close();
-    }
-
-    public static List<bool> LoadPlayer() 
-    {
-    
-    string path = Application.persistentDataPath + "/player.jigs";
-        if (File.Exists(path))
+        public static void SavePlayer(List<bool> jig)
         {
+
             BinaryFormatter formatter = new BinaryFormatter();
-            FileStream stream = new FileStream(path, FileMode.Open);
+            string path = Application.persistentDataPath + "/player.jigs";
+            FileStream stream = new FileStream(path, FileMode.Create);
 
-            List<bool> jigs = formatter.Deserialize(stream) as List<bool>;
+            formatter.Serialize(stream, jig);
             stream.Close();
-
-            return jigs;
-
         }
-        else 
+
+        public static List<bool> LoadPlayer()
         {
-            Debug.LogError("no save file found");
-            return null;
-        
+
+            string path = Application.persistentDataPath + "/player.jigs";
+            if (File.Exists(path))
+            {
+                BinaryFormatter formatter = new BinaryFormatter();
+                FileStream stream = new FileStream(path, FileMode.Open);
+
+                List<bool> jigs = formatter.Deserialize(stream) as List<bool>;
+                stream.Close();
+
+                return jigs;
+
+            }
+            else
+            {
+                Debug.LogError("no save file found");
+                return null;
+
+            }
+
         }
 
     }
-
 }
