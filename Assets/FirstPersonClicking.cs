@@ -65,8 +65,7 @@ public class FirstPersonClicking : MonoBehaviour
         {
             Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * 1000, Color.blue);
            // Debug.Log("Did not Hit");
-            linkstring = "";
-            websiteUI.HideLinkText();
+            linkstring = ""; 
             clickToLink = false;
             safty = true;
         }
@@ -107,7 +106,6 @@ public class FirstPersonClicking : MonoBehaviour
         {
             linkObject = null;
             clickToLink = false;
-            websiteUI.HideLinkText();
             safty = true;
         }
 
