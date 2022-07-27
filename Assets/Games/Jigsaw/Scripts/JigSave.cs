@@ -9,7 +9,7 @@ namespace MovingJigsaw
     public static class JigSave
     {
 
-        public static void SavePlayer(List<bool> jig)
+        public static void SavePlayer(List<JigsawLevel> jig)
         {
 
             BinaryFormatter formatter = new BinaryFormatter();
@@ -20,7 +20,7 @@ namespace MovingJigsaw
             stream.Close();
         }
 
-        public static List<bool> LoadPlayer()
+        public static List<JigsawLevel> LoadPlayer()
         {
 
             string path = Application.persistentDataPath + "/player.jigs";

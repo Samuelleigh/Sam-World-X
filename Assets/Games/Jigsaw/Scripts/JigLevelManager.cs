@@ -17,6 +17,9 @@ namespace MovingJigsaw
 
 
         public List<JigsawLevel> Jigsaws;
+        public List<JigsawLevel> StoryJigsaws;
+        public List<JigsawLevel> WeridJigsaws;
+        public List<JigsawLevel> SandBoxJigsaws;
         public JigsawLevel DebugLevel;
 
         public int CustomX;

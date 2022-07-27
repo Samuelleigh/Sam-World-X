@@ -26,4 +26,5 @@ MonoBehaviour:
   allowCustomFile: 1
   videoClip: {fileID: 32900000, guid: fd6743f5006bc514ea95b4015fb19dc8, type: 3}
   puzzleTexture: {fileID: 0}
+  Customizable: 1
   Notes: 

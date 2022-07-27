@@ -31,7 +31,7 @@ namespace MovingJigsaw
         public bool allowCustomFile = true;
         public VideoClip videoClip;
         public Texture puzzleTexture;
-
+        public bool Customizable = true;
         [TextArea]
         public string Notes;
     }
