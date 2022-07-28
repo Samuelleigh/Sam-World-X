@@ -217,8 +217,9 @@ namespace MovingJigsaw
             {
 
                 GameObject snap = Instantiate(snapObj, snapboard.transform);
-                snap.GetComponent<SnapPiece>().x = x;
-                snap.GetComponent<SnapPiece>().y = y;
+                Debug.Log(x);
+                snap.GetComponent<SnapPiece>().x = i - (y * Xpieces);
+                snap.GetComponent<SnapPiece>().y = Mathf.CeilToInt(i / Xpieces);
 
 
                 snap.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, cellSizeX);
@@ -256,6 +257,10 @@ namespace MovingJigsaw
             //mark level as in Progress
             levels.Jigsaws[levels.playID].jigsawLevelActive[levels.altID].inProgress = true;
             levels.Jigsaws[levels.playID].jigsawLevelActive[levels.altID].completed = false;
+
+            //If no jigsaw piece info, then add each piece to the active save file
+            //SetupSavePostions();
+       
 
         }
 
@@ -332,6 +337,8 @@ namespace MovingJigsaw
                 t[i].SetAsLastSibling();
 
             }
+
+            SetupSavePostions();
         }
 
         public void MoveCamera()
@@ -496,6 +503,8 @@ namespace MovingJigsaw
                 CheckWin(i);
             }
 
+            UpdateSavePostions();
+
         }
 
         public void RemoveCompletedPieces()
@@ -509,6 +518,8 @@ namespace MovingJigsaw
             }
 
             ComfirmClear.SetActive(false);
+
+            UpdateSavePostions();
         }
 
         public void Clean()
@@ -520,6 +531,8 @@ namespace MovingJigsaw
                     PuzzlePieces[i].GetComponent<JigsawPieceScript>().InstantPutBack();
                 }
             }
+            UpdateSavePostions();
+
         }
 
         public void ClearBoard()
@@ -533,32 +546,124 @@ namespace MovingJigsaw
             loadingscreen.SetActive(false);
         }
 
-
         public void SetupSavePostions() 
         {
-
-            for (int i = 0; i < PuzzlePieces.Count; i++) 
+            if (levels.Jigsaws[levels.playID].jigsawLevelActive[levels.altID].savePiece.Count == 0)
             {
-                JigsawPieceSavePostion save = new JigsawPieceSavePostion();
+                for (int i = 0; i < PuzzlePieces.Count; i++)
+                {
+                    JigsawPieceSavePostion piecepostion = new JigsawPieceSavePostion();
 
-                save.freeX = PuzzlePieces[i].GetComponent<RectTransform>().anchoredPosition.x;
-                save.freeY = PuzzlePieces[i].GetComponent<RectTransform>().anchoredPosition.y;
-              
-                 
+                    piecepostion.JigId = i;
+                    piecepostion.destroyed = false;
+                    piecepostion.placed = false;
+                    piecepostion.inDrawer = true;
+                    piecepostion.freeX = PuzzlePieces[i].GetComponent<RectTransform>().anchoredPosition.x;
+                    piecepostion.freeY = PuzzlePieces[i].GetComponent<RectTransform>().anchoredPosition.y;
+                    piecepostion.placedX = -1;
+                    piecepostion.placedY = -1;
 
-                levels.Jigsaws[levels.playID].jigsawLevelActive[levels.altID].savePiece.Add(save);
-                
+                    levels.Jigsaws[levels.playID].jigsawLevelActive[levels.altID].savePiece.Add(piecepostion);
+
+                }
+
             }
-        
-        
+            else
+            {
+                ApplyLoadPieceLocations();
+            }
+
+          //  UpdateSavePostions();
+
         }
 
-        public void SavePostions()
+        public void UpdateSavePostions() 
+        {
+            Debug.Log("Update Postion");
+
+            for (int i = 0; i < PuzzlePieces.Count; i++)
+            {
+                JigsawPieceSavePostion piecepostion = levels.Jigsaws[levels.playID].jigsawLevelActive[levels.altID].savePiece[i];
+
+                piecepostion.JigId = i;
+                //piecepostion.destroyed = PuzzlePieces[i].activeSelf
+                piecepostion.inDrawer = PuzzlePieces[i].transform.parent == box.transform;
+                piecepostion.freeX = PuzzlePieces[i].GetComponent<RectTransform>().anchoredPosition.x;
+                piecepostion.freeY = PuzzlePieces[i].GetComponent<RectTransform>().anchoredPosition.y;
+
+                if (PuzzlePieces[i].transform.parent.GetComponent<SnapPiece>())
+                {
+                    SnapPiece s = PuzzlePieces[i].transform.parent.GetComponent<SnapPiece>();
+                    piecepostion.placedX = s.x;
+                    piecepostion.placedY = s.y;
+                    piecepostion.placed = true;
+                }
+                else 
+                {
+                    piecepostion.placedX = -1;
+                    piecepostion.placedY = -1;
+                    piecepostion.placed = false;
+                }
+ 
+                levels.Jigsaws[levels.playID].jigsawLevelActive[levels.altID].savePiece[i] = piecepostion;
+            }
+        }
+
+        public void ApplyLoadPieceLocations() 
         {
 
-            
+            Debug.Log("Apply save postion");
+
+            for (int i = 0; i < levels.Jigsaws[levels.playID].jigsawLevelActive[levels.altID].savePiece.Count; i++) 
+            {
+                JigsawPieceSavePostion piecesave = levels.Jigsaws[levels.playID].jigsawLevelActive[levels.altID].savePiece[i];
+                GameObject jigpiece = PuzzlePieces[i];
+
+                if (piecesave.destroyed) 
+                {
+                    jigpiece.SetActive(false);
+                }
+
+                if (piecesave.inDrawer) 
+                {
+                    jigpiece.transform.SetParent(box.transform);
+                }
+
+                if (!piecesave.inDrawer && !piecesave.placed) 
+                {
+
+                    jigpiece.transform.SetParent(ui.MasterLayers[1].transform);
+                }
+
+                if (piecesave.placed)
+                {
+                    Debug.Log("piece was placed");
+
+                    foreach (GameObject g in temp)
+                    {
+                        Debug.Log(g.GetComponent<SnapPiece>().x);
+
+                        if (g.GetComponent<SnapPiece>().x == piecesave.placedX && g.GetComponent<SnapPiece>().y == piecesave.placedY)
+                        {
+                            Debug.Log("apply snap piece from save");
+                            jigpiece.GetComponent<JigsawPieceDrag>().SnapToPiece(g);
+                        }
+
+                    }
+
+                }
+                else 
+                {
+                    jigpiece.GetComponent<RectTransform>().anchoredPosition.Set(piecesave.freeX, piecesave.freeY);
+                }
+
+
+            }
+
 
         }
+
+
     }
 }
 

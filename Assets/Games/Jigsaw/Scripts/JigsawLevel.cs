@@ -23,6 +23,7 @@ namespace MovingJigsaw
 
         public int JigId;
         public bool placed;
+        public bool inDrawer;
         public bool destroyed;
         public float freeX, freeY;
         public int placedX, placedY;

@@ -65,7 +65,7 @@ namespace MovingJigsaw
 
         public void UpdatePostionInSave() 
         {
-            
+            gm.UpdateSavePostions();
         
         }
 
