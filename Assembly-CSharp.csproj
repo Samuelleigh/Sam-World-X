@@ -78,6 +78,7 @@
     <Compile Include="Assets\Games\LowFI-3D\Scripts\SightLevelManager.cs" />
     <Compile Include="Assets\Shared\Dialog System\EndGameLogic.cs" />
     <Compile Include="Assets\Doodle Studio 95\Examples\Scripts\SimpleFollowingCamera.cs" />
+    <Compile Include="Assets\Games\Jigsaw\Scripts\DeleteSave.cs" />
     <Compile Include="Assets\Games\The Way Down\Scripts\WayDownGame.cs" />
     <Compile Include="Assets\Games\To Be Finished In next Collection\Cafe\Scripts\CafeManager.cs" />
     <Compile Include="Assets\Games\Guessing Game\SaveSystem\PlayerData.cs" />
@@ -168,7 +169,6 @@
     <Compile Include="Assets\Doodle Studio 95\Examples\Scripts\WalkingCharacter.cs" />
     <Compile Include="Assets\Shared\Sound System\Sound.cs" />
     <Compile Include="Assets\Games\Drawing Game\DrawingGameLogic.cs" />
-    <Compile Include="Assets\Games\Jigsaw\Scripts\DeleteSave.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Shared\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
@@ -412,6 +412,9 @@
     </Reference>
     <Reference Include="UnityEditor">
       <HintPath>C:\Program Files\2020.1.5f1\Editor\Data\Managed\UnityEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp-firstpass">
+      <HintPath>Library\ScriptAssemblies\Assembly-CSharp-firstpass.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>Assets\Newtonsoft.Json.dll</HintPath>
@@ -892,10 +895,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{7A1C649F-40F4-7564-E7C2-244C859161D4}</Project>
-      <Name>Assembly-CSharp-firstpass</Name>
-    </ProjectReference>
     <ProjectReference Include="Ink-Libraries.csproj">
       <Project>{18234A9E-6D4C-358F-5F1A-9494433DAD0A}</Project>
       <Name>Ink-Libraries</Name>

@@ -269,6 +269,9 @@
     <Reference Include="UnityEditor">
       <HintPath>C:\Program Files\2020.1.5f1\Editor\Data\Managed\UnityEditor.dll</HintPath>
     </Reference>
+    <Reference Include="Assembly-CSharp-firstpass">
+      <HintPath>Library\ScriptAssemblies\Assembly-CSharp-firstpass.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEditor.Graphs">
       <HintPath>C:\Program Files\2020.1.5f1\Editor\Data\Managed\UnityEditor.Graphs.dll</HintPath>
     </Reference>
@@ -787,10 +790,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{7A1C649F-40F4-7564-E7C2-244C859161D4}</Project>
-      <Name>Assembly-CSharp-firstpass</Name>
-    </ProjectReference>
     <ProjectReference Include="Assembly-CSharp.csproj">
       <Project>{F26AA553-FFBA-354F-FEDB-5F4136F53EC1}</Project>
       <Name>Assembly-CSharp</Name>
