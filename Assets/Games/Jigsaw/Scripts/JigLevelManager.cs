@@ -8,6 +8,8 @@ namespace MovingJigsaw
 {
     public class JigLevelManager : MonoBehaviour
     {
+        public bool justOpened = true;
+        public int levelsetLastOpened;
         public int debugID;
         public bool debug = true;
         public int playID;
@@ -34,6 +36,14 @@ namespace MovingJigsaw
             DontDestroyOnLoad(gameObject);
             GameObject g = GameObject.Find("Jigsaw Level Manager");
 
+            foreach (JigsawLevel jig in StoryJigsaws) 
+            {
+
+                jig.jigsawLevelActive = new List<JigsawlevelSave>(jig.jigsawLevelDefaults.JigLevels.Count);
+            
+            }
+
+
             //checks if any other game objects with this name 
             if (g != null && g != gameObject)
             {
@@ -45,7 +55,76 @@ namespace MovingJigsaw
             {
                 //DebugLevel = Jigsaws[debugID];
             }
-        }    
+
+            foreach (JigsawLevel jiglevel in StoryJigsaws)
+            {
+                foreach (JigsawScriptObject jigscript in jiglevel.jigsawLevelDefaults.JigLevels)
+                {
+                    JigsawlevelSave newJig = new JigsawlevelSave();
+                    newJig.name = jigscript.name;
+                    jiglevel.jigsawLevelActive.Add(newJig);
+
+                }
+
+            }
+
+            foreach (JigsawLevel jiglevel in WeridJigsaws)
+            {
+                foreach (JigsawScriptObject jigscript in jiglevel.jigsawLevelDefaults.JigLevels)
+                {
+                    JigsawlevelSave newJig = new JigsawlevelSave();
+                    newJig.name = jigscript.name;
+                    jiglevel.jigsawLevelActive.Add(newJig);
+
+                }
+
+            }
+
+            foreach (JigsawLevel jiglevel in SandBoxJigsaws)
+            {
+                foreach (JigsawScriptObject jigscript in jiglevel.jigsawLevelDefaults.JigLevels)
+                {
+                    JigsawlevelSave newJig = new JigsawlevelSave();
+                    newJig.name = jigscript.name;
+                    jiglevel.jigsawLevelActive.Add(newJig);
+
+                }
+
+            }
+
+        }
+
+       
+
+        void Start() 
+        {
+
+            if (justOpened)
+            {
+                justOpened = false;
+            }
+            else 
+            {
+
+                JigsawMenu menus = FindObjectOfType<JigsawMenu>();
+                
+                menus.ChangeLevelSetMode(levelsetLastOpened);
+                menus.ChangeUIView(2);
+               
+
+
+            }
+
+            //Instantiate 
+
+          
+
+        }
+
+     
+        
+
+
     }
 }
 

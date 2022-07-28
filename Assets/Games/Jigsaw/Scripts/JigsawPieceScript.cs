@@ -63,5 +63,11 @@ namespace MovingJigsaw
 
         }
 
+        public void UpdatePostionInSave() 
+        {
+            
+        
+        }
+
     }
 }

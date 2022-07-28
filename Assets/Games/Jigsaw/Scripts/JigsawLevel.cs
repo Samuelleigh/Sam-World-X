@@ -10,12 +10,11 @@ namespace MovingJigsaw
     [System.Serializable]
     public class JigsawLevel
     {
-        public string name;
-        public JigLevelScriptObject jigsawLevelInfo;
-        public bool completed = false;
-        public bool loadFromResource = false;
-        public bool inProgress = false;
-        public List<JigsawPieceSavePostion> savePiece = new List<JigsawPieceSavePostion>();
+      
+        public JigLevelScriptObject jigsawLevelDefaults;
+        public List<JigsawlevelSave> jigsawLevelActive = new List<JigsawlevelSave>();
+   
+
     }
 
     [System.Serializable]
@@ -24,10 +23,25 @@ namespace MovingJigsaw
 
         public int JigId;
         public bool placed;
-        public int freeX, freeY;
+        public bool destroyed;
+        public float freeX, freeY;
         public int placedX, placedY;
 
+   
+    }
 
-    
+    [System.Serializable]
+    public class JigsawlevelSave 
+    { 
+        public string name;
+        public bool completed = false;
+        public bool loadFromResource = false;
+        public bool inProgress = false;
+        public bool customMode = false;
+        public PuzzleResolution puzzleResolution;
+        public int XCustom;
+        public int YCustom;
+        public List<JigsawPieceSavePostion> savePiece = new List<JigsawPieceSavePostion>();
+
     }
 }

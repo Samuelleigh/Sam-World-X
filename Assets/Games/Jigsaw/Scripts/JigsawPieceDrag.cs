@@ -89,6 +89,8 @@ namespace MovingJigsaw
                 }
                 Debug.Log(raycastResultList[i].gameObject.name);
             }
+
+            jig.UpdatePostionInSave();
         }
 
         public void SnapToPiece(GameObject piece)

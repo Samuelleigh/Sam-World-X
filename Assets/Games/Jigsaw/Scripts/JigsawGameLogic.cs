@@ -22,6 +22,7 @@ namespace MovingJigsaw
 
         //jigsaw scriptable object stuff
         public JigsawScriptObject Level;
+        public JigsawlevelSave CustomLevel;
         public int totalPieces;
 
         public float cellSizeX;
@@ -85,7 +86,8 @@ namespace MovingJigsaw
         {
 
             StartCoroutine(LoadingScreen());
-            Level = levels.Jigsaws[levels.playID].jigsawLevelInfo.JigLevels[levels.altID];
+            Level = levels.Jigsaws[levels.playID].jigsawLevelDefaults.JigLevels[levels.altID];
+            CustomLevel = levels.Jigsaws[levels.playID].jigsawLevelActive[levels.altID];
             solvedAmountText.text = puzzlessolved + "/" + Level.numberOfpuzzles;
 
 
@@ -101,19 +103,19 @@ namespace MovingJigsaw
 
             SceneManager.LoadScene(level.SceneName, LoadSceneMode.Additive);
 
-            if (levels.customMode)
+            if (CustomLevel.customMode)
             {
-                Xpieces = levels.CustomX;
-                Ypieces = levels.CustomY;
-                puzzleRez = levels.Customrez;
-
+                Xpieces = levels.Jigsaws[levels.playID].jigsawLevelActive[levels.altID].XCustom;
+                Ypieces = levels.Jigsaws[levels.playID].jigsawLevelActive[levels.altID].YCustom;
+                puzzleRez = levels.Jigsaws[levels.playID].jigsawLevelActive[levels.altID].puzzleResolution;
+                levels.Jigsaws[levels.playID].jigsawLevelActive[levels.altID].customMode = true;
             }
             else
             {
                 Xpieces = level.Xpieces;
                 Ypieces = level.Ypieces;
                 puzzleRez = level.puzzleResolution;
-
+                levels.Jigsaws[levels.playID].jigsawLevelActive[levels.altID].customMode = false;
             }
 
             //Set up the Render texture
@@ -250,6 +252,11 @@ namespace MovingJigsaw
             ScrollViewStuff.GetComponent<ScrollRect>().horizontal = false;
             ScrollViewStuff.GetComponent<ScrollRect>().vertical = false;
 
+
+            //mark level as in Progress
+            levels.Jigsaws[levels.playID].jigsawLevelActive[levels.altID].inProgress = true;
+            levels.Jigsaws[levels.playID].jigsawLevelActive[levels.altID].completed = false;
+
         }
 
 
@@ -358,7 +365,7 @@ namespace MovingJigsaw
                     if (puzzlessolved == Level.numberOfpuzzles)
                     {
                         congrats.SetActive(win);
-                        levels.Jigsaws[levels.playID].completed = win;
+                        levels.Jigsaws[levels.playID].jigsawLevelActive[levels.altID].completed = win;
 
                     }
                     else
@@ -374,11 +381,14 @@ namespace MovingJigsaw
         public void BackToMenu()
         {
             levels.customMode = false;
-            levels.Jigsaws[levels.playID].completed = win;
+            levels.Jigsaws[levels.playID].jigsawLevelActive[levels.altID].completed = win;
             levels.debug = false;
-            List<bool> tempbool = new List<bool>();
+            List<JigsawlevelSave> tempbool = new List<JigsawlevelSave>();
 
-            for (int i = 0; i < levels.Jigsaws.Count; i++) { tempbool.Add(levels.Jigsaws[i].completed); }
+            for (int i = 0; i < levels.StoryJigsaws.Count; i++) { tempbool.Add(levels.StoryJigsaws[i].jigsawLevelActive[levels.altID]); }
+            for (int i = 0; i < levels.WeridJigsaws.Count; i++) { tempbool.Add(levels.WeridJigsaws[i].jigsawLevelActive[levels.altID]); }
+            for (int i = 0; i < levels.SandBoxJigsaws.Count; i++) { tempbool.Add(levels.SandBoxJigsaws[i].jigsawLevelActive[levels.altID]); }
+
 
             JigSave.SavePlayer(tempbool);
             SceneManager.LoadScene("JigsawMenu", LoadSceneMode.Single);
@@ -495,6 +505,7 @@ namespace MovingJigsaw
 
                 PuzzlePieces[i + (Xpieces * Ypieces) * lastSolvedPuzzle].transform.parent = null;
                 PuzzlePieces[i + (Xpieces * Ypieces) * lastSolvedPuzzle].SetActive(false);
+              
             }
 
             ComfirmClear.SetActive(false);
@@ -520,6 +531,33 @@ namespace MovingJigsaw
         {
             yield return new WaitForSeconds(1);
             loadingscreen.SetActive(false);
+        }
+
+
+        public void SetupSavePostions() 
+        {
+
+            for (int i = 0; i < PuzzlePieces.Count; i++) 
+            {
+                JigsawPieceSavePostion save = new JigsawPieceSavePostion();
+
+                save.freeX = PuzzlePieces[i].GetComponent<RectTransform>().anchoredPosition.x;
+                save.freeY = PuzzlePieces[i].GetComponent<RectTransform>().anchoredPosition.y;
+              
+                 
+
+                levels.Jigsaws[levels.playID].jigsawLevelActive[levels.altID].savePiece.Add(save);
+                
+            }
+        
+        
+        }
+
+        public void SavePostions()
+        {
+
+            
+
         }
     }
 }
