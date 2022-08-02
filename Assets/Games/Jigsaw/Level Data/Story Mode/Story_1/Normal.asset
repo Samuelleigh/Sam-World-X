@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: The Basics
   JigLevels:
-  - {fileID: 11400000, guid: d65ce337a67dbd24fa8dba9976615f2c, type: 2}
-  - {fileID: 11400000, guid: d53439d06a54b4a46a1baaeadc7fd764, type: 2}
+  - {fileID: 11400000, guid: 578720a71ca21e54498d525aafa422fd, type: 2}
+  - {fileID: 11400000, guid: de150b6e2e1cebd458dfda0e150c9960, type: 2}
   Notes: 

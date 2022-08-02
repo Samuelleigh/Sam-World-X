@@ -63,6 +63,7 @@
     <Compile Include="Assets\Games\Jigsaw\Scripts\JigLevelManager.cs" />
     <Compile Include="Assets\Games\Guessing Game\Scripts\WorldSelect.cs" />
     <Compile Include="Assets\Games\Guessing Game\Scripts\LevelLogic.cs" />
+    <Compile Include="Assets\Games\Jigsaw\Scripts\ScreenShotControl.cs" />
     <Compile Include="Assets\Games\Guessing Game\Data\Data_World.cs" />
     <Compile Include="Assets\Games\Jigsaw\Scripts\JigWorldText.cs" />
     <Compile Include="Assets\Games\LowFI-3D\Scripts\SightLevel.cs" />
@@ -74,6 +75,7 @@
     <Compile Include="Assets\Shared\Dialog System\Emotion System\Emotion.cs" />
     <Compile Include="Assets\Games\Jigsaw\Scripts\JigsawMenu.cs" />
     <Compile Include="Assets\Games\Jigsaw\Scripts\JigsawSceneObject.cs" />
+    <Compile Include="Assets\Games\Jigsaw\Scripts\ChangeScreenMode.cs" />
     <Compile Include="Assets\Doodle Studio 95\Examples\Scripts\SleepUntilTouched.cs" />
     <Compile Include="Assets\Games\LowFI-3D\Scripts\SightLevelManager.cs" />
     <Compile Include="Assets\Shared\Dialog System\EndGameLogic.cs" />
@@ -95,7 +97,7 @@
     <Compile Include="Assets\Games\The Way Down\Scripts\WDRefrences.cs" />
     <Compile Include="Assets\Games\To Be Finished In next Collection\Cafe\Scripts\CafeCharacterScriptObject.cs" />
     <Compile Include="Assets\Shared\Dialog System\Emotion System\EmotionManager.cs" />
-    <Compile Include="Assets\Games\Jigsaw\Scripts\YoutubeDownload.cs" />
+    <Compile Include="Assets\Games\Jigsaw\Scripts\old\YoutubeDownload.cs" />
     <Compile Include="Assets\Shared\UI Frame System\UI Code\MoveFrame.cs" />
     <Compile Include="Assets\Doodle Studio 95\Examples\Assets\2D Environment\WormArea.cs" />
     <Compile Include="Assets\Games\The Way Down\Scripts\CamTest.cs" />
@@ -130,6 +132,7 @@
     <Compile Include="Assets\Games\Jigsaw\Scripts\JigSave.cs" />
     <Compile Include="Assets\Games\Overworld\First Person Drifter Controller\Scripts\LockMouse.cs" />
     <Compile Include="Assets\CafeTextBox.cs" />
+    <Compile Include="Assets\MainMenuMusicController.cs" />
     <Compile Include="Assets\Shared\Dialog System\DialogLogicBasic.cs" />
     <Compile Include="Assets\Games\Guessing Game\Scripts\TrackerBar.cs" />
     <Compile Include="Assets\Games\LowFI-3D\Scripts\SimpleKeyboardLook.cs" />
@@ -142,6 +145,7 @@
     <Compile Include="Assets\Games\Jigsaw\Scripts\JigsawPieceDrag.cs" />
     <Compile Include="Assets\Games\Guessing Game\Data\DataManager.cs" />
     <Compile Include="Assets\Games\Guessing Game\Scripts\EndFrame.cs" />
+    <Compile Include="Assets\Games\Jigsaw\Scripts\DragSelection.cs" />
     <Compile Include="Assets\Games\To Be Finished In next Collection\Cafe\Scripts\CafeOverWorldFrame.cs" />
     <Compile Include="Assets\Games\10 Games You can play with\PhysicalGameManager.cs" />
     <Compile Include="Assets\Games\Knock Knock\Scripts\Moved to diffrent project\KnockKnockGameLogicMobile.cs" />
@@ -161,6 +165,7 @@
     <Compile Include="Assets\Games\Knock Knock\Scripts\Knocking.cs" />
     <Compile Include="Assets\Doodle Studio 95\Examples\Scripts\ChainAnimations.cs" />
     <Compile Include="Assets\Games\Guessing Game\Scripts\LevelSelect.cs" />
+    <Compile Include="Assets\Games\Jigsaw\Scripts\Utils.cs" />
     <Compile Include="Assets\Games\Jigsaw\Scripts\JigsawScriptObject.cs" />
     <Compile Include="Assets\Games\To Be Finished In next Collection\Cafe\Scripts\CafeDialogScript.cs" />
     <Compile Include="Assets\Doodle Studio 95\Examples\Scripts\TriggerTransition.cs" />
@@ -412,9 +417,6 @@
     </Reference>
     <Reference Include="UnityEditor">
       <HintPath>C:\Program Files\2020.1.5f1\Editor\Data\Managed\UnityEditor.dll</HintPath>
-    </Reference>
-    <Reference Include="Assembly-CSharp-firstpass">
-      <HintPath>Library\ScriptAssemblies\Assembly-CSharp-firstpass.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>Assets\Newtonsoft.Json.dll</HintPath>

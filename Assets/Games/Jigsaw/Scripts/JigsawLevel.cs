@@ -40,9 +40,15 @@ namespace MovingJigsaw
         public bool inProgress = false;
         public bool customMode = false;
         public PuzzleResolution puzzleResolution;
-        public int XCustom;
-        public int YCustom;
+        public int XCustom = 1;
+        public int YCustom = 1;
         public List<JigsawPieceSavePostion> savePiece = new List<JigsawPieceSavePostion>();
+        public string pathURL;
+        public int numberofpuzzles = 1;
+        public List<int> solvedPuzzles;
+      //  public int numberOfPuzzles;
+ 
+ 
 
     }
 }

@@ -19,8 +19,8 @@ namespace MovingJigsaw
         public int Xpieces;
         public int Ypieces;
         public PuzzleResolution puzzleResolution;
-        private int XCustom;
-        private int YCustom;
+        private int XCustom = 1;
+        private int YCustom = 1;
         public string SceneName;
         public int numberOfpuzzles = 1;
         public List<int> cameraID;

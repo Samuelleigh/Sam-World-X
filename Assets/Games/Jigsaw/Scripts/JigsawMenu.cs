@@ -46,6 +46,11 @@ namespace MovingJigsaw
         public Color SelectColor;
         public Color CompleteColor;
 
+        private Color currentColor;
+
+        private float darkenSelectColorAmount = 0.15f;
+    
+
         private void Awake()
         {
             manager = FindObjectOfType<JigLevelManager>();
@@ -95,7 +100,7 @@ namespace MovingJigsaw
                             if (info.name == manager.StoryJigsaws[i].jigsawLevelActive[b].name) 
                                  {
                                         manager.StoryJigsaws[i].jigsawLevelActive[b] = info;
-                                        Debug.Log(info.name);
+                                   //     Debug.Log(info.name);
                                  }
               
                             }
@@ -112,7 +117,7 @@ namespace MovingJigsaw
                             if (info.name == manager.WeridJigsaws[i].jigsawLevelActive[b].name)
                             {
                                 manager.WeridJigsaws[i].jigsawLevelActive[b] = info;
-                                Debug.Log("wow 2");
+                               // Debug.Log("wow 2");
                             }
 
                         }
@@ -128,7 +133,7 @@ namespace MovingJigsaw
                             if (info.name == manager.SandBoxJigsaws[i].jigsawLevelActive[b].name)
                             {
                                 manager.SandBoxJigsaws[i].jigsawLevelActive[b] = info;
-                                Debug.Log("wow 3");
+                              //  Debug.Log("wow 3");
                             }
 
                         }
@@ -278,12 +283,14 @@ namespace MovingJigsaw
             }
 
             //if all alt ids jigsaws are completed turn green
+            ChangeAlt(0);
 
-           
 
-                ChangeAlt(0);
+            //Change to selected color
+            Color tempcolor = obj.GetComponent<Image>().color;
+            obj.GetComponent<Image>().color = new Color(tempcolor.r - darkenSelectColorAmount, tempcolor.g - darkenSelectColorAmount, tempcolor.b - darkenSelectColorAmount);
 
-            obj.GetComponent<Image>().color = SelectColor;
+
 
             if (manager.Jigsaws[loadID].jigsawLevelDefaults.JigLevels[altLoadID].allowCustomFile && customizeMode == true)
             {
@@ -361,12 +368,14 @@ namespace MovingJigsaw
 
             }
 
+            Color tempcolor = altButtons[altID].GetComponent<Image>().color;
 
-            altButtons[altID].GetComponent<Image>().color = SelectColor;
+            altButtons[altID].GetComponent<Image>().color =  new Color(tempcolor.r - darkenSelectColorAmount, tempcolor.g - darkenSelectColorAmount, tempcolor.b - darkenSelectColorAmount);
 
             if (manager.Jigsaws[loadID].jigsawLevelDefaults.JigLevels[altLoadID].allowCustomFile && customizeMode == true)
             {
                 filepathFrame.SetActive(true);
+                FindObjectOfType<VideoPathScript>().LoadFromSave(manager.Jigsaws[loadID].jigsawLevelActive[altID].pathURL) ;
             }
             else
             {
@@ -609,8 +618,43 @@ namespace MovingJigsaw
             manager.Jigsaws[loadID].jigsawLevelActive[altLoadID].inProgress = false;
             manager.Jigsaws[loadID].jigsawLevelActive[altLoadID].completed = false;
             manager.Jigsaws[loadID].jigsawLevelActive[altLoadID].customMode = false;
+            manager.Jigsaws[loadID].jigsawLevelActive[altLoadID].savePiece = new List<JigsawPieceSavePostion>();
+            manager.Jigsaws[loadID].jigsawLevelActive[altLoadID].solvedPuzzles = new List<int>();
             ChangeAlt(altLoadID);
 
+        }
+
+        public void UpdateObjectColor(Image ImageToUpdate,bool Presseddown, bool inprogress, bool completed) 
+        {
+
+            int amount = -10;
+
+            if (inprogress) 
+            {
+                ImageToUpdate.color = inProgressColor;
+            }
+
+            if (completed) 
+            {
+                ImageToUpdate.color = CompleteColor;
+            }
+
+            if (!inprogress && !completed) 
+            {
+                ImageToUpdate.color = Color.white;
+
+            }
+
+            if (Presseddown) 
+            {
+                ImageToUpdate.color = new Color(ImageToUpdate.color.r - amount, ImageToUpdate.color.g - amount, ImageToUpdate.color.b - amount);
+            }
+
+           
+               // return new Color(currentcolor.r - amount, currentcolor.g - amount, currentcolor.b - amount);
+            
+          
+       
         }
 
     }
