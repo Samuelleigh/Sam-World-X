@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEditor;
 using System.IO;
 using UnityEngine;
-using UnityEngine.Video;
 
 namespace MovingJigsaw
 {
@@ -18,9 +17,6 @@ namespace MovingJigsaw
         public string path;
         public bool customMode;
 
-        public bool muteVideo = false;
-        public bool muteSound = false;
-
 
         public List<JigsawLevel> Jigsaws;
         public List<JigsawLevel> StoryJigsaws;
@@ -33,9 +29,6 @@ namespace MovingJigsaw
         public PuzzleResolution Customrez;
 
         public bool customFile;
-
-        public SoundSystem soundsystem;
-
 
 
         private void Awake()
@@ -50,7 +43,6 @@ namespace MovingJigsaw
             
             }
 
-            soundsystem = FindObjectOfType<SoundSystem>();
 
             //checks if any other game objects with this name 
             if (g != null && g != gameObject)
@@ -100,9 +92,6 @@ namespace MovingJigsaw
 
             }
 
-            FlipMuteVideo();
-
-
         }
 
        
@@ -132,64 +121,6 @@ namespace MovingJigsaw
 
         }
 
-        private void Update()
-        {
-
-            if (Input.GetKeyDown(KeyCode.M))
-            {
-                FlipMuteVideo();
-
-            }
-          
-        }
-
-        public void FlipMuteVideo() 
-        {
-
-            muteVideo = !muteVideo;
-
-            AudioSource[] sources = FindObjectOfType<SoundSystem>().gameObject.GetComponents<AudioSource>();
-
-            foreach (AudioSource s in sources)
-            {
-                s.mute = muteVideo;
-            }
-
-
-            if (FindObjectOfType<PuzzleEnviromentStuff>())
-            {
-
-                FindObjectOfType<PuzzleEnviromentStuff>().Mute();
-            }
-
-            if (FindObjectOfType<MainMenuMusicController>())
-            {
-                FindObjectOfType<MainMenuMusicController>().EnableBackgroundMusic();
-            }
-
-
-
-        
-        }
-
-        public void FlipMuteSound() 
-        {
-            muteSound = !muteSound;
-
-            if (muteSound)
-            {
-
-
-            }
-            else 
-            {
-            
-            
-            }
-        
-        }
-
-       
      
         
 

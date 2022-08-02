@@ -13,12 +13,10 @@ namespace MovingJigsaw
         public JigsawPieceScript jig;
         public JigsawGameLogic gm;
         public Vector2 offset;
-        public DragSelection dragSelection;
 
         void Awake()
         {
             gm = FindObjectOfType<JigsawGameLogic>();
-            dragSelection = FindObjectOfType<DragSelection>();
         }
 
         public void OnPointerClick(PointerEventData eventData) // 3
@@ -43,8 +41,6 @@ namespace MovingJigsaw
             //gameObject.transform.SetParent(gm.box.transform);
             jig.transform.SetParent(gm.ui.MasterLayers[1].transform);
 
-            dragSelection.dragingAPiece = true;
-
             SoundSystem.instance.PlaySound("click");
 
         }
@@ -61,7 +57,7 @@ namespace MovingJigsaw
         {
             SoundSystem.instance.PlaySound("click");
             Debug.Log("end drag");
-            dragSelection.dragingAPiece = false;
+
 
             PointerEventData pointerEventData = new PointerEventData(EventSystem.current);
             pointerEventData.position = Input.mousePosition;

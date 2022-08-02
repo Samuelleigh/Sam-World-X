@@ -69,25 +69,9 @@ namespace MovingJigsaw
             // Debug.Log(field.text);
             manager.path = field.text;
 
-            JigsawMenu s = FindObjectOfType<JigsawMenu>();
-
-            manager.Jigsaws[s.loadID].jigsawLevelActive[s.altLoadID].pathURL = field.text;
-
             //"C:\Users\sleig\Desktop\New folder (2)\pepsi0000_still08.png"
 
         }
-
-        public void LoadFromSave(string pathname)
-        {
-
-
-            field.text = pathname;
-            UpdatePath();
-
-
-        }
-
-
     }
 }
 

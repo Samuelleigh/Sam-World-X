@@ -73,16 +73,12 @@ namespace MovingJigsaw
         public int Xpieces;
         public int Ypieces;
         public PuzzleResolution puzzleRez;
-        public int numberOfPuzzles;
-
-        private bool tempinProgress;
 
         private void Awake()
         {
             loadingscreen.SetActive(true);
             levels = FindObjectOfType<JigLevelManager>();
             ui = FindObjectOfType<UIMaster>();
-            tempinProgress = levels.Jigsaws[levels.playID].jigsawLevelActive[levels.altID].inProgress;
         }
 
         // Start is called before the first frame update
@@ -108,31 +104,22 @@ namespace MovingJigsaw
 
         public void LoadLevel(JigsawScriptObject level)
         {
-            Debug.Log(Xpieces);
+
             SceneManager.LoadScene(level.SceneName, LoadSceneMode.Additive);
 
             if (CustomLevel.customMode)
             {
-              
                 Xpieces = levels.Jigsaws[levels.playID].jigsawLevelActive[levels.altID].XCustom;
                 Ypieces = levels.Jigsaws[levels.playID].jigsawLevelActive[levels.altID].YCustom;
                 puzzleRez = levels.Jigsaws[levels.playID].jigsawLevelActive[levels.altID].puzzleResolution;
                 levels.Jigsaws[levels.playID].jigsawLevelActive[levels.altID].customMode = true;
-                numberOfPuzzles = levels.Jigsaws[levels.playID].jigsawLevelDefaults.JigLevels[levels.altID].numberOfpuzzles;
-                
-
-                Debug.Log(Xpieces);
-
             }
             else
             {
-                
                 Xpieces = level.Xpieces;
                 Ypieces = level.Ypieces;
                 puzzleRez = level.puzzleResolution;
                 levels.Jigsaws[levels.playID].jigsawLevelActive[levels.altID].customMode = false;
-                numberOfPuzzles = levels.Jigsaws[levels.playID].jigsawLevelDefaults.JigLevels[levels.altID].numberOfpuzzles;
-                Debug.Log(Xpieces);
             }
 
             //Set up the Render texture
@@ -173,8 +160,6 @@ namespace MovingJigsaw
             }
 
             totalPieces = Xpieces * Ypieces;
-            Debug.Log("Resoultion X" + resoultionX + " X Pieces:" + Xpieces);
-
             cellSizeX = resoultionX / Xpieces;
             cellSizeY = resoultionY / Ypieces;
 
@@ -258,7 +243,6 @@ namespace MovingJigsaw
 
             Invoke("MoveCamera", 1f);
             Invoke("TurnOfflayoutGroup", 1f);
-            
 
             if (resoultionY < 800)
             {
@@ -280,6 +264,7 @@ namespace MovingJigsaw
 
             //If no jigsaw piece info, then add each piece to the active save file
             //SetupSavePostions();
+<<<<<<< HEAD
 
 
             if (levels.Jigsaws[levels.playID].jigsawLevelActive[levels.altID].solvedPuzzles != null)
@@ -304,6 +289,9 @@ namespace MovingJigsaw
 
           
            
+=======
+       
+>>>>>>> parent of 84e2798b (Work on audio and multiple puzzles in a level saving)
 
         }
 
@@ -325,7 +313,6 @@ namespace MovingJigsaw
                 }
             }
 
-        
             win = tempwinVar;
             Winlevel(win, puzzlebeingchecked);
         }
@@ -348,48 +335,14 @@ namespace MovingJigsaw
                 yOffset = Random.Range(-50, 50);
                 add = new Vector3(xOffset, yOffset, 0);
 
-                if (!tempinProgress)
-                {
-                    box.transform.GetChild(i).transform.position += add;
-        
-                }
-                else
-                {
-                    for (int b = 0; b < levels.Jigsaws[levels.playID].jigsawLevelActive[levels.altID].savePiece.Count; b++)
-                    {
-                        JigsawPieceSavePostion piecesave = levels.Jigsaws[levels.playID].jigsawLevelActive[levels.altID].savePiece[i];
-                        GameObject jigpiece = PuzzlePieces[i];
+                box.transform.GetChild(i).transform.position += add;
 
-                        if (!levels.Jigsaws[levels.playID].jigsawLevelActive[levels.altID].savePiece[i].inDrawer)
-                        {
-                            jigpiece.transform.SetParent(ui.MasterLayers[1].transform);
-                            jigpiece.GetComponent<RectTransform>().anchoredPosition = new Vector2(piecesave.freeX, piecesave.freeY);
-                        }
-                        else 
-                        {
-                            jigpiece.GetComponent<RectTransform>().anchoredPosition = new Vector2(piecesave.freeX, piecesave.freeY);
-                        }
-                  
-                    }
-                }
-
-                if (PuzzlePieces[i].GetComponent<RectTransform>().anchoredPosition.x > totalX) 
+                if (box.transform.GetChild(i).GetComponent<RectTransform>().anchoredPosition.x > totalX)
                 {
-
-                    totalX = PuzzlePieces[i].GetComponent<RectTransform>().anchoredPosition.x;
+                    totalX = box.transform.GetChild(i).GetComponent<RectTransform>().anchoredPosition.x;
                     box.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, totalX + cellSizeX / 2 + 10);
-
-
+                  
                 }
-
-               //if (box.transform.GetChild(i).GetComponent<RectTransform>().anchoredPosition.x > totalX)
-               //{
-               //    totalX = box.transform.GetChild(i).GetComponent<RectTransform>().anchoredPosition.x;
-               //    box.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, totalX + cellSizeX / 2 + 10);
-               //
-               //}
-
-
             }
 
             //Save Start Jigsaw location for piece reset.
@@ -437,45 +390,29 @@ namespace MovingJigsaw
         public void Winlevel(bool win, int puzzleWon)
         {
 
-            Debug.Log(win);
-
             if (win == true)
             {
-
-                Debug.Log(puzzleWon);
-
-
-
                 if (!solvedpuzzles.Contains(puzzleWon))
                 {
 
                     solvedpuzzles.Add(puzzleWon);
                     puzzlessolved++;
+
                     solvedAmountText.text = puzzlessolved + "/" + Level.numberOfpuzzles;
 
-                    if (solvedpuzzles.Count == Level.numberOfpuzzles)
+                    if (puzzlessolved == Level.numberOfpuzzles)
                     {
-                        Debug.Log("solved puzzle count " + solvedpuzzles.Count + " number of puzzles " + Level.numberOfpuzzles);
                         congrats.SetActive(win);
                         levels.Jigsaws[levels.playID].jigsawLevelActive[levels.altID].completed = win;
 
                     }
                     else
                     {
-                        Debug.Log("solved puzzle count " + solvedpuzzles.Count + " number of puzzles " + Level.numberOfpuzzles);
                         lastSolvedPuzzle = puzzleWon;
                         ComfirmClear.SetActive(true);
                     }
                 }
             }
-       
-            
-        }
-
-        public void FixSolvedPuzzle() 
-        {
-        
-        
         }
 
 
@@ -492,9 +429,9 @@ namespace MovingJigsaw
             List<JigsawlevelSave> tempbool = new List<JigsawlevelSave>();
          
 
-             for (int i = 0; i < levels.StoryJigsaws.Count; i++) { tempbool.Add(levels.StoryJigsaws[i].jigsawLevelActive[levels.altID]); }
-             for (int i = 0; i < levels.WeridJigsaws.Count; i++) { tempbool.Add(levels.WeridJigsaws[i].jigsawLevelActive[levels.altID]); }
-             for (int i = 0; i < levels.SandBoxJigsaws.Count; i++) { tempbool.Add(levels.SandBoxJigsaws[i].jigsawLevelActive[levels.altID]); }
+            for (int i = 0; i < levels.StoryJigsaws.Count; i++) { tempbool.Add(levels.StoryJigsaws[i].jigsawLevelActive[levels.altID]); }
+            for (int i = 0; i < levels.WeridJigsaws.Count; i++) { tempbool.Add(levels.WeridJigsaws[i].jigsawLevelActive[levels.altID]); }
+            for (int i = 0; i < levels.SandBoxJigsaws.Count; i++) { tempbool.Add(levels.SandBoxJigsaws[i].jigsawLevelActive[levels.altID]); }
 
 
             JigSave.SavePlayer(tempbool);
@@ -603,10 +540,7 @@ namespace MovingJigsaw
                 CheckWin(i);
             }
 
-            if (shift != ShiftDirection.no)
-            {
-                UpdateSavePostions();
-            }
+            UpdateSavePostions();
 
         }
 
@@ -694,8 +628,7 @@ namespace MovingJigsaw
                 piecepostion.freeX = PuzzlePieces[i].GetComponent<RectTransform>().anchoredPosition.x;
                 piecepostion.freeY = PuzzlePieces[i].GetComponent<RectTransform>().anchoredPosition.y;
 
-
-                if (PuzzlePieces[i].activeSelf && PuzzlePieces[i].transform.parent.GetComponent<SnapPiece>())
+                if (PuzzlePieces[i].transform.parent.GetComponent<SnapPiece>())
                 {
                     SnapPiece s = PuzzlePieces[i].transform.parent.GetComponent<SnapPiece>();
                     piecepostion.placedX = s.x;
@@ -711,8 +644,6 @@ namespace MovingJigsaw
  
                 levels.Jigsaws[levels.playID].jigsawLevelActive[levels.altID].savePiece[i] = piecepostion;
             }
-
-            levels.Jigsaws[levels.playID].jigsawLevelActive[levels.altID].solvedPuzzles = solvedpuzzles;
         }
 
         public void ApplyLoadPieceLocations() 
@@ -720,33 +651,36 @@ namespace MovingJigsaw
 
             Debug.Log("Apply save postion");
 
-            for (int i = 0; i < levels.Jigsaws[levels.playID].jigsawLevelActive[levels.altID].savePiece.Count; i++)
+            for (int i = 0; i < levels.Jigsaws[levels.playID].jigsawLevelActive[levels.altID].savePiece.Count; i++) 
             {
                 JigsawPieceSavePostion piecesave = levels.Jigsaws[levels.playID].jigsawLevelActive[levels.altID].savePiece[i];
                 GameObject jigpiece = PuzzlePieces[i];
 
-                if (piecesave.destroyed)
+                if (piecesave.destroyed) 
                 {
                     jigpiece.SetActive(false);
                 }
 
-                if (piecesave.inDrawer)
+                if (piecesave.inDrawer) 
                 {
                     jigpiece.transform.SetParent(box.transform);
                 }
 
-                if (!piecesave.inDrawer && !piecesave.placed)
+                if (!piecesave.inDrawer && !piecesave.placed) 
                 {
 
                     jigpiece.transform.SetParent(ui.MasterLayers[1].transform);
                 }
 
+<<<<<<< HEAD
                 if (levels.Jigsaws[levels.playID].jigsawLevelActive[levels.altID].solvedPuzzles.Contains(piecesave.JigId) && levels.Jigsaws[levels.playID].jigsawLevelActive[levels.altID].solvedPuzzles[levels.Jigsaws[levels.playID].jigsawLevelActive[levels.altID].solvedPuzzles.Count -1] != piecesave.JigId) 
                 {
                     jigpiece.SetActive(false);
                 
                 }
 
+=======
+>>>>>>> parent of 84e2798b (Work on audio and multiple puzzles in a level saving)
                 if (piecesave.placed)
                 {
                     Debug.Log("piece was placed");
@@ -766,31 +700,14 @@ namespace MovingJigsaw
                 }
                 else 
                 {
-                  //  Debug.Log("WWW");
-                  //  jigpiece.GetComponent<RectTransform>().anchoredPosition.Set(piecesave.freeX, piecesave.freeY);
+                    jigpiece.GetComponent<RectTransform>().anchoredPosition.Set(piecesave.freeX, piecesave.freeY);
                 }
 
+
             }
 
 
-            
-
-
         }
-
-        public void ApplyFinshedPuzzleNumber() 
-        {
-
-            if (levels.Jigsaws[levels.playID].jigsawLevelActive[levels.altID].inProgress && levels.Jigsaws[levels.playID].jigsawLevelActive[levels.altID].solvedPuzzles.Count > 0) 
-            {
-
-                Debug.Log("");
-
-
-            
-            }
-        }
-
 
 
     }

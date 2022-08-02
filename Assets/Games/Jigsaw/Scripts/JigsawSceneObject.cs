@@ -43,7 +43,7 @@ namespace MovingJigsaw
 
                 if (gm.Level.videoClip)
                 {
-                    vid.SetDirectAudioMute(0, manager.muteVideo);
+                    vid.SetDirectAudioMute(0, true);
                     vid.clip = gm.Level.videoClip;
                     vid.audioOutputMode = VideoAudioOutputMode.None;
                     vid.isLooping = true;
