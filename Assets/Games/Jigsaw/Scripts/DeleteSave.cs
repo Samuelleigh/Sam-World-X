@@ -15,7 +15,8 @@ public class DeleteSave : MonoBehaviour
 
         foreach (JigsawLevel jig in m.StoryJigsaws)
         {
-
+            Debug.Log("delete");
+            jig.jigsawLevelActive = null;
             jig.jigsawLevelActive = new List<JigsawlevelSave>(jig.jigsawLevelDefaults.JigLevels.Count);
 
         }

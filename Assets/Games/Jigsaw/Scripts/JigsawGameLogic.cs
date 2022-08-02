@@ -92,7 +92,11 @@ namespace MovingJigsaw
             StartCoroutine(LoadingScreen());
             Level = levels.Jigsaws[levels.playID].jigsawLevelDefaults.JigLevels[levels.altID];
             CustomLevel = levels.Jigsaws[levels.playID].jigsawLevelActive[levels.altID];
-            solvedAmountText.text = puzzlessolved + "/" + Level.numberOfpuzzles;
+
+            if (levels.Jigsaws[levels.playID].jigsawLevelActive[levels.altID].solvedPuzzles != null)
+            {
+                solvedAmountText.text = levels.Jigsaws[levels.playID].jigsawLevelActive[levels.altID].solvedPuzzles.Count + "/" + Level.numberOfpuzzles;
+            }
 
 
             if (levels.debug) { ui.SwitchLayer(1); LoadLevel(Level); }
@@ -278,8 +282,17 @@ namespace MovingJigsaw
             //SetupSavePostions();
 
 
+            if (levels.Jigsaws[levels.playID].jigsawLevelActive[levels.altID].solvedPuzzles != null)
+            {
 
-            solvedpuzzles = levels.Jigsaws[levels.playID].jigsawLevelActive[levels.altID].solvedPuzzles;
+                solvedpuzzles = levels.Jigsaws[levels.playID].jigsawLevelActive[levels.altID].solvedPuzzles;
+            }
+            else 
+            {
+                solvedpuzzles = new List<int>(1);
+            }
+            
+            
             Debug.Log(solvedpuzzles.Count);
 
             for (int i = 0; i < solvedpuzzles.Count; i++) 
@@ -468,10 +481,16 @@ namespace MovingJigsaw
 
         public void BackToMenu()
         {
+            if (ComfirmClear.activeSelf == true)
+            {
+                RemoveCompletedPieces();
+            }
+
             levels.customMode = false;
             levels.Jigsaws[levels.playID].jigsawLevelActive[levels.altID].completed = win;
             levels.debug = false;
             List<JigsawlevelSave> tempbool = new List<JigsawlevelSave>();
+         
 
              for (int i = 0; i < levels.StoryJigsaws.Count; i++) { tempbool.Add(levels.StoryJigsaws[i].jigsawLevelActive[levels.altID]); }
              for (int i = 0; i < levels.WeridJigsaws.Count; i++) { tempbool.Add(levels.WeridJigsaws[i].jigsawLevelActive[levels.altID]); }
@@ -722,7 +741,7 @@ namespace MovingJigsaw
                     jigpiece.transform.SetParent(ui.MasterLayers[1].transform);
                 }
 
-                if (levels.Jigsaws[levels.playID].jigsawLevelActive[levels.altID].solvedPuzzles.Contains(piecesave.JigId)) 
+                if (levels.Jigsaws[levels.playID].jigsawLevelActive[levels.altID].solvedPuzzles.Contains(piecesave.JigId) && levels.Jigsaws[levels.playID].jigsawLevelActive[levels.altID].solvedPuzzles[levels.Jigsaws[levels.playID].jigsawLevelActive[levels.altID].solvedPuzzles.Count -1] != piecesave.JigId) 
                 {
                     jigpiece.SetActive(false);
                 
