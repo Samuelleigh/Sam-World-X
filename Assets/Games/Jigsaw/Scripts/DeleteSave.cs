@@ -21,7 +21,7 @@ public class DeleteSave : MonoBehaviour
 
         }
 
-
+        //Sam World 1_Data\sharedassets0.resource
         //checks if any other game objects with this name 
         if (g != null && g != gameObject)
         {
