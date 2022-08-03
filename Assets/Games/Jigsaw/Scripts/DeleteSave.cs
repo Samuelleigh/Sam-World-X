@@ -11,24 +11,17 @@ public class DeleteSave : MonoBehaviour
 
         GameObject g = GameObject.Find("Jigsaw Level Manager");
 
-        JigLevelManager m = g.GetComponent<JigLevelManager>();
+        JigLevelManager m = FindObjectOfType<JigLevelManager>();
 
-        foreach (JigsawLevel jig in m.StoryJigsaws)
+        
+        foreach (JigsawLevel jig in m.Jigsaws)
         {
-
+            jig.jigsawLevelActive.Clear();
             jig.jigsawLevelActive = new List<JigsawlevelSave>(jig.jigsawLevelDefaults.JigLevels.Count);
 
         }
 
-
-        //checks if any other game objects with this name 
-        if (g != null && g != gameObject)
-        {
-
-            Destroy(gameObject);
-        }
-
-   
+        m.StoryJigsaws.Clear();
 
         foreach (JigsawLevel jiglevel in m.StoryJigsaws)
         {
@@ -42,6 +35,8 @@ public class DeleteSave : MonoBehaviour
 
         }
 
+       // m.WeridJigsaws.Clear();
+
         foreach (JigsawLevel jiglevel in m.WeridJigsaws)
         {
             foreach (JigsawScriptObject jigscript in jiglevel.jigsawLevelDefaults.JigLevels)
@@ -53,6 +48,8 @@ public class DeleteSave : MonoBehaviour
             }
 
         }
+
+      //  m.SandBoxJigsaws.Clear();
 
         foreach (JigsawLevel jiglevel in m.SandBoxJigsaws)
         {

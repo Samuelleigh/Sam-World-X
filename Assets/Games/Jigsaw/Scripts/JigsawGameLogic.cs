@@ -280,7 +280,7 @@ namespace MovingJigsaw
 
 
             solvedpuzzles = levels.Jigsaws[levels.playID].jigsawLevelActive[levels.altID].solvedPuzzles;
-            Debug.Log(solvedpuzzles.Count);
+          //  Debug.Log(solvedpuzzles.Count);
 
             for (int i = 0; i < solvedpuzzles.Count; i++) 
             {

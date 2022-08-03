@@ -45,7 +45,7 @@ namespace MovingJigsaw
         public List<JigsawPieceSavePostion> savePiece = new List<JigsawPieceSavePostion>();
         public string pathURL;
         public int numberofpuzzles = 1;
-        public List<int> solvedPuzzles;
+        public List<int> solvedPuzzles = new List<int>();
       //  public int numberOfPuzzles;
  
  
