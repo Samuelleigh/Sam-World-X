@@ -21,10 +21,13 @@ public class DeleteSave : MonoBehaviour
 
         }
 
-        m.StoryJigsaws.Clear();
+     
 
         foreach (JigsawLevel jiglevel in m.StoryJigsaws)
         {
+
+            jiglevel.jigsawLevelActive.Clear();
+
             foreach (JigsawScriptObject jigscript in jiglevel.jigsawLevelDefaults.JigLevels)
             {
                 JigsawlevelSave newJig = new JigsawlevelSave();
@@ -39,6 +42,9 @@ public class DeleteSave : MonoBehaviour
 
         foreach (JigsawLevel jiglevel in m.WeridJigsaws)
         {
+
+            jiglevel.jigsawLevelActive.Clear();
+
             foreach (JigsawScriptObject jigscript in jiglevel.jigsawLevelDefaults.JigLevels)
             {
                 JigsawlevelSave newJig = new JigsawlevelSave();
@@ -49,10 +55,12 @@ public class DeleteSave : MonoBehaviour
 
         }
 
-      //  m.SandBoxJigsaws.Clear();
+  
 
         foreach (JigsawLevel jiglevel in m.SandBoxJigsaws)
         {
+            jiglevel.jigsawLevelActive.Clear();
+
             foreach (JigsawScriptObject jigscript in jiglevel.jigsawLevelDefaults.JigLevels)
             {
                 JigsawlevelSave newJig = new JigsawlevelSave();

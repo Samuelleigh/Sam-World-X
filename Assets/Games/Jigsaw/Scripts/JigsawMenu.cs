@@ -58,6 +58,8 @@ namespace MovingJigsaw
         // Start is called before the first frame update
         void Start()
         {
+            //Happens after jig Level Manager has set up it's time to 
+
             ChangeUIView(0);
             infoView.SetActive(false);
             filepathFrame.SetActive(false);
@@ -78,8 +80,14 @@ namespace MovingJigsaw
                     //manager.Jigsaws[i].completed = temp[i];
                 }
 
+                //applys all the save save data to the each sub List
+
+
                 if (temp != null)
                 {
+
+
+                   //applys all the save save data to the each sub List 
 
                     foreach (JigsawlevelSave info in JigPuzzlesSaves) 
                     {
@@ -394,7 +402,7 @@ namespace MovingJigsaw
                 manager.Jigsaws[loadID].jigsawLevelActive[manager.altID].XCustom = manager.CustomX;
                 manager.Jigsaws[loadID].jigsawLevelActive[manager.altID].YCustom = manager.CustomY;
                 manager.Jigsaws[loadID].jigsawLevelActive[manager.altID].puzzleResolution = manager.Customrez;
-
+             
             }
 
             if (loadID != -1 && thingselected == true)
@@ -620,6 +628,7 @@ namespace MovingJigsaw
             manager.Jigsaws[loadID].jigsawLevelActive[altLoadID].customMode = false;
             manager.Jigsaws[loadID].jigsawLevelActive[altLoadID].savePiece = new List<JigsawPieceSavePostion>();
             manager.Jigsaws[loadID].jigsawLevelActive[altLoadID].solvedPuzzles = new List<int>();
+            manager.Jigsaws[loadID].jigsawLevelActive[altLoadID].numberofpuzzles = manager.Jigsaws[loadID].jigsawLevelDefaults.JigLevels[altLoadID].numberOfpuzzles;
             ChangeAlt(altLoadID);
 
         }

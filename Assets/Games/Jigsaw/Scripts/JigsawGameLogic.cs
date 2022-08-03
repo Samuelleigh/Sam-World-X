@@ -277,8 +277,6 @@ namespace MovingJigsaw
             //If no jigsaw piece info, then add each piece to the active save file
             //SetupSavePostions();
 
-
-
             solvedpuzzles = levels.Jigsaws[levels.playID].jigsawLevelActive[levels.altID].solvedPuzzles;
           //  Debug.Log(solvedpuzzles.Count);
 
@@ -288,9 +286,9 @@ namespace MovingJigsaw
             
             }
 
+            //Update counter
 
-          
-           
+            solvedAmountText.text = solvedpuzzles.Count + "/" + Level.numberOfpuzzles;
 
         }
 
@@ -314,6 +312,7 @@ namespace MovingJigsaw
 
         
             win = tempwinVar;
+            solvedAmountText.text = solvedpuzzles.Count + "/" + Level.numberOfpuzzles;
             Winlevel(win, puzzlebeingchecked);
         }
 
@@ -455,30 +454,62 @@ namespace MovingJigsaw
                     }
                 }
             }
-       
-            
-        }
 
-        public void FixSolvedPuzzle() 
-        {
-        
-        
+            solvedAmountText.text = solvedpuzzles.Count + "/" + Level.numberOfpuzzles;
+
         }
 
 
         public void BackToMenu()
         {
+            UpdateSavePostions();
             levels.customMode = false;
             levels.Jigsaws[levels.playID].jigsawLevelActive[levels.altID].completed = win;
             levels.debug = false;
-            List<JigsawlevelSave> tempbool = new List<JigsawlevelSave>();
+            List<JigsawlevelSave> temppool = new List<JigsawlevelSave>();
 
-             for (int i = 0; i < levels.StoryJigsaws.Count; i++) { tempbool.Add(levels.StoryJigsaws[i].jigsawLevelActive[levels.altID]); }
-             for (int i = 0; i < levels.WeridJigsaws.Count; i++) { tempbool.Add(levels.WeridJigsaws[i].jigsawLevelActive[levels.altID]); }
-             for (int i = 0; i < levels.SandBoxJigsaws.Count; i++) { tempbool.Add(levels.SandBoxJigsaws[i].jigsawLevelActive[levels.altID]); }
+            Debug.Log(levels.altID);
+
+             for (int i = 0; i < levels.StoryJigsaws.Count; i++)
+            {
+
+                for (int b = 0; b < levels.StoryJigsaws[i].jigsawLevelActive.Count; b++)
+                {
+                    temppool.Add(levels.StoryJigsaws[i].jigsawLevelActive[b]);
+
+                }
+
+                
+            }
+
+            Debug.Log(levels.altID);
+
+            for (int i = 0; i < levels.WeridJigsaws.Count; i++) 
+            {
+                for (int b = 0; b < levels.WeridJigsaws[i].jigsawLevelActive.Count; b++)
+                {
+                    temppool.Add(levels.WeridJigsaws[i].jigsawLevelActive[b]);
+
+                }
+
+            
+            
+            }
+
+            Debug.Log(levels.altID);
+
+            for (int i = 0; i < levels.SandBoxJigsaws.Count; i++) 
+            {
+                for (int b = 0; b < levels.SandBoxJigsaws[i].jigsawLevelActive.Count; b++)
+                {
+
+                    temppool.Add(levels.SandBoxJigsaws[i].jigsawLevelActive[b]);
+                }
+            
+            }
 
 
-            JigSave.SavePlayer(tempbool);
+            JigSave.SavePlayer(temppool);
             SceneManager.LoadScene("JigsawMenu", LoadSceneMode.Single);
 
         }
@@ -593,6 +624,9 @@ namespace MovingJigsaw
 
         public void RemoveCompletedPieces()
         {
+
+            Debug.Log("remove Completed pieces");
+
             for (int i = 0; i < (Xpieces * Ypieces); i++)
             {
 
@@ -722,10 +756,17 @@ namespace MovingJigsaw
                     jigpiece.transform.SetParent(ui.MasterLayers[1].transform);
                 }
 
-                if (levels.Jigsaws[levels.playID].jigsawLevelActive[levels.altID].solvedPuzzles.Contains(piecesave.JigId)) 
+                bool tempbool = levels.Jigsaws[levels.playID].jigsawLevelActive[levels.altID].solvedPuzzles.Contains(piecesave.JigId);
+                int last = levels.Jigsaws[levels.playID].jigsawLevelActive[levels.altID].solvedPuzzles.Count -1;
+
+                if (tempbool && levels.Jigsaws[levels.playID].jigsawLevelActive[levels.altID].solvedPuzzles[last] != piecesave.JigId)
                 {
+                    Debug.Log("set inactive because puzzle has already been solved");
                     jigpiece.SetActive(false);
-                
+                }
+                else 
+                {
+                    jigpiece.SetActive(true);
                 }
 
                 if (piecesave.placed)

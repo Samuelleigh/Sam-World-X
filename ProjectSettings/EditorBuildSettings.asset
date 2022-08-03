@@ -50,4 +50,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Games/Jigsaw/Level Data/Story Mode/7_Bird/Bird.unity
     guid: 325f814af7474964d90a1dcd9cc9d586
+  - enabled: 1
+    path: Assets/Games/Jigsaw/Level Data/Sandbox Mode/06_HorizonLine/Tv Static 1.unity
+    guid: 14b87734ace146241836ce652f128304
+  - enabled: 1
+    path: Assets/Games/Jigsaw/Level Data/Sandbox Mode/06_HorizonLine/Tv Static.unity
+    guid: 6717f25ea4e7b7949aa35fad96a4e7e4
   m_configObjects: {}

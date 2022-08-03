@@ -43,12 +43,15 @@ namespace MovingJigsaw
             DontDestroyOnLoad(gameObject);
             GameObject g = GameObject.Find("Jigsaw Level Manager");
 
-            foreach (JigsawLevel jig in StoryJigsaws) 
-            {
 
-                jig.jigsawLevelActive = new List<JigsawlevelSave>(jig.jigsawLevelDefaults.JigLevels.Count);
-            
-            }
+         //  //Create a number of empty lists under each jigsaw objects
+         //
+         //  foreach (JigsawLevel jig in StoryJigsaws) 
+         //  {
+         //
+         //      jig.jigsawLevelActive = new List<JigsawlevelSave>(jig.jigsawLevelDefaults.JigLevels.Count);
+         //  
+         //  }
 
             soundsystem = FindObjectOfType<SoundSystem>();
 
@@ -64,12 +67,15 @@ namespace MovingJigsaw
                 //DebugLevel = Jigsaws[debugID];
             }
 
+            //for each jigsaw level in each sub list, 
+
             foreach (JigsawLevel jiglevel in StoryJigsaws)
             {
                 foreach (JigsawScriptObject jigscript in jiglevel.jigsawLevelDefaults.JigLevels)
                 {
                     JigsawlevelSave newJig = new JigsawlevelSave();
                     newJig.name = jigscript.name;
+                    newJig.numberofpuzzles = jigscript.numberOfpuzzles;
                     jiglevel.jigsawLevelActive.Add(newJig);
 
                 }
@@ -82,6 +88,7 @@ namespace MovingJigsaw
                 {
                     JigsawlevelSave newJig = new JigsawlevelSave();
                     newJig.name = jigscript.name;
+                    newJig.numberofpuzzles = jigscript.numberOfpuzzles;
                     jiglevel.jigsawLevelActive.Add(newJig);
 
                 }
@@ -94,6 +101,7 @@ namespace MovingJigsaw
                 {
                     JigsawlevelSave newJig = new JigsawlevelSave();
                     newJig.name = jigscript.name;
+                    newJig.numberofpuzzles = jigscript.numberOfpuzzles;
                     jiglevel.jigsawLevelActive.Add(newJig);
 
                 }
