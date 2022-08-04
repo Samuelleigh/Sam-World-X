@@ -55,11 +55,15 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\LightShaft\YoutubeAPI\Scripts\Demos\IndividualVideoDataDemo.cs" />
     <Compile Include="Assets\Doodle Studio 95\Examples\Assets\2D Environment\Worm.cs" />
+    <Compile Include="Assets\LightShaft\Scripts\VideoController\PauseIcon.cs" />
     <Compile Include="Assets\FirstPersion AIO Pack\DemoScene\MiscScripts\Doors.cs" />
     <Compile Include="Assets\Games\Guessing Game\Scripts\FrameBase.cs" />
+    <Compile Include="Assets\LightShaft\Scripts\CustomTools\DrawIfAttribute.cs" />
     <Compile Include="Assets\Shared\SoundSystem.cs" />
     <Compile Include="Assets\Games\To Be Finished In next Collection\Treasure Sweeper\TwoDMovement.cs" />
+    <Compile Include="Assets\LightShaft\YoutubeAPI\Scripts\Src\YoutubeSnippet.cs" />
     <Compile Include="Assets\Games\Jigsaw\Scripts\JigLevelManager.cs" />
     <Compile Include="Assets\Games\Guessing Game\Scripts\WorldSelect.cs" />
     <Compile Include="Assets\Games\Guessing Game\Scripts\LevelLogic.cs" />
@@ -72,30 +76,43 @@
     <Compile Include="Assets\Games\Jigsaw\Scripts\PuzzleEnviromentStuff.cs" />
     <Compile Include="Assets\FirstPersonClicking.cs" />
     <Compile Include="Assets\Games\10 Games You can play with\PhysicalGameLogic.cs" />
+    <Compile Include="Assets\LightShaft\CustomYoutubePlayer\VideoPlayer Helper\Scripts\DisplayController.cs" />
     <Compile Include="Assets\Shared\Dialog System\Emotion System\Emotion.cs" />
     <Compile Include="Assets\Games\Jigsaw\Scripts\JigsawMenu.cs" />
+    <Compile Include="Assets\LightShaft\YoutubeSrc\VideoRequest.cs" />
+    <Compile Include="Assets\LightShaft\Scripts\YoutubeLogo.cs" />
     <Compile Include="Assets\Games\Jigsaw\Scripts\JigsawSceneObject.cs" />
     <Compile Include="Assets\Games\Jigsaw\Scripts\ChangeScreenMode.cs" />
     <Compile Include="Assets\Doodle Studio 95\Examples\Scripts\SleepUntilTouched.cs" />
     <Compile Include="Assets\Games\LowFI-3D\Scripts\SightLevelManager.cs" />
+    <Compile Include="Assets\LightShaft\CustomYoutubePlayer\VideoPlayer Helper\Scripts\Interfaces.cs" />
     <Compile Include="Assets\Shared\Dialog System\EndGameLogic.cs" />
     <Compile Include="Assets\Doodle Studio 95\Examples\Scripts\SimpleFollowingCamera.cs" />
     <Compile Include="Assets\Games\Jigsaw\Scripts\DeleteSave.cs" />
     <Compile Include="Assets\Games\The Way Down\Scripts\WayDownGame.cs" />
+    <Compile Include="Assets\LightShaft\YoutubeAPI\Scripts\Demos\YoutubeChannelUI.cs" />
+    <Compile Include="Assets\LightShaft\YoutubeAPI\Scripts\YoutubeDemoUsage.cs" />
     <Compile Include="Assets\Games\To Be Finished In next Collection\Cafe\Scripts\CafeManager.cs" />
     <Compile Include="Assets\Games\Guessing Game\SaveSystem\PlayerData.cs" />
     <Compile Include="Assets\Games\LowFI-3D\Models\WavingGrass\Scripts\Player.cs" />
     <Compile Include="Assets\ScribbleDrivel\Scripts\DrawScript.cs" />
+    <Compile Include="Assets\LightShaft\Scripts\YoutubeDemoScript.cs" />
     <Compile Include="Assets\Games\Guessing Game\Data\Data_Level.cs" />
     <Compile Include="Assets\Games\Drawing Game\DrawingLevel.cs" />
+    <Compile Include="Assets\LightShaft\CustomYoutubePlayer\VideoPlayer Helper\Scripts\OverlayController.cs" />
     <Compile Include="Assets\Games\Overworld\First Person Drifter Controller\Scripts\MouseLook.cs" />
     <Compile Include="Assets\Shared\Dialog System\Emotion System\EmoteLogic.cs" />
     <Compile Include="Assets\Games\LowFI-3D\living birds\scripts\lb_BirdController.cs" />
+    <Compile Include="Assets\LightShaft\CustomYoutubePlayer\VideoPlayer Helper\Scripts\Timeline.cs" />
     <Compile Include="Assets\Games\Guessing Game\Scripts\VarWindowScript.cs" />
     <Compile Include="Assets\Games\To Be Finished In next Collection\Cafe\Scripts\Cafe_GameLogic.cs" />
+    <Compile Include="Assets\LightShaft\YoutubeSrc\MagicHands.cs" />
     <Compile Include="Assets\Games\Guessing Game\AudioManager.cs" />
     <Compile Include="Assets\Games\The Way Down\Scripts\WDRefrences.cs" />
     <Compile Include="Assets\Games\To Be Finished In next Collection\Cafe\Scripts\CafeCharacterScriptObject.cs" />
+    <Compile Include="Assets\LightShaft\YoutubeAPI\Scripts\Demos\ChannelSearchDemo.cs" />
+    <Compile Include="Assets\LightShaft\CustomYoutubePlayer\Examples\Scripts\Spinner.cs" />
+    <Compile Include="Assets\LightShaft\CustomYoutubePlayer\VideoPlayer Helper\Scripts\ClickRouter.cs" />
     <Compile Include="Assets\Shared\Dialog System\Emotion System\EmotionManager.cs" />
     <Compile Include="Assets\Games\Jigsaw\Scripts\old\YoutubeDownload.cs" />
     <Compile Include="Assets\Shared\UI Frame System\UI Code\MoveFrame.cs" />
@@ -103,20 +120,33 @@
     <Compile Include="Assets\Games\The Way Down\Scripts\CamTest.cs" />
     <Compile Include="Assets\Games\Jigsaw\Scripts\JigsawLevel.cs" />
     <Compile Include="Assets\Games\Drawing Game\DrawingLevelManager.cs" />
+    <Compile Include="Assets\LightShaft\YoutubeAPI\Scripts\YoutubeSubtitlesReader.cs" />
+    <Compile Include="Assets\LightShaft\YoutubeSrc\Exceptions.cs" />
+    <Compile Include="Assets\LightShaft\CustomYoutubePlayer\VideoPlayer Helper\Scripts\DirectClickRouter.cs" />
     <Compile Include="Assets\Doodle Studio 95\Examples\Scripts\RespawnOnOppositeEnd.cs" />
     <Compile Include="Assets\Games\Guessing Game\Scripts\GameLogic.cs" />
     <Compile Include="Assets\Games\10 Games You can play with\PhysicalGame.cs" />
     <Compile Include="Assets\Games\LowFI-3D\Prefabs\FirstPersonAIO\FirstPersonAIO.cs" />
+    <Compile Include="Assets\LightShaft\YoutubeSrc\VideoInfo.cs" />
     <Compile Include="Assets\Games\Jigsaw\Scripts\JigsawGameLogic.cs" />
+    <Compile Include="Assets\LightShaft\CustomYoutubePlayer\VideoPlayer Helper\Scripts\Animation\ScaleTransformAnimator.cs" />
     <Compile Include="Assets\Games\LowFI-3D\Scripts\SightGameLogic.cs" />
     <Compile Include="Assets\Games\Overworld\Scripts\LinkObject.cs" />
+    <Compile Include="Assets\LightShaft\Scripts\SimpleJSON.cs" />
+    <Compile Include="Assets\LightShaft\YoutubeAPI\Scripts\Demos\YoutubeApiGetUnlimitedVideos.cs" />
+    <Compile Include="Assets\LightShaft\Scripts\VideoController\YT_RotateCamera.cs" />
     <Compile Include="Assets\Ink\Example\Scripts\BasicInkExample.cs" />
     <Compile Include="Assets\Games\The Way Down\Scripts\WDLevel.cs" />
     <Compile Include="Assets\Games\Overworld\First Person Drifter Controller\Scripts\FirstPersonDrifter.cs" />
     <Compile Include="Assets\Games\Guessing Game\Scripts\LevelBarScript.cs" />
+    <Compile Include="Assets\LightShaft\Scripts\VideoController\LoadVideoTitleToText.cs" />
     <Compile Include="Assets\Games\To Be Finished In next Collection\Cafe\Scripts\CafeConvoScriptObject.cs" />
+    <Compile Include="Assets\LightShaft\YoutubeSrc\HTTPHelperYoutube.cs" />
+    <Compile Include="Assets\LightShaft\CustomYoutubePlayer\VideoPlayer Helper\Scripts\VideoPresenter.cs" />
     <Compile Include="Assets\Games\Guessing Game\SaveSystem\SaveSystem.cs" />
     <Compile Include="Assets\Games\Guessing Game\Scripts\TrackerFrame.cs" />
+    <Compile Include="Assets\LightShaft\YoutubeAPI\Scripts\Demos\VideoSearchDemo.cs" />
+    <Compile Include="Assets\LightShaft\YoutubeAPI\Scripts\Src\YoutubeAPIManager.cs" />
     <Compile Include="Assets\Games\Dead Guy\DeadGuy.cs" />
     <Compile Include="Assets\Ink\Example\Scripts\QuitGameOnKeypress.cs" />
     <Compile Include="Assets\ScribbleDrivel\RateScribbleDrivel.cs" />
@@ -126,27 +156,47 @@
     <Compile Include="Assets\Games\LowFI-3D\Scripts\GoalTrigger.cs" />
     <Compile Include="Assets\Games\Knock Knock\Scripts\KnockGameLogic.cs" />
     <Compile Include="Assets\Games\LowFI-3D\living birds\scripts\lb_CrowProximity.cs" />
+    <Compile Include="Assets\LightShaft\Scripts\YoutubePlayer.cs" />
     <Compile Include="Assets\Games\Jigsaw\Scripts\VideoPathScript.cs" />
     <Compile Include="Assets\UniFileBrowser\Demo\UniFileBrowserExample.cs" />
+    <Compile Include="Assets\LightShaft\CustomYoutubePlayer\Examples\Scripts\VolumeAnimator.cs" />
     <Compile Include="Assets\Games\StartUp Menu\GameSwitcher.cs" />
+    <Compile Include="Assets\LightShaft\YoutubeAPI\Scripts\Demos\CommentsDemo.cs" />
+    <Compile Include="Assets\LightShaft\YoutubeAPI\Scripts\Src\YoutubeContentDetails.cs" />
     <Compile Include="Assets\Games\Jigsaw\Scripts\JigSave.cs" />
     <Compile Include="Assets\Games\Overworld\First Person Drifter Controller\Scripts\LockMouse.cs" />
+    <Compile Include="Assets\LightShaft\YoutubeSrc\Types.cs" />
     <Compile Include="Assets\CafeTextBox.cs" />
+    <Compile Include="Assets\LightShaft\Scripts\YoutubeSimplified.cs" />
     <Compile Include="Assets\MainMenuMusicController.cs" />
+    <Compile Include="Assets\LightShaft\Scripts\CustomTools\PlayerPrefsX.cs" />
     <Compile Include="Assets\Shared\Dialog System\DialogLogicBasic.cs" />
     <Compile Include="Assets\Games\Guessing Game\Scripts\TrackerBar.cs" />
     <Compile Include="Assets\Games\LowFI-3D\Scripts\SimpleKeyboardLook.cs" />
     <Compile Include="Assets\Games\To Be Finished In next Collection\Cafe\Scripts\CafeTrackedVaribles.cs" />
+    <Compile Include="Assets\LightShaft\Scripts\VideoController\VideoProgressBar.cs" />
     <Compile Include="Assets\ScribbleDrivel\Scripts\ChangeBrushSettings.cs" />
     <Compile Include="Assets\Games\Conversation With A Rock\Scripts\RockConversation.cs" />
     <Compile Include="Assets\Games\Jigsaw\Scripts\AnimationStart.cs" />
     <Compile Include="Assets\Games\Guessing Game\Scripts\Promotions.cs" />
+    <Compile Include="Assets\LightShaft\Scripts\DemoCustomPlayerScript.cs" />
+    <Compile Include="Assets\LightShaft\YoutubeAPI\Scripts\Demos\YoutubeVideoUi.cs" />
+    <Compile Include="Assets\LightShaft\Scripts\CustomTools\SliderDrag.cs" />
+    <Compile Include="Assets\LightShaft\YoutubeAPI\Scripts\Src\YoutubeStatistics.cs" />
+    <Compile Include="Assets\LightShaft\CustomYoutubePlayer\VideoPlayer Helper\Scripts\Animation\CanvasGroupAnimator.cs" />
     <Compile Include="Assets\Games\Jigsaw\MusicManager.cs" />
+    <Compile Include="Assets\LightShaft\Scripts\YoutubeVideoEvents.cs" />
     <Compile Include="Assets\Games\Jigsaw\Scripts\JigsawPieceDrag.cs" />
+    <Compile Include="Assets\LightShaft\Scripts\VideoPlayerController.cs" />
+    <Compile Include="Assets\LightShaft\Scripts\YoutubeVideoController.cs" />
     <Compile Include="Assets\Games\Guessing Game\Data\DataManager.cs" />
     <Compile Include="Assets\Games\Guessing Game\Scripts\EndFrame.cs" />
+    <Compile Include="Assets\LightShaft\CustomYoutubePlayer\VideoPlayer Helper\Scripts\Animation\AnimationCurveAnimator.cs" />
+    <Compile Include="Assets\LightShaft\Scripts\YoutubeSettings.cs" />
+    <Compile Include="Assets\LightShaft\Scripts\UIExtensions.cs" />
     <Compile Include="Assets\Games\Jigsaw\Scripts\DragSelection.cs" />
     <Compile Include="Assets\Games\To Be Finished In next Collection\Cafe\Scripts\CafeOverWorldFrame.cs" />
+    <Compile Include="Assets\LightShaft\CustomYoutubePlayer\VideoPlayer Helper\Scripts\VideoController.cs" />
     <Compile Include="Assets\Games\10 Games You can play with\PhysicalGameManager.cs" />
     <Compile Include="Assets\Games\Knock Knock\Scripts\Moved to diffrent project\KnockKnockGameLogicMobile.cs" />
     <Compile Include="Assets\Games\To Be Finished In next Collection\Cafe\Scripts\legacy\CafeInkScript.cs" />
@@ -157,15 +207,19 @@
     <Compile Include="Assets\Games\The Way Down\Scripts\WayDownInk.cs" />
     <Compile Include="Assets\Games\Jigsaw\Scripts\SnapPiece.cs" />
     <Compile Include="Assets\Shared\WebScript.cs" />
+    <Compile Include="Assets\LightShaft\YoutubeAPI\Scripts\Demos\PlaylistDemo.cs" />
     <Compile Include="Assets\Games\LowFI-3D\Models\WavingGrass\Scripts\GrassController.cs" />
     <Compile Include="Assets\Doodle Studio 95\Examples\Assets\2D Environment\BirdCharacter.cs" />
     <Compile Include="Assets\Games\Overworld\Scripts\TextObject.cs" />
+    <Compile Include="Assets\LightShaft\Scripts\YoutubePlayerLivestream.cs" />
     <Compile Include="Assets\Games\Overworld\Scripts\WebsiteUI.cs" />
     <Compile Include="Assets\Games\Jigsaw\Scripts\JigLevelScriptObject.cs" />
     <Compile Include="Assets\Games\Knock Knock\Scripts\Knocking.cs" />
     <Compile Include="Assets\Doodle Studio 95\Examples\Scripts\ChainAnimations.cs" />
     <Compile Include="Assets\Games\Guessing Game\Scripts\LevelSelect.cs" />
+    <Compile Include="Assets\LightShaft\CustomYoutubePlayer\VideoPlayer Helper\Scripts\Extensions.cs" />
     <Compile Include="Assets\Games\Jigsaw\Scripts\Utils.cs" />
+    <Compile Include="Assets\LightShaft\Scripts\ReactingLights.cs" />
     <Compile Include="Assets\Games\Jigsaw\Scripts\JigsawScriptObject.cs" />
     <Compile Include="Assets\Games\To Be Finished In next Collection\Cafe\Scripts\CafeDialogScript.cs" />
     <Compile Include="Assets\Doodle Studio 95\Examples\Scripts\TriggerTransition.cs" />
@@ -184,12 +238,16 @@
      <None Include="Assets\Games\The Way Down\Misc\Todo 3.txt" />
      <None Include="Assets\Shared\TextMesh Pro\Resources\Shaders\TMP_Bitmap.shader" />
      <None Include="Assets\Doodle Studio 95\Assets\Scripts\LICENSES.txt" />
-     <None Include="Assets\Newtonsoft.Json.dll" />
+     <None Include="Assets\LightShaft\YoutubeAPI\Readme.txt" />
      <None Include="Assets\Games\To Be Finished In next Collection\Cafe\Todo.txt" />
      <None Include="Assets\Doodle Studio 95\Assets\Textures\Walter_Turncoat\LICENSE.txt" />
      <None Include="Assets\ScribbleDrivel\Readme.txt" />
      <None Include="Assets\Shared\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
      <None Include="Assets\UniFileBrowser\Extras\Source.txt" />
+     <None Include="Assets\LightShaft\YoutubeAPI\link.xml" />
+     <None Include="Assets\LightShaft\CustomYoutubePlayer\Readme-License.txt" />
+     <None Include="Assets\LightShaft\EACSkyboxShader\EACPanorama.shader" />
+     <None Include="Assets\LightShaft\Readme.txt" />
      <None Include="Assets\Games\To Be Finished In next Collection\Cafe\Todo 2.txt" />
      <None Include="Assets\Games\The Way Down\Misc\Todo 4 - Soundtrack.txt" />
      <None Include="Assets\UniFileBrowser\Documentation\UniFileBrowser 2.0 Upgrade Guide.txt" />
@@ -207,12 +265,15 @@
      <None Include="Assets\ScribbleDrivel\Fonts\Fontdiner_Swanky\FontdinerSwanky_LICENSE.txt" />
      <None Include="Assets\Shared\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
      <None Include="Assets\Shared\TextMesh Pro\Resources\Shaders\TMPro_Surface.cginc" />
+     <None Include="Assets\LightShaft\Shaders\EAC\EACPanorama.cginc" />
+     <None Include="Assets\LightShaft\EACSkyboxShader\EACPanorama.cginc" />
      <None Include="Assets\Doodle Studio 95\Examples\Assets\2D Environment\Parchment_source.txt" />
      <None Include="Assets\Games\LowFI-3D\Models\WavingGrass\readme.txt" />
      <None Include="Assets\Shared\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
      <None Include="Assets\Games\Overworld\First Person Drifter Controller\info.txt" />
      <None Include="Assets\Doodle Studio 95\Plugins\DoodleStudio95.dll" />
      <None Include="Assets\UniFileBrowser\Documentation\UniFileBrowser changelog.txt" />
+     <None Include="Assets\LightShaft\Shaders\EAC-sphere.shader" />
      <None Include="Assets\Games\Jigsaw\Level Idea Bucket.txt" />
      <None Include="Assets\Doodle Studio 95\Assets\Shaders\DrawPreview.shader" />
      <None Include="Assets\Doodle Studio 95\Assets\Shaders\JitterTextShader.shader" />
@@ -224,7 +285,9 @@
      <None Include="Assets\Games\Jigsaw\Todo.txt" />
      <None Include="Assets\Shared\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Mobile.shader" />
      <None Include="Assets\Shared\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
+     <None Include="Assets\LightShaft\Shaders\ViewInside.shader" />
      <None Include="Assets\Shared\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile.shader" />
+     <None Include="Assets\LightShaft\Shaders\EAC\EACPanorama.shader" />
      <None Include="Assets\Games\The Way Down\Misc\Todo 2.txt" />
      <None Include="Assets\Games\LowFI-3D\VertexColorFarmAnimals\Shaders\VertexColorUnlit.shader" />
      <None Include="Assets\Games\Jigsaw\Todo3.txt" />
@@ -418,9 +481,6 @@
     <Reference Include="UnityEditor">
       <HintPath>C:\Program Files\2020.1.5f1\Editor\Data\Managed\UnityEditor.dll</HintPath>
     </Reference>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>Assets\Newtonsoft.Json.dll</HintPath>
-    </Reference>
     <Reference Include="DoodleStudio95">
       <HintPath>Assets\Doodle Studio 95\Plugins\DoodleStudio95.dll</HintPath>
     </Reference>
@@ -435,6 +495,9 @@
     </Reference>
     <Reference Include="Unity.Analytics.Tracker">
       <HintPath>Library\PackageCache\com.unity.analytics@3.3.2\Unity.Analytics.Tracker.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>Library\PackageCache\com.unity.nuget.newtonsoft-json@2.0.0\Runtime\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
       <HintPath>C:\Program Files\2020.1.5f1\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>

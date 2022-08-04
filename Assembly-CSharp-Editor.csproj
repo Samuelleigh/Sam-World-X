@@ -56,6 +56,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\ScribbleDrivel\Editor\DrawScriptEditor.cs" />
+    <Compile Include="Assets\LightShaft\CustomScripts\Editor\InvertedSphere.cs" />
+    <Compile Include="Assets\LightShaft\CustomYoutubePlayer\VideoPlayer Helper\Scripts\Editor\AddVideoTemplateEditor.cs" />
     <Compile Include="Assets\Ink\Core\Editor\InkEditorUtils.cs" />
     <Compile Include="Assets\Ink\Core\Editor\Ink Library\InkLibrary.cs" />
     <Compile Include="Assets\Ink\Tools\File Icons\Editor\InkBrowserIcons.cs" />
@@ -67,6 +69,7 @@
     <Compile Include="Assets\Ink\Tools\Ink Inspector\Editor\InkInspector.cs" />
     <Compile Include="Assets\Ink\Core\Editor\Compiler\InkCompiler.cs" />
     <Compile Include="Assets\Ink\Core\Editor\Ink Library\InkMetaLibrary.cs" />
+    <Compile Include="Assets\LightShaft\Scripts\VideoController\Editor\YoutubeAddPlayerToSceneEditor.cs" />
     <Compile Include="Assets\Games\LowFI-3D\Editor\SightLevelSwitch.cs" />
     <Compile Include="Assets\Ink\Example\Scripts\Editor\BasicInkExampleEditor.cs" />
     <Compile Include="Assets\Ink\Tools\Build Validation\Editor\InkPreBuildValidationCheck.cs" />
@@ -75,6 +78,7 @@
     <Compile Include="Assets\Games\LowFI-3D\Editor\QuickContextSwitch.cs" />
     <Compile Include="Assets\Ink\Core\Editor\Ink Settings\InkSettingsEditor.cs" />
     <Compile Include="Assets\Ink\Tools\Ink Inspector\Editor\DefaultAssetEditor.cs" />
+    <Compile Include="Assets\LightShaft\Scripts\VideoController\Editor\DrawIfPropertyDrawer.cs" />
     <Compile Include="Assets\Ink\Tools\Player Window\Editor\InkPlayerWindow.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -287,9 +291,6 @@
     <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
       <HintPath>C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Editor\SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>Assets\Newtonsoft.Json.dll</HintPath>
-    </Reference>
     <Reference Include="DoodleStudio95">
       <HintPath>Assets\Doodle Studio 95\Plugins\DoodleStudio95.dll</HintPath>
     </Reference>
@@ -310,6 +311,9 @@
     </Reference>
     <Reference Include="Unity.Analytics.Tracker">
       <HintPath>Library\PackageCache\com.unity.analytics@3.3.2\Unity.Analytics.Tracker.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>Library\PackageCache\com.unity.nuget.newtonsoft-json@2.0.0\Runtime\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.Purchasing">
       <HintPath>Library\PackageCache\com.unity.purchasing@2.0.6\Editor\UnityEditor.Purchasing.dll</HintPath>
