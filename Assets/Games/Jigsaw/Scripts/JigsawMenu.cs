@@ -339,18 +339,18 @@ namespace MovingJigsaw
             for (int i = 0; i < manager.Jigsaws[loadID].jigsawLevelActive.Count; i++)
             {
 
-
+              //  Debug.Log("dhh");
 
                 if (manager.Jigsaws[loadID].jigsawLevelActive[i].completed)
                 {
                     altButtons[i].GetComponent<Image>().color = CompleteColor;
                 }
-                else if(manager.Jigsaws[loadID].jigsawLevelActive[i].inProgress)
+                else if (manager.Jigsaws[loadID].jigsawLevelActive[i].inProgress)
                 {
-                    Debug.Log("hifuh");
+                    Debug.Log("chnage button to in progress");
                     altButtons[i].GetComponent<Image>().color = inProgressColor;
                 }
-
+         
             
             }
 
@@ -630,6 +630,78 @@ namespace MovingJigsaw
             manager.Jigsaws[loadID].jigsawLevelActive[altLoadID].solvedPuzzles = new List<int>();
             manager.Jigsaws[loadID].jigsawLevelActive[altLoadID].numberofpuzzles = manager.Jigsaws[loadID].jigsawLevelDefaults.JigLevels[altLoadID].numberOfpuzzles;
             ChangeAlt(altLoadID);
+
+            //if 
+
+          bool _noneinProgess = true;
+        
+          for (int i = 0; i < manager.Jigsaws[loadID].jigsawLevelActive.Count -1; i++) 
+          {
+              if (manager.Jigsaws[loadID].jigsawLevelActive[i].inProgress !=  false) 
+              {
+                  _noneinProgess = false;
+        
+        
+              }
+          }
+        
+          if (_noneinProgess)
+          {
+              Debug.Log("none in progress");
+        
+              buts[loadID].GetComponent<Image>().color = SelectColor; 
+          }
+
+
+          //add to save fiule
+
+            JigLevelManager levels = FindObjectOfType<JigLevelManager>();
+            List<JigsawlevelSave> temppool = new List<JigsawlevelSave>();
+
+            Debug.Log(levels.altID);
+
+            for (int i = 0; i < levels.StoryJigsaws.Count; i++)
+            {
+
+                for (int b = 0; b < levels.StoryJigsaws[i].jigsawLevelActive.Count; b++)
+                {
+                    temppool.Add(levels.StoryJigsaws[i].jigsawLevelActive[b]);
+
+                }
+
+
+            }
+
+            Debug.Log(levels.altID);
+
+            for (int i = 0; i < levels.WeridJigsaws.Count; i++)
+            {
+                for (int b = 0; b < levels.WeridJigsaws[i].jigsawLevelActive.Count; b++)
+                {
+                    temppool.Add(levels.WeridJigsaws[i].jigsawLevelActive[b]);
+
+                }
+
+
+
+            }
+
+            Debug.Log(levels.altID);
+
+            for (int i = 0; i < levels.SandBoxJigsaws.Count; i++)
+            {
+                for (int b = 0; b < levels.SandBoxJigsaws[i].jigsawLevelActive.Count; b++)
+                {
+
+                    temppool.Add(levels.SandBoxJigsaws[i].jigsawLevelActive[b]);
+                }
+
+            }
+
+
+            JigSave.SavePlayer(temppool);
+            
+
 
         }
 

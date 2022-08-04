@@ -77,6 +77,8 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -89,7 +91,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  m_PixelsPerUnitMultiplier: 2
 --- !u!210 &4484562498714801812
 SortingGroup:
   m_ObjectHideFlags: 0
@@ -99,7 +101,7 @@ SortingGroup:
   m_GameObject: {fileID: 4484562498714801816}
   m_Enabled: 1
   m_SortingLayerID: 973153991
-  m_SortingLayer: 1
+  m_SortingLayer: 0
   m_SortingOrder: 1
 --- !u!225 &4484562498714801814
 CanvasGroup:
