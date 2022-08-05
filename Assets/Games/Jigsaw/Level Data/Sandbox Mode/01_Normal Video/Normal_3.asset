@@ -16,7 +16,7 @@ MonoBehaviour:
   Xpieces: 4
   Ypieces: 8
   puzzleResolution: 2
-  SceneName: Normal
+  SceneName: Normal_New
   numberOfpuzzles: 1
   cameraID: 02000000
   enableShift: 1

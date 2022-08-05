@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using LightShaft.Scripts;
 using UnityEngine;
 using UnityEngine.Video;
+using MovingJigsaw;
 
 public class YoutubeSimplified : MonoBehaviour
 {
@@ -13,8 +14,12 @@ public class YoutubeSimplified : MonoBehaviour
     public bool fullscreen = true;
     private VideoPlayer videoPlayer;
 
+    public JigLevelManager manager;
+    public bool test = false;
+
     private void Awake()
     {
+        manager = FindObjectOfType<JigLevelManager>();
         videoPlayer = GetComponentInChildren<VideoPlayer>();
         player = GetComponentInChildren<YoutubePlayer>();
         player.videoPlayer = videoPlayer;
@@ -22,7 +27,16 @@ public class YoutubeSimplified : MonoBehaviour
 
     private void Start()
     {
-        Play();
+        if (manager)
+        {
+            if (manager.path.StartsWith("https:"))
+            {
+                url = manager.path;
+                Play();
+            }
+        }
+
+        if (test) { Play(); }
     }
 
     public void Play()

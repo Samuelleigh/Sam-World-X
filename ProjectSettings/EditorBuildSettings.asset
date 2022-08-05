@@ -6,13 +6,16 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/LightShaft/Scenes/Demo1 - Simplified Player.unity
+    guid: e2615ec52d1592a4b9bc537950c45b90
+  - enabled: 1
     path: Assets/Games/Jigsaw/JigSawMenu.unity
     guid: 2aa017de91089f147bc6ed3ecb322ce7
   - enabled: 1
     path: Assets/Games/Jigsaw/JigsawMain.unity
     guid: 9fe9e0c009390954d8fd82ade27eab11
   - enabled: 1
-    path: Assets/Games/Jigsaw/Level Data/Sandbox Mode/01_Normal Video/Normal.unity
+    path: Assets/Games/Jigsaw/Level Data/Sandbox Mode/01_Normal Video/Normal_NEw.unity
     guid: c0a6bb646dec9f142ab4e90c58ba060e
   - enabled: 1
     path: Assets/Games/Jigsaw/Level Data/Sandbox Mode/03_Skew/Skew.unity
@@ -56,4 +59,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Games/Jigsaw/Level Data/Sandbox Mode/06_HorizonLine/Tv Static.unity
     guid: 6717f25ea4e7b7949aa35fad96a4e7e4
+  - enabled: 1
+    path: Assets/Games/Jigsaw/Level Data/Story Mode/Story_1/Normal.unity
+    guid: bea37d2c6abe7be47a0b74fb06d4f51b
   m_configObjects: {}

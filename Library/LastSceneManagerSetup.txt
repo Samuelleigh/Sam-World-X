@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/LightShaft/Scenes/Demo1.1 - World with control.unity
+- path: Assets/Games/Jigsaw/JigSawMenu.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

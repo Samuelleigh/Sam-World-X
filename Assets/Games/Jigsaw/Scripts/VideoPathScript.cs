@@ -23,47 +23,58 @@ namespace MovingJigsaw
 
         public void UpdatePath()
         {
-            if (field.text.Length > 4)
+            if (field.text.StartsWith("https"))
             {
-                if (field.text[0] == '"' && field.text[field.text.Length - 1] == '"')
-                {
+                tick.color = Color.green;
+                manager.customFile = true;
 
-                    field.text = field.text.Substring(1, field.text.Length - 2);
-                }
-            }
-            if (field.text.EndsWith("PNG"))
-            {
-                field.text = field.text.Substring(0, field.text.LastIndexOf('.'));
-                field.text += ".png";
-                UpdatePath();
-            }
-
-
-            if (field.text == "")
-            {
-                manager.customFile = false;
-                tick.color = Color.white;
-            }
-            else if (File.Exists(field.text))
-            {
-
-                if (Path.GetExtension(field.text) == ".mp4" || Path.GetExtension(field.text) == ".png")
-                {
-
-                    tick.color = Color.green;
-                    manager.customFile = true;
-                }
-                else
-                {
-
-                    manager.customFile = false;
-                    tick.color = Color.red;
-                }
             }
             else
             {
-                manager.customFile = false;
-                tick.color = Color.red;
+
+
+                if (field.text.Length > 4)
+                {
+                    if (field.text[0] == '"' && field.text[field.text.Length - 1] == '"')
+                    {
+
+                        field.text = field.text.Substring(1, field.text.Length - 2);
+                    }
+                }
+                if (field.text.EndsWith("PNG"))
+                {
+                    field.text = field.text.Substring(0, field.text.LastIndexOf('.'));
+                    field.text += ".png";
+                    UpdatePath();
+                }
+
+
+                if (field.text == "")
+                {
+                    manager.customFile = false;
+                    tick.color = Color.white;
+                }
+                else if (File.Exists(field.text))
+                {
+
+                    if (Path.GetExtension(field.text) == ".mp4" || Path.GetExtension(field.text) == ".png")
+                    {
+
+                        tick.color = Color.green;
+                        manager.customFile = true;
+                    }
+                    else
+                    {
+
+                        manager.customFile = false;
+                        tick.color = Color.red;
+                    }
+                }
+                else
+                {
+                    manager.customFile = false;
+                    tick.color = Color.red;
+                }
             }
 
             // Debug.Log(field.text);
