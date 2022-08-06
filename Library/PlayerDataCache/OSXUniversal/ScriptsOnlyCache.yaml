@@ -1,6 +1,7 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp-Editor.dll:
+    - Ink.UnityIntegration.DefaultAssetEditor
     - Ink.UnityIntegration.InkLibrary
     - Ink.UnityIntegration.InkSettings
     Assembly-CSharp.dll:
@@ -1375,4 +1376,4 @@ ScriptsOnlyBuild:
   platform: 2
   scenePathNames:
   - Assets/Games/The Way Down/Way Down.unity
-  playerPath: C:/Users/sleig/Desktop/The Way Down Builds/Mac.app
+  playerPath: /Users/samuelleigh/Desktop/TheWayDown.app
