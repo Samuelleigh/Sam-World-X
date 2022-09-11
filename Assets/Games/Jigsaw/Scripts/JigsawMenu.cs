@@ -204,15 +204,20 @@ namespace MovingJigsaw
 
         public void Changelevel(int jigsawID, int altID, GameObject obj)
         {
+
+            //Get current level
             choosenJigsaw = manager.Jigsaws[jigsawID].jigsawLevelDefaults.JigLevels[altID];
 
-           
 
+            //Turn off then apply custom mode UI
+            ChangeCustomMode(false);
             ChangeCustomizeUI(customizeMode, choosenJigsaw.Customizable);
 
+            //Thing set 
             thingselected = true;
             playbuttontext.text = "Click Here to Start";
 
+            //Mkae sure info frame is always turned on after a level is selected
             infoView.SetActive(true);
 
             loadID = jigsawID;
@@ -235,10 +240,6 @@ namespace MovingJigsaw
                 infoCustom[0].GetComponent<TMP_InputField>().text = manager.Jigsaws[jigsawID].jigsawLevelDefaults.JigLevels[altID].Xpieces.ToString();
                 infoCustom[1].GetComponent<TMP_InputField>().text = manager.Jigsaws[jigsawID].jigsawLevelDefaults.JigLevels[altID].Ypieces.ToString();
                 infoCustom[2].GetComponent<TMP_Dropdown>().value = choosenJigsaw.puzzleResolution.GetHashCode();
-
-
-
-
             }
 
             //Remove alts 
@@ -313,8 +314,14 @@ namespace MovingJigsaw
 
         public void ChangeAlt(int altID)
         {
+
+            Debug.Log("Change alt");
+
             altLoadID = altID;
             choosenJigsaw = manager.Jigsaws[loadID].jigsawLevelDefaults.JigLevels[altID];
+
+            ChangeCustomMode(false);
+            ChangeCustomizeUI(customizeMode, choosenJigsaw.Customizable);
 
             InfoText[0].text = manager.Jigsaws[loadID].jigsawLevelDefaults.JigLevels[altID].name.ToString();
             InfoText[1].text = manager.Jigsaws[loadID].jigsawLevelDefaults.JigLevels[altID].Xpieces.ToString();
@@ -327,6 +334,16 @@ namespace MovingJigsaw
                 infoCustom[0].GetComponent<TMP_InputField>().text = choosenJigsaw.Xpieces.ToString();
                 infoCustom[1].GetComponent<TMP_InputField>().text = choosenJigsaw.Ypieces.ToString();
                 infoCustom[2].GetComponent<TMP_Dropdown>().value = choosenJigsaw.puzzleResolution.GetHashCode();
+
+                ChangeCustomRez();
+                ChangeCustomX();
+                ChangeCustomY();
+              //
+              // Invoke("ChangeCustomRez",0.1f);
+              // Invoke("ChangeCustomX", 0.1f);
+              // Invoke("ChangeCustomY", 0.1f);
+
+                
             }
 
             foreach (GameObject obj in altButtons)
@@ -425,6 +442,26 @@ namespace MovingJigsaw
             else 
             {
                 customizeMode = true;
+            }
+
+            ChangeCustomizeUI(customizeMode, choosenJigsaw.Customizable);
+
+        }
+
+        public void ChangeCustomMode(bool target)
+        {
+
+            Debug.Log("Change custom mode to " + target);
+
+            if (target == true)
+            {
+                customizeMode = true;
+                customizeableCheckbox.GetComponent<Toggle>().Set(true);
+            }
+            else
+            {
+                customizeMode = false;
+                customizeableCheckbox.GetComponent<Toggle>().Set(false);
             }
 
             ChangeCustomizeUI(customizeMode, choosenJigsaw.Customizable);
@@ -598,7 +635,14 @@ namespace MovingJigsaw
             if (onOrNot == false || customizable == false)
             {
                 customizeMode = false;
-               // manager.Jigsaws[loadID].jigsawLevelActive[altLoadID].customMode = true;
+
+                if (customizeableCheckbox.activeInHierarchy)
+                {
+                    manager.Jigsaws[loadID].jigsawLevelActive[altLoadID].customMode = false;
+                    ChangeCustomX();
+                    ChangeCustomY();
+                    ChangeCustomRez();
+                }
 
                 filepathFrame.SetActive(false);
 
@@ -610,15 +654,11 @@ namespace MovingJigsaw
                 infoCustom[1].SetActive(false);
                 infoCustom[2].SetActive(false);
 
+                //
+
                 
-            }
-
-            
-
-           
-                customizeableCheckbox.SetActive(customizable);
-          
-
+            }         
+                customizeableCheckbox.SetActive(customizable);    
         }
 
         public void ResetPuzzle() 

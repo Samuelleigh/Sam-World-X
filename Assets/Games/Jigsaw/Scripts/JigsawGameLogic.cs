@@ -794,24 +794,21 @@ namespace MovingJigsaw
 
             }
 
-
-            
-
-
         }
 
         public void ApplyFinshedPuzzleNumber() 
         {
 
-            if (levels.Jigsaws[levels.playID].jigsawLevelActive[levels.altID].inProgress && levels.Jigsaws[levels.playID].jigsawLevelActive[levels.altID].solvedPuzzles.Count > 0) 
-            {
-
-                Debug.Log("");
-
-
-            
-            }
+      //     if (levels.Jigsaws[levels.playID].jigsawLevelActive[levels.altID].inProgress && levels.Jigsaws[levels.playID].jigsawLevelActive[levels.altID].solvedPuzzles.Count > 0) 
+      //     {
+      //
+      //         Debug.Log("");
+      //
+      //
+      //     
+      //     }
         }
+
 
 
 

@@ -6,16 +6,16 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/LightShaft/Scenes/Demo1 - Simplified Player.unity
-    guid: e2615ec52d1592a4b9bc537950c45b90
-  - enabled: 1
     path: Assets/Games/Jigsaw/JigSawMenu.unity
     guid: 2aa017de91089f147bc6ed3ecb322ce7
   - enabled: 1
     path: Assets/Games/Jigsaw/JigsawMain.unity
     guid: 9fe9e0c009390954d8fd82ade27eab11
   - enabled: 1
-    path: Assets/Games/Jigsaw/Level Data/Sandbox Mode/01_Normal Video/Normal_NEw.unity
+    path: Assets/LightShaft/Scenes/Demo1 - Simplified Player.unity
+    guid: e2615ec52d1592a4b9bc537950c45b90
+  - enabled: 1
+    path: Assets/Games/Jigsaw/Level Data/Sandbox Mode/01_Normal Video/Normal_New.unity
     guid: c0a6bb646dec9f142ab4e90c58ba060e
   - enabled: 1
     path: Assets/Games/Jigsaw/Level Data/Sandbox Mode/03_Skew/Skew.unity

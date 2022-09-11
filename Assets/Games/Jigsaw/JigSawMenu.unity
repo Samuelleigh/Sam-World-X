@@ -10464,9 +10464,6 @@ MonoBehaviour:
   - jigsawLevelDefaults: {fileID: 11400000, guid: 3ed3a2ed491430e4fa2e8d188ac8a39b,
       type: 2}
     jigsawLevelActive: []
-  - jigsawLevelDefaults: {fileID: 11400000, guid: ee637a89a5b7a0c4ba774afb209ee056,
-      type: 2}
-    jigsawLevelActive: []
   SandBoxJigsaws:
   - jigsawLevelDefaults: {fileID: 11400000, guid: c54b1de9c108fa24a8624c84ddc2a47c,
       type: 2}
