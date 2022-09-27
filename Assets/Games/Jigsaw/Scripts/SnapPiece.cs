@@ -2,22 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SnapPiece : MonoBehaviour
+namespace MovingJigsaw
 {
-
-    public int x;
-    public int y;
-    
-
-    // Start is called before the first frame update
-    void Start()
+    public class SnapPiece : MonoBehaviour
     {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        public int x;
+        public int y;
+
     }
 }

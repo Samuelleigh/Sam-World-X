@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.EventSystems;
 
+namespace KnockKnock {
 public class Knocking : MonoBehaviour, IPointerClickHandler, IPointerDownHandler
 {
 
@@ -9,12 +10,10 @@ public class Knocking : MonoBehaviour, IPointerClickHandler, IPointerDownHandler
     public GameObject opendoor;
     public Animator animatior;
     public KnockGameLogic gamelogic;
+    public KnockKnockGameLogicMobile gamelogicMobile;
 
     public UIMaster master;
     public SoundSystem sound;
-
-
-
 
 
     void Awake() 
@@ -27,18 +26,6 @@ public class Knocking : MonoBehaviour, IPointerClickHandler, IPointerDownHandler
     
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-     
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-       
-    }
 
     public void OnPointerClick(PointerEventData eventdata) 
     {
@@ -66,4 +53,5 @@ public class Knocking : MonoBehaviour, IPointerClickHandler, IPointerDownHandler
     {
         
     }
+}
 }

@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Games/Jigsaw/JigSawMenu.unity
+- path: Assets/Games/LowFI-3D/LowFi3D.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

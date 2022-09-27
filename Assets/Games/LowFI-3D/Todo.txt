@@ -1,38 +1,100 @@
 
-Lost Eye:
+Sight
+=====
+TODO: 
 
-Todo: 
+First Steps:
 
-1. Create a level structure. 
-	a. Take level Structure from Jigsaw Puzzles
-	b. Create level Class
-	c. Create 
+- Create / Modify first person Controller DONE
+- Create placeholders for all the levels DONE
+- But in all the placeholder stuff DONE
 
-2. Gameplay
-	a. Check if colours match
-		- by Checking if each colour hits it
-		- if the player is in a certain range of the 2nd eye
-		- Snap the player to the 2nd Eyes transform when it's close.
 
-		https://answers.unity.com/questions/526681/see-if-a-color-is-within-a-threshold.html
+Systems:
 
-Bucket:
+- Created a system for quickly switching between levels  DONE
+- Create an editior for starting the game at specifc places DONE
 
-Structural:
+- Allow for multiple continue Conditions
+- Frame Prefabs
+	- Static Frame Prefab
+	- Verticle Slider prefab
+	- Hortizontal Fram Prefab
+- One Shared Enviroment for levels
+- Recording the player movement and reset when playing
+- Universal frames
+	- Eyeball
+	- Narrtive Frames
 
-	- Level Select
-	- Level Flow
 
-Gameplay:
+Sound: 
 
-	- Turn off 
-	- Level Types
+- Figure out "sound pallete" in foxdot
+- Music System for playing loops
+- all the seperate loops
 
-Difficult:
 
-	- Script to compare if both textures are "mostly" the same
+Enviroment:
 
-UI: 
+- Build The Enviroment
 
-	- Tutorial
+
+Levels: 
+
+- Put in all the UI and Sceneobjects that are nessery for each level
+- 
+
+
+=============
+Level Descriptions: 
+
+- Introduction:
+	- one fra
+
+- Level 1:
+	- Two Frames
+
+- Level 2:
+	- Three Frames, 2 static, 1 active
+
+- Level 3:
+	- 4 Frames 
+
+- Level 4:
 	- 
+
+- Level 5:
+
+- Level 6:
+
+- Level 7:
+
+- Level 8:
+
+- Level 9:
+
+- Level 10:
+
+- 
+
+
+Ideas: 
+
+- Multiple high Rez Static Cameras, the player camera is low rez
+- 6 low rez Camera that all 
+- 2 player camera, medium rez, one has reversed Movement, thye have to collide to continue
+- 1 Player camera with a really high X count, low y coun, time continue
+- 1 Player Camera with a really high Y count, low X count, time continue
+- 4 windows, but which render texture that corrisponds to which window changes on diffrent inputs
+
+- two levels, one where the player has two camera, one doesn't move,  after some levels, we return and now the player can move the other camera, and the previous moves all on it's own.
+
+- 
+
+Persisetant
+
+- 
+
+First Person Controller: 
+
+- Change the FPS Camera to respond to button presses 

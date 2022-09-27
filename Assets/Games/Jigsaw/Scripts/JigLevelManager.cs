@@ -4,51 +4,45 @@ using UnityEditor;
 using System.IO;
 using UnityEngine;
 
-public class JigLevelManager : MonoBehaviour
+namespace MovingJigsaw
 {
-    public int debugID;
-    public bool debug = true;
-    public int playID;
-    public int altID = 0;
-    public string path;
-    public bool customMode;
-
-
-    public List<JigsawLevel> Jigsaws;
-    public JigsawLevel DebugLevel;
-
-    public int CustomX;
-    public int CustomY;
-    public PuzzleResolution Customrez;
-
-    public bool customFile;
-
-
-    private void Awake()
+    public class JigLevelManager : MonoBehaviour
     {
-        DontDestroyOnLoad(gameObject);
-        GameObject g = GameObject.Find("Jigsaw Level Manager");
+        public int debugID;
+        public bool debug = true;
+        public int playID;
+        public int altID = 0;
+        public string path;
+        public bool customMode;
 
-        //checks if any other game objects with this name 
-        if (g != null && g != gameObject )
+
+        public List<JigsawLevel> Jigsaws;
+        public JigsawLevel DebugLevel;
+
+        public int CustomX;
+        public int CustomY;
+        public PuzzleResolution Customrez;
+
+        public bool customFile;
+
+
+        private void Awake()
         {
+            DontDestroyOnLoad(gameObject);
+            GameObject g = GameObject.Find("Jigsaw Level Manager");
 
-            Destroy(gameObject);
-        }
+            //checks if any other game objects with this name 
+            if (g != null && g != gameObject)
+            {
 
-    
-        if (debug == true)
-        {
-            //DebugLevel = Jigsaws[debugID];
-        }
+                Destroy(gameObject);
+            }
 
-
-    }
-
- 
-    public void Start()
-    {
-       
+            if (debug == true)
+            {
+                //DebugLevel = Jigsaws[debugID];
+            }
+        }    
     }
 }
 

@@ -5370,6 +5370,8 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
+  music: []
+  musicSource: {fileID: 0}
 --- !u!4 &1692173617
 Transform:
   m_ObjectHideFlags: 0
@@ -6160,7 +6162,7 @@ MonoBehaviour:
   - {fileID: 812223059}
   IndivdualFrames:
   - {fileID: 1767280250}
-  UniversalFrameParent: {fileID: 1767280250}
+  UniversalFrameParent: {fileID: 0}
 --- !u!4 &1999384788
 Transform:
   m_ObjectHideFlags: 0

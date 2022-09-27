@@ -2,7 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public static class WDRefrences 
+namespace TheWayDown
 {
-    public static GameObject mediaCamera;
+    public static class WDRefrences
+    {
+        public static GameObject mediaCamera;
+    }
 }
