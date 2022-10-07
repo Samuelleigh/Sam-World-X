@@ -7,21 +7,11 @@ public class GameSwitcher : MonoBehaviour
 {
     public bool FunGameSelect;
     public Transform playertransform;
-    public static GameSwitcher instance;
+   // public static GameSwitcher instance;
 
     public void Awake()
     {
-        if (instance == null)
-        {
-            instance = this;
-        }
-        else
-        {
-            Destroy(gameObject);
-            return;
-        }
-        DontDestroyOnLoad(gameObject);
-  
+       
     }
 
     public void FunSwitchMode() 
@@ -39,6 +29,37 @@ public class GameSwitcher : MonoBehaviour
         FunGameSelect = false;
         BackToMainMenuScene();
 
+
+
+    }
+
+    private void Update()
+    {
+
+        if (Input.GetKey("s")) 
+        {
+
+            if (Input.GetKey("a"))
+            {
+                if (Input.GetKey("m"))
+                {
+
+
+                    Debug.Log("wow");
+                    QuickSwitchMode();
+
+
+
+                }
+
+
+
+
+            }
+
+
+
+        }
 
 
     }

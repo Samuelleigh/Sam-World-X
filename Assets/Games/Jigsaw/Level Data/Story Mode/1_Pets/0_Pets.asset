@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5485bfd46d4ed24492767cd900b16df, type: 3}
+  m_Name: 0_Pets
+  m_EditorClassIdentifier: 
+  Name: Pets
+  JigLevels:
+  - {fileID: 11400000, guid: 26b9425a577b8df4f9268b4d02567fac, type: 2}
+  - {fileID: 11400000, guid: 9ad400caf6f54f945a17c3471c2160d7, type: 2}
+  - {fileID: 11400000, guid: 7a06263a517cde349aa4bd4614a3f9a6, type: 2}
+  Notes: 

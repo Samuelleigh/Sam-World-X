@@ -561,8 +561,8 @@ namespace LightShaft.Scripts
                 {
                     if(audioPlayer != null)
                     {
-                        if (audioPlayer.GetTargetAudioSource(0).volume <= 0)
-                            audioPlayer.GetTargetAudioSource(0).volume = _controller.volumeSlider.value;
+                      //  if (audioPlayer.GetTargetAudioSource(0).volume <= 0)
+                      //      audioPlayer.GetTargetAudioSource(0).volume = _controller.volumeSlider.value;
                     }
                 }
             }

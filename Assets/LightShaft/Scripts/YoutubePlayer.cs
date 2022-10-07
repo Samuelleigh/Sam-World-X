@@ -3,6 +3,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Video;
+using LightShaft.Scripts;
 
 namespace LightShaft.Scripts
 {

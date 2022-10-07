@@ -924,6 +924,7 @@ MonoBehaviour:
   videoPlayerInChargeOfAudio: {fileID: 0}
   jigManager: {fileID: 0}
   unmute: 1
+  youtubePlayers: []
 --- !u!4 &2112223760
 Transform:
   m_ObjectHideFlags: 0

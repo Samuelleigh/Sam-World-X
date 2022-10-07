@@ -28,14 +28,24 @@ namespace MovingJigsaw
         void Start()
         {
 
+            if (manager.customFile && !manager.customMode) 
+            {
+
+                manager.customFile = false;
+                manager.path = "";
+            }
+
+
             if (manager.customFile == false)
             {
                 if (gameObject.GetComponent<VideoPlayer>() == null)
                 {
+                    Debug.Log("Ok");
                     vid = gameObject.AddComponent<VideoPlayer>();
                 }
                 else
                 {
+                    Debug.Log("Test");
                     vid = gameObject.GetComponent<VideoPlayer>();
                 }
 

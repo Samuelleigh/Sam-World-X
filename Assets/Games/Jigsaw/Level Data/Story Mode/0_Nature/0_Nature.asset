@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5485bfd46d4ed24492767cd900b16df, type: 3}
+  m_Name: 0_Nature
+  m_EditorClassIdentifier: 
+  Name: Nature
+  JigLevels:
+  - {fileID: 11400000, guid: 716a83f01ef8dbf47b91e38a51e55713, type: 2}
+  - {fileID: 11400000, guid: f1bab8f3f35d3c7419f89ad8e608fea2, type: 2}
+  Notes: 

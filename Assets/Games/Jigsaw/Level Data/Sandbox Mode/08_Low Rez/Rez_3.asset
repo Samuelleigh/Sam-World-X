@@ -16,8 +16,6 @@ MonoBehaviour:
   Xpieces: 5
   Ypieces: 5
   puzzleResolution: 0
-  XCustom: 0
-  YCustom: 0
   SceneName: Rez
   numberOfpuzzles: 1
   cameraID: 00000000
@@ -26,5 +24,7 @@ MonoBehaviour:
   difficulty: 0
   centerAligned: 0
   allowCustomFile: 1
-  videoClip: {fileID: 32900000, guid: 4a75ba38db63a1f48a64c1dd37bf1f58, type: 3}
+  videoClip: {fileID: 32900000, guid: a7d7a836625411541bf10ebb3554cb87, type: 3}
+  puzzleTexture: {fileID: 0}
+  Customizable: 1
   Notes: 

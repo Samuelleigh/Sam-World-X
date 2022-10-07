@@ -204,13 +204,12 @@ namespace MovingJigsaw
 
         public void Changelevel(int jigsawID, int altID, GameObject obj)
         {
-
+         
             //Get current level
             choosenJigsaw = manager.Jigsaws[jigsawID].jigsawLevelDefaults.JigLevels[altID];
 
 
             //Turn off then apply custom mode UI
-            ChangeCustomMode(false);
             ChangeCustomizeUI(customizeMode, choosenJigsaw.Customizable);
 
             //Thing set 
@@ -222,6 +221,7 @@ namespace MovingJigsaw
 
             loadID = jigsawID;
 
+           
             if (customizeMode == false)
             {
 
@@ -243,23 +243,44 @@ namespace MovingJigsaw
             }
 
             //Remove alts 
+            
             for (int i = 0; i < altButtons.Count; i++)
             {
                 int numberofbeing = altButtons.Count - manager.Jigsaws[jigsawID].jigsawLevelDefaults.JigLevels.Count;
 
                 if (i < manager.Jigsaws[jigsawID].jigsawLevelDefaults.JigLevels.Count)
-                { altButtons[i].SetActive(true); }
+                {
+                    
+                    altButtons[i].SetActive(true);
+                }
                 else
                 {
+                    
                     altButtons[i].SetActive(false);
                 }
             }
+            Debug.Log("heya");
 
             //check if button is in progress or completed
 
+            bool allcompleted = true;
+
             for (int i = 0; i < manager.Jigsaws.Count; i++)
             {
-                if (manager.Jigsaws[i].jigsawLevelActive[altID].inProgress == true)
+
+                bool atLeastOneInProgrss = false;
+
+                for (int b = 0; b < manager.Jigsaws[i].jigsawLevelActive.Count; b++)
+                {
+                   
+                    if (manager.Jigsaws[i].jigsawLevelActive[b].inProgress == true)
+                    {
+   
+                        atLeastOneInProgrss = true;
+                    }              
+                }
+
+                if (atLeastOneInProgrss)
                 {
                     buts[i].GetComponent<Image>().color = inProgressColor;
                 }
@@ -268,16 +289,18 @@ namespace MovingJigsaw
                     buts[i].GetComponent<Image>().color = Color.white;
                 }
 
-
+               
                 //turns button green if all alts are completed
 
-                bool allcompleted = true;
 
-                
-                    foreach (JigsawlevelSave j in manager.Jigsaws[i].jigsawLevelActive)
+                foreach (JigsawlevelSave j in manager.Jigsaws[i].jigsawLevelActive)
                     {
-                        if(!j.completed)
+
+                  //  Debug.Log("is it this one");
+
+                         if (!j.completed)
                         {
+                        
                         allcompleted = false;
                         }
 
@@ -285,30 +308,39 @@ namespace MovingJigsaw
 
                 if (allcompleted == true)
                 {
+                   
                     buts[i].GetComponent<Image>().color = CompleteColor;
+                   
                 }
             
 
             }
+         
 
-            //if all alt ids jigsaws are completed turn green
+            //Changing level selects first alt
             ChangeAlt(0);
 
 
+         
             //Change to selected color
-            Color tempcolor = obj.GetComponent<Image>().color;
-            obj.GetComponent<Image>().color = new Color(tempcolor.r - darkenSelectColorAmount, tempcolor.g - darkenSelectColorAmount, tempcolor.b - darkenSelectColorAmount);
-
-
-
-            if (manager.Jigsaws[loadID].jigsawLevelDefaults.JigLevels[altLoadID].allowCustomFile && customizeMode == true)
+            if (obj != null)
             {
-                filepathFrame.SetActive(true);
+               
+                Color tempcolor = obj.GetComponent<Image>().color;
+                obj.GetComponent<Image>().color = new Color(tempcolor.r - darkenSelectColorAmount, tempcolor.g - darkenSelectColorAmount, tempcolor.b - darkenSelectColorAmount);
             }
-            else
-            {
-                filepathFrame.SetActive(false);
-            }
+         
+         
+           if (manager.Jigsaws[loadID].jigsawLevelDefaults.JigLevels[altLoadID].allowCustomFile && customizeMode == true)
+           {
+               //Debug.Log("fine");
+               filepathFrame.SetActive(true);
+           }
+           else
+           {
+             //  Debug.Log("fine");
+               filepathFrame.SetActive(false);
+           }
 
         }
 
@@ -356,7 +388,7 @@ namespace MovingJigsaw
             for (int i = 0; i < manager.Jigsaws[loadID].jigsawLevelActive.Count; i++)
             {
 
-              //  Debug.Log("dhh");
+
 
                 if (manager.Jigsaws[loadID].jigsawLevelActive[i].completed)
                 {
@@ -413,12 +445,15 @@ namespace MovingJigsaw
 
         public void Startlevel()
         {
+          //  Debug.Log("level ID:" + loadID +". Alt ID: " + manager.altID);
+          //  Debug.Log("level ID:" + loadID +". Alt ID: " + altLoadID);
+
             if (customizeMode == true)
             {
                 manager.customMode = true;
-                manager.Jigsaws[loadID].jigsawLevelActive[manager.altID].XCustom = manager.CustomX;
-                manager.Jigsaws[loadID].jigsawLevelActive[manager.altID].YCustom = manager.CustomY;
-                manager.Jigsaws[loadID].jigsawLevelActive[manager.altID].puzzleResolution = manager.Customrez;
+                manager.Jigsaws[loadID].jigsawLevelActive[altLoadID].XCustom = manager.CustomX;
+                manager.Jigsaws[loadID].jigsawLevelActive[altLoadID].YCustom = manager.CustomY;
+                manager.Jigsaws[loadID].jigsawLevelActive[altLoadID].puzzleResolution = manager.Customrez;
              
             }
 

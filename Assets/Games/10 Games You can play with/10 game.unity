@@ -4193,88 +4193,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 781051747}
   m_CullTransparentMesh: 0
---- !u!1 &804076004
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 804076006}
-  - component: {fileID: 804076005}
-  m_Layer: 0
-  m_Name: New Sprite
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!212 &804076005
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 804076004}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 1bab96d5d5b866f4e970d448f5ddc959, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 1.24, y: 1.24}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
---- !u!4 &804076006
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 804076004}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.168, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &850413893
 GameObject:
   m_ObjectHideFlags: 0
@@ -9437,12 +9355,12 @@ MonoBehaviour:
   - title1: Lick
     writing1: '1. Lick your business card.
 
-      
 
-      2. Keep licking it until
-      you are bored or dissatisfied with licking it, then move to step three.
 
-      
+      2. Keep licking it until you
+      are bored or dissatisfied with licking it, then move to step three.
+
+
 
       3.
       Stop licking your business card.
@@ -9502,10 +9420,10 @@ MonoBehaviour:
     title2: Biting
     writing2: '1. Players bite opposite ends of a business card.
 
-      
 
-      2.
-      Whoever tears off the biggest piece wins.
+
+      2. Whoever
+      tears off the biggest piece wins.
 
 '
     sprite: {fileID: 0}
@@ -9565,15 +9483,15 @@ MonoBehaviour:
   - title1: Decay
     writing1: '1. Read a book.
 
-      
 
-      2. Afterwards, rip out a personally
-      interesting page.
 
-      
+      2. Afterwards, rip out a personally interesting
+      page.
 
-      3. Give the book to someone else and tell
-      them to repeat the game.
+
+
+      3. Give the book to someone else and tell them to repeat the
+      game.
 
 '
     title2: 
@@ -9656,14 +9574,14 @@ MonoBehaviour:
   - title1: 'Catch:'
     writing1: '1. Throw your phone straight up into the air.
 
-      
 
-      2.
-      Catch it.
 
-      
+      2. Catch it.
 
-      Variation: Someone else has to catch the phone.'
+
+
+      Variation:
+      Someone else has to catch the phone.'
     title2: 
     writing2: 
     sprite: {fileID: 0}
@@ -9717,15 +9635,14 @@ MonoBehaviour:
   - title1: 'Walk the Dog:'
     writing1: '1. Connect headphones into the phone.
 
-      
 
-      2. Hold the
-      Earbuds in one hand and put the phone on the floor.
 
-      
+      2. Hold the Earbuds
+      in one hand and put the phone on the floor.
 
-      3. Go
-      for a walk.'
+
+
+      3. Go for a walk.'
     title2: 
     writing2: 
     sprite: {fileID: 0}
@@ -9747,14 +9664,14 @@ MonoBehaviour:
     writing1: '1. Two players have 30 or 60 seconds to delete everything private
       on their phone.
 
-      
+
 
       2. Players switch phones (unlocked).
 
-      
 
-      3.
-      First person to find something private wins.'
+
+      3. First
+      person to find something private wins.'
     title2: 
     writing2: 
     sprite: {fileID: 0}
@@ -9764,20 +9681,20 @@ MonoBehaviour:
   - title1: 'Call Me:'
     writing1: '1. Two players.
 
-      
 
-      2. At any time, either player can
-      call the other.
 
-      
+      2. At any time, either player can call the
+      other.
 
-      3. Before the phone goes to voicemail. The
-      receiver has to pick up and immediately say whether they think the caller can
-      see them.
 
-      
 
-      4. The caller then reveals the truth.'
+      3. Before the phone goes to voicemail. The receiver has to
+      pick up and immediately say whether they think the caller can see them.
+
+
+
+      4.
+      The caller then reveals the truth.'
     title2: 
     writing2: 
     sprite: {fileID: 0}
@@ -9823,20 +9740,20 @@ MonoBehaviour:
   - title1: 'Re-create:'
     writing1: '1. Gather 4+ players and divide into teams of 2 or 3.
 
-      
+
 
       2.
       A random vine in a random RIP #VINE compilation is chosen.
 
-      
 
-      3.
-      In 1 hour, all teams have to re-create the chosen vine.
 
-      
+      3. In 1
+      hour, all teams have to re-create the chosen vine.
 
-      4.
-      The most accurate team wins. (you may want to designate a judge)'
+
+
+      4. The most accurate
+      team wins. (you may want to designate a judge)'
     title2: 
     writing2: 
     sprite: {fileID: 21300000, guid: d7f6cc57a8a989c42aa96976d4ff6077, type: 3}
@@ -9846,20 +9763,20 @@ MonoBehaviour:
   - title1: 'Words:'
     writing1: '1. Before starting, all players pick one word.
 
-      
 
-      2.
-      Start watching a random #RIP #VINE COMPILATION together.
 
-      
+      2. Start watching
+      a random #RIP #VINE COMPILATION together.
 
-      2.
-      Whenever the compilation says a player''s word, that player gets a point.
 
-      
 
-      3.
-      At the end, whomever got the closest to 3 points wins.
+      2. Whenever the compilation
+      says a player''s word, that player gets a point.
+
+
+
+      3. At the end, whomever
+      got the closest to 3 points wins.
 
 '
     title2: 
@@ -9872,10 +9789,10 @@ MonoBehaviour:
     writing1: '1. In the background of a social setting, play 2 RIP vine complications
       at the same time side by side.
 
-      
 
-      2. Whenever the same #vine
-      plays on both sides at the same time, everyone takes a 6 second moment of silence.
+
+      2. Whenever the same #vine plays on
+      both sides at the same time, everyone takes a 6 second moment of silence.
 
 '
     title2: 
@@ -9908,7 +9825,7 @@ MonoBehaviour:
       friend to reference one of included vines to the other without them realizing
       it, wins.
 
-      
+
 
       note: this game might go on forever.'
     title2: 

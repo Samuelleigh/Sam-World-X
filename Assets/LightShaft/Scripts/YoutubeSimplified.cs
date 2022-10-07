@@ -29,7 +29,7 @@ public class YoutubeSimplified : MonoBehaviour
     {
         if (manager)
         {
-            if (manager.path.StartsWith("https:"))
+            if (manager.path.StartsWith("https:") && manager.customFile && manager.customMode)
             {
                 url = manager.path;
                 Play();

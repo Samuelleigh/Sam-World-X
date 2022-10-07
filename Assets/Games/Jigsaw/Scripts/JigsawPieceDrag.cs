@@ -77,7 +77,12 @@ namespace MovingJigsaw
                     if (raycastResultList[i].gameObject.transform.childCount == 0)
                     {
                         SnapToPiece(raycastResultList[i].gameObject);
-                        gm.CheckWin(jig.puzzleID);
+
+                        //if not on the last level
+                        if (gm.Level.name != "Just A Dream")
+                        {
+                            gm.CheckWin(jig.puzzleID);
+                        }
                     }
                     else
                     {
@@ -95,6 +100,13 @@ namespace MovingJigsaw
             }
 
             jig.UpdatePostionInSave();
+
+            if (gm.Level.name == "Just A Dream") 
+            {
+                Debug.Log("werid");
+                gameObject.SetActive(false);
+                gm.EndingStepForward();
+            }
         }
 
         public void SnapToPiece(GameObject piece)

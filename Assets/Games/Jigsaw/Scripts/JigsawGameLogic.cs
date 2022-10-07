@@ -15,6 +15,21 @@ namespace MovingJigsaw
 
     public class JigsawGameLogic : MonoBehaviour
     {
+
+        public GameObject testGameObject;
+        public Transform testTransform;
+        public DeleteSave deleteSave;
+        public Image playerImage;
+
+       
+
+        public int ageInYears = 25;
+        private float moneyInPocket = 10.20f;
+        public char firstIntial = 'S';
+        public string fullName = "Samuel Leigh";
+        public bool isAwake = true;
+       
+
         public bool Debugbool;
         public JigLevelManager levels;
         public UIMaster ui;
@@ -77,6 +92,16 @@ namespace MovingJigsaw
 
         private bool tempinProgress;
 
+        public bool lastlevel = false;
+
+        public GameObject LastLevel1;
+        public GameObject LastLevel2;
+        public GameObject LastLevel3;
+
+        public Image finalImage;
+        public int FinalLevelstep;
+        public GameObject death;
+
         private void Awake()
         {
             loadingscreen.SetActive(true);
@@ -99,6 +124,7 @@ namespace MovingJigsaw
             else { ui.SwitchLayer(1); LoadLevel(Level); }
 
             ShiftAllPieces(ShiftDirection.no);
+
         }
 
 
@@ -169,7 +195,7 @@ namespace MovingJigsaw
             }
 
             totalPieces = Xpieces * Ypieces;
-            Debug.Log("Resoultion X" + resoultionX + " X Pieces:" + Xpieces);
+           // Debug.Log("Resoultion X" + resoultionX + " X Pieces:" + Xpieces);
 
             cellSizeX = resoultionX / Xpieces;
             cellSizeY = resoultionY / Ypieces;
@@ -232,7 +258,7 @@ namespace MovingJigsaw
             {
 
                 GameObject snap = Instantiate(snapObj, snapboard.transform);
-                Debug.Log(x);
+            //    Debug.Log(x);
                 snap.GetComponent<SnapPiece>().x = i - (y * Xpieces);
                 snap.GetComponent<SnapPiece>().y = Mathf.CeilToInt(i / Xpieces);
 
@@ -290,6 +316,14 @@ namespace MovingJigsaw
 
             solvedAmountText.text = solvedpuzzles.Count + "/" + Level.numberOfpuzzles;
 
+            if (Level.name == "Just A Dream")
+            {
+                lastlevel = true;
+                Invoke("SetUpLastLevel", 1.1f);
+               // SetUpLastLevel();
+
+            }
+
         }
 
 
@@ -301,7 +335,7 @@ namespace MovingJigsaw
             bool tempwinVar = true;
 
 
-            Debug.Log(offset);
+            //Debug.Log(offset);
             for (int i = 0; i < numofpieces; i++)
             {
                 if (PuzzlePieces[i + offset].transform.parent != snapboard.transform.GetChild(i))
@@ -423,7 +457,7 @@ namespace MovingJigsaw
         public void Winlevel(bool win, int puzzleWon)
         {
 
-            Debug.Log(win);
+           // Debug.Log(win);
 
             if (win == true)
             {
@@ -733,7 +767,7 @@ namespace MovingJigsaw
         public void ApplyLoadPieceLocations() 
         {
 
-            Debug.Log("Apply save postion");
+           // Debug.Log("Apply save postion");
 
             for (int i = 0; i < levels.Jigsaws[levels.playID].jigsawLevelActive[levels.altID].savePiece.Count; i++)
             {
@@ -809,6 +843,93 @@ namespace MovingJigsaw
       //     }
         }
 
+        public void SetUpLastLevel() 
+        {
+
+            Debug.Log("Set Up Last level");
+            Debug.Log(snapboard.transform.childCount);
+            Debug.Log(PuzzlePieces.Count);
+
+  
+
+            //start with all pieces snaped in place
+
+            for (int i = 0; i < temp.Count; i++) 
+            {
+            
+                     
+                for (int b = 0; b < PuzzlePieces.Count; b++)
+                {
+
+                            
+                    if (b == i)
+                    {
+                            Debug.Log("Success");
+                        PuzzlePieces[b].GetComponent<JigsawPieceDrag>().SnapToPiece(temp[i]);
+                     }
+
+                }
+            }
+
+
+            //remove changing frames
+            shiftFrame.SetActive(false);
+
+            //remove 
+            LastLevel1.SetActive(false);
+            LastLevel2.SetActive(false);
+            LastLevel3.SetActive(false);
+
+
+        }
+
+
+        public void EndingStepForward() 
+        {
+
+            Color d = new Color(155,152,238);
+
+            if (Level.name == "Just A Dream") 
+            {
+                FinalLevelstep++;
+
+            }
+
+            if (FinalLevelstep > 7) 
+            {
+                var tempColor = finalImage.color;
+                tempColor.a = tempColor.a + 0.056f;
+                finalImage.color = tempColor;
+            }
+
+            if (FinalLevelstep == 18) 
+            {
+                death.SetActive(true);
+            }
+
+            if (FinalLevelstep == 22)
+            {
+                death.SetActive(false);
+            }
+
+
+            if (FinalLevelstep == 25) 
+            {
+                Debug.Log("heh");
+                Invoke("quitquitquit",3f);
+
+
+            }
+        
+        
+        }
+
+
+        public void quitquitquit()
+        {
+            Application.Quit();
+
+        }
 
 
 

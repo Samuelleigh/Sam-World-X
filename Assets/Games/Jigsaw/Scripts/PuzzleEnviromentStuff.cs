@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Video;
+using LightShaft.Scripts;
 
 namespace MovingJigsaw
 {
@@ -14,11 +15,23 @@ namespace MovingJigsaw
         public JigLevelManager jigManager;
         public bool unmute = true;
 
+        public YoutubePlayer[] youtubePlayers;
+
         public void Start()
         {
+            youtubePlayers = FindObjectsOfType<YoutubePlayer>();
             UnmuteStart();
             jigManager = FindObjectOfType<JigLevelManager>();
-         
+
+
+            if (!jigManager.customMode) 
+            {
+                foreach (YoutubePlayer p in youtubePlayers) 
+                {
+                    p.gameObject.SetActive(false);
+                }
+            }
+
         }
 
         private void Update()
