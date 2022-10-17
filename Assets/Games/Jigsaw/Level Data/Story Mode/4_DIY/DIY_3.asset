@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: DIY_3
   m_EditorClassIdentifier: 
   name: Walking Through
-  Xpieces: 8
-  Ypieces: 4
+  Xpieces: 10
+  Ypieces: 6
   puzzleResolution: 1
   SceneName: Normal
   numberOfpuzzles: 1
@@ -23,7 +23,7 @@ MonoBehaviour:
   style: 
   difficulty: 0
   centerAligned: 0
-  allowCustomFile: 1
+  allowCustomFile: 0
   videoClip: {fileID: 32900000, guid: d031d05d552b4c9428f12049b402aae2, type: 3}
   puzzleTexture: {fileID: 0}
   Customizable: 1

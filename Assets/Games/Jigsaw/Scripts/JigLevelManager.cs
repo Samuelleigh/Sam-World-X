@@ -75,7 +75,7 @@ namespace MovingJigsaw
                 {
                     JigsawlevelSave newJig = new JigsawlevelSave();
                     newJig.name = jigscript.name;
-                    newJig.numberofpuzzles = jigscript.numberOfpuzzles;
+                    newJig.numberofpuzzles = jigscript.numberOfpuzzles;                  
                     jiglevel.jigsawLevelActive.Add(newJig);
 
                 }

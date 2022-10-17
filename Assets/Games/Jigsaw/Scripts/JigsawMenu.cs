@@ -92,7 +92,7 @@ namespace MovingJigsaw
                     foreach (JigsawlevelSave info in JigPuzzlesSaves) 
                     {
 
-                    Debug.Log(info.name);
+                  //  Debug.Log(info.name);
 
                         for (int i = 0; i < manager.StoryJigsaws.Count; i++) 
                         {
@@ -211,6 +211,7 @@ namespace MovingJigsaw
 
             //Turn off then apply custom mode UI
             ChangeCustomizeUI(customizeMode, choosenJigsaw.Customizable);
+            
 
             //Thing set 
             thingselected = true;
@@ -352,7 +353,7 @@ namespace MovingJigsaw
             altLoadID = altID;
             choosenJigsaw = manager.Jigsaws[loadID].jigsawLevelDefaults.JigLevels[altID];
 
-            ChangeCustomMode(false);
+            ChangeCustomMode(manager.Jigsaws[loadID].jigsawLevelActive[altID].customMode);
             ChangeCustomizeUI(customizeMode, choosenJigsaw.Customizable);
 
             InfoText[0].text = manager.Jigsaws[loadID].jigsawLevelDefaults.JigLevels[altID].name.ToString();
@@ -388,6 +389,10 @@ namespace MovingJigsaw
             for (int i = 0; i < manager.Jigsaws[loadID].jigsawLevelActive.Count; i++)
             {
 
+                if (manager.Jigsaws[loadID].jigsawLevelActive[i].customMode) 
+                {
+                    
+                }
 
 
                 if (manager.Jigsaws[loadID].jigsawLevelActive[i].completed)

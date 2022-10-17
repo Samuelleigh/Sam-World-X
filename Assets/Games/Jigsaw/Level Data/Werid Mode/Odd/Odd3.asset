@@ -15,7 +15,7 @@ MonoBehaviour:
   name: Egg
   Xpieces: 8
   Ypieces: 4
-  puzzleResolution: 1
+  puzzleResolution: 0
   SceneName: Normal_New
   numberOfpuzzles: 1
   cameraID: 01000000

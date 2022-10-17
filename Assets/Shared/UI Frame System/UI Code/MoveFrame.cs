@@ -39,8 +39,8 @@ public class MoveFrame : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
     public void OnDrag(PointerEventData eventData)
     {
 
-        Debug.Log(eventData.eligibleForClick);
-        Debug.Log(eventData.pointerEnter.name);
+      //  Debug.Log(eventData.eligibleForClick);
+       // Debug.Log(eventData.pointerEnter.name);
 
         if (main)
         {

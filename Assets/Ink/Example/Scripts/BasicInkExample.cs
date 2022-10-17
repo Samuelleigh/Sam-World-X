@@ -15,6 +15,9 @@ namespace KnockKnock
 	{
 		public static event Action<Story> OnCreateStory;
 
+
+		public Sprite[] hey;
+
 		void Awake()
 		{
 			// Remove the default message

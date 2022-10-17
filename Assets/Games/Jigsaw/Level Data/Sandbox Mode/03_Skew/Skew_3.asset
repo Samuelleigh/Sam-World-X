@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Skew_3
   m_EditorClassIdentifier: 
   name: Two Skew
-  Xpieces: 1
-  Ypieces: 1
+  Xpieces: 5
+  Ypieces: 5
   puzzleResolution: 1
   SceneName: Skew
   numberOfpuzzles: 2

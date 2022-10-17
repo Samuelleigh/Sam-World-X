@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Pets_1
   m_EditorClassIdentifier: 
   name: Pops
-  Xpieces: 5
-  Ypieces: 5
+  Xpieces: 7
+  Ypieces: 7
   puzzleResolution: 1
   SceneName: Normal
   numberOfpuzzles: 1

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 357420eebc2d1ce42ba00a2bfa08eb15, type: 3}
   m_Name: Friends_1
   m_EditorClassIdentifier: 
-  name: LOL Bots
+  name: Dance
   Xpieces: 5
   Ypieces: 5
   puzzleResolution: 1
@@ -23,7 +23,7 @@ MonoBehaviour:
   style: 
   difficulty: 0
   centerAligned: 1
-  allowCustomFile: 1
+  allowCustomFile: 0
   videoClip: {fileID: 32900000, guid: ca414bd134175b0409352b16f1953b53, type: 3}
   puzzleTexture: {fileID: 0}
   Customizable: 1

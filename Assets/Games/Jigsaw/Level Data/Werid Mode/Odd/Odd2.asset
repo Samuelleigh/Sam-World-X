@@ -15,7 +15,7 @@ MonoBehaviour:
   name: Banjo
   Xpieces: 4
   Ypieces: 8
-  puzzleResolution: 2
+  puzzleResolution: 0
   SceneName: Normal_New
   numberOfpuzzles: 1
   cameraID: 02000000

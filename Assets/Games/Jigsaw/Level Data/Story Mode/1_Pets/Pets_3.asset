@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Pets_3
   m_EditorClassIdentifier: 
   name: Remy (Hungry)
-  Xpieces: 8
-  Ypieces: 4
+  Xpieces: 1
+  Ypieces: 20
   puzzleResolution: 2
   SceneName: Normal
   numberOfpuzzles: 1

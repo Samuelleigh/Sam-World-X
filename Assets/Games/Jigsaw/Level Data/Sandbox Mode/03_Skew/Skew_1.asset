@@ -16,8 +16,6 @@ MonoBehaviour:
   Xpieces: 5
   Ypieces: 5
   puzzleResolution: 1
-  XCustom: 0
-  YCustom: 0
   SceneName: Skew
   numberOfpuzzles: 1
   cameraID: 00000000
@@ -26,5 +24,7 @@ MonoBehaviour:
   difficulty: 0
   centerAligned: 0
   allowCustomFile: 1
-  videoClip: {fileID: 32900000, guid: 7cca3254fcac21c4e9a758afd4e4c1c4, type: 3}
+  videoClip: {fileID: 32900000, guid: fd6743f5006bc514ea95b4015fb19dc8, type: 3}
+  puzzleTexture: {fileID: 0}
+  Customizable: 1
   Notes: 

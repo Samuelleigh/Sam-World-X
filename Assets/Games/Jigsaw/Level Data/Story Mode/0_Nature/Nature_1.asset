@@ -23,7 +23,7 @@ MonoBehaviour:
   style: 
   difficulty: 0
   centerAligned: 1
-  allowCustomFile: 1
+  allowCustomFile: 0
   videoClip: {fileID: 32900000, guid: 7d786a1d390a05340930c05334fac9da, type: 3}
   puzzleTexture: {fileID: 0}
   Customizable: 1

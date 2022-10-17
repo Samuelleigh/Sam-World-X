@@ -135,7 +135,7 @@ namespace MovingJigsaw
 
             if (CustomLevel.customMode)
             {
-              
+                Debug.Log("loaded Custom mode");
                 Xpieces = levels.Jigsaws[levels.playID].jigsawLevelActive[levels.altID].XCustom;
                 Ypieces = levels.Jigsaws[levels.playID].jigsawLevelActive[levels.altID].YCustom;
                 puzzleRez = levels.Jigsaws[levels.playID].jigsawLevelActive[levels.altID].puzzleResolution;
@@ -148,7 +148,7 @@ namespace MovingJigsaw
             }
             else
             {
-                
+                Debug.Log("loaded a non custom mode");
                 Xpieces = level.Xpieces;
                 Ypieces = level.Ypieces;
                 puzzleRez = level.puzzleResolution;
@@ -497,6 +497,8 @@ namespace MovingJigsaw
         public void BackToMenu()
         {
             UpdateSavePostions();
+            Debug.Log(levels.customMode);
+            levels.Jigsaws[levels.playID].jigsawLevelActive[levels.altID].customMode = levels.customMode;
             levels.customMode = false;
             levels.Jigsaws[levels.playID].jigsawLevelActive[levels.altID].completed = win;
             levels.debug = false;

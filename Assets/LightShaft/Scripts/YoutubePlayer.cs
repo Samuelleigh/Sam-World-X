@@ -149,6 +149,8 @@ namespace LightShaft.Scripts
             startFromSecondTime = startFrom;
             Stop();
             PlayYoutubeVideo(url);
+
+            Debug.Log("Player Starts playing");
         }
 
         ///<summary>Play or Pause the active videoplayer.</summary>

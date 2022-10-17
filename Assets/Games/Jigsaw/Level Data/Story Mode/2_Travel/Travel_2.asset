@@ -12,19 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 357420eebc2d1ce42ba00a2bfa08eb15, type: 3}
   m_Name: Travel_2
   m_EditorClassIdentifier: 
-  name: The Forest
-  Xpieces: 8
-  Ypieces: 4
-  puzzleResolution: 1
+  name: Night Tracks
+  Xpieces: 7
+  Ypieces: 7
+  puzzleResolution: 0
   SceneName: Normal
   numberOfpuzzles: 1
-  cameraID: 01000000
+  cameraID: 00000000
   enableShift: 1
   style: 
   difficulty: 0
   centerAligned: 1
   allowCustomFile: 1
-  videoClip: {fileID: 32900000, guid: bf015c6c24961cb40b65f32b7dddb991, type: 3}
+  videoClip: {fileID: 32900000, guid: 985e37c85165ba3409341316cd5f670e, type: 3}
   puzzleTexture: {fileID: 0}
   Customizable: 1
   Notes: 

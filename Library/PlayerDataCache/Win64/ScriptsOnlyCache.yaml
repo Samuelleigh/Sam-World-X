@@ -119,8 +119,10 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -932,6 +934,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 65
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
     - Class: 84
       Script: {instanceID: 0}
     - Class: 104
@@ -980,6 +984,8 @@ ScriptsOnlyBuild:
     - Class: 65
       Script: {instanceID: 0}
     - Class: 74
+      Script: {instanceID: 0}
+    - Class: 82
       Script: {instanceID: 0}
     - Class: 91
       Script: {instanceID: 0}
@@ -1034,7 +1040,56 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 65
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
     - Class: 84
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 12640}
+    - Class: 114
+      Script: {instanceID: 12822}
+    - Class: 114
+      Script: {instanceID: 15174}
+    - Class: 114
+      Script: {instanceID: 15858}
+    - Class: 114
+      Script: {instanceID: 16410}
+    - Class: 114
+      Script: {instanceID: 16462}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 328
+      Script: {instanceID: 0}
+    - Class: 850595691
+      Script: {instanceID: 0}
+    Assets/Games/Jigsaw/Level Data/Sandbox Mode/03_Skew/skew2.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 23
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 33
+      Script: {instanceID: 0}
+    - Class: 43
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 65
+      Script: {instanceID: 0}
+    - Class: 82
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
@@ -1080,6 +1135,8 @@ ScriptsOnlyBuild:
     - Class: 48
       Script: {instanceID: 0}
     - Class: 65
+      Script: {instanceID: 0}
+    - Class: 82
       Script: {instanceID: 0}
     - Class: 84
       Script: {instanceID: 0}
@@ -1129,6 +1186,8 @@ ScriptsOnlyBuild:
     - Class: 65
       Script: {instanceID: 0}
     - Class: 74
+      Script: {instanceID: 0}
+    - Class: 82
       Script: {instanceID: 0}
     - Class: 91
       Script: {instanceID: 0}
@@ -1181,6 +1240,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 65
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
@@ -1226,7 +1287,64 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 65
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
     - Class: 104
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 12640}
+    - Class: 114
+      Script: {instanceID: 12822}
+    - Class: 114
+      Script: {instanceID: 15174}
+    - Class: 114
+      Script: {instanceID: 15858}
+    - Class: 114
+      Script: {instanceID: 16410}
+    - Class: 114
+      Script: {instanceID: 16462}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 328
+      Script: {instanceID: 0}
+    - Class: 850595691
+      Script: {instanceID: 0}
+    Assets/Games/Jigsaw/Level Data/Sandbox Mode/07_Moving Cubes/Cubes.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 23
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 33
+      Script: {instanceID: 0}
+    - Class: 43
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 65
+      Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 108
       Script: {instanceID: 0}
     - Class: 114
       Script: {instanceID: 12640}
@@ -1274,6 +1392,8 @@ ScriptsOnlyBuild:
     - Class: 74
       Script: {instanceID: 0}
     - Class: 81
+      Script: {instanceID: 0}
+    - Class: 82
       Script: {instanceID: 0}
     - Class: 84
       Script: {instanceID: 0}
@@ -1331,6 +1451,8 @@ ScriptsOnlyBuild:
     - Class: 65
       Script: {instanceID: 0}
     - Class: 81
+      Script: {instanceID: 0}
+    - Class: 82
       Script: {instanceID: 0}
     - Class: 84
       Script: {instanceID: 0}
@@ -1404,6 +1526,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 65
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
     - Class: 84
       Script: {instanceID: 0}
     - Class: 104
@@ -1450,6 +1574,8 @@ ScriptsOnlyBuild:
     - Class: 48
       Script: {instanceID: 0}
     - Class: 65
+      Script: {instanceID: 0}
+    - Class: 82
       Script: {instanceID: 0}
     - Class: 84
       Script: {instanceID: 0}
@@ -1498,6 +1624,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 65
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
     - Class: 84
       Script: {instanceID: 0}
     - Class: 104
@@ -1545,6 +1673,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 65
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
     - Class: 84
       Script: {instanceID: 0}
     - Class: 104
@@ -1591,6 +1721,8 @@ ScriptsOnlyBuild:
     - Class: 48
       Script: {instanceID: 0}
     - Class: 65
+      Script: {instanceID: 0}
+    - Class: 82
       Script: {instanceID: 0}
     - Class: 84
       Script: {instanceID: 0}
@@ -1642,6 +1774,8 @@ ScriptsOnlyBuild:
     - Class: 48
       Script: {instanceID: 0}
     - Class: 65
+      Script: {instanceID: 0}
+    - Class: 82
       Script: {instanceID: 0}
     - Class: 84
       Script: {instanceID: 0}
@@ -1696,6 +1830,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 65
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
     - Class: 84
       Script: {instanceID: 0}
     - Class: 104
@@ -1747,6 +1883,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 65
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
     - Class: 84
       Script: {instanceID: 0}
     - Class: 104
@@ -1797,6 +1935,8 @@ ScriptsOnlyBuild:
     - Class: 48
       Script: {instanceID: 0}
     - Class: 65
+      Script: {instanceID: 0}
+    - Class: 82
       Script: {instanceID: 0}
     - Class: 84
       Script: {instanceID: 0}
@@ -1902,7 +2042,58 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 850595691
       Script: {instanceID: 0}
-    Assets/Games/Jigsaw/Level Data/Werid Mode/06_Duck Rotation/Duck Rotation.unity:
+    Assets/Games/Jigsaw/Level Data/Werid Mode/Dancing/Dance.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 23
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 33
+      Script: {instanceID: 0}
+    - Class: 43
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 65
+      Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
+    - Class: 90
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 108
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 12640}
+    - Class: 114
+      Script: {instanceID: 12822}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 137
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 212
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 850595691
+      Script: {instanceID: 0}
+    Assets/Games/Jigsaw/Level Data/Werid Mode/Duck Rotation/Duck Rotation.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -1955,50 +2146,7 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 850595691
       Script: {instanceID: 0}
-    Assets/Games/Jigsaw/Level Data/Werid Mode/07_Moving Cubes/Cubes.unity:
-    - Class: 1
-      Script: {instanceID: 0}
-    - Class: 4
-      Script: {instanceID: 0}
-    - Class: 20
-      Script: {instanceID: 0}
-    - Class: 21
-      Script: {instanceID: 0}
-    - Class: 23
-      Script: {instanceID: 0}
-    - Class: 28
-      Script: {instanceID: 0}
-    - Class: 33
-      Script: {instanceID: 0}
-    - Class: 43
-      Script: {instanceID: 0}
-    - Class: 48
-      Script: {instanceID: 0}
-    - Class: 65
-      Script: {instanceID: 0}
-    - Class: 74
-      Script: {instanceID: 0}
-    - Class: 91
-      Script: {instanceID: 0}
-    - Class: 95
-      Script: {instanceID: 0}
-    - Class: 104
-      Script: {instanceID: 0}
-    - Class: 108
-      Script: {instanceID: 0}
-    - Class: 114
-      Script: {instanceID: 12640}
-    - Class: 114
-      Script: {instanceID: 12822}
-    - Class: 115
-      Script: {instanceID: 0}
-    - Class: 157
-      Script: {instanceID: 0}
-    - Class: 196
-      Script: {instanceID: 0}
-    - Class: 850595691
-      Script: {instanceID: 0}
-    Assets/Games/Jigsaw/Level Data/Werid Mode/11_Text/Text.unity:
+    Assets/Games/Jigsaw/Level Data/Werid Mode/Text/Text.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -2048,57 +2196,6 @@ ScriptsOnlyBuild:
     - Class: 223
       Script: {instanceID: 0}
     - Class: 224
-      Script: {instanceID: 0}
-    - Class: 850595691
-      Script: {instanceID: 0}
-    Assets/Games/Jigsaw/Level Data/Werid Mode/12_Dancing/Dance.unity:
-    - Class: 1
-      Script: {instanceID: 0}
-    - Class: 4
-      Script: {instanceID: 0}
-    - Class: 20
-      Script: {instanceID: 0}
-    - Class: 21
-      Script: {instanceID: 0}
-    - Class: 23
-      Script: {instanceID: 0}
-    - Class: 28
-      Script: {instanceID: 0}
-    - Class: 33
-      Script: {instanceID: 0}
-    - Class: 43
-      Script: {instanceID: 0}
-    - Class: 48
-      Script: {instanceID: 0}
-    - Class: 65
-      Script: {instanceID: 0}
-    - Class: 74
-      Script: {instanceID: 0}
-    - Class: 90
-      Script: {instanceID: 0}
-    - Class: 91
-      Script: {instanceID: 0}
-    - Class: 95
-      Script: {instanceID: 0}
-    - Class: 104
-      Script: {instanceID: 0}
-    - Class: 108
-      Script: {instanceID: 0}
-    - Class: 114
-      Script: {instanceID: 12640}
-    - Class: 114
-      Script: {instanceID: 12822}
-    - Class: 115
-      Script: {instanceID: 0}
-    - Class: 137
-      Script: {instanceID: 0}
-    - Class: 157
-      Script: {instanceID: 0}
-    - Class: 196
-      Script: {instanceID: 0}
-    - Class: 212
-      Script: {instanceID: 0}
-    - Class: 213
       Script: {instanceID: 0}
     - Class: 850595691
       Script: {instanceID: 0}
@@ -2745,7 +2842,7 @@ ScriptsOnlyBuild:
     className: DebugUIHandlerVBox
   - hash:
       serializedVersion: 2
-      Hash: 7090873e4ab4dbb402df3b0cf6e4119c
+      Hash: 4d725cb1e854e54f9cf272355c4e86a3
     assemblyName: Assembly-CSharp.dll
     namespaceName: MovingJigsaw
     className: JigsawPieceScript
@@ -3375,7 +3472,7 @@ ScriptsOnlyBuild:
     className: ChromaticAberration
   - hash:
       serializedVersion: 2
-      Hash: 65cb18af92d4c374ae843ed2ae860bd6
+      Hash: 7f0843745a65a9acc3266aa8aee2cfba
     assemblyName: Assembly-CSharp.dll
     namespaceName: KnockKnock
     className: BasicInkExample
@@ -3753,7 +3850,7 @@ ScriptsOnlyBuild:
     className: CinemachineSameAsFollowTarget
   - hash:
       serializedVersion: 2
-      Hash: bc859fc88e96b5c3026ca3ba8b42f39f
+      Hash: a65e42e27711f8976e7a4bde5aed9734
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: YoutubeSimplified
@@ -4589,12 +4686,12 @@ ScriptsOnlyBuild:
   - Assets/Games/Jigsaw/Level Data/Sandbox Mode/02_Cycle/Cycle.unity
   - Assets/Games/Jigsaw/Level Data/Sandbox Mode/04_Mirror/Mirror.unity
   - Assets/Games/Jigsaw/Level Data/Sandbox Mode/05_Rotation/Rotation.unity
-  - Assets/Games/Jigsaw/Level Data/Werid Mode/06_Duck Rotation/Duck Rotation.unity
-  - Assets/Games/Jigsaw/Level Data/Werid Mode/07_Moving Cubes/Cubes.unity
+  - Assets/Games/Jigsaw/Level Data/Werid Mode/Duck Rotation/Duck Rotation.unity
+  - Assets/Games/Jigsaw/Level Data/Sandbox Mode/07_Moving Cubes/Cubes.unity
   - Assets/Games/Jigsaw/Level Data/Sandbox Mode/07_Sphere Mesh/Sphere.unity
   - Assets/Games/Jigsaw/Level Data/Sandbox Mode/09_Wobbly Mesh/Wobbly.unity
-  - Assets/Games/Jigsaw/Level Data/Werid Mode/11_Text/Text.unity
-  - Assets/Games/Jigsaw/Level Data/Werid Mode/12_Dancing/Dance.unity
+  - Assets/Games/Jigsaw/Level Data/Werid Mode/Text/Text.unity
+  - Assets/Games/Jigsaw/Level Data/Werid Mode/Dancing/Dance.unity
   - Assets/Games/Jigsaw/Level Data/Sandbox Mode/08_Low Rez/Rez.unity
   - Assets/Games/Jigsaw/Level Data/Story Mode/Old/7_Bird/Bird.unity
   - Assets/Games/Jigsaw/Level Data/Sandbox Mode/06_HorizonLine/Tv Static 1.unity
@@ -4617,5 +4714,6 @@ ScriptsOnlyBuild:
   - Assets/Games/Jigsaw/Level Data/Sandbox Mode/Tinted/Tinted_Blue.unity
   - Assets/Games/Jigsaw/Level Data/Sandbox Mode/Tinted/Tinted_Cycle.unity
   - Assets/Games/Jigsaw/Level Data/Sandbox Mode/extra/Extra.unity
+  - Assets/Games/Jigsaw/Level Data/Sandbox Mode/03_Skew/skew2.unity
   playerPath: C:/Users/sleig/Desktop/Moving Jigsaw Puzzles Steam Builds/Moving Jigsaw
     Puzzles.exe

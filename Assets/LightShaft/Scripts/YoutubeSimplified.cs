@@ -13,6 +13,7 @@ public class YoutubeSimplified : MonoBehaviour
     public bool autoPlay = true;
     public bool fullscreen = true;
     private VideoPlayer videoPlayer;
+    public VideoPlayer audioPlayer;
 
     public JigLevelManager manager;
     public bool test = false;
@@ -29,14 +30,22 @@ public class YoutubeSimplified : MonoBehaviour
     {
         if (manager)
         {
+
+            
+
             if (manager.path.StartsWith("https:") && manager.customFile && manager.customMode)
             {
                 url = manager.path;
+                
                 Play();
             }
         }
 
         if (test) { Play(); }
+
+     
+        
+
     }
 
     public void Play()

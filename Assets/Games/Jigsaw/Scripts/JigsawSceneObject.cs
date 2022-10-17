@@ -40,16 +40,16 @@ namespace MovingJigsaw
             {
                 if (gameObject.GetComponent<VideoPlayer>() == null)
                 {
-                    Debug.Log("Ok");
+                  // Debug.Log("Ok");
                     vid = gameObject.AddComponent<VideoPlayer>();
                 }
                 else
                 {
-                    Debug.Log("Test");
+                //    Debug.Log("Test");
                     vid = gameObject.GetComponent<VideoPlayer>();
                 }
 
-                Debug.Log("df");
+               // Debug.Log("df");
 
                 if (gm.Level.videoClip)
                 {

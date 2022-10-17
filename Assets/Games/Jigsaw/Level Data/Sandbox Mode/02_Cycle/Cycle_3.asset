@@ -26,5 +26,5 @@ MonoBehaviour:
   allowCustomFile: 1
   videoClip: {fileID: 0}
   puzzleTexture: {fileID: 0}
-  Customizable: 0
+  Customizable: 1
   Notes: 
