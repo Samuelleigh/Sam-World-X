@@ -119,4 +119,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Games/Jigsaw/Level Data/Sandbox Mode/03_Skew/skew2.unity
     guid: 4b4cb2b7e13d7604685702397f7a005b
+  - enabled: 1
+    path: Assets/Games/Jigsaw/Level Data/Werid Mode/Jump Scene/Scenes/Jump Scene.unity
+    guid: d7dba2ca4a5479040bcdf2d2bdb112e1
+  - enabled: 1
+    path: Assets/Games/Jigsaw/Level Data/Werid Mode/WASD Movement/WASDTemplate.unity
+    guid: e9aee266dbe9ee2489cee7471ce9c5d3
   m_configObjects: {}

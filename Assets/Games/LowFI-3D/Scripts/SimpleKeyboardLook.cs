@@ -6,13 +6,13 @@ public class SimpleKeyboardLook : MonoBehaviour
 {
 
     public float speed = 5;
-    public Camera camera;
+    public Camera cameraa;
     public Vector3 point;
 
     private void Awake()
     {
         point = transform.position;
-        camera = FindObjectOfType<Camera>();
+        cameraa = FindObjectOfType<Camera>();
     }
 
     // Start is called before the first frame update

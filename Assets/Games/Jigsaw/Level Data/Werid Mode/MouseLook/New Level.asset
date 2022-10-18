@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5485bfd46d4ed24492767cd900b16df, type: 3}
+  m_Name: New Level
+  m_EditorClassIdentifier: 
+  Name: Template
+  JigLevels:
+  - {fileID: 11400000, guid: 7dc7160bdb9f3884abad84904395d652, type: 2}
+  - {fileID: 11400000, guid: 98d63fc5a1c1ce047b7484345d0ec875, type: 2}
+  - {fileID: 11400000, guid: ad966172b17226944bbc0662a6f7f684, type: 2}
+  - {fileID: 11400000, guid: 36531a3c9ab0f1b43aa40d056e4086c3, type: 2}
+  Notes: 
