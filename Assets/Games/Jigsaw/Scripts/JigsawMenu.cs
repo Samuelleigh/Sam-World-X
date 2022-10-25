@@ -49,6 +49,10 @@ namespace MovingJigsaw
         private Color currentColor;
 
         private float darkenSelectColorAmount = 0.15f;
+
+        public TMP_InputField secondInput;
+        public TMP_InputField minuteInput;
+        public TMP_InputField hourInput;
     
 
         private void Awake()
@@ -347,6 +351,11 @@ namespace MovingJigsaw
 
         public void ChangeAlt(int altID)
         {
+
+            secondInput.text = "00";
+            hourInput.text = "00";
+            minuteInput.text = "00";
+            
 
             Debug.Log("Change alt");
 

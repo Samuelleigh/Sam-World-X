@@ -16,6 +16,9 @@ namespace MovingJigsaw
         public int playID;
         public int altID = 0;
         public string path;
+        public int startseconds = 0;
+        public int startminutes = 0;
+        public int starthours = 0;
         public bool customMode;
 
         public bool muteVideo = false;

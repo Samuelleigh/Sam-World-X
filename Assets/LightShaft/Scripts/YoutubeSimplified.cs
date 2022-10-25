@@ -18,6 +18,12 @@ public class YoutubeSimplified : MonoBehaviour
     public JigLevelManager manager;
     public bool test = false;
 
+    public int seconds;
+    public int minutes;
+    public int hours;
+
+    public int startTimeSeconds;
+
     private void Awake()
     {
         manager = FindObjectOfType<JigLevelManager>();
@@ -31,12 +37,18 @@ public class YoutubeSimplified : MonoBehaviour
         if (manager)
         {
 
-            
+            seconds = manager.startseconds;
+            hours = manager.starthours;
+            minutes = manager.startminutes;
+
+            startTimeSeconds = seconds + (minutes * 60) + (hours * 3600);
 
             if (manager.path.StartsWith("https:") && manager.customFile && manager.customMode)
             {
                 url = manager.path;
-                
+                Debug.Log(startTimeSeconds);
+                player.startFromSecond = true;
+                player.startFromSecondTime = startTimeSeconds;
                 Play();
             }
         }
@@ -56,8 +68,13 @@ public class YoutubeSimplified : MonoBehaviour
         }
         player.autoPlayOnStart = autoPlay;
         player.videoQuality = YoutubePlayer.YoutubeVideoQuality.STANDARD;
+        
 
-        if(autoPlay)
+        if (autoPlay)
+        {
+            
             player.Play(url);
+            
+        }
     }
 }

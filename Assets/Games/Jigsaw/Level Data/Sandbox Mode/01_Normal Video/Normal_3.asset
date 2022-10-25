@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 357420eebc2d1ce42ba00a2bfa08eb15, type: 3}
   m_Name: Normal_3
   m_EditorClassIdentifier: 
-  name: 9:16 Verticle
-  Xpieces: 4
-  Ypieces: 8
-  puzzleResolution: 2
+  name: Blank 3
+  Xpieces: 8
+  Ypieces: 4
+  puzzleResolution: 1
   SceneName: Normal_New
   numberOfpuzzles: 1
-  cameraID: 02000000
+  cameraID: 00000000
   enableShift: 1
   style: 
   difficulty: 0

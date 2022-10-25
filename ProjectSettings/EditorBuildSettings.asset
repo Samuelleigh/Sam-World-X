@@ -125,4 +125,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Games/Jigsaw/Level Data/Werid Mode/WASD Movement/WASDTemplate.unity
     guid: e9aee266dbe9ee2489cee7471ce9c5d3
+  - enabled: 1
+    path: Assets/Games/Jigsaw/Level Data/Werid Mode/WASD Movement/WASD1.unity
+    guid: 2a19b35151cc27e4fa061fc00b6ae106
+  - enabled: 1
+    path: Assets/Games/Jigsaw/Level Data/Werid Mode/WASD Movement/WASD2.unity
+    guid: 8ca619d9219db4f499bec441af2dea8f
+  - enabled: 1
+    path: Assets/Games/Jigsaw/Level Data/Werid Mode/WASD Movement/WASD3.unity
+    guid: 4b33d1c59bc27ea4da6f2b5b7cec862f
+  - enabled: 1
+    path: Assets/Games/Jigsaw/Level Data/Werid Mode/WASD Movement/WASD4.unity
+    guid: 3399f6cacd313b940ab60d344224894a
   m_configObjects: {}

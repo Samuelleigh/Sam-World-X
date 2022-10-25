@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 357420eebc2d1ce42ba00a2bfa08eb15, type: 3}
   m_Name: WASD_3
   m_EditorClassIdentifier: 
-  name: 
+  name: Dots
   Xpieces: 5
   Ypieces: 5
   puzzleResolution: 0
-  SceneName: WASDTemplate
+  SceneName: WASD3
   numberOfpuzzles: 1
-  cameraID: 02000000
+  cameraID: 00000000
   enableShift: 1
   style: 
   difficulty: 0

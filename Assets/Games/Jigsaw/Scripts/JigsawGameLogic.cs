@@ -807,11 +807,11 @@ namespace MovingJigsaw
 
                 if (piecesave.placed)
                 {
-                    Debug.Log("piece was placed");
+                   // Debug.Log("piece was placed");
 
                     foreach (GameObject g in temp)
                     {
-                        Debug.Log(g.GetComponent<SnapPiece>().x);
+                       // Debug.Log(g.GetComponent<SnapPiece>().x);
 
                         if (g.GetComponent<SnapPiece>().x == piecesave.placedX && g.GetComponent<SnapPiece>().y == piecesave.placedY)
                         {
