@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5485bfd46d4ed24492767cd900b16df, type: 3}
   m_Name: Normal
   m_EditorClassIdentifier: 
-  Name: Normal Blanks
+  Name: Normal
   JigLevels:
   - {fileID: 11400000, guid: d65ce337a67dbd24fa8dba9976615f2c, type: 2}
   - {fileID: 11400000, guid: d53439d06a54b4a46a1baaeadc7fd764, type: 2}

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using MovingJigsaw;
 
 public class GameSwitcher : MonoBehaviour
 {
@@ -11,7 +12,13 @@ public class GameSwitcher : MonoBehaviour
 
     public void Awake()
     {
-       
+        JigLevelManager j = FindObjectOfType<JigLevelManager>();
+        j.ForceSoundBackOn();
+    }
+
+    public void Start()
+    {
+        FindObjectOfType<SoundSystem>().PlayMusic("samSong");
     }
 
     public void FunSwitchMode() 
@@ -82,6 +89,8 @@ public class GameSwitcher : MonoBehaviour
 
     public void LoadNewGame(string name) 
     {
+
+        FindObjectOfType<SoundSystem>().PlayMusic("mute");
 
         if (FunGameSelect == true) { }
 

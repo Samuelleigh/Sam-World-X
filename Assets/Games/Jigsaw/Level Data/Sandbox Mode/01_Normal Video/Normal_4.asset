@@ -16,15 +16,15 @@ MonoBehaviour:
   Xpieces: 8
   Ypieces: 4
   puzzleResolution: 1
-  SceneName: Normal_New
+  SceneName: Normal
   numberOfpuzzles: 1
-  cameraID: 00000000
+  cameraID: 01000000
   enableShift: 1
   style: 
-  difficulty: 0
+  difficulty: 1
   centerAligned: 0
   allowCustomFile: 1
-  videoClip: {fileID: 32900000, guid: 255685a02fb9a5442b249df18d0c2fd9, type: 3}
+  videoClip: {fileID: 32900000, guid: a7d7a836625411541bf10ebb3554cb87, type: 3}
   puzzleTexture: {fileID: 0}
   Customizable: 1
   Notes: 

@@ -200,9 +200,22 @@ namespace MovingJigsaw
         
         }
 
-       
-     
-        
+        public void ForceSoundBackOn() 
+        {
+            muteVideo = false;
+
+            AudioSource[] sources = FindObjectOfType<SoundSystem>().gameObject.GetComponents<AudioSource>();
+
+            foreach (AudioSource s in sources)
+            {
+                s.mute = muteVideo;
+            }
+
+
+        }
+
+
+
 
 
     }

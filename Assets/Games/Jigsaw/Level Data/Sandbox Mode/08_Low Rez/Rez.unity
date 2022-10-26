@@ -456,7 +456,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 449566885}
-  m_LocalRotation: {x: 1, y: -0, z: -0, w: 0}
+  m_LocalRotation: {x: 0, y: -1, z: 0, w: 0}
   m_LocalPosition: {x: 1.6083832, y: -41.80395, z: -56.45336}
   m_LocalScale: {x: 10.634, y: 10.634, z: 10.634}
   m_Children: []
@@ -1787,8 +1787,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Cameras:
   - {fileID: 449566885}
-  - {fileID: 2038435429}
-  - {fileID: 336809939}
+  - {fileID: 449566885}
+  - {fileID: 449566885}
   vids: []
   videoPlayerInChargeOfAudio: {fileID: 0}
   jigManager: {fileID: 0}

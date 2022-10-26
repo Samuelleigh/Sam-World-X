@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Conform Video To Aspect Ratio
   JigLevels:
-  - {fileID: 11400000, guid: d65ce337a67dbd24fa8dba9976615f2c, type: 2}
-  - {fileID: 11400000, guid: d53439d06a54b4a46a1baaeadc7fd764, type: 2}
-  - {fileID: 11400000, guid: c35d3d78b34c646499b3d30d2489e008, type: 2}
+  - {fileID: 11400000, guid: c3173238afcd27d4cadbf08ed4d3aeb5, type: 2}
+  - {fileID: 11400000, guid: 58854876b18c9f64396c3925041d99b8, type: 2}
+  - {fileID: 11400000, guid: 1f4c4385af9f73a49a68a6d9e25a593c, type: 2}
   Notes: 
