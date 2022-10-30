@@ -11,6 +11,8 @@ public class SoundSystem : MonoBehaviour
     public Sound[] music;
     public static SoundSystem instance;
     public AudioSource musicSource;
+    public List<AudioSource> soundEffectsSources;
+    public bool mutesounds = false;
 
     // Start is called before the first frame update
 
@@ -34,6 +36,9 @@ public class SoundSystem : MonoBehaviour
             s.source.volume = s.volume;
             s.source.pitch = s.pitch;
             s.source.loop = s.loop;
+
+            soundEffectsSources.Add(s.source);
+
         }
 
 
@@ -100,5 +105,30 @@ public class SoundSystem : MonoBehaviour
 
         }
         bucket[Random.Range(0, bucket.Count)].source.Play();
+    }
+
+    public void SwitchMuteSounds() 
+    {
+        mutesounds = !mutesounds;
+
+
+        for (int i = 0; i < soundEffectsSources.Count; i++) 
+        {
+            if (mutesounds)
+            {
+                soundEffectsSources[i].playOnAwake = false;
+                soundEffectsSources[i].enabled = false;
+
+            }
+            else
+            {
+
+                soundEffectsSources[i].enabled = true;
+
+            }
+
+        }      
+              
+
     }
 }

@@ -53,11 +53,17 @@ namespace MovingJigsaw
         public TMP_InputField secondInput;
         public TMP_InputField minuteInput;
         public TMP_InputField hourInput;
-    
+
+        public Button muteSoundButton;
+        public Button muteMusicButton;
 
         private void Awake()
         {
             manager = FindObjectOfType<JigLevelManager>();
+
+            muteMusicButton.onClick.AddListener(delegate { manager.FlipMuteVideo();  });
+            muteSoundButton.onClick.AddListener(delegate { manager.FlipMuteSound();  });
+
         }
         // Start is called before the first frame update
         void Start()
@@ -164,7 +170,10 @@ namespace MovingJigsaw
                 ChangeUIView(2);
             }
 
-          //  PopulateScrollView(manager.StoryJigsaws);
+            //  PopulateScrollView(manager.StoryJigsaws);
+
+            if (manager.muteSound) { muteSoundButton.gameObject.GetComponentInChildren<TextMeshProUGUI>().text = "Unmute Sound"; }
+            else { muteSoundButton.gameObject.GetComponentInChildren<TextMeshProUGUI>().text = "Mute Sound"; }
 
           
         }
@@ -825,6 +834,29 @@ namespace MovingJigsaw
             
           
        
+        }
+
+        public void SetTextToMuteOrUnmute(GameObject text) 
+        {
+            if (text.GetComponent<TextMeshProUGUI>().text == "Mute Sound")
+            {
+                text.GetComponent<TextMeshProUGUI>().text = "Unmute Sound";
+            }
+            else if(text.GetComponent<TextMeshProUGUI>().text == "Unmute Sound") 
+            {
+                text.GetComponent<TextMeshProUGUI>().text = "Mute Sound";
+            }
+
+         //   if (text.GetComponent<TextMeshProUGUI>().text == "Mute Music")
+         //   {
+         //       text.GetComponent<TextMeshProUGUI>().text = "Unmute Music";
+         //   }
+         //   else if (text.GetComponent<TextMeshProUGUI>().text == "Unmute Music")
+         //   {
+         //       text.GetComponent<TextMeshProUGUI>().text = "Mute Music";
+         //   }
+
+
         }
 
     }

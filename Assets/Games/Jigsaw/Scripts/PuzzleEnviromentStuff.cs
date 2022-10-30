@@ -32,6 +32,12 @@ namespace MovingJigsaw
                 }
             }
 
+            if (jigManager.muteVideo == true) 
+            {
+                videoPlayerInChargeOfAudio.SetDirectAudioMute(0, true);
+
+            }
+
         }
 
         private void Update()

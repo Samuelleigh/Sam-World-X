@@ -380,7 +380,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &81587936
 GameObject:
@@ -3154,6 +3154,8 @@ MonoBehaviour:
   secondInput: {fileID: 609279221}
   minuteInput: {fileID: 1718463813}
   hourInput: {fileID: 1284100948}
+  muteSoundButton: {fileID: 1978980671}
+  muteMusicButton: {fileID: 1161551389}
 --- !u!4 &256096842
 Transform:
   m_ObjectHideFlags: 0
@@ -3215,7 +3217,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &293017240
 GameObject:
@@ -3274,7 +3276,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Reset level to change customization
+  m_text: 'Reset puzzle to customize '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0491c49f4cbb85348a134305cf91c127, type: 2}
   m_sharedMaterial: {fileID: 21722043216658014, guid: 0491c49f4cbb85348a134305cf91c127,
@@ -3310,7 +3312,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -6695,7 +6697,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &625132239
 GameObject:
@@ -8145,7 +8147,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &721817446
 GameObject:
@@ -13447,7 +13449,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &1160168149
 AudioSource:
@@ -13640,13 +13642,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1024758686}
-        m_TargetAssemblyTypeName: MovingJigsaw.JigLevelManager, Assembly-CSharp
-        m_MethodName: FlipMuteVideo
-        m_Mode: 1
+      - m_Target: {fileID: 256096841}
+        m_TargetAssemblyTypeName: MovingJigsaw.JigsawMenu, Assembly-CSharp
+        m_MethodName: SetTextToMuteOrUnmute
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 407603046}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -14578,7 +14580,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1264435224
 PrefabInstance:
@@ -15928,7 +15930,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1334312814
 GameObject:
@@ -18091,94 +18093,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1560911218}
   m_CullTransparentMesh: 0
---- !u!1 &1568970156
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1568970157}
-  - component: {fileID: 1568970158}
-  m_Layer: 0
-  m_Name: SoundSystem
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &1568970157
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1568970156}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 948.31146, y: 580.79834, z: -2002.5}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1568970158
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1568970156}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 311fde50a9e6d0e47a683a78216babbc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sounds:
-  - name: click
-    clip: {fileID: 8300000, guid: 8e225be830d81b14689e16dd7a5eb5c6, type: 3}
-    volume: 0.146
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
-  - name: Boy
-    clip: {fileID: 8300000, guid: 8e225be830d81b14689e16dd7a5eb5c6, type: 3}
-    volume: 0.363
-    pitch: 0.8
-    loop: 0
-    source: {fileID: 0}
-  - name: Big
-    clip: {fileID: 8300000, guid: 8e225be830d81b14689e16dd7a5eb5c6, type: 3}
-    volume: 0.46
-    pitch: 1.2
-    loop: 0
-    source: {fileID: 0}
-  - name: Knock
-    clip: {fileID: 8300000, guid: 188e5ca9ec774a240b2b74a6c086386a, type: 3}
-    volume: 0.56
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
-  - name: doorshut
-    clip: {fileID: 8300000, guid: 5a3f038b5c29e6f4d89ff87f6e59a04a, type: 3}
-    volume: 0.56
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
-  music:
-  - name: overworldmusic
-    clip: {fileID: 8300000, guid: 79b3f0f2544722c4cb2f7a0d335c196a, type: 3}
-    volume: 0.3
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
-  - name: menumusic
-    clip: {fileID: 8300000, guid: 468caf0b0032fdd4aa43713c4536898f, type: 3}
-    volume: 1
-    pitch: 1
-    loop: 1
-    source: {fileID: 0}
-  musicSource: {fileID: 0}
 --- !u!1 &1573459899
 GameObject:
   m_ObjectHideFlags: 0
@@ -20146,7 +20060,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1693004652
 MonoBehaviour:
@@ -21541,7 +21455,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1832903028
 GameObject:
@@ -22447,6 +22361,8 @@ MonoBehaviour:
     loop: 1
     source: {fileID: 0}
   musicSource: {fileID: 0}
+  soundEffectsSources: []
+  mutesounds: 0
 --- !u!4 &1888229511
 Transform:
   m_ObjectHideFlags: 0
@@ -22459,7 +22375,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1897823573
 GameObject:
@@ -23677,13 +23593,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1024758686}
-        m_TargetAssemblyTypeName: MovingJigsaw.JigLevelManager, Assembly-CSharp
-        m_MethodName: FlipMuteSound
-        m_Mode: 1
+      - m_Target: {fileID: 256096841}
+        m_TargetAssemblyTypeName: MovingJigsaw.JigsawMenu, Assembly-CSharp
+        m_MethodName: SetTextToMuteOrUnmute
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 1428739351}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -24733,7 +24649,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2075296830
 GameObject:

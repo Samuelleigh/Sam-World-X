@@ -159,44 +159,39 @@ namespace MovingJigsaw
 
             muteVideo = !muteVideo;
 
-            AudioSource[] sources = FindObjectOfType<SoundSystem>().gameObject.GetComponents<AudioSource>();
-
-            foreach (AudioSource s in sources)
-            {
-                s.mute = muteVideo;
-            }
-
-
-            if (FindObjectOfType<PuzzleEnviromentStuff>())
+            if (FindObjectOfType<SoundSystem>())
             {
 
-                FindObjectOfType<PuzzleEnviromentStuff>().Mute();
+                AudioSource[] sources = FindObjectOfType<SoundSystem>().gameObject.GetComponents<AudioSource>();
+
+                foreach (AudioSource s in sources)
+                {
+                    s.mute = muteVideo;
+                }
+
+
+                if (FindObjectOfType<PuzzleEnviromentStuff>())
+                {
+
+                    FindObjectOfType<PuzzleEnviromentStuff>().Mute();
+                }
+
+                if (FindObjectOfType<MainMenuMusicController>())
+                {
+                    FindObjectOfType<MainMenuMusicController>().EnableBackgroundMusic();
+                }
+
             }
-
-            if (FindObjectOfType<MainMenuMusicController>())
-            {
-                FindObjectOfType<MainMenuMusicController>().EnableBackgroundMusic();
-            }
-
-
-
+            
         
         }
 
         public void FlipMuteSound() 
         {
             muteSound = !muteSound;
+            soundsystem.SwitchMuteSounds();
 
-            if (muteSound)
-            {
-
-
-            }
-            else 
-            {
             
-            
-            }
         
         }
 

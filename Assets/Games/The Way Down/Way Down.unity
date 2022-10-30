@@ -21872,7 +21872,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 812630014}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!20 &812630017
 Camera:
   m_ObjectHideFlags: 0
@@ -47288,6 +47288,8 @@ MonoBehaviour:
     loop: 1
     source: {fileID: 0}
   musicSource: {fileID: 0}
+  soundEffectsSources: []
+  mutesounds: 0
 --- !u!4 &1692173617
 Transform:
   m_ObjectHideFlags: 0
