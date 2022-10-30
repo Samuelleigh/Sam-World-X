@@ -24,7 +24,7 @@ MonoBehaviour:
   difficulty: 1
   centerAligned: 0
   allowCustomFile: 1
-  videoClip: {fileID: 32900000, guid: 990a7bfc96a459a4598917243343c233, type: 3}
+  videoClip: {fileID: 32900000, guid: 7d786a1d390a05340930c05334fac9da, type: 3}
   puzzleTexture: {fileID: 0}
   Customizable: 1
   Notes: 
