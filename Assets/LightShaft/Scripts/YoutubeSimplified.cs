@@ -30,6 +30,7 @@ public class YoutubeSimplified : MonoBehaviour
         videoPlayer = GetComponentInChildren<VideoPlayer>();
         player = GetComponentInChildren<YoutubePlayer>();
         player.videoPlayer = videoPlayer;
+        
     }
 
     private void Start()
@@ -55,7 +56,7 @@ public class YoutubeSimplified : MonoBehaviour
 
         if (test) { Play(); }
 
-     
+        Invoke("ForceOnSkipOnDrop",2f);
         
 
     }
@@ -77,4 +78,16 @@ public class YoutubeSimplified : MonoBehaviour
             
         }
     }
+
+    public void ForceOnSkipOnDrop()
+    {
+        videoPlayer.skipOnDrop = true;
+
+    }
+
+    public void Update()
+    {
+        videoPlayer.skipOnDrop = true;
+    }
+
 }

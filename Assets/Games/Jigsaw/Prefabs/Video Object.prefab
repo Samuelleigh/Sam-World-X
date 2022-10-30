@@ -246,6 +246,10 @@ MonoBehaviour:
   audioPlayer: {fileID: 3144992672212529657}
   manager: {fileID: 0}
   test: 0
+  seconds: 0
+  minutes: 0
+  hours: 0
+  startTimeSeconds: 0
 --- !u!1 &9043265507774642980
 GameObject:
   m_ObjectHideFlags: 0

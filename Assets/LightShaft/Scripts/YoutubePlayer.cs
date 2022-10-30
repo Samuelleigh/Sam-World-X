@@ -94,6 +94,7 @@ namespace LightShaft.Scripts
                 }
                 else
                 {
+                    videoPlayer.time = startFromSecondTime;
                     audioPlayer.time = startFromSecondTime;
                 }
             }
@@ -209,6 +210,7 @@ namespace LightShaft.Scripts
                             Debug.Log("Finished");
                         if (videoPlayer.isLooping)
                         {
+                            
                             videoPlayer.time = 0;
                             videoPlayer.frame = 0;
                             audioPlayer.time = 0;
