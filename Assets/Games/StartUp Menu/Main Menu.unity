@@ -5190,7 +5190,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.71363354, g: 0.9811321, b: 0.7096238, a: 1}
+  m_Color: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -8045,8 +8045,7 @@ MonoBehaviour:
     time gained during the pandemic, so while I'm proud of my work, I can't help
     but see it as a monument to my life being trapped inside.\r\n\r\nPre-pandemic,
     magically gaining a full year to just work on games was something I was secretly
-    hoping for. Funny that...\r\n\r\nAnyway, thanks for reading this!\r\n\n\n\n\n
-    \n\n"
+    hoping for. Funny that...\r\n\r\nAnyway, thanks for reading this!\r\n\n\n\n\n\n\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0491c49f4cbb85348a134305cf91c127, type: 2}
   m_sharedMaterial: {fileID: 21722043216658014, guid: 0491c49f4cbb85348a134305cf91c127,
