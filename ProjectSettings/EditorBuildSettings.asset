@@ -137,4 +137,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Games/Jigsaw/Level Data/Werid Mode/WASD Movement/WASD4.unity
     guid: 3399f6cacd313b940ab60d344224894a
+  - enabled: 1
+    path: Assets/Games/Jigsaw/Level Data/Sandbox Mode/Mouse Move/Mouse Move.unity
+    guid: 383b325a0e8230545874ca4bd17333b2
+  - enabled: 1
+    path: Assets/Games/Jigsaw/Level Data/Sandbox Mode/Mouse Move/Mouse Move 1.unity
+    guid: aabc81142a8c82d4ea0c434b9a4c9701
+  - enabled: 1
+    path: Assets/Games/Jigsaw/Level Data/Sandbox Mode/Mouse Move/Mouse Move 2.unity
+    guid: 91ec9c0c729ec5446936516a50b49122
+  - enabled: 1
+    path: Assets/Games/Jigsaw/Level Data/Sandbox Mode/Mouse Move/Mouse Move 3.unity
+    guid: 560c95d3c3551f840be3a334864fb805
   m_configObjects: {}

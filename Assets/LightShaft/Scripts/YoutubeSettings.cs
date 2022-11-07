@@ -15,6 +15,7 @@ using UnityEngine.Networking;
 using UnityEngine.UI;
 using UnityEngine.Video;
 using YoutubeLight;
+using MovingJigsaw;
 
 namespace LightShaft.Scripts
 {
@@ -261,6 +262,7 @@ namespace LightShaft.Scripts
             if (request.error != null)
             {
                 Debug.Log("Error: " + request.error);
+                InternetError();
             }
             else
             {
@@ -1807,7 +1809,10 @@ namespace LightShaft.Scripts
             
             lastErrorTime = Time.time;
             RetryPlayYoutubeVideo();
+            InternetError();
             Debug.Log("Youtube VideoErrorReceived! Retry: " + message);
+
+           
         }
 
         [HideInInspector]
@@ -3519,6 +3524,15 @@ namespace LightShaft.Scripts
             //Check if have the url generated on cache, if yes check the expire timecode, if it is already expired delete and generate a new one, if no, use this instead to prevent calls to server.
             PlayerPrefs.SetString("id", "url");
             PlayerPrefs.SetInt("id-expire", 1634364304);
+        }
+
+        public void InternetError() 
+        {
+            if (FindObjectOfType<JigsawGameLogic>())
+            {
+                FindObjectOfType<JigsawGameLogic>().LostInternetConnection();
+            }
+
         }
     }
 

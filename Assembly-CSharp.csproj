@@ -126,6 +126,7 @@
     <Compile Include="Assets\LightShaft\YoutubeAPI\Scripts\YoutubeSubtitlesReader.cs" />
     <Compile Include="Assets\LightShaft\YoutubeSrc\Exceptions.cs" />
     <Compile Include="Assets\LightShaft\CustomYoutubePlayer\VideoPlayer Helper\Scripts\DirectClickRouter.cs" />
+    <Compile Include="Assets\Games\Raycast check\3D Movement\PlayerMovement.cs" />
     <Compile Include="Assets\Doodle Studio 95\Examples\Scripts\RespawnOnOppositeEnd.cs" />
     <Compile Include="Assets\Games\Guessing Game\Scripts\GameLogic.cs" />
     <Compile Include="Assets\Games\10 Games You can play with\PhysicalGame.cs" />
@@ -184,6 +185,7 @@
     <Compile Include="Assets\Games\To Be Finished In next Collection\Cafe\Scripts\CafeTrackedVaribles.cs" />
     <Compile Include="Assets\LightShaft\Scripts\VideoController\VideoProgressBar.cs" />
     <Compile Include="Assets\ScribbleDrivel\Scripts\ChangeBrushSettings.cs" />
+    <Compile Include="Assets\Games\Raycast check\RayCastManager.cs" />
     <Compile Include="Assets\Games\Conversation With A Rock\Scripts\RockConversation.cs" />
     <Compile Include="Assets\YoutubeLinksFrameUI.cs" />
     <Compile Include="Assets\Games\Jigsaw\Scripts\AnimationStart.cs" />
@@ -193,6 +195,7 @@
     <Compile Include="Assets\LightShaft\Scripts\CustomTools\SliderDrag.cs" />
     <Compile Include="Assets\LightShaft\YoutubeAPI\Scripts\Src\YoutubeStatistics.cs" />
     <Compile Include="Assets\LightShaft\CustomYoutubePlayer\VideoPlayer Helper\Scripts\Animation\CanvasGroupAnimator.cs" />
+    <Compile Include="Assets\Games\Raycast check\3D Movement\CameraRotation.cs" />
     <Compile Include="Assets\Games\Jigsaw\MusicManager.cs" />
     <Compile Include="Assets\LightShaft\Scripts\YoutubeVideoEvents.cs" />
     <Compile Include="Assets\Games\Jigsaw\Scripts\JigsawPieceDrag.cs" />
@@ -219,6 +222,7 @@
     <Compile Include="Assets\Shared\WebScript.cs" />
     <Compile Include="Assets\Games\TestScript.cs" />
     <Compile Include="Assets\LightShaft\YoutubeAPI\Scripts\Demos\PlaylistDemo.cs" />
+    <Compile Include="Assets\Games\Raycast check\3D Movement\MoveCamToPostion.cs" />
     <Compile Include="Assets\Games\LowFI-3D\Models\WavingGrass\Scripts\GrassController.cs" />
     <Compile Include="Assets\Doodle Studio 95\Examples\Assets\2D Environment\BirdCharacter.cs" />
     <Compile Include="Assets\Games\Overworld\Scripts\TextObject.cs" />
@@ -240,7 +244,6 @@
     <Compile Include="Assets\Doodle Studio 95\Examples\Scripts\WalkingCharacter.cs" />
     <Compile Include="Assets\Shared\Sound System\Sound.cs" />
     <Compile Include="Assets\Games\Drawing Game\DrawingGameLogic.cs" />
-    <Compile Include="Assets\Games\Raycast check\RayCastManager.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Shared\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
@@ -872,121 +875,155 @@
     <Reference Include="System.Web">
       <HintPath>C:\Program Files\2020.1.5f1\Editor\Data\MonoBleedingEdge\lib\mono\4.7.1-api\System.Web.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.RenderPipeline.Universal.ShaderLibrary">
-      <HintPath>Library\ScriptAssemblies\Unity.RenderPipeline.Universal.ShaderLibrary.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Timeline.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Cinemachine">
-      <HintPath>Library\ScriptAssemblies\Cinemachine.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.RenderPipelines.Universal.Shaders">
-      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VSCode.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.ProBuilder">
-      <HintPath>Library\ScriptAssemblies\Unity.ProBuilder.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.RenderPipelines.Core.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Core.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.ProBuilder.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.ProBuilder.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.ProBuilder.AssetIdRemapUtility">
-      <HintPath>Library\ScriptAssemblies\Unity.ProBuilder.AssetIdRemapUtility.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.RenderPipelines.Core.Runtime">
-      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Core.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.RenderPipelines.Universal.Runtime">
-      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.RenderPipelines.Universal.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.UI">
-      <HintPath>Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Searcher.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.Searcher.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Timeline">
-      <HintPath>Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Postprocessing.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.Postprocessing.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.XR.LegacyInputHelpers">
-      <HintPath>Library\ScriptAssemblies\UnityEngine.XR.LegacyInputHelpers.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Rider.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
-      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.2D.Sprite.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Postprocessing.Runtime">
-      <HintPath>Library\ScriptAssemblies\Unity.Postprocessing.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.2D.Tilemap.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.2D.Tilemap.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.SpatialTracking">
-      <HintPath>Library\ScriptAssemblies\UnityEditor.SpatialTracking.dll</HintPath>
-    </Reference>
-    <Reference Include="com.unity.cinemachine.editor">
-      <HintPath>Library\ScriptAssemblies\com.unity.cinemachine.editor.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.SpatialTracking">
-      <HintPath>Library\ScriptAssemblies\UnityEngine.SpatialTracking.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VisualStudio.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.ProBuilder.AddOns.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.ProBuilder.AddOns.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.ShaderGraph.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.ShaderGraph.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
-      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.TextMeshPro">
-      <HintPath>Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Analytics.DataPrivacy">
-      <HintPath>Library\ScriptAssemblies\Unity.Analytics.DataPrivacy.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.XR.LegacyInputHelpers">
-      <HintPath>Library\ScriptAssemblies\UnityEditor.XR.LegacyInputHelpers.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.UI">
-      <HintPath>Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="Unity.RenderPipeline.Universal.ShaderLibrary.csproj">
+      <Project>{09AEBA35-6470-C937-4E78-4DE90B8C5CC9}</Project>
+      <Name>Unity.RenderPipeline.Universal.ShaderLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Timeline.Editor.csproj">
+      <Project>{C3D7A31E-68AF-3575-A1CD-9CFCD570B12C}</Project>
+      <Name>Unity.Timeline.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Cinemachine.csproj">
+      <Project>{3671FE4B-4236-6727-BF71-C2427BDF57C3}</Project>
+      <Name>Cinemachine</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipelines.Universal.Shaders.csproj">
+      <Project>{6BE1CFCC-0AFE-BB75-D4AE-96079D78ED4B}</Project>
+      <Name>Unity.RenderPipelines.Universal.Shaders</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.VSCode.Editor.csproj">
+      <Project>{4DD0F2E7-0484-18FE-C8C0-0EBBCC5A5672}</Project>
+      <Name>Unity.VSCode.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.ProBuilder.csproj">
+      <Project>{788643C8-F5C9-F0C7-AB04-9E13E317FD01}</Project>
+      <Name>Unity.ProBuilder</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipelines.Core.Editor.csproj">
+      <Project>{F88315CC-6603-52FC-0FD0-19995A138490}</Project>
+      <Name>Unity.RenderPipelines.Core.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.ProBuilder.Editor.csproj">
+      <Project>{86610D0E-34B3-9657-E47D-241D8A9EEC96}</Project>
+      <Name>Unity.ProBuilder.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.ProBuilder.AssetIdRemapUtility.csproj">
+      <Project>{94963576-ED66-5BD9-E840-356ED75FD33F}</Project>
+      <Name>Unity.ProBuilder.AssetIdRemapUtility</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipelines.Core.Runtime.csproj">
+      <Project>{5DE6E3F6-083D-567A-FFF6-7DBA1DDF95FD}</Project>
+      <Name>Unity.RenderPipelines.Core.Runtime</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.TextMeshPro.Editor.csproj">
+      <Project>{8D6CE595-BA25-5254-CD73-48D11518578F}</Project>
+      <Name>Unity.TextMeshPro.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipelines.Universal.Runtime.csproj">
+      <Project>{57400AD9-328B-4770-BB39-27E28F7333F1}</Project>
+      <Name>Unity.RenderPipelines.Universal.Runtime</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipelines.Universal.Editor.csproj">
+      <Project>{232C9BF6-5C25-18C4-61AF-F0F61F7F6026}</Project>
+      <Name>Unity.RenderPipelines.Universal.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityEngine.UI.csproj">
+      <Project>{85385467-EC2E-E8A7-7828-536265D311F3}</Project>
+      <Name>UnityEngine.UI</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Searcher.Editor.csproj">
+      <Project>{7C053956-CA4D-5E2A-9880-9436AB045508}</Project>
+      <Name>Unity.Searcher.Editor</Name>
+    </ProjectReference>
     <ProjectReference Include="Ink-Libraries.csproj">
       <Project>{18234A9E-6D4C-358F-5F1A-9494433DAD0A}</Project>
       <Name>Ink-Libraries</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Timeline.csproj">
+      <Project>{3C8AB648-F4D3-C8A4-718E-0EC61DB2B4BC}</Project>
+      <Name>Unity.Timeline</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Postprocessing.Editor.csproj">
+      <Project>{9EA9157B-4391-35AA-B239-D0A27CC4BD0B}</Project>
+      <Name>Unity.Postprocessing.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityEngine.XR.LegacyInputHelpers.csproj">
+      <Project>{B0FCC944-FB10-EA96-E025-5B5FA9FF29D4}</Project>
+      <Name>UnityEngine.XR.LegacyInputHelpers</Name>
     </ProjectReference>
     <ProjectReference Include="com.rlabrecque.steamworks.net.editor.csproj">
       <Project>{0C9CDED3-08BF-1F13-68DA-0A5ABE6D1296}</Project>
       <Name>com.rlabrecque.steamworks.net.editor</Name>
     </ProjectReference>
+    <ProjectReference Include="Unity.Rider.Editor.csproj">
+      <Project>{C9D580AE-2CCB-5D59-5FA7-F12EA13A3720}</Project>
+      <Name>Unity.Rider.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.csproj">
+      <Project>{B65AF317-3ED8-295C-DD35-1F4AF00699DE}</Project>
+      <Name>Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.2D.Sprite.Editor.csproj">
+      <Project>{56EA5DD4-0982-E575-6133-7876DB0336B4}</Project>
+      <Name>Unity.2D.Sprite.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Postprocessing.Runtime.csproj">
+      <Project>{3B34CC4C-08B4-F4F7-E5A7-883DF43791DC}</Project>
+      <Name>Unity.Postprocessing.Runtime</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.2D.Tilemap.Editor.csproj">
+      <Project>{633BAAA3-4B5D-EB43-5B12-BCE76FA17CAF}</Project>
+      <Name>Unity.2D.Tilemap.Editor</Name>
+    </ProjectReference>
     <ProjectReference Include="com.rlabrecque.steamworks.net.csproj">
       <Project>{9DBC4C73-6E04-8795-CA03-0870AAE69C59}</Project>
       <Name>com.rlabrecque.steamworks.net</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityEditor.SpatialTracking.csproj">
+      <Project>{C861329C-B053-7B5C-CCDC-86934B49512F}</Project>
+      <Name>UnityEditor.SpatialTracking</Name>
+    </ProjectReference>
+    <ProjectReference Include="com.unity.cinemachine.editor.csproj">
+      <Project>{61ACE1D0-5BB4-B91D-4B3C-9A8283462F91}</Project>
+      <Name>com.unity.cinemachine.editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityEngine.SpatialTracking.csproj">
+      <Project>{FEB05C0D-FB23-98E1-4FDB-9000E9B03A84}</Project>
+      <Name>UnityEngine.SpatialTracking</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.VisualStudio.Editor.csproj">
+      <Project>{2B57C6F0-145B-8486-7801-B5375050CD04}</Project>
+      <Name>Unity.VisualStudio.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.ProBuilder.AddOns.Editor.csproj">
+      <Project>{50389C79-9DBA-CC2D-284A-976338C7E182}</Project>
+      <Name>Unity.ProBuilder.AddOns.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.ShaderGraph.Editor.csproj">
+      <Project>{E7E76264-41C7-2915-C1BC-5F536575A8D4}</Project>
+      <Name>Unity.ShaderGraph.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipelines.Core.ShaderLibrary.csproj">
+      <Project>{36838762-BB7F-CBD0-417C-403FC1F823ED}</Project>
+      <Name>Unity.RenderPipelines.Core.ShaderLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.TextMeshPro.csproj">
+      <Project>{CF13EBBD-00E5-CE33-5953-FC5F80A1140A}</Project>
+      <Name>Unity.TextMeshPro</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Analytics.DataPrivacy.csproj">
+      <Project>{5EF21F0C-561B-F22A-16DB-D1871AF33D98}</Project>
+      <Name>Unity.Analytics.DataPrivacy</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityEditor.XR.LegacyInputHelpers.csproj">
+      <Project>{843532A4-EEBD-AC9F-3927-39ADC6621080}</Project>
+      <Name>UnityEditor.XR.LegacyInputHelpers</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityEditor.UI.csproj">
+      <Project>{2A3E89F1-2E8D-80AB-7EC0-5242F68666EE}</Project>
+      <Name>UnityEditor.UI</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

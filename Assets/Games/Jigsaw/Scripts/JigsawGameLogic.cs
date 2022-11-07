@@ -102,6 +102,9 @@ namespace MovingJigsaw
         public int FinalLevelstep;
         public GameObject death;
 
+
+        public GameObject LostConenctionMessage;
+
         private void Awake()
         {
             loadingscreen.SetActive(true);
@@ -923,6 +926,15 @@ namespace MovingJigsaw
 
             }
         
+        
+        }
+
+        public void LostInternetConnection() 
+        {
+
+          
+
+            LostConenctionMessage.SetActive(true);
         
         }
 
