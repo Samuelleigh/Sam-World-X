@@ -79,8 +79,6 @@ ScriptsOnlyBuild:
     - YouTubeLinkButton
     - YoutubeLinksFrameUI
     - YoutubeSimplified
-    - lb_Bird
-    - lb_CrowProximity
     Unity.2D.Tilemap.Editor.dll:
     - UnityEditor.Tilemaps.GridPaintingState
     - UnityEditor.Tilemaps.GridPaletteBrushes
@@ -610,15 +608,9 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 28
       Script: {instanceID: 0}
-    - Class: 43
-      Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
     - Class: 49
-      Script: {instanceID: 0}
-    - Class: 54
-      Script: {instanceID: 0}
-    - Class: 65
       Script: {instanceID: 0}
     - Class: 74
       Script: {instanceID: 0}
@@ -629,8 +621,6 @@ ScriptsOnlyBuild:
     - Class: 83
       Script: {instanceID: 0}
     - Class: 84
-      Script: {instanceID: 0}
-    - Class: 90
       Script: {instanceID: 0}
     - Class: 91
       Script: {instanceID: 0}
@@ -677,8 +667,6 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12460}
     - Class: 114
-      Script: {instanceID: 12574}
-    - Class: 114
       Script: {instanceID: 12582}
     - Class: 114
       Script: {instanceID: 12618}
@@ -718,8 +706,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 14752}
     - Class: 114
       Script: {instanceID: 14942}
-    - Class: 114
-      Script: {instanceID: 15130}
     - Class: 114
       Script: {instanceID: 15188}
     - Class: 114
@@ -784,17 +770,9 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 128
       Script: {instanceID: 0}
-    - Class: 135
-      Script: {instanceID: 0}
-    - Class: 137
-      Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
-      Script: {instanceID: 0}
-    - Class: 198
-      Script: {instanceID: 0}
-    - Class: 199
       Script: {instanceID: 0}
     - Class: 212
       Script: {instanceID: 0}
