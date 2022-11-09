@@ -4,51 +4,28 @@ using UnityEngine;
 
 public class RayCastManager : MonoBehaviour
 {
-    [SerializeField] private string selectableTag = "select";
-    [SerializeField] private Material highlightMaterial;
-    [SerializeField] private Material defaultMaterial;
 
-    [SerializeField]private Transform _selection;
-
-    [SerializeField] private Transform BoxStart;
+    public Camera s;
 
     // Update is called once per frame
     void Update()
     {
 
-        if (_selection != null)
-        {
-            var selectionRenderer = _selection.GetComponent<Renderer>();
-            selectionRenderer.material = defaultMaterial;
-            _selection = null;
-
-        }
-
-
-        Ray ray = new Ray(BoxStart.position,Vector3.right);
-        //Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
+        Ray ray = new Ray(s.transform.position, s.transform.forward);
+        Debug.DrawRay(s.transform.position, s.transform.forward * 100);
 
-        Debug.DrawRay(ray.origin,ray.direction * 20,Color.red);
+       
 
-
-        if (Physics.Raycast(ray, out hit)) 
-        {
-            
-            Transform selection = hit.transform;
-            if (selection.CompareTag(selectableTag))
+            if (Physics.Raycast(ray, out hit))
             {
-        
-                Renderer selectionRenderer = selection.GetComponent<Renderer>();
-                if (selectionRenderer != null)
-                {
-
-                    selectionRenderer.material = highlightMaterial;
-                }
-
-                _selection = selection;
+            Debug.DrawRay(ray.origin,ray.direction);
+            Debug.Log(hit.transform.gameObject);
+            
             }
-        }
+        
+        
+        
 
     }
 }

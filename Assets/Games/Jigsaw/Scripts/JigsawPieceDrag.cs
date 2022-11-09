@@ -47,6 +47,8 @@ namespace MovingJigsaw
 
             SoundSystem.instance.PlaySound("click");
 
+           
+
         }
 
         public void OnDrag(PointerEventData eventData)
@@ -79,7 +81,7 @@ namespace MovingJigsaw
                         SnapToPiece(raycastResultList[i].gameObject);
 
                         //if not on the last level
-                        if (gm.Level.name != "Just A Dream")
+                        if (gm.Level.name != "Just A Dream (Play last)")
                         {
                             gm.CheckWin(jig.puzzleID);
                         }
@@ -101,7 +103,7 @@ namespace MovingJigsaw
 
             jig.UpdatePostionInSave();
 
-            if (gm.Level.name == "Just A Dream") 
+            if (gm.Level.name == "Just A Dream (Play last)") 
             {
                 Debug.Log("werid");
                 gameObject.SetActive(false);

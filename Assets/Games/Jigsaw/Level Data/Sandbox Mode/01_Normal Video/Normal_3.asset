@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 357420eebc2d1ce42ba00a2bfa08eb15, type: 3}
   m_Name: Normal_3
   m_EditorClassIdentifier: 
-  name: Blank 3
-  Xpieces: 8
-  Ypieces: 4
-  puzzleResolution: 1
+  name: Square Easy
+  Xpieces: 5
+  Ypieces: 5
+  puzzleResolution: 0
   SceneName: Normal_New
   numberOfpuzzles: 1
   cameraID: 01000000

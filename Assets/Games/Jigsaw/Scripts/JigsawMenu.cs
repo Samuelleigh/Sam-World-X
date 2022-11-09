@@ -57,6 +57,9 @@ namespace MovingJigsaw
         public Button muteSoundButton;
         public Button muteMusicButton;
 
+        public int maxPieces;
+        public GameObject maxPieceMessage;
+
         private void Awake()
         {
             manager = FindObjectOfType<JigLevelManager>();
@@ -540,9 +543,10 @@ namespace MovingJigsaw
                     manager.CustomX = 1;
                     infoCustom[0].GetComponent<TMP_InputField>().text = manager.CustomX.ToString();
                 }
-                if (manager.CustomX > 20)
+                if (manager.CustomX * manager.CustomY > maxPieces)
                 {
-                    manager.CustomX = 20;
+                    manager.CustomX = 1;
+                    maxPieceMessage.SetActive(true);
                     infoCustom[0].GetComponent<TMP_InputField>().text = manager.CustomX.ToString();
                 }
             }
@@ -566,9 +570,10 @@ namespace MovingJigsaw
                     manager.CustomY = 1;
                     infoCustom[1].GetComponent<TMP_InputField>().text = manager.CustomY.ToString();
                 }
-                if (manager.CustomY > 20)
+                if (manager.CustomX * manager.CustomY > maxPieces)
                 {
-                    manager.CustomY = 20;
+                    manager.CustomY = 1;
+                    maxPieceMessage.SetActive(true);
                     infoCustom[1].GetComponent<TMP_InputField>().text = manager.CustomY.ToString();
                 }
             }
@@ -584,7 +589,7 @@ namespace MovingJigsaw
             manager.Customrez = (PuzzleResolution)infoCustom[2].GetComponent<TMP_Dropdown>().value;
         }
 
-
+        
 
         public void ChangeLevelSetMode(int modeId)
         {

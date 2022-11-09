@@ -319,7 +319,7 @@ namespace MovingJigsaw
 
             solvedAmountText.text = solvedpuzzles.Count + "/" + Level.numberOfpuzzles;
 
-            if (Level.name == "Just A Dream")
+            if (Level.name == "Just A Dream (Play last)")
             {
                 lastlevel = true;
                 Invoke("SetUpLastLevel", 1.1f);
@@ -894,7 +894,7 @@ namespace MovingJigsaw
 
             Color d = new Color(155,152,238);
 
-            if (Level.name == "Just A Dream") 
+            if (Level.name == "Just A Dream (Play last)") 
             {
                 FinalLevelstep++;
 

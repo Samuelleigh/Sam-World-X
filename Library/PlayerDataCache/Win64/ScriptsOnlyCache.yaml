@@ -3538,6 +3538,18 @@ ScriptsOnlyBuild:
     className: SightLevelManager
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: UnityEngine.Advertisements.dll
+    namespaceName: UnityEngine.Advertisements
+    className: CallbackExecutor
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: UnityEngine.Advertisements.dll
+    namespaceName: UnityEngine.Advertisements.Editor
+    className: Placeholder
+  - hash:
+      serializedVersion: 2
       Hash: 91f9316684655da49f4eea8de28c6c3e
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -5319,5 +5331,4 @@ ScriptsOnlyBuild:
   - Assets/Games/Jigsaw/Level Data/Sandbox Mode/Mouse Move/Mouse Move 1.unity
   - Assets/Games/Jigsaw/Level Data/Sandbox Mode/Mouse Move/Mouse Move 2.unity
   - Assets/Games/Jigsaw/Level Data/Sandbox Mode/Mouse Move/Mouse Move 3.unity
-  playerPath: C:/Users/sleig/Desktop/Jigsaw Builds/Moving Jigsaw Puzzles PC/Moving
-    Jigsaw Puzzles.exe
+  playerPath: C:/Users/sleig/Desktop/Steam Build/MovingJigsawPuzzles/MovingJigsawPuzzles.exe
