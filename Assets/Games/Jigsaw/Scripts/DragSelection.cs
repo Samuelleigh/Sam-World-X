@@ -1,8 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using MovingJigsaw;
+using UnityEngine.EventSystems;
 
-public class DragSelection : MonoBehaviour
+public class DragSelection : MonoBehaviour,IPointerDownHandler
 {
 
     
@@ -10,6 +12,21 @@ public class DragSelection : MonoBehaviour
 
     public bool dragSelect;
     public bool dragingAPiece = false;
+
+    public JigsawPieceDrag[] jigsawpieces;
+
+    public List<JigsawPieceDrag> selectedPieces;
+
+    public RectTransform selectionRecttransform;
+
+    public Vector3 lastMousepostion;
+    public bool mouseMoving;
+
+    public Rect rectyglobal;
+
+    public GameObject canvas;
+
+    public EventSystem events;
 
     //Collider variables
     //=======================================================//
@@ -30,18 +47,40 @@ public class DragSelection : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
-        
+      
         dragSelect = false;
+        jigsawpieces = FindObjectsOfType<JigsawPieceDrag>();
+        events = FindObjectOfType<EventSystem>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (lastMousepostion != Input.mousePosition)
+        {
+            mouseMoving = true;
+
+        }
+        else 
+        {
+            mouseMoving = false;
+        }
+
+        lastMousepostion = Input.mousePosition;
+
         //1. when left mouse button clicked (but not released)
         if (Input.GetMouseButtonDown(0))
         {
-            p1 = Input.mousePosition;
+            p1 = Input.mousePosition;          
+
+         
+              selectedPieces.Clear();
+          
+              foreach (JigsawPieceDrag jig in jigsawpieces)
+              {
+                  jig.SetJigpieceColorToNormal();
+              }
+  
         }
 
         //2. while left mouse button held
@@ -51,133 +90,215 @@ public class DragSelection : MonoBehaviour
             {
                 dragSelect = true;
             }
+         
         }
 
         //3. when mouse button comes up
         if (Input.GetMouseButtonUp(0))
         {
+
+            
             if (dragSelect == false) //single select
             {
-                Ray ray = Camera.main.ScreenPointToRay(p1);
-
-                if (Physics.Raycast(ray, out hit, 50000.0f))
-                {
-                    if (Input.GetKey(KeyCode.LeftShift)) //inclusive select
-                    {
-                     //   selected_table.addSelected(hit.transform.gameObject);
-                    }
-                    else //exclusive selected
-                    {
-                       // selected_table.deselectAll();
-                       // selected_table.addSelected(hit.transform.gameObject);
-                    }
-                }
-                else //if we didnt hit something
-                {
-                    if (Input.GetKey(KeyCode.LeftShift))
-                    {
-                        //do nothing
-                    }
-                    else
-                    {
-                     //   selected_table.deselectAll();
-                    }
-                }
+                
             }
             else //marquee select
             {
-                verts = new Vector3[4];
-                vecs = new Vector3[4];
-                int i = 0;
-                p2 = Input.mousePosition;
-                corners = getBoundingBox(p1, p2);
-
-
-                //generate the mesh
-              //  selectionMesh = generateSelectionMesh(verts, vecs);
-
-              //  selectionBox = gameObject.AddComponent<MeshCollider>();
-             //   selectionBox.sharedMesh = selectionMesh;
-             //   selectionBox.convex = true;
-             //   selectionBox.isTrigger = true;
-
-                if (!Input.GetKey(KeyCode.LeftShift))
-                {
-                  //  selected_table.deselectAll();
-                }
-
+                CheckInsideSelectionRect();
                 Destroy(selectionBox, 0.02f);
 
             }//end marquee select
 
             dragSelect = false;
 
+         
+
         }
+
+    }
+
+    public void CheckInsideSelectionRect()
+    {
+
+        //Debug.Log("Check inside selection rect");
+
+       
+            Rect recty = Utils.GetScreenRect(p1, Input.mousePosition);
+            selectionRecttransform.pivot = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
+            selectionRecttransform.sizeDelta = new Vector2(recty.width, recty.height);
+
+            // Vector3[] drag = new Vector3[4];
+            // selectionRecttransform.GetWorldCorners(drag);
+
+            foreach (JigsawPieceDrag piece in jigsawpieces)
+            {
+                piece.GenerateNewRectArea();
+                // Debug.Log(piece.GetComponent<RectTransform>().localPosition);                  
+
+                int cornerinsidecount = 0;
+
+                bool[] visable = new bool[4];
+
+                
+
+                for (int i = 0; i < piece.dragArea.Length; i++)
+                {
+
+
+                    visable[i] = piece.CheckIfInContentView(piece.dragArea[i]);
+                //  Debug.Log(piece.dragArea[i].x + "      " + selectionRecttransform.pivot.x);
+
+                    if (CheckDragArea(piece.dragArea[i]) && visable[i] )
+                    {
+                        cornerinsidecount++;
+                    }
+
+             
+
+                }
+
+            for (int i = 0; i < visable.Length; i++)
+            {
+                Debug.Log(visable[i]);
+            }
+
+            if (cornerinsidecount > 0)
+            {
+                piece.groupSelected = true;
+            }
+            else
+            {
+                piece.groupSelected = false;
+            }
+
+            if (piece.groupSelected)
+                {
+                    Debug.Log("add piece");
+                    selectedPieces.Add(piece);
+                    piece.SetJigpieceColorToSelected();
+                }
+            }      
+    }
+
+
+    public bool CheckDragArea(Vector3 pointtocheck) 
+    {
+
+        bool left = false;
+        bool up= false; 
+
+        if (p1.x < Input.mousePosition.x) 
+        {
+            left = true;
+        }
+
+        if (p1.x >= Input.mousePosition.x)
+        {
+            left = false;
+        }
+
+        if (p1.y > Input.mousePosition.y)
+        {
+            up = false;
+        }
+        if (p1.y <= Input.mousePosition.y)
+        {
+            up = true;
+        }
+
+
+        if (left & up)
+        {
+           // Debug.Log("moving left up");
+
+            if (pointtocheck.x <= Mathf.Abs(selectionRecttransform.pivot.x)
+                            && pointtocheck.x >= Mathf.Abs(selectionRecttransform.pivot.x - rectyglobal.width)
+                            && pointtocheck.y <= Mathf.Abs(selectionRecttransform.pivot.y)
+                            && pointtocheck.y >= Mathf.Abs(selectionRecttransform.pivot.y - rectyglobal.height)) { return true; }
+            else { return false; }
+        }
+
+        if (left & !up) 
+        {
+         //   Debug.Log("moving left down");
+            if (pointtocheck.x <= Mathf.Abs(selectionRecttransform.pivot.x)
+                            && pointtocheck.x >= Mathf.Abs(selectionRecttransform.pivot.x - rectyglobal.width)
+                          && pointtocheck.y >= Mathf.Abs(selectionRecttransform.pivot.y)
+                 && pointtocheck.y <= Mathf.Abs(selectionRecttransform.pivot.y + rectyglobal.height)) { return true; }
+            else { return false; }
+        }
+
+        if (!left & up)
+        {
+
+            Debug.Log("Point to check" + pointtocheck + "   min x,y" + (selectionRecttransform.pivot.x) + "," + (selectionRecttransform.pivot.y) + "   max x,y" + (selectionRecttransform.pivot.x + rectyglobal.width) + " , " + (selectionRecttransform.pivot.y - rectyglobal.height));
+
+
+            if (pointtocheck.x >= selectionRecttransform.pivot.x
+                 && pointtocheck.x <= selectionRecttransform.pivot.x + rectyglobal.width
+                 && pointtocheck.y <= selectionRecttransform.pivot.y
+                          && pointtocheck.y >= selectionRecttransform.pivot.y - rectyglobal.height
+                 ) { return true; }
+            else { return false; }
+        }
+
+        if (!left & !up)
+        {
+            //  Debug.Log("moving right down");
+
+            if (pointtocheck.x >= selectionRecttransform.pivot.x)
+                Debug.Log("point x is less than pivot");
+
+
+            if (pointtocheck.x >= selectionRecttransform.pivot.x
+                 && pointtocheck.x <= selectionRecttransform.pivot.x + rectyglobal.width
+                 && pointtocheck.y >= selectionRecttransform.pivot.y
+                 && pointtocheck.y <= selectionRecttransform.pivot.y + rectyglobal.height)
+            { return true; }
+            else { return false; }
+        }
+
+        return false;
 
     }
 
     private void OnGUI()
     {
+
         if (dragSelect == true)
         {
-       //   var rect = Utils.GetScreenRect(p1, Input.mousePosition);
-       //   Utils.DrawScreenRect(rect, new Color(0.8f, 0.8f, 0.95f, 0.25f));
-       //   Utils.DrawScreenRectBorder(rect, 2, new Color(0.8f, 0.8f, 0.95f));
-
-        //   foreach () 
-        //   {
-        //   
-        //   
-        //   }
-        //
-        //   if(rect.Contains())
+            rectyglobal = Utils.GetScreenRect(p1, Input.mousePosition);
+            Utils.DrawScreenRect(rectyglobal, new Color(0.8f, 0.8f, 0.95f, 0.25f));
+            Utils.DrawScreenRectBorder(rectyglobal, 2, new Color(0.8f, 0.8f, 0.95f));        
         }
     }
 
-    //create a bounding box (4 corners in order) from the start and end mouse position
-    Vector2[] getBoundingBox(Vector2 p1, Vector2 p2)
-    {
-        // Min and Max to get 2 corners of rectangle regardless of drag direction.
-        var bottomLeft = Vector3.Min(p1, p2);
-        var topRight = Vector3.Max(p1, p2);
-
-        // 0 = top left; 1 = top right; 2 = bottom left; 3 = bottom right;
-        Vector2[] corners =
+       
+        private void OnTriggerEnter(Collider other)
         {
-            new Vector2(bottomLeft.x, topRight.y),
-            new Vector2(topRight.x, topRight.y),
-            new Vector2(bottomLeft.x, bottomLeft.y),
-            new Vector2(topRight.x, bottomLeft.y)
-        };
-        return corners;
-
-    }
-
-    //generate a mesh from the 4 bottom points
-    Mesh generateSelectionMesh(Vector3[] corners, Vector3[] vecs)
-    {
-        Vector3[] verts = new Vector3[8];
-        int[] tris = { 0, 1, 2, 2, 1, 3, 4, 6, 0, 0, 6, 2, 6, 7, 2, 2, 7, 3, 7, 5, 3, 3, 5, 1, 5, 0, 1, 1, 4, 0, 4, 5, 6, 6, 5, 7 }; //map the tris of our cube
-
-        for (int i = 0; i < 4; i++)
-        {
-            verts[i] = corners[i];
+            // selected_table.addSelected(other.gameObject);
         }
 
-        for (int j = 4; j < 8; j++)
-        {
-            verts[j] = corners[j - 4] + vecs[j - 4];
-        }
-
-        Mesh selectionMesh = new Mesh();
-        selectionMesh.vertices = verts;
-        selectionMesh.triangles = tris;
-
-        return selectionMesh;
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-       // selected_table.addSelected(other.gameObject);
-    }
+   // public void OnPointerDown(PointerEventData eventData)
+   // {
+   //
+   //     Debug.Log(eventData.lastPress.name);
+   //
+   //     if (eventData.lastPress.name == "JigsawPiece(Clone)")
+   //     {
+   //
+   //         Debug.Log("hehe");
+   //     }
+   //     else 
+   //     {
+   //         selectedPieces.Clear();
+   //
+   //         foreach (JigsawPieceDrag jig in jigsawpieces)
+   //         {
+   //             jig.SetJigpieceColorToNormal();
+   //         }
+   //
+   //     };
+   //     
+   // }
 }

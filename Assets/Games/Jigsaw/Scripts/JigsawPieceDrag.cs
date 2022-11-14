@@ -8,17 +8,40 @@ namespace MovingJigsaw
 {
     public class JigsawPieceDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler, IPointerClickHandler
     {
+        [SerializeField]
+        public Color selectedcolor;
 
         public GameObject main;
         public JigsawPieceScript jig;
         public JigsawGameLogic gm;
         public Vector2 offset;
         public DragSelection dragSelection;
+        public RectTransform mytransform;
+        public bool groupSelected = false;
+
+        public Vector3[] dragArea = new Vector3[4];
+
+        public RectTransform viewport;
+        public RectTransform canvas;
 
         void Awake()
         {
             gm = FindObjectOfType<JigsawGameLogic>();
             dragSelection = FindObjectOfType<DragSelection>();
+            mytransform = GetComponent<RectTransform>();
+
+
+
+
+
+
+        }
+
+        public void Start()
+        {
+            dragArea = new Vector3[4];
+            mytransform.GetWorldCorners(dragArea);
+            viewport = transform.parent.parent.parent.GetComponent<RectTransform>();
         }
 
         public void OnPointerClick(PointerEventData eventData) // 3
@@ -32,8 +55,17 @@ namespace MovingJigsaw
             if (Input.GetMouseButtonUp(0))
             {
                 jig.transform.SetParent(gm.ui.MasterLayers[1].transform);
+                dragSelection.dragingAPiece = true;
+            }
+
+            if (Input.GetMouseButtonDown(0))
+            {
+                //jig.transform.SetParent(gm.ui.MasterLayers[1].transform);
+                dragSelection.dragingAPiece = true;
             }
         }
+
+  
 
         public void OnBeginDrag(PointerEventData eventData)
         {
@@ -47,7 +79,13 @@ namespace MovingJigsaw
 
             SoundSystem.instance.PlaySound("click");
 
-           
+            //Make all 
+
+            foreach (JigsawPieceDrag jig in dragSelection.jigsawpieces) 
+            {
+               // jig.transform.parent = canvas;
+            }
+
 
         }
 
@@ -56,11 +94,18 @@ namespace MovingJigsaw
             if (50 < eventData.position.x && eventData.position.x < (Screen.width - 50) && 50 < eventData.position.y && eventData.position.y < (Screen.height - 50))
             {
                 main.transform.position = new Vector2(Input.mousePosition.x, Input.mousePosition.y) - offset;
+
+                foreach (JigsawPieceDrag jig in dragSelection.selectedPieces)
+                {
+                //    jig.transform.position = main.transform.position =- new Vector2(jig.transform.position.x, jig.transform.position.y);
+                }
+
             }
         }
 
         public void OnEndDrag(PointerEventData eventData)
         {
+
             SoundSystem.instance.PlaySound("click");
             Debug.Log("end drag");
             dragSelection.dragingAPiece = false;
@@ -98,14 +143,14 @@ namespace MovingJigsaw
                     gameObject.transform.SetParent(gm.box.transform);
 
                 }
-                Debug.Log(raycastResultList[i].gameObject.name);
+               // Debug.Log(raycastResultList[i].gameObject.name);
             }
 
             jig.UpdatePostionInSave();
 
-            if (gm.Level.name == "Just A Dream (Play last)") 
+            if (gm.Level.name == "Just A Dream (Play last)")
             {
-                Debug.Log("werid");
+              //  Debug.Log("werid");
                 gameObject.SetActive(false);
                 gm.EndingStepForward();
             }
@@ -115,6 +160,65 @@ namespace MovingJigsaw
         {
             gameObject.transform.position = piece.transform.position;
             gameObject.transform.SetParent(piece.gameObject.transform);
+        }
+
+        public void GenerateNewRectArea()
+        {
+
+            mytransform.GetWorldCorners(dragArea);
+        }
+
+        public bool CheckIfInContentView(Vector3 point) 
+        {
+
+            if (transform.parent.parent.parent == viewport)
+            {
+              //  Debug.Log("piece is inside viewport");
+
+              
+
+                Vector3[] tempmatrix = new Vector3[4];
+                viewport.GetWorldCorners(tempmatrix);
+
+
+                Rect tempRect = Utils.GetScreenRect(tempmatrix[0], tempmatrix[2]);
+               // Debug.Log("min viewport: " + tempmatrix[0] + "  max viewport: " + tempmatrix[2]);
+               // Debug.Log("point: " + point);
+
+                if (point.x >= tempmatrix[0].x
+                         && point.x <= tempmatrix[2].x
+                         && point.y >= tempmatrix[0].y
+                         && point.y <= tempmatrix[2].y)
+                {
+                   // Debug.Log("return true on point");
+                    return true; 
+                }
+               
+                else 
+                {
+                    return false;
+                }                
+
+            }
+            else 
+            {
+                return true;
+            }
+
+          
+        
+        }
+
+        public void SetJigpieceColorToSelected() 
+        {
+            jig.child.GetComponent<RawImage>().color = selectedcolor;
+
+        }
+
+        public void SetJigpieceColorToNormal()
+        {
+            jig.child.GetComponent<RawImage>().color = Color.white;
+
         }
 
     }

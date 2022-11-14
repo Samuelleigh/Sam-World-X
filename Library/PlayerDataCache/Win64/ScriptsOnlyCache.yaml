@@ -115,6 +115,8 @@ ScriptsOnlyBuild:
     - UnityEditor.Rendering.Universal.UniversalProjectSettings
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
+    Unity.TextMeshPro.Editor.dll:
+    - TMPro.EditorUtilities.TMP_SettingsEditor
     Unity.TextMeshPro.dll:
     - TMPro.TMP_Dropdown
     - TMPro.TMP_FontAsset
@@ -3436,7 +3438,7 @@ ScriptsOnlyBuild:
     className: ActivationTrack
   - hash:
       serializedVersion: 2
-      Hash: 34b9a16c16fe23ee4b4d9a35ba1a7b4a
+      Hash: 031509e605358df593076288734ff632
     assemblyName: Assembly-CSharp.dll
     namespaceName: MovingJigsaw
     className: JigsawMenu
@@ -3536,18 +3538,6 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: SightLevelManager
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: UnityEngine.Advertisements.dll
-    namespaceName: UnityEngine.Advertisements
-    className: CallbackExecutor
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: UnityEngine.Advertisements.dll
-    namespaceName: UnityEngine.Advertisements.Editor
-    className: Placeholder
   - hash:
       serializedVersion: 2
       Hash: 91f9316684655da49f4eea8de28c6c3e
@@ -4552,7 +4542,7 @@ ScriptsOnlyBuild:
     className: ChangeBrushSettings
   - hash:
       serializedVersion: 2
-      Hash: 3117a8f411f9a09eb1269d4f05381b78
+      Hash: f6462a065f8e75d41f427840093ab66d
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: RayCastManager
@@ -4696,7 +4686,7 @@ ScriptsOnlyBuild:
     className: UniversalRenderPipelineEditorResources
   - hash:
       serializedVersion: 2
-      Hash: aa87beec4021451de7f7c6ebb5815f02
+      Hash: f0927ec129899c505b67d2cd7cf322ba
     assemblyName: Assembly-CSharp.dll
     namespaceName: MovingJigsaw
     className: JigsawPieceDrag
@@ -4798,7 +4788,7 @@ ScriptsOnlyBuild:
     className: DebugUIHandlerVector2
   - hash:
       serializedVersion: 2
-      Hash: 1a29daa75cf4f1b0a62d2cf1ce2acc67
+      Hash: 03f87575b6f1e4aeabc644cf303882b5
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: DragSelection
