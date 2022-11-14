@@ -4,7 +4,7 @@ using UnityEngine;
 using MovingJigsaw;
 using UnityEngine.EventSystems;
 
-public class DragSelection : MonoBehaviour,IPointerDownHandler
+public class DragSelection : MonoBehaviour//,IPointerDownHandler
 {
 
     
@@ -12,6 +12,10 @@ public class DragSelection : MonoBehaviour,IPointerDownHandler
 
     public bool dragSelect;
     public bool dragingAPiece = false;
+
+    bool didclickonignoredragobject = false;
+
+    public List<GameObject> igorneDraggingStartObjects;
 
     public JigsawPieceDrag[] jigsawpieces;
 
@@ -51,6 +55,52 @@ public class DragSelection : MonoBehaviour,IPointerDownHandler
         dragSelect = false;
         jigsawpieces = FindObjectsOfType<JigsawPieceDrag>();
         events = FindObjectOfType<EventSystem>();
+
+        List<GameObject> temp = new List<GameObject>();
+
+        foreach (GameObject g in igorneDraggingStartObjects)
+        {
+            temp.Add(g);
+
+            foreach (Transform child in g.transform) 
+            {
+                temp.Add(child.gameObject);
+
+                foreach (Transform child2 in child.transform)
+                {
+                    temp.Add(child2.gameObject);
+
+                    foreach (Transform child3 in child2.transform)
+                    {
+                        temp.Add(child3.gameObject);
+
+                        foreach (Transform child4 in child3.transform)
+                        {
+                            temp.Add(child4.gameObject);
+
+                            foreach (Transform child5 in child4.transform)
+                            {
+                                temp.Add(child5.gameObject);
+
+                                foreach (Transform child6 in child5.transform)
+                                {
+                                    temp.Add(child6.gameObject);
+
+                                    foreach (Transform child7 in child6.transform)
+                                    {
+                                        temp.Add(child7.gameObject);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }       
+
+        igorneDraggingStartObjects = temp;
+
+
     }
 
     // Update is called once per frame
@@ -71,22 +121,52 @@ public class DragSelection : MonoBehaviour,IPointerDownHandler
         //1. when left mouse button clicked (but not released)
         if (Input.GetMouseButtonDown(0))
         {
-            p1 = Input.mousePosition;          
+            p1 = Input.mousePosition;
 
-         
-              selectedPieces.Clear();
-          
-              foreach (JigsawPieceDrag jig in jigsawpieces)
-              {
-                  jig.SetJigpieceColorToNormal();
-              }
-  
+
+            //If at least jigsaw piece is clicked on
+            if (dragingAPiece)
+            {
+                Debug.Log("helo");
+
+            }
+            else 
+            {
+                selectedPieces.Clear();
+
+                foreach (JigsawPieceDrag jig in jigsawpieces)
+                {
+                    jig.SetJigpieceColorToNormal();
+                }
+            }
+
+
+            PointerEventData pointerEventData = new PointerEventData(EventSystem.current);
+            pointerEventData.position = Input.mousePosition;
+
+            List<RaycastResult> raycastResultList = new List<RaycastResult>();
+            EventSystem.current.RaycastAll(pointerEventData, raycastResultList);
+
+            didclickonignoredragobject = false;
+
+            foreach (RaycastResult castresult in raycastResultList)
+            {
+
+                if (igorneDraggingStartObjects.Contains(castresult.gameObject))
+                {
+                    Debug.Log(castresult.gameObject.name);
+                    didclickonignoredragobject = true;
+                }
+            }
+
+
         }
 
         //2. while left mouse button held
         if (Input.GetMouseButton(0))
         {
-            if ((p1 - Input.mousePosition).magnitude > 40 && !dragingAPiece )
+
+            if ((p1 - Input.mousePosition).magnitude > 40 && !dragingAPiece && !didclickonignoredragobject)
             {
                 dragSelect = true;
             }
@@ -95,9 +175,7 @@ public class DragSelection : MonoBehaviour,IPointerDownHandler
 
         //3. when mouse button comes up
         if (Input.GetMouseButtonUp(0))
-        {
-
-            
+        {           
             if (dragSelect == false) //single select
             {
                 
@@ -110,9 +188,6 @@ public class DragSelection : MonoBehaviour,IPointerDownHandler
             }//end marquee select
 
             dragSelect = false;
-
-         
-
         }
 
     }
@@ -132,34 +207,24 @@ public class DragSelection : MonoBehaviour,IPointerDownHandler
 
             foreach (JigsawPieceDrag piece in jigsawpieces)
             {
-                piece.GenerateNewRectArea();
-                // Debug.Log(piece.GetComponent<RectTransform>().localPosition);                  
+                piece.GenerateNewRectArea();               
 
                 int cornerinsidecount = 0;
-
                 bool[] visable = new bool[4];
-
-                
-
+              
                 for (int i = 0; i < piece.dragArea.Length; i++)
                 {
-
-
                     visable[i] = piece.CheckIfInContentView(piece.dragArea[i]);
-                //  Debug.Log(piece.dragArea[i].x + "      " + selectionRecttransform.pivot.x);
 
                     if (CheckDragArea(piece.dragArea[i]) && visable[i] )
                     {
                         cornerinsidecount++;
                     }
-
-             
-
                 }
 
             for (int i = 0; i < visable.Length; i++)
             {
-                Debug.Log(visable[i]);
+            //    Debug.Log(visable[i]);
             }
 
             if (cornerinsidecount > 0)
@@ -231,7 +296,7 @@ public class DragSelection : MonoBehaviour,IPointerDownHandler
         if (!left & up)
         {
 
-            Debug.Log("Point to check" + pointtocheck + "   min x,y" + (selectionRecttransform.pivot.x) + "," + (selectionRecttransform.pivot.y) + "   max x,y" + (selectionRecttransform.pivot.x + rectyglobal.width) + " , " + (selectionRecttransform.pivot.y - rectyglobal.height));
+         //   Debug.Log("Point to check" + pointtocheck + "   min x,y" + (selectionRecttransform.pivot.x) + "," + (selectionRecttransform.pivot.y) + "   max x,y" + (selectionRecttransform.pivot.x + rectyglobal.width) + " , " + (selectionRecttransform.pivot.y - rectyglobal.height));
 
 
             if (pointtocheck.x >= selectionRecttransform.pivot.x
@@ -247,7 +312,7 @@ public class DragSelection : MonoBehaviour,IPointerDownHandler
             //  Debug.Log("moving right down");
 
             if (pointtocheck.x >= selectionRecttransform.pivot.x)
-                Debug.Log("point x is less than pivot");
+             //   Debug.Log("point x is less than pivot");
 
 
             if (pointtocheck.x >= selectionRecttransform.pivot.x
@@ -272,33 +337,6 @@ public class DragSelection : MonoBehaviour,IPointerDownHandler
             Utils.DrawScreenRectBorder(rectyglobal, 2, new Color(0.8f, 0.8f, 0.95f));        
         }
     }
-
-       
-        private void OnTriggerEnter(Collider other)
-        {
-            // selected_table.addSelected(other.gameObject);
-        }
-
-   // public void OnPointerDown(PointerEventData eventData)
-   // {
-   //
-   //     Debug.Log(eventData.lastPress.name);
-   //
-   //     if (eventData.lastPress.name == "JigsawPiece(Clone)")
-   //     {
-   //
-   //         Debug.Log("hehe");
-   //     }
-   //     else 
-   //     {
-   //         selectedPieces.Clear();
-   //
-   //         foreach (JigsawPieceDrag jig in jigsawpieces)
-   //         {
-   //             jig.SetJigpieceColorToNormal();
-   //         }
-   //
-   //     };
-   //     
-   // }
+     
+  
 }

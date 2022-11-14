@@ -1,12 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 namespace MovingJigsaw
 {
-    public class JigsawPieceDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler, IPointerClickHandler
+    public class JigsawPieceDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler, IPointerClickHandler, IPointerDownHandler
     {
         [SerializeField]
         public Color selectedcolor;
@@ -15,6 +14,7 @@ namespace MovingJigsaw
         public JigsawPieceScript jig;
         public JigsawGameLogic gm;
         public Vector2 offset;
+        public Vector2 multiSelectOffset;
         public DragSelection dragSelection;
         public RectTransform mytransform;
         public bool groupSelected = false;
@@ -30,11 +30,6 @@ namespace MovingJigsaw
             dragSelection = FindObjectOfType<DragSelection>();
             mytransform = GetComponent<RectTransform>();
 
-
-
-
-
-
         }
 
         public void Start()
@@ -44,8 +39,18 @@ namespace MovingJigsaw
             viewport = transform.parent.parent.parent.GetComponent<RectTransform>();
         }
 
+
+        public void OnPointerDown(PointerEventData eventData)
+        {
+            Debug.Log("blah blah blah");
+            dragSelection.dragingAPiece = true;
+
+        }
+
         public void OnPointerClick(PointerEventData eventData) // 3
         {
+            
+
             if (Input.GetMouseButtonUp(1))
             {
                 Debug.Log("left Click");
@@ -81,9 +86,13 @@ namespace MovingJigsaw
 
             //Make all 
 
-            foreach (JigsawPieceDrag jig in dragSelection.jigsawpieces) 
+            foreach (JigsawPieceDrag jig in dragSelection.selectedPieces) 
             {
-               // jig.transform.parent = canvas;
+                if (jig != this)
+                {
+                    jig.transform.parent = gameObject.transform.parent;
+                    jig.multiSelectOffset = new Vector2(main.transform.position.x, main.transform.position.y) - (new Vector2(jig.main.transform.position.x, jig.main.transform.position.y));
+                }
             }
 
 
@@ -97,7 +106,10 @@ namespace MovingJigsaw
 
                 foreach (JigsawPieceDrag jig in dragSelection.selectedPieces)
                 {
-                //    jig.transform.position = main.transform.position =- new Vector2(jig.transform.position.x, jig.transform.position.y);
+                    if (jig != this)
+                    {
+                        jig.transform.position = new Vector2(main.transform.position.x, main.transform.position.y) - jig.multiSelectOffset;
+                    }
                 }
 
             }
@@ -109,6 +121,43 @@ namespace MovingJigsaw
             SoundSystem.instance.PlaySound("click");
             Debug.Log("end drag");
             dragSelection.dragingAPiece = false;
+
+
+            foreach (JigsawPieceDrag jigdragscript in dragSelection.selectedPieces)
+            {
+                jigdragscript.SetJigpieceColorToNormal();
+
+                //generate matrix
+                jigdragscript.GenerateNewRectArea();
+                int pointsovercanvas = 0;
+
+                foreach(Vector3 point in jigdragscript.dragArea ) 
+                {
+                    if (CheckifOverRectTransform(point,viewport)) 
+                    {
+                        //if any point in over the overlay then set parenbt to content view
+                        Debug.Log("Set Selection to this thing lol");
+                        jigdragscript.transform.SetParent(gm.box.transform);
+                    }
+
+                    if (!CheckifOverRectTransform(point, dragSelection.canvas.GetComponent<RectTransform>())) 
+                    {
+                        pointsovercanvas++;                  
+                    }
+                }
+
+                Debug.Log(pointsovercanvas);
+                if (pointsovercanvas >= 3) 
+                {
+                    Debug.Log("outside canvas");
+                    jigdragscript.jig.InstantPutBack();
+                }
+
+            }
+
+            dragSelection.selectedPieces.Clear();
+
+
 
             PointerEventData pointerEventData = new PointerEventData(EventSystem.current);
             pointerEventData.position = Input.mousePosition;
@@ -160,6 +209,8 @@ namespace MovingJigsaw
         {
             gameObject.transform.position = piece.transform.position;
             gameObject.transform.SetParent(piece.gameObject.transform);
+
+           
         }
 
         public void GenerateNewRectArea()
@@ -174,8 +225,6 @@ namespace MovingJigsaw
             if (transform.parent.parent.parent == viewport)
             {
               //  Debug.Log("piece is inside viewport");
-
-              
 
                 Vector3[] tempmatrix = new Vector3[4];
                 viewport.GetWorldCorners(tempmatrix);
@@ -192,8 +241,7 @@ namespace MovingJigsaw
                 {
                    // Debug.Log("return true on point");
                     return true; 
-                }
-               
+                }              
                 else 
                 {
                     return false;
@@ -204,10 +252,35 @@ namespace MovingJigsaw
             {
                 return true;
             }
-
-          
-        
         }
+
+        public bool CheckifOverRectTransform(Vector3 point,RectTransform overtransform) 
+        {
+            Vector3[] tempmatrix = new Vector3[4];
+            overtransform.GetWorldCorners(tempmatrix);
+
+
+            Rect tempRect = Utils.GetScreenRect(tempmatrix[0], tempmatrix[2]);
+            // Debug.Log("min viewport: " + tempmatrix[0] + "  max viewport: " + tempmatrix[2]);
+            // Debug.Log("point: " + point);
+
+            if (point.x >= tempmatrix[0].x
+                     && point.x <= tempmatrix[2].x
+                     && point.y >= tempmatrix[0].y
+                     && point.y <= tempmatrix[2].y)
+            {
+                // Debug.Log("return true on point");
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
+        }
+
+
+        
 
         public void SetJigpieceColorToSelected() 
         {
