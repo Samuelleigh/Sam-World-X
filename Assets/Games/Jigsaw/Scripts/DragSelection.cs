@@ -32,6 +32,8 @@ public class DragSelection : MonoBehaviour//,IPointerDownHandler
 
     public EventSystem events;
 
+    public JigsawGameLogic gm;
+
     //Collider variables
     //=======================================================//
 
@@ -51,7 +53,7 @@ public class DragSelection : MonoBehaviour//,IPointerDownHandler
     // Start is called before the first frame update
     void Start()
     {
-      
+        gm = FindObjectOfType<JigsawGameLogic>();
         dragSelect = false;
         jigsawpieces = FindObjectsOfType<JigsawPieceDrag>();
         events = FindObjectOfType<EventSystem>();
@@ -127,11 +129,14 @@ public class DragSelection : MonoBehaviour//,IPointerDownHandler
             //If at least jigsaw piece is clicked on
             if (dragingAPiece)
             {
-                Debug.Log("helo");
+             //   Debug.Log("helo");
 
             }
             else 
             {
+
+
+
                 selectedPieces.Clear();
 
                 foreach (JigsawPieceDrag jig in jigsawpieces)
@@ -178,16 +183,19 @@ public class DragSelection : MonoBehaviour//,IPointerDownHandler
         {           
             if (dragSelect == false) //single select
             {
-                
+               
             }
             else //marquee select
-            {
+            {         
                 CheckInsideSelectionRect();
                 Destroy(selectionBox, 0.02f);
 
             }//end marquee select
 
             dragSelect = false;
+
+           
+
         }
 
     }
@@ -207,7 +215,8 @@ public class DragSelection : MonoBehaviour//,IPointerDownHandler
 
             foreach (JigsawPieceDrag piece in jigsawpieces)
             {
-                piece.GenerateNewRectArea();               
+                piece.GenerateNewRectArea();
+               
 
                 int cornerinsidecount = 0;
                 bool[] visable = new bool[4];
@@ -216,7 +225,7 @@ public class DragSelection : MonoBehaviour//,IPointerDownHandler
                 {
                     visable[i] = piece.CheckIfInContentView(piece.dragArea[i]);
 
-                    if (CheckDragArea(piece.dragArea[i]) && visable[i] )
+                    if (CheckDragArea(piece.dragArea[i]) && visable[i])
                     {
                         cornerinsidecount++;
                     }
@@ -234,14 +243,19 @@ public class DragSelection : MonoBehaviour//,IPointerDownHandler
             else
             {
                 piece.groupSelected = false;
+               
+
             }
 
             if (piece.groupSelected)
                 {
-                    Debug.Log("add piece");
+                 //   Debug.Log("add piece");
+                    
+
                     selectedPieces.Add(piece);
                     piece.SetJigpieceColorToSelected();
-                }
+                  
+            }
             }      
     }
 
@@ -329,12 +343,14 @@ public class DragSelection : MonoBehaviour//,IPointerDownHandler
 
     private void OnGUI()
     {
-
-        if (dragSelect == true)
+        if (gm.Level.name != "Just A Dream (The End)")
         {
-            rectyglobal = Utils.GetScreenRect(p1, Input.mousePosition);
-            Utils.DrawScreenRect(rectyglobal, new Color(0.8f, 0.8f, 0.95f, 0.25f));
-            Utils.DrawScreenRectBorder(rectyglobal, 2, new Color(0.8f, 0.8f, 0.95f));        
+            if (dragSelect == true)
+            {
+                rectyglobal = Utils.GetScreenRect(p1, Input.mousePosition);
+                Utils.DrawScreenRect(rectyglobal, new Color(0.8f, 0.8f, 0.95f, 0.25f));
+                Utils.DrawScreenRectBorder(rectyglobal, 2, new Color(0.8f, 0.8f, 0.95f));
+            }
         }
     }
      

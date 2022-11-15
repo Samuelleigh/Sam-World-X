@@ -84,6 +84,11 @@ namespace MovingJigsaw
 
             SoundSystem.instance.PlaySound("click");
 
+            if (!dragSelection.selectedPieces.Contains(this)) 
+            {
+                dragSelection.selectedPieces.Add(this);
+            }
+
             //Make all 
 
             foreach (JigsawPieceDrag jig in dragSelection.selectedPieces) 
@@ -119,7 +124,7 @@ namespace MovingJigsaw
         {
 
             SoundSystem.instance.PlaySound("click");
-            Debug.Log("end drag");
+            //Debug.Log("end drag");
             dragSelection.dragingAPiece = false;
 
 
@@ -144,65 +149,71 @@ namespace MovingJigsaw
                     {
                         pointsovercanvas++;                  
                     }
+
                 }
 
-                Debug.Log(pointsovercanvas);
+                jigdragscript.CheckIfOverJigPiece();
+
+                //  Debug.Log(pointsovercanvas);
                 if (pointsovercanvas >= 3) 
                 {
-                    Debug.Log("outside canvas");
+                    //Debug.Log("outside canvas");
                     jigdragscript.jig.InstantPutBack();
                 }
 
             }
 
+          //  CheckIfOverJigPiece();
+
             dragSelection.selectedPieces.Clear();
 
 
 
-            PointerEventData pointerEventData = new PointerEventData(EventSystem.current);
-            pointerEventData.position = Input.mousePosition;
-
-            List<RaycastResult> raycastResultList = new List<RaycastResult>();
-            EventSystem.current.RaycastAll(pointerEventData, raycastResultList);
-
-            for (int i = 0; i < raycastResultList.Count; i++)
-            {
-                // Debug.Log(raycastResultList[i]);
-                if (raycastResultList[i].gameObject.name == "SnapPiece(Clone)")
-                {
-                    if (raycastResultList[i].gameObject.transform.childCount == 0)
-                    {
-                        SnapToPiece(raycastResultList[i].gameObject);
-
-                        //if not on the last level
-                        if (gm.Level.name != "Just A Dream (Play last)")
-                        {
-                            gm.CheckWin(jig.puzzleID);
-                        }
-                    }
-                    else
-                    {
-                        gameObject.transform.SetParent(gm.ui.MasterLayers[1].transform);
-
-                    }
-                }
-                if (raycastResultList[i].gameObject.name == "Viewport")
-                {
-                    Debug.Log("snap back to content");
-                    gameObject.transform.SetParent(gm.box.transform);
-
-                }
-               // Debug.Log(raycastResultList[i].gameObject.name);
-            }
-
-            jig.UpdatePostionInSave();
-
-            if (gm.Level.name == "Just A Dream (Play last)")
-            {
-              //  Debug.Log("werid");
-                gameObject.SetActive(false);
-                gm.EndingStepForward();
-            }
+        //  PointerEventData pointerEventData = new PointerEventData(EventSystem.current);
+        //  pointerEventData.position = Input.mousePosition;
+        //
+        //  List<RaycastResult> raycastResultList = new List<RaycastResult>();
+        //  EventSystem.current.RaycastAll(pointerEventData, raycastResultList);
+        //
+        //  if (dragSelection.selectedPieces.Count == 0) {
+        //      for (int i = 0; i < raycastResultList.Count; i++)
+        //      {
+        //          // Debug.Log(raycastResultList[i]);
+        //          if (raycastResultList[i].gameObject.name == "SnapPiece(Clone)")
+        //          {
+        //              if (raycastResultList[i].gameObject.transform.childCount == 0)
+        //              {
+        //                  SnapToPiece(raycastResultList[i].gameObject);
+        //
+        //                  //if not on the last level
+        //                  if (gm.Level.name != "Just A Dream (The End)")
+        //                  {
+        //                      gm.CheckWin(jig.puzzleID);
+        //                  }
+        //              }
+        //              else
+        //              {
+        //                  gameObject.transform.SetParent(gm.ui.MasterLayers[1].transform);
+        //
+        //              }
+        //          }
+        //          if (raycastResultList[i].gameObject.name == "Viewport")
+        //          {
+        //              Debug.Log("snap back to content");
+        //              gameObject.transform.SetParent(gm.box.transform);
+        //
+        //          }
+        //          // Debug.Log(raycastResultList[i].gameObject.name);
+        //      } }
+        //
+        //  jig.UpdatePostionInSave();
+        //
+        //  if (gm.Level.name == "Just A Dream (The End)")
+        //  {
+        //    //  Debug.Log("werid");
+        //      gameObject.SetActive(false);
+        //      gm.EndingStepForward();
+        //  }
         }
 
         public void SnapToPiece(GameObject piece)
@@ -277,6 +288,46 @@ namespace MovingJigsaw
                 return false;
             }
 
+        }
+
+
+        public void CheckIfOverJigPiece()
+        {
+
+            Debug.Log("CheckIfOverJigPiece");
+
+            Vector3 center = ((dragArea[2] - dragArea[0]) / 2) + dragArea[0];
+
+            PointerEventData pointerEventData = new PointerEventData(EventSystem.current);
+            pointerEventData.position = center;
+
+            List<RaycastResult> raycastResultList = new List<RaycastResult>();
+            EventSystem.current.RaycastAll(pointerEventData, raycastResultList);
+
+            for (int i = 0; i < raycastResultList.Count; i++)
+            {
+                // Debug.Log(raycastResultList[i]);
+                if (raycastResultList[i].gameObject.name == "SnapPiece(Clone)")
+                {
+                    if (raycastResultList[i].gameObject.transform.childCount == 0)
+                    {
+                        SnapToPiece(raycastResultList[i].gameObject);
+
+                        //if not on the last level
+                        if (gm.Level.name != "Just A Dream (The End)")
+                        {
+                            gm.CheckWin(jig.puzzleID);
+                        }
+                    }
+                    else
+                    {
+                        gameObject.transform.SetParent(gm.ui.MasterLayers[1].transform);
+
+                    }
+                }
+
+
+            }
         }
 
 
