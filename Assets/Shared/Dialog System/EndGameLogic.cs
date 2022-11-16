@@ -23,10 +23,10 @@ public class EndGameLogic : MonoBehaviour
         {
             QuitProgram();
         }
-        if (Input.GetKey("f"))
-        {
-            ToggleFullScreen();
-        }
+       // if (Input.GetKey("f"))
+       // {
+       //     ToggleFullScreen();
+       // }
 
     }
 

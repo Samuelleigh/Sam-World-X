@@ -1418,12 +1418,12 @@ PrefabInstance:
     - target: {fileID: 559566662113289963, guid: eab27084e36c8ee4fb723c2aa6632611,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 671
+      value: 650
       objectReference: {fileID: 0}
     - target: {fileID: 559566662113289963, guid: eab27084e36c8ee4fb723c2aa6632611,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -136.86
+      value: 44.6
       objectReference: {fileID: 0}
     - target: {fileID: 559566662113289963, guid: eab27084e36c8ee4fb723c2aa6632611,
         type: 3}
@@ -1433,7 +1433,7 @@ PrefabInstance:
     - target: {fileID: 559566662113289963, guid: eab27084e36c8ee4fb723c2aa6632611,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 241
+      value: 394.1267
       objectReference: {fileID: 0}
     - target: {fileID: 559566662113289963, guid: eab27084e36c8ee4fb723c2aa6632611,
         type: 3}
@@ -11137,7 +11137,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Controls: \nMouse - Make Choices.\nF - Toggle Fullscreen.\nEsc - Exit
-    Program."
+    Program.\n\nHold \"SAM\" at the same time to go back to main menu (will not save)"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9c8a0f2b06ec6194fab18dd6a71bc5c4, type: 2}
   m_sharedMaterial: {fileID: -3016527089854279770, guid: 9c8a0f2b06ec6194fab18dd6a71bc5c4,
@@ -11165,7 +11165,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 29.7
+  m_fontSize: 28
   m_fontSizeBase: 73.68
   m_fontWeight: 400
   m_enableAutoSizing: 1

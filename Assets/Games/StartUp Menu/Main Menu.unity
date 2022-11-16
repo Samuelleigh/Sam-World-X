@@ -2864,12 +2864,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 54.05
+  m_fontSize: 24
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 60.8
+  m_fontSizeMax: 48.56
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -11165,20 +11165,21 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\r\nSo uhhh... funny thing about this. \r\n\r\nI used Github to save my
-    progress so if I make a ton of errors, I can go back to a previous \"save\" and
-    continue on as normal. After picking up the project again after a hiatus,  I
-    reverted back to a \"save\" from 8 months prior.\r\n\r\nWhat I didn't realise
-    was that I had not saved since then, so all the work I did in those 8 months.\r\n\r\nluckily
-    not much was lost...apart from one entirely finished game called \"SIGHT\", which
-    I had already published on itch.io. \r\n\r\nSo, I want the game to be included
-    in this collection because it was made around the same time as the other games...
-    but I don't want to have to remake the entire thing... hence, the download link
-    below.\r\n\n\nluckily not much was lost...apart from one entirely finished game
-    called \"SIGHT\", which I had already published on itch.io. \n\nSo, I want the
-    game to be included in this collection because it was made around the same time
-    as the other games... but I don't want to have to remake the entire thing...
-    hence, the download link below.\n"
+  m_text: "\r\r\nSo uhhh... funny thing about this. \r\n\r\nI used a service called
+    Github during this project, which basically allows me to make \"saves\" of my
+    work as I progress on making stuff. Part of this service allows me to revert
+    the entire project back to any of those saves, so that if I ever make a catascopic
+    mistake while coding, I can just undo it and continue as normal.\r\n\r\nAfter
+    picking up the project again after a hiatus, I encountered such an issue, and
+    with confidence in my heart and \"what's the worst that can happen\" in my prefrontal
+    cortex, I reverted back to my previous save.\r\n\r\nWhat I didn't realise was
+    that my last save was another a year ago, so all the work I did in that year...was
+    gone.\r\n\r\r\nNow truthly not much was lost, mostly just a lot of small polish
+    things.. The only loss that really hurt was an entirely finished game called
+    \"SIGHT\", but I had already published that game onto itch.io so even that wasn't
+    too bad.\r\n\r\nThat does put me in a bit of weird spot with this collection,
+    in that I want to include it, but remaking it from scratch just feels like a
+    waste of effort, so i've included a link to the game below, ENJOY :P\r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0491c49f4cbb85348a134305cf91c127, type: 2}
   m_sharedMaterial: {fileID: 21722043216658014, guid: 0491c49f4cbb85348a134305cf91c127,

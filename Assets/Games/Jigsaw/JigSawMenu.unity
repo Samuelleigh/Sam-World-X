@@ -2413,7 +2413,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0.59957886, y: -70.937195}
-  m_SizeDelta: {x: -32.68518, y: -123.620056}
+  m_SizeDelta: {x: -32.68518, y: -145.28912}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &203018620
 MonoBehaviour:
@@ -8497,7 +8497,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: f26675ab836218c4ea988d4b2fe4b448, type: 3}
+  m_Sprite: {fileID: 21300000, guid: eb46cf5c943185442a389b5a1f12fe80, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -13323,7 +13323,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1024758687}
   - component: {fileID: 1024758686}
-  - component: {fileID: 1024758688}
   m_Layer: 0
   m_Name: Jigsaw Level Manager
   m_TagString: Untagged
@@ -13463,20 +13462,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1024758688
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1024758685}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e16cdc1fd7068749b6646b5272da994, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentlyFullScreen: 1
-  onlyone: 0
 --- !u!1 &1024908902
 GameObject:
   m_ObjectHideFlags: 0
@@ -17477,8 +17462,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 396.4378, y: -142.2499}
-  m_SizeDelta: {x: 742.8756, y: 520.13}
+  m_AnchoredPosition: {x: 396.4378, y: -142.24971}
+  m_SizeDelta: {x: 742.8756, y: 596.74}
   m_Pivot: {x: 0.5, y: 1.0000005}
 --- !u!114 &1312910385
 MonoBehaviour:
@@ -17509,9 +17494,11 @@ MonoBehaviour:
 
     M: Mute
 
+    F: Change Full-Screen Mode
 
-    Note: Press the "clean" button to retrive
-    any missing pieces.
+
+    Note:
+    Press the "clean" button to retrive any missing pieces.
 
 '
   m_isRightToLeft: 0
@@ -23291,8 +23278,6 @@ MonoBehaviour:
     youtubeURL: https://www.youtube.com/watch?v=lXBLv71E3bw&ab_channel=DreadCentral
   - youtubeTitle: 'A TERRIBLY FAST WORLD '
     youtubeURL: https://www.youtube.com/watch?v=qw0LExvj0gQ&t=244s&ab_channel=Endzeitkind
-  - youtubeTitle: 'Crowds Crowded People Walking Down Oxford Street London '
-    youtubeURL: https://www.youtube.com/watch?v=ng8Wivt52K0&ab_channel=BeautifulRelaxation
   - youtubeTitle: Day To Night Time Lapse
     youtubeURL: https://youtu.be/fhiH6WDMd-U
   - youtubeTitle: Aphex Twin - Vordhosbn
@@ -25277,7 +25262,7 @@ PrefabInstance:
     - target: {fileID: 559566662113289963, guid: eab27084e36c8ee4fb723c2aa6632611,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 104.5
+      value: 140.8
       objectReference: {fileID: 0}
     - target: {fileID: 559566662113289963, guid: eab27084e36c8ee4fb723c2aa6632611,
         type: 3}
@@ -25287,7 +25272,7 @@ PrefabInstance:
     - target: {fileID: 559566662113289963, guid: eab27084e36c8ee4fb723c2aa6632611,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 786.00006
+      value: 884.2791
       objectReference: {fileID: 0}
     - target: {fileID: 559566662113289963, guid: eab27084e36c8ee4fb723c2aa6632611,
         type: 3}
