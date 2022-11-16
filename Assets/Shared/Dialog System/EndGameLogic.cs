@@ -12,22 +12,22 @@ public class EndGameLogic : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       currentscene = SceneManager.GetActiveScene();
+        currentscene = SceneManager.GetActiveScene();
     }
 
     // Update is called once per frame
     void Update()
     {
-       
-            if (Input.GetKey("escape"))
-            {
-                QuitProgram();
-            }
-            if (Input.GetKey("f"))
-            {
-                ToggleFullScreen();
-            }
-        
+
+        if (Input.GetKey("escape"))
+        {
+            QuitProgram();
+        }
+        if (Input.GetKey("f"))
+        {
+            ToggleFullScreen();
+        }
+
     }
 
     public void ToggleFullScreen()
@@ -40,13 +40,13 @@ public class EndGameLogic : MonoBehaviour
     public void EndGame()
     {
 
-     
-        if (currentscene.name == "Rock Conversation") 
+
+        if (currentscene.name == "Rock Conversation")
         {
             FindObjectOfType<RockConversation>().gameOver();
         }
 
-        if (currentscene.name == "Knock Knock") 
+        if (currentscene.name == "Knock Knock")
         {
 
             QuitProgram();
@@ -66,6 +66,18 @@ public class EndGameLogic : MonoBehaviour
     {
 
         Application.Quit();
+    }
+
+    public void RestartRockGame() 
+    {
+        Scene scene = SceneManager.GetActiveScene(); SceneManager.LoadScene(scene.name);
+
+    }
+
+    public void BackToSamWorld() 
+    {
+
+         SceneManager.LoadScene("Main Menu");
     }
 
 

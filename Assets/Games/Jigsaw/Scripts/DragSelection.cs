@@ -198,6 +198,20 @@ public class DragSelection : MonoBehaviour//,IPointerDownHandler
 
         }
 
+        if (Input.GetMouseButtonDown(1))
+        {
+
+            Debug.Log("heh");
+
+            if (!Input.GetMouseButton(0))
+            {
+                dragSelect = false;
+            }
+
+
+
+        }
+
     }
 
     public void CheckInsideSelectionRect()

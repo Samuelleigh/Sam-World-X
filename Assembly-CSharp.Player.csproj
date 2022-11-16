@@ -244,6 +244,7 @@
     <Compile Include="Assets\Doodle Studio 95\Examples\Scripts\WalkingCharacter.cs" />
     <Compile Include="Assets\Shared\Sound System\Sound.cs" />
     <Compile Include="Assets\Games\Drawing Game\DrawingGameLogic.cs" />
+    <Compile Include="Assets\LogoEyeAnimation.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Shared\TextMesh Pro\Resources\Shaders\TMPro.cginc" />

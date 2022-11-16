@@ -95,7 +95,7 @@ namespace MovingJigsaw
             {
                 if (jig != this)
                 {
-                    jig.transform.parent = gameObject.transform.parent;
+                    jig.transform.SetParent(gameObject.transform.parent,true); //true or false
                     jig.multiSelectOffset = new Vector2(main.transform.position.x, main.transform.position.y) - (new Vector2(jig.main.transform.position.x, jig.main.transform.position.y));
                 }
             }
@@ -208,12 +208,12 @@ namespace MovingJigsaw
         //
         //  jig.UpdatePostionInSave();
         //
-        //  if (gm.Level.name == "Just A Dream (The End)")
-        //  {
-        //    //  Debug.Log("werid");
-        //      gameObject.SetActive(false);
-        //      gm.EndingStepForward();
-        //  }
+            if (gm.Level.name == "Just A Dream (The End)")
+            {
+              //  Debug.Log("werid");
+                gameObject.SetActive(false);
+                gm.EndingStepForward();
+            }
         }
 
         public void SnapToPiece(GameObject piece)
