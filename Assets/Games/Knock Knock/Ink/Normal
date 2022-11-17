@@ -15,15 +15,15 @@ WHAT IS IT! #annoyed
 Hey how's it goi...wait, sorry I thought you were someone else.
 *Really why?
 Oh I have a friend that always knocks a lot at first, then just stops abruptly.
-    **Cool
-    **Ok
+    **Cool.
+    **Ok.
     --
     ->FirstChoice
-*OK
+*OK.
 ->FirstChoice
 =FirstChoice
 
-*I have a package for you
+*I have a package for you.
 { reaction: 
 - "annoyed": -> package.annoyedPackage
 - "neutral": -> package.neutralPackage

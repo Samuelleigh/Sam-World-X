@@ -3,7 +3,7 @@
 =AnnoyedHelp
 I'm really busy at the moment so it better be important. #annoyed
 *It is.
-Ok, what do you need ->WhatDoYouNeed 
+Ok, what do you need? ->WhatDoYouNeed 
 *It isn't.
 ...Find someone else to annoy then. ->END
 
@@ -12,7 +12,7 @@ Ok, what do you need ->WhatDoYouNeed
 
 =neutralHelp
 uhh, could you perhaps ask someone else? 
-*It's really important
+*It's really important.
 Fine, what do you need?
 ->WhatDoYouNeed
 *It won't take that long
@@ -30,18 +30,18 @@ Sure, what do you need?
 =WhatDoYouNeed
 *I crashed my truck
  { reaction: 
-- "annoyed": ok...well, that sucks, but you look fine to me. ->areyouok
-- "neutral": wow, are you ok? ->areyouok #concerned
-- "Expecting": wow, are you ok? ->areyouok #concerned
+- "annoyed": Ok...well, that sucks, but you look fine to me. ->areyouok
+- "neutral": Wow, are you ok? ->areyouok #concerned
+- "Expecting": Wow, are you ok? ->areyouok #concerned
 }
 
 *I need a cup of sugar.
     { reaction: 
 - "annoyed": You knocked violently on my door for a cup of sugar? ->annoyedsugar  #annoyed
-- "neutral": umm, no offense, but I've never seen you before, who are you? ->neverSeen #concerned
-- "Expecting": ok sure, how much do you need. ->howmuch #concerned
+- "neutral": Umm, no offense, but I've never seen you before, who are you? ->neverSeen #concerned
+- "Expecting": Ok sure, how much do you need. ->howmuch #concerned
 }
-*I have no money could I borrow 20$.
+*I have no money. Could I borrow 20$.
  { reaction: 
 - "annoyed": ... ->END #concerned
 - "neutral": ->END
@@ -64,13 +64,13 @@ Really? Which number are you?
 
     *-1
     That's not a real number. #annoyed
-        **duh
+        **duh.
     ... ->END #annoyed
         **It was a joke.
          { reaction: 
 - "annoyed": Not funny. Which house did you move into? ->whichnum #annoyed
-- "neutral": oh. So which house are you at really? ->whichnum 
-- "Expecting": oh, sorry, yes of course. But seriously which house. ->whichnum
+- "neutral": Oh. So which house are you at really? ->whichnum 
+- "Expecting": Oh, sorry, yes of course. But seriously which house. ->whichnum
 }
         **It's a special new house in an alternative dimension.
             ...
@@ -80,25 +80,25 @@ Really? Which number are you?
      { reaction: 
 - "annoyed": That's like...the other side of town #concerned
 - "neutral": uh, sure...Don't know why you couldn't have just asked your neighbor instead. 
-- "Expecting": ok cool.
+- "Expecting": Ok cool.
 }
         **Everyone else was out. 
         I don't think that's true. #concerned
             ***Why does that matter? I'm here now.
             { reaction: 
-    - "annoyed": I don't know who you are so, it kinda does. ->neverseen2 #annoyed
-    - "neutral":I don't know who you are so, it kinda does. ->neverseen2 #annoyed
-    - "Expecting": I guess your right? ->howmuch
+    - "annoyed": I don't know who you are, so, it kinda does. ->neverseen2 #annoyed
+    - "neutral":I don't know who you are, so, it kinda does. ->neverseen2 #annoyed
+    - "Expecting": I guess you're right? ->howmuch
     }
             ***Why would I lie about that?
             { reaction: 
-            - "annoyed": I don't know, why does anyone do anything ->doanything #annoyed
-             - "neutral":I don't know, why does anyone do anything ->doanything #annoyed
-             - "Expecting": I guess your right? ->howmuch
+            - "annoyed": I don't know, why does anyone do anything? ->doanything #annoyed
+             - "neutral":I don't know, why does anyone do anything? ->doanything #annoyed
+             - "Expecting": I guess you're right? ->howmuch
              }
-        **Are you going to give me some sugar or not.
+        **Are you going to give me some sugar or not?
         { reaction: 
-- "annoyed": no...->END #angry
+- "annoyed": No...->END #angry
 - "neutral": uh, sure...how much? ->howmuch #concerned
 - "Expecting": uh, sure...how much? ->howmuch #concerned
 }
@@ -107,11 +107,11 @@ Really? Which number are you?
         **Yes, I live with you now.
         ... ->END #concerned
         **Yes, Get out of my house right now
-        ...no ->END #angry
+        ...No ->END #angry
         **So?
         ...->END
     *23
-    I think I would of noticed if my next door neighbor moved out. #concerned
+    I think I would have noticed if my next door neighbor moved out. #concerned
         **I guess not.
             { reaction: 
     - "annoyed": hmm...How much do you need? ->howmuch #annoyed
@@ -119,7 +119,7 @@ Really? Which number are you?
     - "Expecting": I have been pretty wrapped up in my own drama recently. How much sugar do you need? ->howmuch #concerned
     }
         **I'm house sitting.
-        oh, that makes sense, How much sugar do you need. ->howmuch 
+        Oh, that makes sense, How much sugar do you need? ->howmuch 
         
 *{!howmuch}I'm just someone who needs sugar.
  { reaction: 
@@ -132,23 +132,23 @@ Really? Which number are you?
 =neverseen2
 *So you can't help people you don't know.
     Well I didn't mean that. 
-    **No I get it, your too busy to help out a neighbour in need. 
+    **No I get it, you're too busy to help out a neighbour in need. 
      ->END
     **It's fine, I wouldn't want to take help from someone that clearly loathed me.
     ... #annoyed
-        ***But I want you too know that if this was a real emergency, I would be dead.
+        ***But I want you to know that if this was a real emergency, I would be dead.
         ---
         ...Are you done.#annoyed
-            ***yes.
+            ***Yes.
             .->END #-0.5
-            ***no.
+            ***No.
             . ->END #-0.5
             
 =doanything
 *oohhh very Camus.
-    how?
+    How?
     **uhh, I don't know...Just kinda, felt like something he would say.
-    oh, ok. Do you know what else Camus would do in this situation?
+    Oh, ok. Do you know what else Camus would do in this situation?
         ***no? What?
     ->END
     
@@ -158,8 +158,8 @@ Really? Which number are you?
 What do you mean? #concerned
     **I have to bake a cake RIGHT NOW!
     That's your emergency? I thought you were diabetic or something. #annoyed
-        ***nope, I just need to bake a cake and I have no sugar.
-        ok...sure, whatever, how much do you need? ->howmuch
+        ***Nope, I just need to bake a cake and I have no sugar.
+        Ok...sure, whatever, how much do you need? ->howmuch
         ***Yes, that as well.
         ...->END
         ***I don't understand?
@@ -170,36 +170,36 @@ What do you mean? #concerned
                 No. ->END #angry
             ****I'm sorry for misleading you.
                 You better be, you complete idiot. #angry
-                *****alright, you can calm down now.
+                *****Alright, you can calm down now.
                 ->annoyedsugarVoilent
                 *****Are you going to give me sugar or not.
                 ...no ->END  #angry
 *Yes, sorry for misleading you.
-whatever...how much do you need. ->howmuch #annoyed
+Whatever...how much do you need. ->howmuch #annoyed
 *I wouldn't say I knocked "violently".
 ->annoyedsugarVoilent
 
         
 =annoyedsugarVoilent
 I just wanted to make a point that you shouldn't disrupt people's lives for no reason. #annoyed
-    **great job dude, you really showed me.
-    you know what...->END #annoyed
+    **Great job dude, you really showed me.
+    You know what...->END #annoyed
     **...
     I have my own things I need to deal with so if your going to intrude in my life in such an annoying way, it better be important. #annoyed
     ***Yes, I'm an adult. I know this.
-    clearly not.#annoyed
-         ****Dude, your not even real, so stop trying to make me feel bad.
-        ...wow...just wow. ->END 
+    Clearly not.#annoyed
+         ****Dude, you're not even real, so stop trying to make me feel bad.
+        ...Wow...just wow. ->END 
         ****...
         ...I'm out of sugar anyway. ->END
     ***...
     You know I've been having family trouble recently, I thought someone had DIED! #angry
-        ****Dude, your not even real, so stop trying to make me feel bad.
+        ****Dude, you're not even real, so stop trying to make me feel bad.
         ...wow...just wow. ->END
         ****I'm sorry.
-        good...and I guess i'm sorry for going off at you, I've been on edge recently.#annoyed
+        Good...and I guess i'm sorry for going off at you, I've been on edge recently.#annoyed
             *****Can I have some sugar?
-            ...actually...I'm out of sugar. ->END
+            ...Actually...I'm out of sugar. ->END
     ***What? so I can't ever talk to any stranger ever.
     NOT IF YOUR GOING TO ACT LIKE THAT! ->END #angry
 
@@ -213,7 +213,7 @@ I just wanted to make a point that you shouldn't disrupt people's lives for no r
 }
 --
     **That's how much I need.
-    sure, I'll go inside to get you some.->END
+    Sure, I'll go inside to get you some.->END
     **Actually, you could just give me a cup, and I'll just measure out the correct amount.
     Sounds good, I'll go inside and get you some. ->END
                 
@@ -237,7 +237,7 @@ I just wanted to make a point that you shouldn't disrupt people's lives for no r
 }
 
 *{!whichnum}Sorry, I should of introduced myself first, I just moved in yesterday,
-oh, ok. Which house do you live in?
+Oh, ok. Which house do you live in?
 ->whichnum
 
 

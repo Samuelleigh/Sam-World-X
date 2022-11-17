@@ -25,7 +25,7 @@ Uh, I'm sorry but, could you remind me? #concerned
 
 
 =justSpoke
-  I think I would of remembered that. #annoyed
+  I think I would have remembered that. #annoyed
         *You just went inside to call an ambulance and then you never came back.
         umm, do you need an ambulance. #concerned
             **Yes, I have a concussion.
@@ -34,7 +34,7 @@ Uh, I'm sorry but, could you remind me? #concerned
             I seriously don't remember you.
                 ***Sure man, sure.
                 ... ->END #annoyed
-                ***I think you're the one who needs an ambulance
+                ***I think you're the one who needs an ambulance.
                 I'm going to shut the door now.
                     ****No no no wait.
                     . ->END #-0.1
@@ -102,7 +102,7 @@ Uh, I'm sorry but, could you remind me? #concerned
                         ******No.
                         Goodbye. ->END #concerned
             ***Perhaps, But I still want to.#concerned
-            Oh...sorry I'm...uhh, a little busy right now...ugh thank you, for beliving in me. #concerned
+            Oh...sorry I'm...uhh, a little busy right now...ugh thank you, for believing in me. #concerned
             ->END 
             ***Yes you're right.
             ...#sad
@@ -116,7 +116,7 @@ My brother is dead.
 - "neutral": ...->END
 - "Expecting": ... ->END
 }
-    *I'm sorry
+    *I'm sorry.
     { reaction: 
 - "annoyed": Sure, whatever. ->END #angry
 - "neutral": ...->END
