@@ -146,6 +146,7 @@
     <Compile Include="Assets\Games\Guessing Game\Scripts\LevelBarScript.cs" />
     <Compile Include="Assets\LightShaft\Scripts\VideoController\LoadVideoTitleToText.cs" />
     <Compile Include="Assets\Games\To Be Finished In next Collection\Cafe\Scripts\CafeConvoScriptObject.cs" />
+    <Compile Include="Assets\LogoEyeAnimation.cs" />
     <Compile Include="Assets\LightShaft\YoutubeSrc\HTTPHelperYoutube.cs" />
     <Compile Include="Assets\Games\Jigsaw\Level Data\Werid Mode\Jump Scene\Scripts\GameLogicJump.cs" />
     <Compile Include="Assets\LightShaft\CustomYoutubePlayer\VideoPlayer Helper\Scripts\VideoPresenter.cs" />
@@ -244,7 +245,7 @@
     <Compile Include="Assets\Doodle Studio 95\Examples\Scripts\WalkingCharacter.cs" />
     <Compile Include="Assets\Shared\Sound System\Sound.cs" />
     <Compile Include="Assets\Games\Drawing Game\DrawingGameLogic.cs" />
-    <Compile Include="Assets\LogoEyeAnimation.cs" />
+    <Compile Include="Assets\Games\Jigsaw\Scripts\ButtonClickSoundSystemLink.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Shared\TextMesh Pro\Resources\Shaders\TMPro.cginc" />

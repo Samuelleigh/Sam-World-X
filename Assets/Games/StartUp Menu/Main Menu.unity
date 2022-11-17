@@ -3712,18 +3712,6 @@ MonoBehaviour:
           m_StringArgument: Rock Conversation
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: StartStory
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 1033404214}
         m_TargetAssemblyTypeName: 
         m_MethodName: PlaySound
@@ -3881,18 +3869,6 @@ MonoBehaviour:
           m_StringArgument: Way Down
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: StartStory
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 1033404214}
         m_TargetAssemblyTypeName: 
         m_MethodName: PlaySound
@@ -4049,18 +4025,6 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 10 game
           m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: StartStory
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1033404214}
         m_TargetAssemblyTypeName: 
@@ -4485,6 +4449,7 @@ GameObject:
   m_Component:
   - component: {fileID: 696685584}
   - component: {fileID: 696685583}
+  - component: {fileID: 696685585}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -4518,6 +4483,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &696685585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 696685582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa56e1069ea18bb4793b40f003c9dfe1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttons: []
+  soundname: hia
+  sounds: {fileID: 0}
 --- !u!1 &775634785
 GameObject:
   m_ObjectHideFlags: 0
@@ -5541,18 +5521,6 @@ MonoBehaviour:
           m_StringArgument: PlayScene
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: StartStory
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 1033404214}
         m_TargetAssemblyTypeName: 
         m_MethodName: PlaySound
@@ -5818,18 +5786,6 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: DeadGuy
           m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: StartStory
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1033404214}
         m_TargetAssemblyTypeName: 
@@ -6281,18 +6237,6 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: Knock Knock
           m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: StartStory
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1033404214}
         m_TargetAssemblyTypeName: 
@@ -7997,7 +7941,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_UiScaleMode: 1
-  m_ReferencePixelsPerUnit: 95.8
+  m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 0.5
   m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
@@ -8862,7 +8806,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Design Thoughts
+  m_text: About Sam world 1?
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0491c49f4cbb85348a134305cf91c127, type: 2}
   m_sharedMaterial: {fileID: 21722043216658014, guid: 0491c49f4cbb85348a134305cf91c127,
@@ -12584,18 +12528,6 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: JigsawMenu
           m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: StartStory
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1033404214}
         m_TargetAssemblyTypeName: 

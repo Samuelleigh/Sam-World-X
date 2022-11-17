@@ -12,11 +12,11 @@ Sorry, this is 15 Kay Spur street.
         ummm......no. ->END
     **Sorry, that was what I meant to say.
     ummm, ok. So where is the package then? ->WherePackage
-*Are you darren smith?
+*Are you Darren Smith?
     Nope. He lives on the other side of town.
     **Do you know his address?
     Not off by heart, I have it written down inside though, If you wait I can get it. 
-        ***No that's fine.
+        ***No, that's fine.
         It's no bother. 
             ****OK sure.
             I'll just shut this door to stop the cold getting in. ->END
@@ -45,7 +45,7 @@ Very funny, where is my package?#annoyed
 *What, so I can't knock creatively?
     You call that racket creative? #annoyed
     **Can you suggest a better way of knocking creatively?
-    Really? Ok. I have one friend that quickly 6 times, then just stops. That's at least something.
+    Really? Ok. I have one friend that knocks quickly 6 times, then just stops. That's at least something.
         ***Thank you.
         Sure. Whatever. Where is my package? #annoyed
     **Yes.
@@ -116,7 +116,7 @@ What about it.
             - "neutral": Ok well I won't be doing that.
             - "Expecting": That doesn't sound right.
             }
-            ****It's only a 5 dollars service fee.
+            ****It's only a 5 dollar service fee.
               { reaction: 
             - "annoyed": This is stupid. #annoyed
                   ****Please sir, I'm just doing my job.
@@ -181,7 +181,7 @@ What about it.
             What?#annoyed
                 ****I don't know.
                { reaction: 
-            - "annoyed": YES I HEARD I YOU! WHAT DO YOU MEAN MY PACKAGE ISN'T HERE! #angry
+            - "annoyed": YES I HEARD YOU! WHAT DO YOU MEAN MY PACKAGE ISN'T HERE! #angry
                     *It's not here.
                     How about this, when the package gets here, you can knock on my door and waste more of my time, goodbye. ->END
             - "neutral": I'm confused, What exactly are you trying to tell me? #annoyed
@@ -193,7 +193,7 @@ What about it.
                 *That your package isn't here.
                     ->END
                     *That there was an error, so I don't have the package you ordered.
-                    Isn't there some sort of automated system for letting me know this stuff. #concerned
+                    Isn't there some sort of automated system for letting me know this stuff? #concerned
                         **I just wanted to make sure.
                         Ah, Thanks for that. ->END #concerned
                         **Yes, but I forgot about that.
@@ -249,7 +249,7 @@ Why?
     -
     *Right here.
     Where? You're just saying "here" without pointing to anything.#annoyed
-        **Sir I'm just doing my job.
+        **Sir, I'm just doing my job.
           { reaction: 
 - "annoyed": You're an idiot. ->END #angry
 - "neutral": Are you ok? <> ->WhereTruck #concerned
@@ -285,7 +285,7 @@ Which car?
         ***ummm
         Are you trying to scam me? #annoyed
         ->Caught2
-        ***No it's mine.
+        ***No, it's mine.
         ---
         You're an idiot.#annoyed
         ->END
@@ -320,7 +320,7 @@ Which car?
 =annoyedinjury
 *Sorry if my injury inconvenienced you.
 ...You're quite right, I'm sorry. You're probably not thinking straight. Do you want me to call you an ambulance? #concerned
-    **No I'm ok.
+    **No, I'm ok.
     Are you sure? Don't take this the wrong way, but only someone with a major concussion would act like the way you are. #concerned
         ***Good point.
         ***Not necessarily.
@@ -333,7 +333,7 @@ Which car?
 =neutralInjury
 *Yes that is what happened.
 You're probably not thinking straight. Do you want me to call you an ambulance? #concerned
-    **No I'm ok.
+    **No, I'm ok.
     Are you sure? Don't take this the wrong way, but only someone with a major concussion would act like the way you are.#concerned
         ***Good point.
         ***Not necessarily. 
@@ -347,7 +347,7 @@ You're probably not thinking straight. Do you want me to call you an ambulance? 
 //expecting injury
 =ExpectingInjury
 Do you want me to call you an ambulance? #concerned
-    **No I'm ok.
+    **No, I'm ok.
     Are you sure, don't take this the wrong way, but only someone with a major concussion would act like the way you are.#concerned
         ***Good point.
         ***Not necessarily.
@@ -400,6 +400,7 @@ Well, you'll have to explain to your boss why I didn't get my package, because I
 Well forget it then. ->END
 *Yes.
 ->signHere
+
 
 
 

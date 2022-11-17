@@ -39,7 +39,7 @@ Sure, what do you need?
     { reaction: 
 - "annoyed": You knocked violently on my door for a cup of sugar? ->annoyedsugar  #annoyed
 - "neutral": Umm, no offense, but I've never seen you before, who are you? ->neverSeen #concerned
-- "Expecting": Ok sure, how much do you need. ->howmuch #concerned
+- "Expecting": Ok sure, how much do you need? ->howmuch #concerned
 }
 *I have no money. Could I borrow 20$.
  { reaction: 
@@ -138,7 +138,7 @@ Really? Which number are you?
     ... #annoyed
         ***But I want you to know that if this was a real emergency, I would be dead.
         ---
-        ...Are you done.#annoyed
+        ...Are you done?#annoyed
             ***Yes.
             .->END #-0.5
             ***No.
@@ -165,14 +165,14 @@ What do you mean? #concerned
         ***I don't understand?
         How? That's literally the only emergency that could possibly be helped with sugar.  #annoyed
             ****I don't think that's how being diabetic works.
-            Well I'm sorry if me trying to help wasn't logical enough for you.   #annoyed
-                *****Whatever, can I have some sugar now.
+            Well I'm sorry my help isn't logical enough for you.   #annoyed
+                *****Whatever, can I have some sugar now?
                 No. ->END #angry
             ****I'm sorry for misleading you.
                 You better be, you complete idiot. #angry
                 *****Alright, you can calm down now.
                 ->annoyedsugarVoilent
-                *****Are you going to give me sugar or not.
+                *****Are you going to give me sugar or not?
                 ...no ->END  #angry
 *Yes, sorry for misleading you.
 Whatever...how much do you need. ->howmuch #annoyed
@@ -288,3 +288,4 @@ I'll go inside and call the hospital. I'll shut the door so you can lean up agai
     **Ok, I'll be here.
         Good lad.
         ->END
+

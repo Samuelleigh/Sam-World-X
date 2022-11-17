@@ -96,7 +96,7 @@ public class SoundSystem : MonoBehaviour
             {
                 if (soundNames[i] == sounds[b].name) 
                 {
-
+                    Debug.Log(soundNames[i]);
                     bucket.Add(sounds[b]);
                   //  return;
                 }
@@ -105,6 +105,30 @@ public class SoundSystem : MonoBehaviour
 
         }
         bucket[Random.Range(0, bucket.Count)].source.Play();
+    }
+
+
+    public void PlayRandomSound(List<String> soundnames) 
+    {
+        List<Sound> bucket = new List<Sound>();
+        foreach (Sound s in sounds) 
+        {
+            
+
+            if (soundnames.Contains(s.name))
+            {
+                Debug.Log(s.name);
+                bucket.Add(s);
+            }
+            else 
+            {
+                Debug.Log(s.name);
+                Debug.Log("not in here");
+            }
+        }
+
+        bucket[Random.Range(0, bucket.Count)].source.Play();
+
     }
 
     public void SwitchMuteSounds() 

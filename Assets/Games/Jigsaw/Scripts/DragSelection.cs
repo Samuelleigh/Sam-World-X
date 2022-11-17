@@ -134,9 +134,6 @@ public class DragSelection : MonoBehaviour//,IPointerDownHandler
             }
             else 
             {
-
-
-
                 selectedPieces.Clear();
 
                 foreach (JigsawPieceDrag jig in jigsawpieces)
@@ -201,11 +198,14 @@ public class DragSelection : MonoBehaviour//,IPointerDownHandler
         if (Input.GetMouseButtonDown(1))
         {
 
-            Debug.Log("heh");
+            Debug.Log("mouse up 1");
 
             if (!Input.GetMouseButton(0))
             {
-                dragSelect = false;
+                Debug.Log("mouse up 2");
+                dragingAPiece = false;      
+                
+                
             }
 
 
@@ -355,6 +355,7 @@ public class DragSelection : MonoBehaviour//,IPointerDownHandler
 
     }
 
+ 
     private void OnGUI()
     {
         if (gm.Level.name != "Just A Dream (The End)")

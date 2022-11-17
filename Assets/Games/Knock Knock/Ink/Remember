@@ -27,7 +27,7 @@ Uh, I'm sorry but, could you remind me? #concerned
 =justSpoke
   I think I would have remembered that. #annoyed
         *You just went inside to call an ambulance and then you never came back.
-        umm, do you need an ambulance. #concerned
+        umm, do you need an ambulance? #concerned
             **Yes, I have a concussion.
             Oh, ok, I'll just go inside and get my phone. ->END
             **Ok, I get it, you're getting revenge, cool move man.
@@ -45,7 +45,7 @@ Uh, I'm sorry but, could you remind me? #concerned
         *You got mad at me for not delivering a package.
             ...you have a package for me? 
                 **No
-                So you knocked, on my door, pretended to have a package...but didn't.
+                So you knocked on my door, pretended to have a package...but didn't.
                     ***Exactly.
                     Yeah, I would find that annoying. 
                     ->END
@@ -53,7 +53,7 @@ Uh, I'm sorry but, could you remind me? #concerned
                 Oh, ok, I wasn't expecting anything today, are you sure you've got the right address.
                     ***This 29 KingsWood Lane?
                         Nope, it's 15 Kay Spur street.
-                    ***Are you darren smith?
+                    ***Are you Darren smith?
                        Nope. He lives on the other side of town.
                     ---
                     ***Well I guess that doesn't matter anyway, because as I said I don't have anything for you.

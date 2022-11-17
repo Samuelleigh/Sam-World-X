@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -24,11 +25,20 @@ namespace MovingJigsaw
         public RectTransform viewport;
         public RectTransform canvas;
 
+        public List<string> snapnames = new List<string>();
+
         void Awake()
         {
             gm = FindObjectOfType<JigsawGameLogic>();
             dragSelection = FindObjectOfType<DragSelection>();
             mytransform = GetComponent<RectTransform>();
+
+            snapnames.Add("newclick1");
+            snapnames.Add("newclick2");
+            snapnames.Add("newclick3");
+            snapnames.Add("newclick4");
+            snapnames.Add("newclick5");
+            snapnames.Add("newclick6");
 
         }
 
@@ -93,7 +103,7 @@ namespace MovingJigsaw
 
             dragSelection.dragingAPiece = true;
 
-            SoundSystem.instance.PlaySound("click");
+            SoundSystem.instance.PlayRandomSound(snapnames);
 
             if (!dragSelection.selectedPieces.Contains(this)) 
             {
@@ -134,7 +144,7 @@ namespace MovingJigsaw
         public void OnEndDrag(PointerEventData eventData)
         {
 
-            SoundSystem.instance.PlaySound("click");
+            SoundSystem.instance.PlayRandomSound(snapnames);
             //Debug.Log("end drag");
             dragSelection.dragingAPiece = false;
 
