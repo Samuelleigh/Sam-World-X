@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 357420eebc2d1ce42ba00a2bfa08eb15, type: 3}
   m_Name: Conform_3
   m_EditorClassIdentifier: 
-  name: 9:16 Verticle
+  name: 9:16 Vertical
   Xpieces: 4
   Ypieces: 8
   puzzleResolution: 2

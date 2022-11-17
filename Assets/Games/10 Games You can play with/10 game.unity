@@ -4636,10 +4636,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "1. Open the book to page one.\n\n2. Read everyword in the order they're
-    presented on the page\n\n3. Turn the page and repeat step 2.\n\n<u>Varations:
-    </u>\n - read every other word\n - Read pages out of order\n - Read one page
-    then discard the book.\n - Just look at the pictures.\n\n"
+  m_text: "RIP Vine Collection\r\n\r\n1. Open the book to page one.\r\n\r\n2. Read
+    every word in the order they're presented on the page\r\n\r\n3. Turn the page
+    and repeat step 2.\r\n\r\n<u>Variations: </u>\r\n - read every other word\r\n
+    - Read pages out of order\r\n - Read one page then discard the book.\r\n - Just
+    look at the pictures.\r\n\n\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bea7f1e5c3a794c44966453b6e216ec1, type: 2}
   m_sharedMaterial: {fileID: 2719408204413092389, guid: bea7f1e5c3a794c44966453b6e216ec1,
@@ -5208,13 +5209,13 @@ MonoBehaviour:
       m_Calls: []
   m_text: "- These collections of games were originally one page zines, this allowed
     each zine have an \"A\" side, and a \"B\" side.  I used this transition between
-    the sides to signal that the next games were more experimental in nature.\r\n\n-
+    the sides to signal that the next games were more experimental in nature.\r\n\r\n-
     For each zine, I ordered the games intentionally, pairing up games that I felt
     had some sort of thematic connection, which is why I've recreated the layout
-    here.\n\r\n- The last two collections were posted to twitter... so I've included
+    here.\r\n\r\n- The last two collections were posted to twitter... so I've included
     the media I made for those threads.\r\n\r\n- The first of these zines (pinecone)
-    was made sometime around 2015 (when I was still in highschool!). \n\n- I find
-    it intresting how dated some of these games are...idk.\n"
+    was made sometime around 2015 (when I was still in highschool!). \r\n\r\n- I
+    find it interesting how dated some of these games are...idk.\r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bea7f1e5c3a794c44966453b6e216ec1, type: 2}
   m_sharedMaterial: {fileID: 2719408204413092389, guid: bea7f1e5c3a794c44966453b6e216ec1,
@@ -10500,12 +10501,12 @@ MonoBehaviour:
     writing1: "1. Two players wrap a hand around the same pinecone.\r\n\r\n2. Both
       players shut their eyes and agree not to speak unless they want to stop playing.\r\n\r\n3.
       One player can lightly squeeze the pinecone, but can\u2019t squeeze it again
-      until the other person have squeezed the pinecone in return.\r\n\r\n4. Have
-      a conversation. "
+      until the other person has squeezed the pinecone in return.\r\n\r\n4. Have
+      a conversation. \r\n"
     title2: Divorce
-    writing2: "1. Two players hold a pinecone from oppisite ends.\r\n\r\n2. Players
+    writing2: "\r\n1. Two players hold a pinecone from opposite ends.\r\n\r\n2. Players
       must try to get the \r\npinecone off the other player\r\n\r\n3. DON\u2019T
-      HARM THE  PINECONE!!!"
+      HARM THE  PINECONE!!!\r\n"
     sprite: {fileID: 0}
     videoClip: {fileID: 0}
     isSpread: 1
@@ -10518,12 +10519,12 @@ MonoBehaviour:
       put their hands up. \r\n\r\n4. Stop once everyone agrees that the pinecone
       is no more. "
     title2: Variations
-    writing2: "Catch:\r\n- Use an imaginary pinecone. \r\n- One player, use a wall
+    writing2: "Catch:\r\n- Use an imaginary pinecone. \r\n- One player uses a wall
       to bounce the pinecone back to you.\r\nGoal:\r\n- Two teams, both trying to
       get their pinecone to the other side first.\r\nTalk:\r\n-Three people instead
-      of two.\r\n- Use an imagenry pinecone.\r\nDivorce:\r\n- Don\u2019t care if
+      of two.\r\n- Use an imaginary pinecone.\r\nDivorce:\r\n- Don\u2019t care if
       the pinecone is harmed.\r\nDismantle: \r\n- After dismantling the pinecone,
-      try to rebuild the pinecone. "
+      try to rebuild the pinecone. \r\n"
     sprite: {fileID: 0}
     videoClip: {fileID: 0}
     isSpread: 1
@@ -11568,10 +11569,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "1. Open the book to page one.\n\n2. Read everyword in the order they're
-    presented on the page\n\n3. Turn the page and repeat step 2.\n\n<u>Varations:
-    </u>\n - read every other word\n - Read pages out of order\n - Read one page
-    then discard the book.\n - Just look at the pictures.\n\n"
+  m_text: "\r\n1. Open the book to page one.\r\n\r\n2. Read every word in the order
+    they're presented on the page\r\n\r\n3. Turn the page and repeat step 2.\r\n\r\n<u>Variations:
+    </u>\r\n - read every other word\r\n - Read pages out of order\r\n - Read one
+    page then discard the book.\r\n - Just look at the pictures.\r\n\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bea7f1e5c3a794c44966453b6e216ec1, type: 2}
   m_sharedMaterial: {fileID: 2719408204413092389, guid: bea7f1e5c3a794c44966453b6e216ec1,
@@ -11841,10 +11842,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "1. Open the book to page one.\n\n2. Read everyword in the order they're
-    presented on the page\n\n3. Turn the page and repeat step 2.\n\n<u>Varations:
-    </u>\n - read every other word\n - Read pages out of order\n - Read one page
-    then discard the book.\n - Just look at the pictures.\n\n"
+  m_text: "1. Open the book to page one.\r\n\r\n2. Read every word in the order they're
+    presented on the page\r\n\r\n3. Turn the page and repeat step 2.\r\n\r\n<u>Variations:
+    </u>\r\n - read every other word\r\n - Read pages out of order\r\n - Read one
+    page then discard the book.\r\n - Just look at the pictures.\r\n\r\n\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bea7f1e5c3a794c44966453b6e216ec1, type: 2}
   m_sharedMaterial: {fileID: 2719408204413092389, guid: bea7f1e5c3a794c44966453b6e216ec1,

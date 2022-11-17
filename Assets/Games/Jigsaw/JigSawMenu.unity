@@ -3502,7 +3502,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Reset level to customize '
+  m_text: Reset level to customise
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0491c49f4cbb85348a134305cf91c127, type: 2}
   m_sharedMaterial: {fileID: 21722043216658014, guid: 0491c49f4cbb85348a134305cf91c127,
@@ -13233,7 +13233,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: '<u>Classic Mode:</u>
 
-    Puzzles that focus on using intresting videos.
+    Puzzles that focus on using interesting videos.
 
 '
   m_isRightToLeft: 0
@@ -17498,7 +17498,7 @@ MonoBehaviour:
 
 
     Note:
-    Press the "clean" button to retrive any missing pieces.
+    Press the "clean" button to retrieve any missing pieces.
 
 '
   m_isRightToLeft: 0
@@ -25123,7 +25123,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Copy file path or Youtube URl here! (Alt-Tab Switch Window) '
+  m_text: 'Copy file path or Youtube URl here! (Press F to toggle fullscreen) '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

@@ -3521,14 +3521,14 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Asset Credits:\n\nCode: \n<size=50%>\nYoutube Player: Lightshaft\nBranching
-    Narritives: Ink by Inkle\n</size>\nMusic: \n\n<size=50%>\"Starting Out Waltz
-    Allegretto\" Kevin MacLeod (incompetech.com)\r\nLicensed under Creative Commons:
-    By Attribution 4.0 License\r\nhttp://creativecommons.org/licenses/by/4.0/\n\n\"Past
+  m_text: "Asset Credits:\r\n\r\nCode: \r\n<size=50%>\r\nYoutube Player: Lightshaft\r\nBranching
+    Narratives: Ink by Inkle\r\n</size>\r\nMusic: \r\n\r\n<size=50%>\"Starting Out
+    Waltz Allegretto\" Kevin MacLeod (incompetech.com)\r\nLicensed under Creative
+    Commons: By Attribution 4.0 Licence\r\nhttp://creativecommons.org/licenses/by/4.0/\r\n\r\n\"Past
     Sadness\" Kevin MacLeod (incompetech.com)\r\nLicensed under Creative Commons:
-    By Attribution 4.0 License\r\nhttp://creativecommons.org/licenses/by/4.0/\n\n\"Bossa
+    By Attribution 4.0 Licence\r\nhttp://creativecommons.org/licenses/by/4.0/\r\n\r\n\"Bossa
     Antigua\" Kevin MacLeod (incompetech.com)\r\nLicensed under Creative Commons:
-    By Attribution 4.0 License\r\nhttp://creativecommons.org/licenses/by/4.0/\n\n\n"
+    By Attribution 4.0 Licence\r\nhttp://creativecommons.org/licenses/by/4.0/\r\\"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -8806,7 +8806,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: About Sam world 1?
+  m_text: About Sam world 1
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0491c49f4cbb85348a134305cf91c127, type: 2}
   m_sharedMaterial: {fileID: 21722043216658014, guid: 0491c49f4cbb85348a134305cf91c127,
@@ -12132,7 +12132,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Tiktok (web)
+  m_text: TikTok (web)
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0491c49f4cbb85348a134305cf91c127, type: 2}
   m_sharedMaterial: {fileID: 21722043216658014, guid: 0491c49f4cbb85348a134305cf91c127,

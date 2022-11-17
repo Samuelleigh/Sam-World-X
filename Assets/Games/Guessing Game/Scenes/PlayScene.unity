@@ -198,6 +198,11 @@ PrefabInstance:
       propertyPath: m_fontSize
       value: 58.9
       objectReference: {fileID: 0}
+    - target: {fileID: 2451551836375315476, guid: f8b2597942d288940afe779f8494a2da,
+        type: 3}
+      propertyPath: m_text
+      value: To World Screen
+      objectReference: {fileID: 0}
     - target: {fileID: 2992336620444811336, guid: f8b2597942d288940afe779f8494a2da,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -2968,6 +2973,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21722043216658014, guid: 0491c49f4cbb85348a134305cf91c127,
         type: 2}
+    - target: {fileID: 7224841552054609596, guid: d6ccf3cf61d8ac646ad2b1d5355d352a,
+        type: 3}
+      propertyPath: m_text
+      value: Back To Level Select
+      objectReference: {fileID: 0}
     - target: {fileID: 8498289304370579322, guid: d6ccf3cf61d8ac646ad2b1d5355d352a,
         type: 3}
       propertyPath: m_AnchorMin.y
@@ -7075,10 +7085,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_text
       value: "1. Each level has a rule, you have to figure out this rule by submitting
-        diffrent numbers.\n\r\n2. Some rules are dependent on a variable, which may
-        or may not be shown to you. \r\n\nExample rules:\r\r\n- Only even numbers\r\n-
-        Only multiples of 3\r\n- Only numbers that start with 2\r\n\n3. Each level
-        is choosen randomly out of levels you've unlocked, but not completed.\n\r"
+        different numbers.\r\n\r\n2. Some rules are dependent on a variable, which
+        may or may not be shown to you. \r\n\r\nExample rules:\r\n\r\n- Only even
+        numbers\r\n- Only multiples of 3\r\n- Only numbers that start with 2\r\n\r\n3.
+        Each level is chosen randomly out of levels you've unlocked, but not completed.\r\n\n3.
+        Each level is choosen randomly out of levels you've unlocked, but not completed.\n\r"
       objectReference: {fileID: 0}
     - target: {fileID: 1074177759186748424, guid: 535d59074dbbb3d458b569b4e849968d,
         type: 3}

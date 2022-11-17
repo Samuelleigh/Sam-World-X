@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Games/Jigsaw/JigSawMenu.unity
+- path: Assets/Games/10 Games You can play with/10 game.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
