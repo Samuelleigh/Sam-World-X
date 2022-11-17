@@ -1663,12 +1663,12 @@ PrefabInstance:
     - target: {fileID: 559566662113289963, guid: eab27084e36c8ee4fb723c2aa6632611,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 413.91
+      value: 507
       objectReference: {fileID: 0}
     - target: {fileID: 559566662113289963, guid: eab27084e36c8ee4fb723c2aa6632611,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -31.3
+      value: 21
       objectReference: {fileID: 0}
     - target: {fileID: 559566662113289963, guid: eab27084e36c8ee4fb723c2aa6632611,
         type: 3}
@@ -1990,102 +1990,102 @@ PrefabInstance:
     - target: {fileID: 5423106473070934799, guid: eab27084e36c8ee4fb723c2aa6632611,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5423106473070934799, guid: eab27084e36c8ee4fb723c2aa6632611,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5423106473070934799, guid: eab27084e36c8ee4fb723c2aa6632611,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 498.85248
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5423106473070934799, guid: eab27084e36c8ee4fb723c2aa6632611,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -18.417496
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5423106473070934799, guid: eab27084e36c8ee4fb723c2aa6632611,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 983.70496
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5633930180404946497, guid: eab27084e36c8ee4fb723c2aa6632611,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5633930180404946497, guid: eab27084e36c8ee4fb723c2aa6632611,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5633930180404946497, guid: eab27084e36c8ee4fb723c2aa6632611,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 498.85248
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5633930180404946497, guid: eab27084e36c8ee4fb723c2aa6632611,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -3.1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5633930180404946497, guid: eab27084e36c8ee4fb723c2aa6632611,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 983.70496
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7045997637036848130, guid: eab27084e36c8ee4fb723c2aa6632611,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7045997637036848130, guid: eab27084e36c8ee4fb723c2aa6632611,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7045997637036848130, guid: eab27084e36c8ee4fb723c2aa6632611,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 498.85248
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7045997637036848130, guid: eab27084e36c8ee4fb723c2aa6632611,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -49.052486
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7045997637036848130, guid: eab27084e36c8ee4fb723c2aa6632611,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 983.70496
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8047826738476284305, guid: eab27084e36c8ee4fb723c2aa6632611,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8047826738476284305, guid: eab27084e36c8ee4fb723c2aa6632611,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8047826738476284305, guid: eab27084e36c8ee4fb723c2aa6632611,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 498.85248
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8047826738476284305, guid: eab27084e36c8ee4fb723c2aa6632611,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -33.734993
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8047826738476284305, guid: eab27084e36c8ee4fb723c2aa6632611,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 983.70496
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8643494955161263725, guid: eab27084e36c8ee4fb723c2aa6632611,
         type: 3}
@@ -3442,7 +3442,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &520718441
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6319,7 +6319,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+  m_Color: {r: 0.8235294, g: 0.93333334, b: 0.8, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -6791,102 +6791,102 @@ PrefabInstance:
     - target: {fileID: 5423106473070934799, guid: eab27084e36c8ee4fb723c2aa6632611,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5423106473070934799, guid: eab27084e36c8ee4fb723c2aa6632611,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5423106473070934799, guid: eab27084e36c8ee4fb723c2aa6632611,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 115.85289
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5423106473070934799, guid: eab27084e36c8ee4fb723c2aa6632611,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -18.417496
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5423106473070934799, guid: eab27084e36c8ee4fb723c2aa6632611,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 217.70578
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5633930180404946497, guid: eab27084e36c8ee4fb723c2aa6632611,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5633930180404946497, guid: eab27084e36c8ee4fb723c2aa6632611,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5633930180404946497, guid: eab27084e36c8ee4fb723c2aa6632611,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 115.85289
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5633930180404946497, guid: eab27084e36c8ee4fb723c2aa6632611,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -3.1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5633930180404946497, guid: eab27084e36c8ee4fb723c2aa6632611,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 217.70578
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7045997637036848130, guid: eab27084e36c8ee4fb723c2aa6632611,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7045997637036848130, guid: eab27084e36c8ee4fb723c2aa6632611,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7045997637036848130, guid: eab27084e36c8ee4fb723c2aa6632611,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 115.85289
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7045997637036848130, guid: eab27084e36c8ee4fb723c2aa6632611,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -49.052486
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7045997637036848130, guid: eab27084e36c8ee4fb723c2aa6632611,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 217.70578
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8047826738476284305, guid: eab27084e36c8ee4fb723c2aa6632611,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8047826738476284305, guid: eab27084e36c8ee4fb723c2aa6632611,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8047826738476284305, guid: eab27084e36c8ee4fb723c2aa6632611,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 115.85289
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8047826738476284305, guid: eab27084e36c8ee4fb723c2aa6632611,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -33.734993
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8047826738476284305, guid: eab27084e36c8ee4fb723c2aa6632611,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 217.70578
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8643494955161263725, guid: eab27084e36c8ee4fb723c2aa6632611,
         type: 3}
@@ -9410,25 +9410,27 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "The original idea for this project was to create a \"game album\" that
-    contained a series of games that all used the same virtual desktop. Partly to
-    bring cohesion to the project, but also so that I could make games quicker.\r\n\r\nI
-    started this project in 2019. So...good job on that then.\r\n\r\nAnyway... this
-    initial \"game album\" idea kinda fell away after I finished Moving Jigsaw Puzzles,
-    as I figured I would have better luck marketing that game as a stand alone rather
-    than as part of a collection...but I still wanted to do the album concept, hence
-    the hidden games here.\r\n\r\nProgress on this thing has been weird January -
-    August 2020, work was pretty steady. When  I released the first version of MJP
-    then I took a break to handle other life things. Progress has been off and on
-    since, working around various other projects and jobs. Finally in August 2022
-    I committed to getting this thing finished. This last push was based more around
-    getting the jigsaw game polished, with a working save system, youtube integration
-    and more levels. \r\n\r\nWriting this at the end of this project, I'm kinda ready
-    to see this thing go. I see this collection largely as a product of the free
-    time gained during the pandemic, so while I'm proud of my work, I can't help
-    but see it as a monument to my life being trapped inside.\r\n\r\nPre-pandemic,
-    magically gaining a full year to just work on games was something I was secretly
-    hoping for. Funny that...\r\n\r\nAnyway, thanks for reading this!\r\n\n\n\n\n\n\n"
+  m_text: "The original idea for this project was to create a \"game album\", a series
+    of games that all used the same virtual desktop setup. The thought was that this
+    would bring a sense of continuity between each game, inviting the player to think
+    about how they could be read together... It was also an attempt at making the
+    dev process itself quicker.\r\n\r\nI started this project in 2019... so not exactly
+    quick I guess. \r\n\r\nAnyway, this initial \"game album\" idea kinda fell away
+    after I finished Moving Jigsaw Puzzles. I figured I would have better luck marketing
+    that game as a stand alone rather than as part of a collection...but I still
+    wanted to do the album concept, hence the hidden games here.\r\n\r\nProgress
+    on this thing has been weird January - August 2020, work was pretty steady. When 
+    I released the first version of MJP I took a break to handle other life things.
+    Progress has been off and on since, working around various other projects and
+    jobs. Finally in August 2022 I committed to getting this thing finished. This
+    last push was based more around getting the jigsaw game polished, with a working
+    save system, drag selection for the pieces, youtube integration and more levels.
+    \r\n\r\nWriting this at the end of this project, I'm kinda ready to see this
+    thing go. I see this collection largely as a product of the free time gained
+    during the pandemic, so while I'm proud of my work, I can't help but see this
+    as a monument to my life being trapped inside.\r\n\r\nPre-pandemic, magically
+    gaining a full year to just work on games was something I was secretly hoping
+    for. Funny that...\r\n\r\nAnyway, thanks for reading this!\r\n\n\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0491c49f4cbb85348a134305cf91c127, type: 2}
   m_sharedMaterial: {fileID: 21722043216658014, guid: 0491c49f4cbb85348a134305cf91c127,
@@ -11165,21 +11167,19 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\r\r\nSo uhhh... funny thing about this. \r\n\r\nI used a service called
-    Github during this project, which basically allows me to make \"saves\" of my
-    work as I progress on making stuff. Part of this service allows me to revert
-    the entire project back to any of those saves, so that if I ever make a catascopic
-    mistake while coding, I can just undo it and continue as normal.\r\n\r\nAfter
-    picking up the project again after a hiatus, I encountered such an issue, and
-    with confidence in my heart and \"what's the worst that can happen\" in my prefrontal
+  m_text: "So uhhh... funny thing about this. \r\n\r\nI used a service called Github
+    during this project, which allows me to make \"saves\" of my work that I can
+    revert back to whenever I make a catastrophic mistake.\r\n\r\nAfter picking up
+    this project again after a hiatus, I encountered such an issue, and with confidence
+    in my heart and \"what's the worst that can happen\" in my silky smooth prefrontal
     cortex, I reverted back to my previous save.\r\n\r\nWhat I didn't realise was
-    that my last save was another a year ago, so all the work I did in that year...was
-    gone.\r\n\r\r\nNow truthly not much was lost, mostly just a lot of small polish
-    things.. The only loss that really hurt was an entirely finished game called
-    \"SIGHT\", but I had already published that game onto itch.io so even that wasn't
-    too bad.\r\n\r\nThat does put me in a bit of weird spot with this collection,
-    in that I want to include it, but remaking it from scratch just feels like a
-    waste of effort, so i've included a link to the game below, ENJOY :P\r\n"
+    that my last save was from a year ago, so all the work I did since then...was
+    gone.\r\n\r\nNow truthly not much was lost, mostly just a lot of annoying polish
+    work... That is except for an entirely finished game called \"SIGHT\". I was
+    lucky in that I had already published that game onto itch.io, but now I couldn't
+    change anything about it going forward. \r\n\r\nIn making this final album, I
+    want to include SIGHT, but remaking it from scratch just doesn't make sense.
+    As a compromise so i've included a link to the game below, ENJOY :P\n\r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0491c49f4cbb85348a134305cf91c127, type: 2}
   m_sharedMaterial: {fileID: 21722043216658014, guid: 0491c49f4cbb85348a134305cf91c127,
@@ -12553,7 +12553,7 @@ MonoBehaviour:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_SelectedColor: {r: 1, g: 1, b: 1, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1

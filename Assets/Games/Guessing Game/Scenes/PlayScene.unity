@@ -1531,6 +1531,16 @@ PrefabInstance:
       propertyPath: m_ChildControlHeight
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5404197828560357295, guid: ec447117c12def449b362ce486220274,
+        type: 3}
+      propertyPath: m_ChildForceExpandWidth
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404197828560357295, guid: ec447117c12def449b362ce486220274,
+        type: 3}
+      propertyPath: m_ChildForceExpandHeight
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5496806980204004602, guid: ec447117c12def449b362ce486220274,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -1616,7 +1626,7 @@ PrefabInstance:
     - target: {fileID: 7281301758608465158, guid: ec447117c12def449b362ce486220274,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0.99999994
       objectReference: {fileID: 0}
     - target: {fileID: 7287380990894923597, guid: ec447117c12def449b362ce486220274,
         type: 3}

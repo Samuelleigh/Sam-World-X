@@ -54,7 +54,18 @@ namespace MovingJigsaw
             if (Input.GetMouseButtonUp(1))
             {
                 Debug.Log("left Click");
-                jig.InstantPutBack();
+
+                if (!dragSelection.selectedPieces.Contains(this)) 
+                {
+                    jig.InstantPutBack();
+                }
+
+                if (gm.Level.name == "Just A Dream (The End)")
+                {
+                    //  Debug.Log("werid");
+                    gameObject.SetActive(false);
+                    gm.EndingStepForward();
+                }
 
             }
             if (Input.GetMouseButtonUp(0))
