@@ -191,6 +191,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1014436097}
     m_Modifications:
+    - target: {fileID: 3007647967337706675, guid: 6a7a8356e27f7c7409da7fa7a519e9d9,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3144992672212529657, guid: 6a7a8356e27f7c7409da7fa7a519e9d9,
+        type: 3}
+      propertyPath: m_AudioOutputMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3611226875316052562, guid: 6a7a8356e27f7c7409da7fa7a519e9d9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9043265506148803420, guid: 6a7a8356e27f7c7409da7fa7a519e9d9,
         type: 3}
       propertyPath: m_Name
@@ -536,6 +551,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1014436097}
     m_Modifications:
+    - target: {fileID: 3007647967337706675, guid: 6a7a8356e27f7c7409da7fa7a519e9d9,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3144992672212529657, guid: 6a7a8356e27f7c7409da7fa7a519e9d9,
+        type: 3}
+      propertyPath: m_AudioOutputMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3611226875316052562, guid: 6a7a8356e27f7c7409da7fa7a519e9d9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9043265506148803420, guid: 6a7a8356e27f7c7409da7fa7a519e9d9,
         type: 3}
       propertyPath: m_Name
@@ -753,6 +783,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1014436097}
     m_Modifications:
+    - target: {fileID: 3007647967337706675, guid: 6a7a8356e27f7c7409da7fa7a519e9d9,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3144992672212529657, guid: 6a7a8356e27f7c7409da7fa7a519e9d9,
+        type: 3}
+      propertyPath: m_AudioOutputMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3611226875316052562, guid: 6a7a8356e27f7c7409da7fa7a519e9d9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9043265506148803420, guid: 6a7a8356e27f7c7409da7fa7a519e9d9,
         type: 3}
       propertyPath: m_Name

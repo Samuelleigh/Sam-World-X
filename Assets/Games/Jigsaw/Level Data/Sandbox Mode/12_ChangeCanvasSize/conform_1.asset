@@ -16,7 +16,7 @@ MonoBehaviour:
   Xpieces: 5
   Ypieces: 5
   puzzleResolution: 0
-  SceneName: Normal_New
+  SceneName: Normal_NewMain
   numberOfpuzzles: 1
   cameraID: 00000000
   enableShift: 1
@@ -27,4 +27,5 @@ MonoBehaviour:
   videoClip: {fileID: 32900000, guid: 67ecefd1a83113441a73174a6be6fe8f, type: 3}
   puzzleTexture: {fileID: 0}
   Customizable: 1
+  gameMode: 0
   Notes: 

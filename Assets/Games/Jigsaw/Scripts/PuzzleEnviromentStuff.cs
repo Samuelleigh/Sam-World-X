@@ -20,7 +20,8 @@ namespace MovingJigsaw
         public void Start()
         {
             youtubePlayers = FindObjectsOfType<YoutubePlayer>();
-            UnmuteStart();
+            Invoke("UnmuteStart",0.01f);
+           // UnmuteStart();
             jigManager = FindObjectOfType<JigLevelManager>();
 
 
@@ -37,6 +38,9 @@ namespace MovingJigsaw
                 videoPlayerInChargeOfAudio.SetDirectAudioMute(0, true);
 
             }
+
+
+
 
         }
 
@@ -69,7 +73,7 @@ namespace MovingJigsaw
         public void UnmuteStart() 
         {
             vids = FindObjectsOfType<VideoPlayer>();
-           
+            Debug.Log("ummuteStart");
 
             if (vids.Length > 0) 
             {
@@ -83,15 +87,15 @@ namespace MovingJigsaw
 
                 }
 
-                videoPlayerInChargeOfAudio.gameObject.SetActive(false);
-                videoPlayerInChargeOfAudio.gameObject.SetActive(true);
+             //  videoPlayerInChargeOfAudio.gameObject.SetActive(false);
+             //  videoPlayerInChargeOfAudio.gameObject.SetActive(true);
 
                 videoPlayerInChargeOfAudio.audioOutputMode = VideoAudioOutputMode.Direct;
                 videoPlayerInChargeOfAudio.SetDirectAudioMute(0, false);
                 videoPlayerInChargeOfAudio.SetDirectAudioVolume(0, 0.5f);
 
-                videoPlayerInChargeOfAudio.gameObject.SetActive(false);
-                videoPlayerInChargeOfAudio.gameObject.SetActive(true);
+              // videoPlayerInChargeOfAudio.gameObject.SetActive(false);
+              // videoPlayerInChargeOfAudio.gameObject.SetActive(true);
 
             }
 

@@ -128,10 +128,8 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -914,7 +912,7 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 850595691
       Script: {instanceID: 0}
-    Assets/Games/Jigsaw/Level Data/Sandbox Mode/01_Normal Video/Normal_New.unity:
+    Assets/Games/Jigsaw/Level Data/Sandbox Mode/01_Normal Video/Normal_NewMain.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -5296,7 +5294,7 @@ ScriptsOnlyBuild:
   - Assets/Games/Jigsaw/JigSawMenu.unity
   - Assets/Games/Jigsaw/JigsawMain.unity
   - Assets/LightShaft/Scenes/Demo1 - Simplified Player.unity
-  - Assets/Games/Jigsaw/Level Data/Sandbox Mode/01_Normal Video/Normal_New.unity
+  - Assets/Games/Jigsaw/Level Data/Sandbox Mode/01_Normal Video/Normal_NewMain.unity
   - Assets/Games/Jigsaw/Level Data/Sandbox Mode/03_Skew/Skew.unity
   - Assets/Games/Jigsaw/Level Data/Sandbox Mode/02_Cycle/Cycle.unity
   - Assets/Games/Jigsaw/Level Data/Sandbox Mode/04_Mirror/Mirror.unity
