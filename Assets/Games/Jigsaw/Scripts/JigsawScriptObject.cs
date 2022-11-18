@@ -32,7 +32,9 @@ namespace MovingJigsaw
         public VideoClip videoClip;
         public Texture puzzleTexture;
         public bool Customizable = true;
+        public JigGameMode gameMode;
         [TextArea]
         public string Notes;
+
     }
 }

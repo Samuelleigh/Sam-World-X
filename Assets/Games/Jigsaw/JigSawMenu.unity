@@ -5687,7 +5687,7 @@ PrefabInstance:
         type: 3}
       propertyPath: main
       value: 
-      objectReference: {fileID: 1387614393}
+      objectReference: {fileID: 0}
     - target: {fileID: 5423106473070934799, guid: eab27084e36c8ee4fb723c2aa6632611,
         type: 3}
       propertyPath: m_AnchorMin.y
@@ -6565,7 +6565,7 @@ PrefabInstance:
         type: 3}
       propertyPath: main
       value: 
-      objectReference: {fileID: 1387614393}
+      objectReference: {fileID: 0}
     - target: {fileID: 5423106473070934799, guid: eab27084e36c8ee4fb723c2aa6632611,
         type: 3}
       propertyPath: m_AnchorMin.y
@@ -9577,7 +9577,7 @@ PrefabInstance:
         type: 3}
       propertyPath: main
       value: 
-      objectReference: {fileID: 1387614393}
+      objectReference: {fileID: 0}
     - target: {fileID: 5423106473070934799, guid: eab27084e36c8ee4fb723c2aa6632611,
         type: 3}
       propertyPath: m_AnchorMin.y
@@ -10914,7 +10914,7 @@ PrefabInstance:
         type: 3}
       propertyPath: main
       value: 
-      objectReference: {fileID: 1387614393}
+      objectReference: {fileID: 0}
     - target: {fileID: 5423106473070934799, guid: eab27084e36c8ee4fb723c2aa6632611,
         type: 3}
       propertyPath: m_AnchorMin.y
@@ -13407,34 +13407,34 @@ MonoBehaviour:
   - jigsawLevelDefaults: {fileID: 11400000, guid: 3ed3a2ed491430e4fa2e8d188ac8a39b,
       type: 2}
     jigsawLevelActive: []
-  - jigsawLevelDefaults: {fileID: 11400000, guid: 2d5633ba38628a44faceac6ca01495e3,
+  - jigsawLevelDefaults: {fileID: 11400000, guid: 7ec0ee09b95292b47a75185e4514008e,
       type: 2}
     jigsawLevelActive: []
-  - jigsawLevelDefaults: {fileID: 11400000, guid: 7ec0ee09b95292b47a75185e4514008e,
+  - jigsawLevelDefaults: {fileID: 11400000, guid: 2d5633ba38628a44faceac6ca01495e3,
       type: 2}
     jigsawLevelActive: []
   - jigsawLevelDefaults: {fileID: 11400000, guid: ec9fc4f057665944facdd9157d422b06,
       type: 2}
     jigsawLevelActive: []
-  - jigsawLevelDefaults: {fileID: 11400000, guid: 9dc470cb65cb2b248a36ebb6715303e7,
-      type: 2}
-    jigsawLevelActive: []
   - jigsawLevelDefaults: {fileID: 11400000, guid: eba7c59575f503b4fa828e1dc47d0d82,
-      type: 2}
-    jigsawLevelActive: []
-  - jigsawLevelDefaults: {fileID: 11400000, guid: a09e3b68794ca854c80b62af6979a678,
-      type: 2}
-    jigsawLevelActive: []
-  - jigsawLevelDefaults: {fileID: 11400000, guid: 6761c728ac819384ebd1ed56516b7e9e,
-      type: 2}
-    jigsawLevelActive: []
-  - jigsawLevelDefaults: {fileID: 11400000, guid: 0ebe4b48c9cdd724b877fb63ab927be1,
       type: 2}
     jigsawLevelActive: []
   - jigsawLevelDefaults: {fileID: 11400000, guid: 333656a23dd09274d8e396a4dcbd5831,
       type: 2}
     jigsawLevelActive: []
+  - jigsawLevelDefaults: {fileID: 11400000, guid: 9dc470cb65cb2b248a36ebb6715303e7,
+      type: 2}
+    jigsawLevelActive: []
   - jigsawLevelDefaults: {fileID: 11400000, guid: ee18aea8c30564d48b458c2d10b2e252,
+      type: 2}
+    jigsawLevelActive: []
+  - jigsawLevelDefaults: {fileID: 11400000, guid: 6761c728ac819384ebd1ed56516b7e9e,
+      type: 2}
+    jigsawLevelActive: []
+  - jigsawLevelDefaults: {fileID: 11400000, guid: a09e3b68794ca854c80b62af6979a678,
+      type: 2}
+    jigsawLevelActive: []
+  - jigsawLevelDefaults: {fileID: 11400000, guid: 0ebe4b48c9cdd724b877fb63ab927be1,
       type: 2}
     jigsawLevelActive: []
   - jigsawLevelDefaults: {fileID: 11400000, guid: 19ddea7cd65ea1b4fb79b11dfde70ff7,
@@ -21369,7 +21369,7 @@ PrefabInstance:
         type: 3}
       propertyPath: main
       value: 
-      objectReference: {fileID: 1387614393}
+      objectReference: {fileID: 0}
     - target: {fileID: 5423106473070934799, guid: eab27084e36c8ee4fb723c2aa6632611,
         type: 3}
       propertyPath: m_AnchorMin.y
@@ -23109,7 +23109,7 @@ PrefabInstance:
         type: 3}
       propertyPath: main
       value: 
-      objectReference: {fileID: 1387614393}
+      objectReference: {fileID: 0}
     - target: {fileID: 5423106473070934799, guid: eab27084e36c8ee4fb723c2aa6632611,
         type: 3}
       propertyPath: m_AnchorMin.y
@@ -24642,37 +24642,37 @@ MonoBehaviour:
   - name: newclick1
     clip: {fileID: 8300000, guid: 6ff5d499b8dca184d8e259268b537761, type: 3}
     volume: 0.263
-    pitch: 0.4
+    pitch: 0.2
     loop: 0
     source: {fileID: 0}
   - name: newclick2
     clip: {fileID: 8300000, guid: 6ff5d499b8dca184d8e259268b537761, type: 3}
     volume: 0.263
-    pitch: 0.6
+    pitch: 0.4
     loop: 0
     source: {fileID: 0}
   - name: newclick3
     clip: {fileID: 8300000, guid: 6ff5d499b8dca184d8e259268b537761, type: 3}
     volume: 0.263
-    pitch: 0.8
+    pitch: 0.6
     loop: 0
     source: {fileID: 0}
   - name: newclick4
     clip: {fileID: 8300000, guid: 6ff5d499b8dca184d8e259268b537761, type: 3}
     volume: 0.263
-    pitch: 1
+    pitch: 0.8
     loop: 0
     source: {fileID: 0}
   - name: newclick5
     clip: {fileID: 8300000, guid: 6ff5d499b8dca184d8e259268b537761, type: 3}
     volume: 0.263
-    pitch: 1.2
+    pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: newclick6
     clip: {fileID: 8300000, guid: 6ff5d499b8dca184d8e259268b537761, type: 3}
     volume: 0.263
-    pitch: 1.4
+    pitch: 1.2
     loop: 0
     source: {fileID: 0}
   - name: boy
@@ -28335,7 +28335,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttons: []
-  soundname: newclick3
+  soundname:
+  - newclick1
+  - newclick2
+  - newclick3
+  - newclick4
+  - newclick5
   sounds: {fileID: 0}
 --- !u!4 &2125332418
 Transform:

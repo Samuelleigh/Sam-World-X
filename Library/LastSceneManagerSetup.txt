@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Games/Jigsaw/JigSawMenu.unity
+- path: Assets/Games/Jigsaw/Level Data/Sandbox Mode/12_ChangeCanvasSize/Normal_New.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

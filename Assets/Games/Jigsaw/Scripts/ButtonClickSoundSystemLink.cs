@@ -11,7 +11,7 @@ public class ButtonClickSoundSystemLink : MonoBehaviour
 
     public List<Button> buttons = new List<Button>();
 
-    public string soundname;
+    public List<string> soundname;
 
     public SoundSystem sounds;
 
@@ -34,7 +34,7 @@ public class ButtonClickSoundSystemLink : MonoBehaviour
 
     public void PlaySound() 
     {
-        sounds.PlaySound(soundname);
+        sounds.PlayRandomSound(soundname);
     
     }
 

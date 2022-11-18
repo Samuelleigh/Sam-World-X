@@ -15,6 +15,7 @@ MonoBehaviour:
   name: 
   Xpieces: 0
   Ypieces: 0
+  puzzleResolution: 0
   SceneName: 
   numberOfpuzzles: 1
   cameraID: 03000000
@@ -22,4 +23,9 @@ MonoBehaviour:
   style: 
   difficulty: 0
   centerAligned: 0
+  allowCustomFile: 0
+  videoClip: {fileID: 0}
+  puzzleTexture: {fileID: 0}
+  Customizable: 1
+  gameMode: 0
   Notes: 

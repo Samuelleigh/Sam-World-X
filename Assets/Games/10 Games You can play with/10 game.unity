@@ -529,7 +529,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f879724267cd6d4ab178be453665666, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  main: {fileID: 520718440}
+  main: {fileID: 65321846}
   offset: {x: 0, y: 0}
 --- !u!225 &65321850
 CanvasGroup:
@@ -2765,7 +2765,7 @@ PrefabInstance:
         type: 3}
       propertyPath: main
       value: 
-      objectReference: {fileID: 1554304032}
+      objectReference: {fileID: 567044297}
     - target: {fileID: 4029978715058592459, guid: bb37e2e308597fd43baca4ce590f0106,
         type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -7570,7 +7570,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f879724267cd6d4ab178be453665666, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  main: {fileID: 520718440}
+  main: {fileID: 1420551213}
   offset: {x: 0, y: 0}
 --- !u!225 &1420551216
 CanvasGroup:
@@ -12359,7 +12359,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f879724267cd6d4ab178be453665666, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  main: {fileID: 1554304032}
+  main: {fileID: 4029978716043621692}
   offset: {x: 0, y: 0}
 --- !u!1 &2437577150898945005
 GameObject:

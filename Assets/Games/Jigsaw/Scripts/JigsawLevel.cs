@@ -7,6 +7,9 @@ using UnityEngine.SceneManagement;
 
 namespace MovingJigsaw
 {
+
+    public enum JigGameMode {Normal_Mode,Time_Attack,Battle,Boss_Rush,Limited_Moves,One_at_a_Time,Werid_Mode_1,Werid_Mode_2,Werid_Mode_3 }
+
     [System.Serializable]
     public class JigsawLevel
     {
@@ -14,6 +17,14 @@ namespace MovingJigsaw
         public JigLevelScriptObject jigsawLevelDefaults;
         public List<JigsawlevelSave> jigsawLevelActive = new List<JigsawlevelSave>();
    
+    }
+
+    public class TimeToComplete 
+    {
+        public string time;
+        public string name;
+        public string levelname;
+        public string date;
 
     }
 
@@ -46,9 +57,9 @@ namespace MovingJigsaw
         public string pathURL;
         public int numberofpuzzles = 1;
         public List<int> solvedPuzzles = new List<int>();
-      //  public int numberOfPuzzles;
- 
- 
+        //  public int numberOfPuzzles;
+        public JigGameMode gameMode;
+        public List<TimeToComplete> timetoCompleteList;
 
     }
 }
