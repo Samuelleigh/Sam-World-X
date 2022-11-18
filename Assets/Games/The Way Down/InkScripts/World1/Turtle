@@ -30,13 +30,13 @@ As you approach the tower, you find that it is made of many turtles stacked on t
                 ---
                 *****"Can I climb the tower?"
                 ->AskClimb
-                *****"Could you give me something to do."
+                *****"Could you give me something to do?"
                 ->climb.goals
     **"I'm annoyed."
         "Why?"
         ***"I've been alive for so long, but I feel like I've learnt nothing."
         ~ addAwareness(5)
-            The turtle looks nervous "I would say it's best not to think about it."
+            The turtle looks nervous. "I would say it's best not to think about it."
         ***"Everyone around here is weird."
         ~ addAwareness(1)
             "I know, I try to remember that they're just trying to cope with...all this."
@@ -61,7 +61,7 @@ As you approach the tower, you find that it is made of many turtles stacked on t
                     *****"I'm not promising anything."
                     -----
                     ->climb.young
-        **"But you would allow me to do it?"
+        **"But would you allow me to do it?"
         ~ addAwareness(1)
         "I can't stop you"...The turtle looks off into the distance.
             ***Climb the turtle.
@@ -127,7 +127,7 @@ The turtle speaks. "You know I can feel you right?"
         ->goals
     *"I wanted to jump off."
     ~ addAwareness(2)
-    The turtle eyes widen. "I'm sorry, that you felt that way, not that I can blame you, there isn't much to do down here."
+    The turtle's eyes widened. "I'm sorry that you felt that way, not that I can blame you, there isn't much to do down here."
         **Clarify that you just thought it would be fun.
         ->young
         **...
@@ -138,7 +138,7 @@ The turtle speaks. "You know I can feel you right?"
     "Would it deter any future attempts if I said that there's nothing much up there. Just more turtles."
     ~ addAwareness(4)
         **"How do you know that?"
-        "Every so often, the weight of the tower crushs the turtle at the bottom, so I used to be alot higher up."
+        "Every so often, the weight of the tower crushes the turtle at the bottom, so I used to be a lot higher up."
             ***"Aren't you scared about dying soon?"
                 ~ addAwareness(4)
             "A turtle crush only happens once in an infinity, so I'm not too worried."
@@ -159,14 +159,14 @@ It takes forever, but you eventually reach the top. #END
 ->END
 *Fall off.
 ~ Body = 0
-It climb forever, but you eventually fall off.#END 
+It climbs forever, but you eventually fall off.#END 
 ->END
 
 
 
 =young
 "You must be quite young then?"
-    *"What do you mean."
+    *"What do you mean?"
     ~ addAwareness(4)
     "Well, if you want to survive down here for as long as the others have, you can't take risks like that."
         **"How so?"
@@ -185,7 +185,7 @@ It climb forever, but you eventually fall off.#END
                  ~ addAwareness(4)
                     "The Beings that decide to stay around seem to invent hobbies for themselves, keep themselves busy.Distracted."
                     ->endconvisation
-    *"I'll have you know i'm {Age}."
+    *"I'll have you know I'm {Age}."
     "That is quite young."
         **"How old are you then?"
         ~ addAwareness(4)
@@ -246,11 +246,11 @@ The turtle smiles, notices his smile, then frowns. //change the shot to somethin
                             ~ addAwareness(4)
                                   I hope so.
                                   ->endturlte
-                            *****"If that's true, then why are you fine."
+                            *****"If that's true, then why are you fine?"
                             ~ addAwareness(4)
                             "I don't know. I don't think I am."
                             ->endturlte
-                            *****"If it's inevitable, then why does it matter when exactly it happens."
+                            *****"If it's inevitable, then why does it matter when exactly it happens?"
                             ~ addAwareness(4)
                                 "It matters to me."
                                 ->endturlte
@@ -308,11 +308,14 @@ The turtle smiles, notices his smile, then frowns. //change the shot to somethin
         ***Everyone around here is weird.
             I know, I try to remember that they're just trying to cope. 
                 ****How so?
-                "well this small being is bad. 
+                "Well this small being is bad. 
                 *****So This
                   ->END
                 *****Could you give me something to do?
                 ->climb.goals
+
+
+
 
 
 

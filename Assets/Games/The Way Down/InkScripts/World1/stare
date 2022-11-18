@@ -1,3 +1,4 @@
+
 ===1stare==
 ~Strange = "Movement"
 In the distance, a Being is still. They are looking towards you, but not with purpose. #m #0 #a #1 #idle #music #Stare1
@@ -129,7 +130,7 @@ The being continues to stare.
 ==dead
 You stare at the body, it looks like they have a potion in their hand. #m #3
     *Take it.
-    As you reach down, you hear the beings last breath. #p #4 #h
+    As you reach down, you hear the beings' last breath. #p #4 #h
     ->OverWorld.lastbreath
     *Don't you dare.
     ~addAwareness(10)

@@ -23279,7 +23279,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Content Warning: Death. Brief mention of suicide. '
+  m_text: 'Content Warning: Death. Brief, potential mention of suicide. '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9c8a0f2b06ec6194fab18dd6a71bc5c4, type: 2}
   m_sharedMaterial: {fileID: -3016527089854279770, guid: 9c8a0f2b06ec6194fab18dd6a71bc5c4,

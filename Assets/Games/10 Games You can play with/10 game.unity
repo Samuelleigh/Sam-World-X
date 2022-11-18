@@ -4638,8 +4638,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "RIP Vine Collection\r\n\r\n1. Open the book to page one.\r\n\r\n2. Read
     every word in the order they're presented on the page\r\n\r\n3. Turn the page
-    and repeat step 2.\r\n\r\n<u>Variations: </u>\r\n - read every other word\r\n
-    - Read pages out of order\r\n - Read one page then discard the book.\r\n - Just
+    and repeat step 2.\r\n\r\n<u>Variations: </u>\r\n - read every other word\r\n-
+    Read pages out of order\r\n - Read one page then discard the book.\r\n - Just
     look at the pictures.\r\n\n\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bea7f1e5c3a794c44966453b6e216ec1, type: 2}
@@ -10609,12 +10609,11 @@ MonoBehaviour:
       gives their own card to the first player.\r\n\r\n4. HIGH FIVE!!! You both win!!\r\n\r\nVariation:
       Exchange business cards only using your teeth."
     title2: Toss
-    writing2: "\r1.Two players crumple their business cards.\r\n\r\n2.One player
-      then throws their card in a linear direction.\r\n\r\n3. The second player then
-      throws their card in the same direction as the first player.\r\n\r\n4. Whoever\u2019s
-      card is farthest away wins; they retrieve the cards.\r\n\r\nVariation: Instead
-      of crumpling, make tiny paper Airplanes.\r\n\r\nVariation: Play with twenty
-      people."
+    writing2: "\r1. Two players engage in pleasant conversation.\r\n\r\n2. When the
+      conversation arrives at a natural end, one player gives their business card
+      to the other.\r\n \r\n3. After a successful hand over, the receiving player
+      gives their own card to the first player.\r\n\r\n4. HIGH FIVE!!! You both win!!\r\n\r\nVariation:
+      Exchange business cards only using your teeth."
     sprite: {fileID: 0}
     videoClip: {fileID: 0}
     isSpread: 1
@@ -10645,9 +10644,10 @@ MonoBehaviour:
     SingleGame: 0
   - title1: Perfection
     writing1: "1. In a group of less than 100 people, pass around someone\u2019s
-      business card.\r\n\r\n2. Once everyone has held the business card give it back
-      to the original owner.\r\n\r\n3. -1 point for every imperfection on the card.\r\n\r\nVariation:
-      Pass around everyone\u2019s business card at the same time.\r\n"
+      business card.\r\n\r\n2. Once everyone has held the business card, give it
+      back to the original owner.\r\n\r\n3. -1 point for every imperfection on the
+      card.\r\n\r\nVariation: Pass around everyone\u2019s business card at the same
+      time.\r\n"
     title2: 
     writing2: 
     sprite: {fileID: 0}
@@ -10737,9 +10737,9 @@ MonoBehaviour:
   - title1: Open Close
     writing1: " 1. Open a book halfway, players hold different halves and can\u2019t
       let go.\r\n\r\n2. Player 1 has to close the book.\r\n\r\n3. Player 2 has to
-      to keep it open.\r\n\r\n4. Play until a goal is reached or the book is destroyed.\r\n"
+      keep it open.\r\n\r\n4. Play until a goal is reached or the book is destroyed.\r\n"
     title2: Rewrite
-    writing2: "1. Choose a Random Letter\r\n\r\n2. Rewrite a paragraph of a book
+    writing2: "1. Choose a random letter\r\n\r\n2. Rewrite a paragraph of a book
       without said letter\r\n\r\nVariations:\r\n\r\n- Rewrite the paragraph\u2026\r\n\t-Without
       dialog.\r\n\t- In the style of another author.\r\n\t- Like the characters already
       know their fates.\r\n"
@@ -10870,7 +10870,7 @@ MonoBehaviour:
     writing1: "1. Two players change their lockscreen background to a number between
       1-99.\r\n\r\n2. The first player to correctly guess the other player\u2019s
       number wins.\r\n\r\n3. Players can only guess once.\r\n\r\n4. Players can\u2019t
-      touch each others phone."
+      touch each other's phones."
     title2: 
     writing2: 
     sprite: {fileID: 0}
@@ -10879,7 +10879,7 @@ MonoBehaviour:
     SingleGame: 1
   - title1: 'Flip-Phone:'
     writing1: "1. Place the phone face down on a table, sticking out over the edge.\r\n\r\n2.
-      With one hand, flip the phone onto it's other side.\r\n\r\n3. The next player
+      With one hand, flip the phone onto its other side.\r\n\r\n3. The next player
       does the same, but the phone has to land on top of the last.\r\n\r\n4. Continue
       until every player\u2019s phone has been flipped."
     title2: 
@@ -11076,7 +11076,7 @@ MonoBehaviour:
       what kind of person made this compilation.
 
 
-      3. Use the creators chosen
+      3. Use the creator''s chosen
       vines as evidence.'
     title2: 
     writing2: 
@@ -11089,7 +11089,7 @@ MonoBehaviour:
 
 
       2. The first
-      friend to reference one of included vines to the other without them realizing
+      friend to reference one of included vines to the other without them realising
       it, wins.
 
 
@@ -11105,7 +11105,7 @@ MonoBehaviour:
     writing1: '1. Two plays each find an existing rip vine compilation.
 
       2.
-      In front of a crowd, players take turn making music by pressing the number
+      In front of a crowd, players take turns making music by pressing the number
       keys.
 
       3. Don''t forget to play a stock drum beat in the background.'
@@ -11131,7 +11131,7 @@ MonoBehaviour:
     isSpread: 0
     SingleGame: 1
   - title1: 'Tug of War:'
-    writing1: '1. Skip to the center of a compilation video
+    writing1: '1. Skip to the centre of a compilation video
 
 
       2. Two players
