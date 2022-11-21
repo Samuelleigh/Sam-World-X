@@ -171,6 +171,9 @@ public class DragSelection : MonoBehaviour//,IPointerDownHandler
             if ((p1 - Input.mousePosition).magnitude > 40 && !dragingAPiece && !didclickonignoredragobject)
             {
                 dragSelect = true;
+
+                //if mouse position over              
+
             }
          
         }
@@ -189,9 +192,13 @@ public class DragSelection : MonoBehaviour//,IPointerDownHandler
 
             }//end marquee select
 
-            dragSelect = false;
+            foreach (JigsawPieceDrag j in selectedPieces) 
+            {
+                j.SetJigpieceColorToSelected();
 
-           
+            }
+
+            dragSelect = false;         
 
         }
 
@@ -263,12 +270,15 @@ public class DragSelection : MonoBehaviour//,IPointerDownHandler
 
             if (piece.groupSelected)
                 {
-                 //   Debug.Log("add piece");
-                    
+                //   Debug.Log("add piece");
 
-                    selectedPieces.Add(piece);
-                    piece.SetJigpieceColorToSelected();
-                  
+                if (!selectedPieces.Contains(piece))
+                {
+                    selectedPieces.Add(piece);                    //piece.SetJigpieceColorToSelected();
+                }
+
+                piece.SetJigpieceColorToSelected();
+
             }
             }      
     }

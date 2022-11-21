@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 namespace MovingJigsaw
 {
-    public class JigsawPieceDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler, IPointerClickHandler, IPointerDownHandler
+    public class JigsawPieceDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler, IPointerClickHandler, IPointerDownHandler,IPointerEnterHandler
     {
         [SerializeField]
         public Color selectedcolor;
@@ -315,7 +315,7 @@ namespace MovingJigsaw
         public void CheckIfOverJigPiece()
         {
 
-            Debug.Log("CheckIfOverJigPiece");
+//            Debug.Log("CheckIfOverJigPiece");
 
             Vector3 center = ((dragArea[2] - dragArea[0]) / 2) + dragArea[0];
 
@@ -366,5 +366,18 @@ namespace MovingJigsaw
 
         }
 
+        public void OnPointerEnter(PointerEventData eventData)
+        {
+
+          //  Debug.Log("mouse over") ;
+
+            if (dragSelection.dragSelect && !dragSelection.selectedPieces.Contains(this)) 
+            {
+                dragSelection.selectedPieces.Add(this);
+                SetJigpieceColorToSelected();
+            }
+
+        
+        }
     }
 }

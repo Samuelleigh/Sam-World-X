@@ -7088,8 +7088,7 @@ PrefabInstance:
         different numbers.\r\n\r\n2. Some rules are dependent on a variable, which
         may or may not be shown to you. \r\n\r\nExample rules:\r\n\r\n- Only even
         numbers\r\n- Only multiples of 3\r\n- Only numbers that start with 2\r\n\r\n3.
-        Each level is chosen randomly out of levels you've unlocked, but not completed.\r\n\n3.
-        Each level is choosen randomly out of levels you've unlocked, but not completed.\n\r"
+        Each level is chosen randomly out of levels you've unlocked, but not completed.\r\n"
       objectReference: {fileID: 0}
     - target: {fileID: 1074177759186748424, guid: 535d59074dbbb3d458b569b4e849968d,
         type: 3}

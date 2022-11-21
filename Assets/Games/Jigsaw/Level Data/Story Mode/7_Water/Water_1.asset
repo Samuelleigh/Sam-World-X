@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 357420eebc2d1ce42ba00a2bfa08eb15, type: 3}
   m_Name: Water_1
   m_EditorClassIdentifier: 
-  name: Water
-  Xpieces: 5
-  Ypieces: 5
+  name: 'Floaty '
+  Xpieces: 6
+  Ypieces: 6
   puzzleResolution: 1
   SceneName: Normal
   numberOfpuzzles: 1
@@ -27,4 +27,5 @@ MonoBehaviour:
   videoClip: {fileID: 32900000, guid: 8a3c64c2e93452d4c94088bb86ea30dc, type: 3}
   puzzleTexture: {fileID: 0}
   Customizable: 1
+  gameMode: 0
   Notes: 

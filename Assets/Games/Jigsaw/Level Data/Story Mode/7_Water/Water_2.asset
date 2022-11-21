@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 357420eebc2d1ce42ba00a2bfa08eb15, type: 3}
   m_Name: Water_2
   m_EditorClassIdentifier: 
-  name: Floaty
+  name: Just Water
   Xpieces: 12
   Ypieces: 6
   puzzleResolution: 1
@@ -27,4 +27,5 @@ MonoBehaviour:
   videoClip: {fileID: 32900000, guid: e7464e8766170d940a43cc69e324843e, type: 3}
   puzzleTexture: {fileID: 0}
   Customizable: 1
+  gameMode: 0
   Notes: 
