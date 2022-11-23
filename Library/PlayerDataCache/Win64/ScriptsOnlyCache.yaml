@@ -128,10 +128,8 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -5340,4 +5338,4 @@ ScriptsOnlyBuild:
   - Assets/Games/Jigsaw/Level Data/Sandbox Mode/Mouse Move/Mouse Move 1.unity
   - Assets/Games/Jigsaw/Level Data/Sandbox Mode/Mouse Move/Mouse Move 2.unity
   - Assets/Games/Jigsaw/Level Data/Sandbox Mode/Mouse Move/Mouse Move 3.unity
-  playerPath: C:/Users/sleig/Documents/MovingJigsawPuzzlesBuild/MovingJigsawPuzzles.exe
+  playerPath: C:/Users/sleig/Documents/MovingJigsawPuzzles/MovingJigsawPuzzles.exe

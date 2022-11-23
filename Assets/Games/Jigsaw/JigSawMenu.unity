@@ -11914,9 +11914,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Designed, filmed (mostly), and programmed by Samuel Leigh\n\nMusic by
-    Kevin Mcloud\n\nSpecial Thanks to: \n\nMy Parents, Ahse, Nolan, Flan, Rick, Charles,
-    Lilyian, James, Gus, Blake, Sam B, Ave, Eva, Syn, Karl, Parash, BabyCastles,
-    Frank, Emily, Bo and Satchel"
+    Kevin Mcloud\n\nSpecial Thanks to: \n\nMy Parents, Ahse, Nolan, Flan, Rick, Lilyian,
+    James, Gus, Blake, Sam B, Emily, Ave, Eva, Syn, Karl, Parash, Charles, BabyCastles,
+    Frank, Bo and Satchel"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0491c49f4cbb85348a134305cf91c127, type: 2}
   m_sharedMaterial: {fileID: 21722043216658014, guid: 0491c49f4cbb85348a134305cf91c127,

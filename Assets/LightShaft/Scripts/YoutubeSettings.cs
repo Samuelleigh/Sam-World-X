@@ -1490,10 +1490,20 @@ namespace LightShaft.Scripts
 
             if (startFromSecond)
             {
-                startedFromTime = true;
+
+                if ((float)videoPlayer.length <= startFromSecondTime) 
+                {
+                    Debug.Log("reseting start time");
+                    startFromSecondTime = 0;
+                }
+
+
+                    startedFromTime = true;
                 if (videoQuality == YoutubeVideoQuality.STANDARD)
                 {
                     //seekUsingLowQuality = true;
+                    
+
                     videoPlayer.time = startFromSecondTime;
                 }
                 else
