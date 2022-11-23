@@ -66,8 +66,8 @@
     <Compile Include="C:\Program Files\2020.1.5f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.ugui\Runtime\UI\Core\Mask.cs" />
     <Compile Include="C:\Program Files\2020.1.5f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.ugui\Runtime\UI\Core\Scrollbar.cs" />
     <Compile Include="C:\Program Files\2020.1.5f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.ugui\Runtime\UI\Core\GraphicRaycaster.cs" />
-    <Compile Include="C:\Program Files\2020.1.5f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.ugui\Runtime\UI\Core\Layout\VerticalLayoutGroup.cs" />
     <Compile Include="C:\Program Files\2020.1.5f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.ugui\Runtime\UI\Core\VertexModifiers\Outline.cs" />
+    <Compile Include="C:\Program Files\2020.1.5f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.ugui\Runtime\UI\Core\Layout\VerticalLayoutGroup.cs" />
     <Compile Include="C:\Program Files\2020.1.5f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.ugui\Runtime\UI\Core\Layout\GridLayoutGroup.cs" />
     <Compile Include="C:\Program Files\2020.1.5f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.ugui\Runtime\UI\Core\Layout\CanvasScaler.cs" />
     <Compile Include="C:\Program Files\2020.1.5f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.ugui\Runtime\UI\Core\IMaskable.cs" />
