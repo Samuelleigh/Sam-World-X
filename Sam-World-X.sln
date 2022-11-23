@@ -103,8 +103,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.ProBuilder", "Unity.P
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityEngine.TestRunner", "UnityEngine.TestRunner.Player.csproj", "{80C63219-EEEF-370F-5604-33E7764B8340}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "com.rlabrecque.steamworks.net", "com.rlabrecque.steamworks.net.Player.csproj", "{C7A5D0F9-2921-2160-575F-71B705E5C22C}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.Postprocessing.Runtime", "Unity.Postprocessing.Runtime.Player.csproj", "{30CA5383-2EC2-2024-399E-F803AB173A5C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.Player.csproj", "{BC9624C9-5ABE-F4E2-92B7-FE6B29AC4555}"
@@ -353,10 +351,6 @@ Global
 		{80C63219-EEEF-370F-5604-33E7764B8340}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{80C63219-EEEF-370F-5604-33E7764B8340}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{80C63219-EEEF-370F-5604-33E7764B8340}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C7A5D0F9-2921-2160-575F-71B705E5C22C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C7A5D0F9-2921-2160-575F-71B705E5C22C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C7A5D0F9-2921-2160-575F-71B705E5C22C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C7A5D0F9-2921-2160-575F-71B705E5C22C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{30CA5383-2EC2-2024-399E-F803AB173A5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{30CA5383-2EC2-2024-399E-F803AB173A5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{30CA5383-2EC2-2024-399E-F803AB173A5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
