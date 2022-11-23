@@ -2,26 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using MovingJigsaw;
 
 public class GameSwitcher : MonoBehaviour
 {
     public bool FunGameSelect;
     public Transform playertransform;
-    public static GameSwitcher instance;
+   // public static GameSwitcher instance;
 
     public void Awake()
     {
-        if (instance == null)
-        {
-            instance = this;
-        }
-        else
-        {
-            Destroy(gameObject);
-            return;
-        }
-        DontDestroyOnLoad(gameObject);
-  
+        JigLevelManager j = FindObjectOfType<JigLevelManager>();
+        j.ForceSoundBackOn();
+    }
+
+    public void Start()
+    {
+        FindObjectOfType<SoundSystem>().PlayMusic("samSong");
     }
 
     public void FunSwitchMode() 
@@ -39,6 +36,37 @@ public class GameSwitcher : MonoBehaviour
         FunGameSelect = false;
         BackToMainMenuScene();
 
+
+
+    }
+
+    private void Update()
+    {
+
+        if (Input.GetKey("s")) 
+        {
+
+            if (Input.GetKey("a"))
+            {
+                if (Input.GetKey("m"))
+                {
+
+
+                    Debug.Log("wow");
+                    QuickSwitchMode();
+
+
+
+                }
+
+
+
+
+            }
+
+
+
+        }
 
 
     }
@@ -61,6 +89,8 @@ public class GameSwitcher : MonoBehaviour
 
     public void LoadNewGame(string name) 
     {
+
+        FindObjectOfType<SoundSystem>().PlayMusic("mute");
 
         if (FunGameSelect == true) { }
 

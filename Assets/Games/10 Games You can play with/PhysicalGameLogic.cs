@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using UnityEngine.Video;
+using UnityEngine.SceneManagement;
 
 public class PhysicalGameLogic : MonoBehaviour
 {
@@ -49,6 +50,13 @@ public class PhysicalGameLogic : MonoBehaviour
     {
         
     }
+
+    public void BackToMainMenu() 
+    {
+        SceneManager.LoadScene("Main Menu");
+
+    }
+
 
     public void LoadGame(string ID) 
     {

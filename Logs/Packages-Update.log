@@ -76,3 +76,11 @@ The following packages were added:
   com.unity.postprocessing@2.1.7
   com.unity.purchasing@2.0.6
   com.unity.xr.legacyinputhelpers@2.0.2
+
+=== Thu Aug  4 11:07:32 2022
+
+Packages were changed.
+Update Mode: mergeDefaultDependencies
+
+The following packages were added:
+  com.unity.nuget.newtonsoft-json@2.0.0

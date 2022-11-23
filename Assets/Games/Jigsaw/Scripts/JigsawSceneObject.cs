@@ -28,22 +28,32 @@ namespace MovingJigsaw
         void Start()
         {
 
+            if (manager.customFile && !manager.customMode) 
+            {
+
+                manager.customFile = false;
+                manager.path = "";
+            }
+
+
             if (manager.customFile == false)
             {
                 if (gameObject.GetComponent<VideoPlayer>() == null)
                 {
+                  // Debug.Log("Ok");
                     vid = gameObject.AddComponent<VideoPlayer>();
                 }
                 else
                 {
+                //    Debug.Log("Test");
                     vid = gameObject.GetComponent<VideoPlayer>();
                 }
 
-                Debug.Log("df");
+               // Debug.Log("df");
 
                 if (gm.Level.videoClip)
                 {
-                    vid.SetDirectAudioMute(0, true);
+                    vid.SetDirectAudioMute(0, manager.muteVideo);
                     vid.clip = gm.Level.videoClip;
                     vid.audioOutputMode = VideoAudioOutputMode.None;
                     vid.isLooping = true;

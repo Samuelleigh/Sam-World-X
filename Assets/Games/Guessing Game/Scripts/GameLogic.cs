@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-
+using UnityEngine.SceneManagement;
 
 public enum State { MainMenu, WorldSelect, LevelSelect, Gameplay, Extra };
 
@@ -169,7 +169,10 @@ public class GameLogic : MonoBehaviour
         MoveToFront(reminder);
     }
 
-
+    public void BackToMainMenu() 
+    {
+        SceneManager.LoadScene("Main Menu");
+    }
 
     public void MoveToFront(GameObject frame)
     {

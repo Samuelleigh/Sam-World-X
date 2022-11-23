@@ -8,7 +8,7 @@ My Best.
     **"What are you trying to accomplish?"
     Build a new world.
     ~addAwareness(5)
-        ***"How long have you been doing this."
+        ***"How long have you been doing this?"
             Too long.
             ~addAwareness(5)
             ****"Do you think you have a chance?"

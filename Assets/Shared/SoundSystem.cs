@@ -11,6 +11,8 @@ public class SoundSystem : MonoBehaviour
     public Sound[] music;
     public static SoundSystem instance;
     public AudioSource musicSource;
+    public List<AudioSource> soundEffectsSources;
+    public bool mutesounds = false;
 
     // Start is called before the first frame update
 
@@ -34,6 +36,9 @@ public class SoundSystem : MonoBehaviour
             s.source.volume = s.volume;
             s.source.pitch = s.pitch;
             s.source.loop = s.loop;
+
+            soundEffectsSources.Add(s.source);
+
         }
 
 
@@ -91,7 +96,7 @@ public class SoundSystem : MonoBehaviour
             {
                 if (soundNames[i] == sounds[b].name) 
                 {
-
+                    Debug.Log(soundNames[i]);
                     bucket.Add(sounds[b]);
                   //  return;
                 }
@@ -100,5 +105,54 @@ public class SoundSystem : MonoBehaviour
 
         }
         bucket[Random.Range(0, bucket.Count)].source.Play();
+    }
+
+
+    public void PlayRandomSound(List<String> soundnames) 
+    {
+        List<Sound> bucket = new List<Sound>();
+        foreach (Sound s in sounds) 
+        {
+            
+
+            if (soundnames.Contains(s.name))
+            {
+                Debug.Log(s.name);
+                bucket.Add(s);
+            }
+            else 
+            {
+                Debug.Log(s.name);
+                Debug.Log("not in here");
+            }
+        }
+
+        bucket[Random.Range(0, bucket.Count)].source.Play();
+
+    }
+
+    public void SwitchMuteSounds() 
+    {
+        mutesounds = !mutesounds;
+
+
+        for (int i = 0; i < soundEffectsSources.Count; i++) 
+        {
+            if (mutesounds)
+            {
+                soundEffectsSources[i].playOnAwake = false;
+                soundEffectsSources[i].enabled = false;
+
+            }
+            else
+            {
+
+                soundEffectsSources[i].enabled = true;
+
+            }
+
+        }      
+              
+
     }
 }

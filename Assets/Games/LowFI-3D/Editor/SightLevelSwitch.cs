@@ -31,7 +31,7 @@ public class SightLevelSwitch : EditorWindow
         sightGameLogic = FindObjectOfType<SightGameLogic>();
         GUILayout.Label("Sight Level Switch");
 
-        GUILayout.Label(sightGameLogic.manager.currentlevelID.ToString());
+     //   GUILayout.Label(sightGameLogic.manager.currentlevelID.ToString());
 
         if (GUILayout.Button("Next Level",GUILayout.Height(30)))
         {

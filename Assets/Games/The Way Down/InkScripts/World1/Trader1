@@ -34,7 +34,7 @@ But what shall you say? #m #1 #a #1 #praying #music #Trader3
                 ***"Trade?"
                 "Trade, yes, trade." 
                     ****"I want to trade"
-                        The being eyes light up, surprises of how easy it was.
+                        The beings' eyes light up, surprises of how easy it was.
                         ->StartTrade 
                     ****"What do you mean?"
                         "It's simple <>
@@ -48,7 +48,7 @@ But what shall you say? #m #1 #a #1 #praying #music #Trader3
                 **"Yes."
                     The being is getting more excited. "Excellent, my friend, I have a proposition for you" they take a nervous breath. "<> ->TradeExplain
                 **"Only if they helped me first."
-                "I see you are a Being of nuance, how very unique." Their smile is strained...
+                "I see you are a Being of nuance, how very unique." Their smiles are strained...
                 ***"Go on."
                 "I am not so nuanced, for me, I help even those who have yet to help me."
                     ****"ok..."
@@ -94,8 +94,8 @@ But what shall you say? #m #1 #a #1 #praying #music #Trader3
                         **"I'm interested, but I have some questions."
                         "Yes of course, I will try my best to answer them"
                         ->TradeQuestions 
-                        **"Sure, lets give it a try."
-                        The beings nervousness melts into pleasure. <>->StartTrade
+                        **"Sure, let's give it a try."
+                        The beings' nervousness melts into pleasure. <>->StartTrade
                     *"I don't understand."
                     "Don't worry, many beings similar to yourself have struggled to understand as well, do you have any questions" ->TradeQuestions
                     
@@ -104,11 +104,11 @@ But what shall you say? #m #1 #a #1 #praying #music #Trader3
                         "If we all focused on trading things, this world will become a better place." ->TradeQuestions #m #3
                         **"What is this world?"
                           ~ addAwareness(10)
-                        The being looks nervious. "Friend, I want to help you, answering that will not help. Please."
+                        The being looks nervous. "Friend, I want to help you, answering that will not help. Please."
                         ->TradeQuestions
                         **"Could we trade now?"
                         The trader's eyes light up. "yes, yes we can!" ->StartTrade #m #3
-                        **"I don't want to engage with this activity."
+                        **"I don't want to engage in this activity."
                         "I will respect your wishes my friend. But could you allow me to make one last suggestion."
                             ***"Ok."
                             "Why not just a trial run? You don't have much to lose? I'll even immediately give you 100 kneecaps."
@@ -123,14 +123,14 @@ But what shall you say? #m #1 #a #1 #praying #music #Trader3
                                 ->OverWorld
 
 
-==Ignore //change shot to somehting idk
+==Ignore //change shot to something idk
 You do not turn to face them. As you walk past them you sense their presence on your shoulder. #h
     *Turn to face them.
     ->Engage
     *Start running.
     ->RunAway
     
-==RunAway //change shot to somehting idk
+==RunAway //change shot to something idk
 You start running, and to your surprise, the being runs after you. #m #0 #a #1 #running #music #Trader2
 *Keep running.
     The being keeps running. They call out "I only want to help you."
@@ -155,7 +155,7 @@ Your knuckles lightly graze the beings cheek, they fall to the ground, you conti
 
 
 ->OverWorld
-==StartTrade //change shot to somehting idk
+==StartTrade //change shot to something idk
 //They explain to you all the trades that he is offering at the moment, their body visibly shaking throughout.
 The trader excitedly describes all the things that they'd be willing to give, and what they want in return.  #a #1 #excited
 *Trade 10 kneecaps for 1 awareness.
@@ -171,7 +171,7 @@ The trader excitedly describes all the things that they'd be willing to give, an
 ~subAwareness(300)
 ->TradeSuccess
 *"I don't want to do any of these?"
-You see blood drain from the traders face, "oh, sorry, I was sure that at least one of these would be pleasing to you."
+You see blood drain from the trader's face, "oh, sorry, I was sure that at least one of these would be pleasing to you."
     **"You were wrong."
     Hurt, the being shuffles away.#m #0 #a #1 #sad
     ->OverWorld.hide
@@ -196,12 +196,12 @@ As the exchange is completed, the Trader's excitement dissolves. #m #0 #a #1 #sa
 
     *"Have I seen you before?"
         "It's unlikely." the trader responds, slightly nervous.
-            **"Then why are you approaching me."
+            **"Then why are you approaching me?"
             I just want to help you.
                 ***Why?
                 ->DONE
                // ->why
-            **"Then why do I remember you."
+            **"Then why do I remember you?"
             "I wouldn't think about it too hard...it's not worth it."
                 ***"What do you mean?"
                 "Friend, I want to help you, but not in this way, please."

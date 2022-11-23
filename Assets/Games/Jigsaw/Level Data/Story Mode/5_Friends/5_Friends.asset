@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5485bfd46d4ed24492767cd900b16df, type: 3}
+  m_Name: 5_Friends
+  m_EditorClassIdentifier: 
+  Name: Friends
+  JigLevels:
+  - {fileID: 11400000, guid: 31449be9f72344c4c9717abd7adbbaa4, type: 2}
+  - {fileID: 11400000, guid: 99974f5e992feb34eba236fc900423c9, type: 2}
+  - {fileID: 11400000, guid: fd8f6dd73ac51d74b982d6b852df2978, type: 2}
+  Notes: 

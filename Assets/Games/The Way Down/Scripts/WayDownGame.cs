@@ -390,5 +390,15 @@ namespace TheWayDown
 
         }
 
+        public void BackToSamWorld() 
+        {
+
+          //  soundsystem.s
+
+            SceneManager.LoadScene("Main Menu",LoadSceneMode.Single);
+            
+        }
+
+
     }
 }

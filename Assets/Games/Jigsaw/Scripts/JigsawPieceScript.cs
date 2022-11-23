@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿
 using UnityEngine;
 using UnityEngine.UI;
 using MovingJigsaw;
@@ -17,6 +16,7 @@ namespace MovingJigsaw
         public JigsawGameLogic gm;
         public Rect st;
         public Transform parent;
+        public GameObject[] sk;
 
         public float x;
         public float y;
@@ -61,6 +61,12 @@ namespace MovingJigsaw
             x = gameObject.GetComponent<RectTransform>().anchoredPosition.x;
             y = gameObject.GetComponent<RectTransform>().anchoredPosition.y;
 
+        }
+
+        public void UpdatePostionInSave() 
+        {
+            gm.UpdateSavePostions();
+        
         }
 
     }
