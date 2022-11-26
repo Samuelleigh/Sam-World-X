@@ -160,13 +160,13 @@ public class FirstPersonClicking : MonoBehaviour
 
     public void OpenLinkJSPlugin()
     {
-#if! UNITY_EDITOR
-		openWindow(linkstring);
-#else 
-        Application.OpenURL(linkstring);
-#endif
+//#if! UNITY_EDITOR
+//		openWindow(linkstring);
+//#else 
+//        Application.OpenURL(linkstring);
+//#endif
     }
 
-    [DllImport("__Internal")]
-    private static extern void openWindow(string url);
+    //[DllImport("__Internal")]
+  //  private static extern void openWindow(string url);
 }

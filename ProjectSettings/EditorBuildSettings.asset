@@ -12,9 +12,6 @@ EditorBuildSettings:
     path: Assets/Games/Jigsaw/JigsawMain.unity
     guid: 9fe9e0c009390954d8fd82ade27eab11
   - enabled: 1
-    path: Assets/LightShaft/Scenes/Demo1 - Simplified Player.unity
-    guid: e2615ec52d1592a4b9bc537950c45b90
-  - enabled: 1
     path: Assets/Games/Jigsaw/Level Data/Sandbox Mode/01_Normal Video/Normal_NewMain.unity
     guid: c0a6bb646dec9f142ab4e90c58ba060e
   - enabled: 1
@@ -62,30 +59,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Games/Jigsaw/Level Data/Story Mode/Normal.unity
     guid: bea37d2c6abe7be47a0b74fb06d4f51b
-  - enabled: 1
-    path: Assets/Games/The Way Down/Way Down.unity
-    guid: b296614dc6fbea44aa0db861a1b6b458
-  - enabled: 1
-    path: Assets/Games/Conversation With A Rock/Rock Conversation.unity
-    guid: 6d5f7e42522d0734f8adb4f0a5c4d660
-  - enabled: 1
-    path: Assets/Games/Dead Guy/DeadGuy.unity
-    guid: d8b4c45f98774a74eb70b71429bcafbe
-  - enabled: 1
-    path: Assets/Games/Drawing Game/Drawing.unity
-    guid: 315ffe9a463e7904997c268e1b025046
-  - enabled: 1
-    path: Assets/Games/Guessing Game/Scenes/PlayScene.unity
-    guid: 99c9720ab356a0642a771bea13969a05
-  - enabled: 1
-    path: Assets/Games/Knock Knock/Scenes/Knock Knock.unity
-    guid: 008572bdef439744aa77695d2fe60b01
-  - enabled: 1
-    path: Assets/Games/10 Games You can play with/10 game.unity
-    guid: 6b66a446b9cace4409853520e7428aa3
-  - enabled: 1
-    path: Assets/Games/StartUp Menu/Main Menu.unity
-    guid: 73dbbd5ac20823343950fe10cb7096e9
   - enabled: 1
     path: Assets/Games/Jigsaw/Level Data/Sandbox Mode/Inverted/Inverted Verticle.unity
     guid: 34d307545ec328e43a1adf59c054fc68
