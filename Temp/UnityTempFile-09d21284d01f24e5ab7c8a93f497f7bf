@@ -1,0 +1,481 @@
+/target:library
+/nowarn:0169
+/out:"Temp/Assembly-CSharp.dll"
+/deterministic
+/debug:portable
+/optimize+
+/nostdlib+
+/preferreduilang:en-US
+/langversion:latest
+/reference:"Library/PlayerScriptAssemblies/Cinemachine.dll"
+/reference:"Library/PlayerScriptAssemblies/Ink-Libraries.dll"
+/reference:"Library/PlayerScriptAssemblies/Unity.Analytics.DataPrivacy.dll"
+/reference:"Library/PlayerScriptAssemblies/Unity.Postprocessing.Runtime.dll"
+/reference:"Library/PlayerScriptAssemblies/Unity.ProBuilder.dll"
+/reference:"Library/PlayerScriptAssemblies/Unity.RenderPipeline.Universal.ShaderLibrary.dll"
+/reference:"Library/PlayerScriptAssemblies/Unity.RenderPipelines.Core.Runtime.dll"
+/reference:"Library/PlayerScriptAssemblies/Unity.RenderPipelines.Core.ShaderLibrary.dll"
+/reference:"Library/PlayerScriptAssemblies/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll"
+/reference:"Library/PlayerScriptAssemblies/Unity.RenderPipelines.Universal.Runtime.dll"
+/reference:"Library/PlayerScriptAssemblies/Unity.RenderPipelines.Universal.Shaders.dll"
+/reference:"Library/PlayerScriptAssemblies/Unity.TextMeshPro.dll"
+/reference:"Library/PlayerScriptAssemblies/Unity.Timeline.dll"
+/reference:"Library/PlayerScriptAssemblies/UnityEngine.Advertisements.dll"
+/reference:"Library/PlayerScriptAssemblies/UnityEngine.Monetization.dll"
+/reference:"Library/PlayerScriptAssemblies/UnityEngine.SpatialTracking.dll"
+/reference:"Library/PlayerScriptAssemblies/UnityEngine.UI.dll"
+/reference:"Library/PlayerScriptAssemblies/UnityEngine.XR.LegacyInputHelpers.dll"
+/reference:"/Applications/2020.1.5f1/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.AIModule.dll"
+/reference:"/Applications/2020.1.5f1/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.ARModule.dll"
+/reference:"/Applications/2020.1.5f1/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.AccessibilityModule.dll"
+/reference:"/Applications/2020.1.5f1/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.AndroidJNIModule.dll"
+/reference:"/Applications/2020.1.5f1/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.AnimationModule.dll"
+/reference:"/Applications/2020.1.5f1/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.AssetBundleModule.dll"
+/reference:"/Applications/2020.1.5f1/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.AudioModule.dll"
+/reference:"/Applications/2020.1.5f1/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.ClothModule.dll"
+/reference:"/Applications/2020.1.5f1/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.CoreModule.dll"
+/reference:"/Applications/2020.1.5f1/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.CrashReportingModule.dll"
+/reference:"/Applications/2020.1.5f1/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.DSPGraphModule.dll"
+/reference:"/Applications/2020.1.5f1/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.DirectorModule.dll"
+/reference:"/Applications/2020.1.5f1/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.GameCenterModule.dll"
+/reference:"/Applications/2020.1.5f1/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.GridModule.dll"
+/reference:"/Applications/2020.1.5f1/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.HotReloadModule.dll"
+/reference:"/Applications/2020.1.5f1/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.IMGUIModule.dll"
+/reference:"/Applications/2020.1.5f1/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.ImageConversionModule.dll"
+/reference:"/Applications/2020.1.5f1/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.InputLegacyModule.dll"
+/reference:"/Applications/2020.1.5f1/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.InputModule.dll"
+/reference:"/Applications/2020.1.5f1/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.JSONSerializeModule.dll"
+/reference:"/Applications/2020.1.5f1/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.LocalizationModule.dll"
+/reference:"/Applications/2020.1.5f1/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.ParticleSystemModule.dll"
+/reference:"/Applications/2020.1.5f1/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.PerformanceReportingModule.dll"
+/reference:"/Applications/2020.1.5f1/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.Physics2DModule.dll"
+/reference:"/Applications/2020.1.5f1/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.PhysicsModule.dll"
+/reference:"/Applications/2020.1.5f1/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.ProfilerModule.dll"
+/reference:"/Applications/2020.1.5f1/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.ScreenCaptureModule.dll"
+/reference:"/Applications/2020.1.5f1/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.SharedInternalsModule.dll"
+/reference:"/Applications/2020.1.5f1/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.SpriteMaskModule.dll"
+/reference:"/Applications/2020.1.5f1/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.SpriteShapeModule.dll"
+/reference:"/Applications/2020.1.5f1/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.StreamingModule.dll"
+/reference:"/Applications/2020.1.5f1/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.SubstanceModule.dll"
+/reference:"/Applications/2020.1.5f1/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.SubsystemsModule.dll"
+/reference:"/Applications/2020.1.5f1/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.TLSModule.dll"
+/reference:"/Applications/2020.1.5f1/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.TerrainModule.dll"
+/reference:"/Applications/2020.1.5f1/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.TerrainPhysicsModule.dll"
+/reference:"/Applications/2020.1.5f1/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.TextCoreModule.dll"
+/reference:"/Applications/2020.1.5f1/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.TextRenderingModule.dll"
+/reference:"/Applications/2020.1.5f1/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.TilemapModule.dll"
+/reference:"/Applications/2020.1.5f1/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.UIElementsModule.dll"
+/reference:"/Applications/2020.1.5f1/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.UIElementsNativeModule.dll"
+/reference:"/Applications/2020.1.5f1/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.UIModule.dll"
+/reference:"/Applications/2020.1.5f1/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.UNETModule.dll"
+/reference:"/Applications/2020.1.5f1/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.UmbraModule.dll"
+/reference:"/Applications/2020.1.5f1/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.UnityAnalyticsModule.dll"
+/reference:"/Applications/2020.1.5f1/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.UnityConnectModule.dll"
+/reference:"/Applications/2020.1.5f1/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.UnityTestProtocolModule.dll"
+/reference:"/Applications/2020.1.5f1/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.UnityWebRequestAssetBundleModule.dll"
+/reference:"/Applications/2020.1.5f1/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.UnityWebRequestAudioModule.dll"
+/reference:"/Applications/2020.1.5f1/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.UnityWebRequestModule.dll"
+/reference:"/Applications/2020.1.5f1/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.UnityWebRequestTextureModule.dll"
+/reference:"/Applications/2020.1.5f1/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.UnityWebRequestWWWModule.dll"
+/reference:"/Applications/2020.1.5f1/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.VFXModule.dll"
+/reference:"/Applications/2020.1.5f1/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.VRModule.dll"
+/reference:"/Applications/2020.1.5f1/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.VehiclesModule.dll"
+/reference:"/Applications/2020.1.5f1/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.VideoModule.dll"
+/reference:"/Applications/2020.1.5f1/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.WindModule.dll"
+/reference:"/Applications/2020.1.5f1/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.XRModule.dll"
+/reference:"/Applications/2020.1.5f1/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed/UnityEngine.dll"
+/reference:"/Applications/2020.1.5f1/Unity.app/Contents/NetStandard/Extensions/2.0.0/System.Numerics.Vectors.dll"
+/reference:"/Applications/2020.1.5f1/Unity.app/Contents/NetStandard/Extensions/2.0.0/System.Runtime.InteropServices.WindowsRuntime.dll"
+/reference:"/Applications/2020.1.5f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netfx/System.ComponentModel.Composition.dll"
+/reference:"/Applications/2020.1.5f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netfx/System.Core.dll"
+/reference:"/Applications/2020.1.5f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netfx/System.Data.dll"
+/reference:"/Applications/2020.1.5f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netfx/System.Drawing.dll"
+/reference:"/Applications/2020.1.5f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netfx/System.IO.Compression.FileSystem.dll"
+/reference:"/Applications/2020.1.5f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netfx/System.Net.dll"
+/reference:"/Applications/2020.1.5f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netfx/System.Numerics.dll"
+/reference:"/Applications/2020.1.5f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netfx/System.Runtime.Serialization.dll"
+/reference:"/Applications/2020.1.5f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netfx/System.ServiceModel.Web.dll"
+/reference:"/Applications/2020.1.5f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netfx/System.Transactions.dll"
+/reference:"/Applications/2020.1.5f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netfx/System.Web.dll"
+/reference:"/Applications/2020.1.5f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netfx/System.Windows.dll"
+/reference:"/Applications/2020.1.5f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netfx/System.Xml.Linq.dll"
+/reference:"/Applications/2020.1.5f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netfx/System.Xml.Serialization.dll"
+/reference:"/Applications/2020.1.5f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netfx/System.Xml.dll"
+/reference:"/Applications/2020.1.5f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netfx/System.dll"
+/reference:"/Applications/2020.1.5f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netfx/mscorlib.dll"
+/reference:"/Applications/2020.1.5f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/Microsoft.Win32.Primitives.dll"
+/reference:"/Applications/2020.1.5f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.AppContext.dll"
+/reference:"/Applications/2020.1.5f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Collections.Concurrent.dll"
+/reference:"/Applications/2020.1.5f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Collections.NonGeneric.dll"
+/reference:"/Applications/2020.1.5f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Collections.Specialized.dll"
+/reference:"/Applications/2020.1.5f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Collections.dll"
+/reference:"/Applications/2020.1.5f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.ComponentModel.EventBasedAsync.dll"
+/reference:"/Applications/2020.1.5f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.ComponentModel.Primitives.dll"
+/reference:"/Applications/2020.1.5f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.ComponentModel.TypeConverter.dll"
+/reference:"/Applications/2020.1.5f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.ComponentModel.dll"
+/reference:"/Applications/2020.1.5f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Console.dll"
+/reference:"/Applications/2020.1.5f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Data.Common.dll"
+/reference:"/Applications/2020.1.5f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Diagnostics.Contracts.dll"
+/reference:"/Applications/2020.1.5f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Diagnostics.Debug.dll"
+/reference:"/Applications/2020.1.5f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Diagnostics.FileVersionInfo.dll"
+/reference:"/Applications/2020.1.5f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Diagnostics.Process.dll"
+/reference:"/Applications/2020.1.5f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Diagnostics.StackTrace.dll"
+/reference:"/Applications/2020.1.5f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Diagnostics.TextWriterTraceListener.dll"
+/reference:"/Applications/2020.1.5f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Diagnostics.Tools.dll"
+/reference:"/Applications/2020.1.5f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Diagnostics.TraceSource.dll"
+/reference:"/Applications/2020.1.5f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Diagnostics.Tracing.dll"
+/reference:"/Applications/2020.1.5f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Drawing.Primitives.dll"
+/reference:"/Applications/2020.1.5f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Dynamic.Runtime.dll"
+/reference:"/Applications/2020.1.5f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Globalization.Calendars.dll"
+/reference:"/Applications/2020.1.5f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Globalization.Extensions.dll"
+/reference:"/Applications/2020.1.5f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Globalization.dll"
+/reference:"/Applications/2020.1.5f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.IO.Compression.ZipFile.dll"
+/reference:"/Applications/2020.1.5f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.IO.Compression.dll"
+/reference:"/Applications/2020.1.5f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.IO.FileSystem.DriveInfo.dll"
+/reference:"/Applications/2020.1.5f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.IO.FileSystem.Primitives.dll"
+/reference:"/Applications/2020.1.5f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.IO.FileSystem.Watcher.dll"
+/reference:"/Applications/2020.1.5f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.IO.FileSystem.dll"
+/reference:"/Applications/2020.1.5f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.IO.IsolatedStorage.dll"
+/reference:"/Applications/2020.1.5f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.IO.MemoryMappedFiles.dll"
+/reference:"/Applications/2020.1.5f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.IO.Pipes.dll"
+/reference:"/Applications/2020.1.5f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.IO.UnmanagedMemoryStream.dll"
+/reference:"/Applications/2020.1.5f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.IO.dll"
+/reference:"/Applications/2020.1.5f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Linq.Expressions.dll"
+/reference:"/Applications/2020.1.5f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Linq.Parallel.dll"
+/reference:"/Applications/2020.1.5f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Linq.Queryable.dll"
+/reference:"/Applications/2020.1.5f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Linq.dll"
+/reference:"/Applications/2020.1.5f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Net.Http.dll"
+/reference:"/Applications/2020.1.5f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Net.NameResolution.dll"
+/reference:"/Applications/2020.1.5f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Net.NetworkInformation.dll"
+/reference:"/Applications/2020.1.5f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Net.Ping.dll"
+/reference:"/Applications/2020.1.5f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Net.Primitives.dll"
+/reference:"/Applications/2020.1.5f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Net.Requests.dll"
+/reference:"/Applications/2020.1.5f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Net.Security.dll"
+/reference:"/Applications/2020.1.5f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Net.Sockets.dll"
+/reference:"/Applications/2020.1.5f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Net.WebHeaderCollection.dll"
+/reference:"/Applications/2020.1.5f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Net.WebSockets.Client.dll"
+/reference:"/Applications/2020.1.5f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Net.WebSockets.dll"
+/reference:"/Applications/2020.1.5f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.ObjectModel.dll"
+/reference:"/Applications/2020.1.5f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Reflection.Extensions.dll"
+/reference:"/Applications/2020.1.5f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Reflection.Primitives.dll"
+/reference:"/Applications/2020.1.5f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Reflection.dll"
+/reference:"/Applications/2020.1.5f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Resources.Reader.dll"
+/reference:"/Applications/2020.1.5f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Resources.ResourceManager.dll"
+/reference:"/Applications/2020.1.5f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Resources.Writer.dll"
+/reference:"/Applications/2020.1.5f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Runtime.CompilerServices.VisualC.dll"
+/reference:"/Applications/2020.1.5f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Runtime.Extensions.dll"
+/reference:"/Applications/2020.1.5f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Runtime.Handles.dll"
+/reference:"/Applications/2020.1.5f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Runtime.InteropServices.RuntimeInformation.dll"
+/reference:"/Applications/2020.1.5f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Runtime.InteropServices.dll"
+/reference:"/Applications/2020.1.5f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Runtime.Numerics.dll"
+/reference:"/Applications/2020.1.5f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Runtime.Serialization.Formatters.dll"
+/reference:"/Applications/2020.1.5f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Runtime.Serialization.Json.dll"
+/reference:"/Applications/2020.1.5f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Runtime.Serialization.Primitives.dll"
+/reference:"/Applications/2020.1.5f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Runtime.Serialization.Xml.dll"
+/reference:"/Applications/2020.1.5f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Runtime.dll"
+/reference:"/Applications/2020.1.5f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Security.Claims.dll"
+/reference:"/Applications/2020.1.5f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Security.Cryptography.Algorithms.dll"
+/reference:"/Applications/2020.1.5f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Security.Cryptography.Csp.dll"
+/reference:"/Applications/2020.1.5f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Security.Cryptography.Encoding.dll"
+/reference:"/Applications/2020.1.5f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Security.Cryptography.Primitives.dll"
+/reference:"/Applications/2020.1.5f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Security.Cryptography.X509Certificates.dll"
+/reference:"/Applications/2020.1.5f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Security.Principal.dll"
+/reference:"/Applications/2020.1.5f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Security.SecureString.dll"
+/reference:"/Applications/2020.1.5f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Text.Encoding.Extensions.dll"
+/reference:"/Applications/2020.1.5f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Text.Encoding.dll"
+/reference:"/Applications/2020.1.5f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Text.RegularExpressions.dll"
+/reference:"/Applications/2020.1.5f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Threading.Overlapped.dll"
+/reference:"/Applications/2020.1.5f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Threading.Tasks.Parallel.dll"
+/reference:"/Applications/2020.1.5f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Threading.Tasks.dll"
+/reference:"/Applications/2020.1.5f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Threading.Thread.dll"
+/reference:"/Applications/2020.1.5f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Threading.ThreadPool.dll"
+/reference:"/Applications/2020.1.5f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Threading.Timer.dll"
+/reference:"/Applications/2020.1.5f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Threading.dll"
+/reference:"/Applications/2020.1.5f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.ValueTuple.dll"
+/reference:"/Applications/2020.1.5f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Xml.ReaderWriter.dll"
+/reference:"/Applications/2020.1.5f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Xml.XDocument.dll"
+/reference:"/Applications/2020.1.5f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Xml.XPath.XDocument.dll"
+/reference:"/Applications/2020.1.5f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Xml.XPath.dll"
+/reference:"/Applications/2020.1.5f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Xml.XmlDocument.dll"
+/reference:"/Applications/2020.1.5f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Xml.XmlSerializer.dll"
+/reference:"/Applications/2020.1.5f1/Unity.app/Contents/NetStandard/ref/2.0.0/netstandard.dll"
+/reference:"/Users/samuelleigh/Sam World X Main Real/Sam-World-X/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0/Runtime/AOT/Newtonsoft.Json.dll"
+/reference:"/Users/samuelleigh/Sam World X Main Real/Sam-World-X/Library/PackageCache/com.unity.purchasing@2.0.6/UnityEngine.Purchasing.dll"
+/reference:"Assets/Doodle Studio 95/Plugins/DoodleStudio95.dll"
+/reference:"Assets/UniFileBrowser/Plugins/UniFileBrowser.dll"
+/define:CSHARP_7_3_OR_NEWER
+/define:CSHARP_7_OR_LATER
+/define:DEBUGGER_LISTENS_FIXED_PORT
+/define:ENABLE_AR
+/define:ENABLE_AUDIO
+/define:ENABLE_CACHING
+/define:ENABLE_CLOTH
+/define:ENABLE_CLOUD_LICENSE
+/define:ENABLE_CLOUD_SERVICES
+/define:ENABLE_CLOUD_SERVICES_ADS
+/define:ENABLE_CLOUD_SERVICES_ANALYTICS
+/define:ENABLE_CLOUD_SERVICES_BUILD
+/define:ENABLE_CLOUD_SERVICES_COLLAB
+/define:ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS
+/define:ENABLE_CLOUD_SERVICES_CRASH_REPORTING
+/define:ENABLE_CLOUD_SERVICES_PURCHASING
+/define:ENABLE_CLOUD_SERVICES_UNET
+/define:ENABLE_CLOUD_SERVICES_USE_WEBREQUEST
+/define:ENABLE_CRUNCH_TEXTURE_COMPRESSION
+/define:ENABLE_CUSTOM_RENDER_TEXTURE
+/define:ENABLE_DIRECTOR
+/define:ENABLE_DIRECTOR_AUDIO
+/define:ENABLE_DIRECTOR_TEXTURE
+/define:ENABLE_EDITOR_HUB_LICENSE
+/define:ENABLE_ENGINE_CODE_STRIPPING
+/define:ENABLE_GAMECENTER
+/define:ENABLE_IL2CPP
+/define:ENABLE_IOS_APP_SLICING
+/define:ENABLE_IOS_ON_DEMAND_RESOURCES
+/define:ENABLE_LEGACY_INPUT_MANAGER
+/define:ENABLE_LOCALIZATION
+/define:ENABLE_LZMA
+/define:ENABLE_MANAGED_ANIMATION_JOBS
+/define:ENABLE_MANAGED_AUDIO_JOBS
+/define:ENABLE_MANAGED_JOBS
+/define:ENABLE_MANAGED_TRANSFORM_JOBS
+/define:ENABLE_MICROPHONE
+/define:ENABLE_MONO_BDWGC
+/define:ENABLE_MULTIPLE_DISPLAYS
+/define:ENABLE_NETWORK
+/define:ENABLE_ONSCREEN_KEYBOARD
+/define:ENABLE_PHYSICS
+/define:ENABLE_RUNTIME_GI
+/define:ENABLE_SCRIPTING_GC_WBARRIERS
+/define:ENABLE_SPATIALTRACKING
+/define:ENABLE_SPRITES
+/define:ENABLE_TERRAIN
+/define:ENABLE_TEXTURE_STREAMING
+/define:ENABLE_TILEMAP
+/define:ENABLE_TIMELINE
+/define:ENABLE_UNET
+/define:ENABLE_UNITYADS_RUNTIME
+/define:ENABLE_UNITYEVENTS
+/define:ENABLE_UNITYWEBREQUEST
+/define:ENABLE_VIDEO
+/define:ENABLE_VR
+/define:ENABLE_WEBCAM
+/define:ENABLE_WEBSOCKET_CLIENT
+/define:ENABLE_WWW
+/define:INCLUDE_DYNAMIC_GI
+/define:NET_STANDARD_2_0
+/define:PLATFORM_IOS
+/define:PLATFORM_IPHONE
+/define:PLATFORM_SUPPORTS_ADS_ID
+/define:PLATFORM_SUPPORTS_MONO
+/define:PLATFORM_SUPPORTS_PROFILER
+/define:PLAYERCONNECTION_LISTENS_FIXED_PORT
+/define:STEAMWORKS_NET
+/define:SUPPORT_ENVIRONMENT_VARIABLES
+/define:SUPPORT_MULTIPLE_DISPLAYS
+/define:UNITY_2017_1_OR_NEWER
+/define:UNITY_2017_2_OR_NEWER
+/define:UNITY_2017_3_OR_NEWER
+/define:UNITY_2017_4_OR_NEWER
+/define:UNITY_2018_1_OR_NEWER
+/define:UNITY_2018_2_OR_NEWER
+/define:UNITY_2018_3_OR_NEWER
+/define:UNITY_2018_4_OR_NEWER
+/define:UNITY_2019_1_OR_NEWER
+/define:UNITY_2019_2_OR_NEWER
+/define:UNITY_2019_3_OR_NEWER
+/define:UNITY_2019_4_OR_NEWER
+/define:UNITY_2020
+/define:UNITY_2020_1
+/define:UNITY_2020_1_5
+/define:UNITY_2020_1_OR_NEWER
+/define:UNITY_5_3_OR_NEWER
+/define:UNITY_5_4_OR_NEWER
+/define:UNITY_5_5_OR_NEWER
+/define:UNITY_5_6_OR_NEWER
+/define:UNITY_HAS_GOOGLEVR
+/define:UNITY_IOS
+/define:UNITY_IPHONE
+/define:UNITY_IPHONE_API
+/define:UNITY_POST_PROCESSING_STACK_V2
+/define:UNITY_UNITYADS_API
+"Assets/CafeTextBox.cs"
+"Assets/Doodle Studio 95/Examples/Assets/2D Environment/BirdCharacter.cs"
+"Assets/Doodle Studio 95/Examples/Assets/2D Environment/Worm.cs"
+"Assets/Doodle Studio 95/Examples/Assets/2D Environment/WormArea.cs"
+"Assets/Doodle Studio 95/Examples/Scripts/ChainAnimations.cs"
+"Assets/Doodle Studio 95/Examples/Scripts/RespawnOnOppositeEnd.cs"
+"Assets/Doodle Studio 95/Examples/Scripts/SimpleFollowingCamera.cs"
+"Assets/Doodle Studio 95/Examples/Scripts/SleepUntilTouched.cs"
+"Assets/Doodle Studio 95/Examples/Scripts/ThirdParty/Unity-FPS-Controller/FPS.cs"
+"Assets/Doodle Studio 95/Examples/Scripts/TriggerTransition.cs"
+"Assets/Doodle Studio 95/Examples/Scripts/WalkingCharacter.cs"
+"Assets/FirstPersion AIO Pack/DemoScene/MiscScripts/Doors.cs"
+"Assets/FirstPersonClicking.cs"
+"Assets/Games/10 Games You can play with/PhysicalGame.cs"
+"Assets/Games/10 Games You can play with/PhysicalGameLogic.cs"
+"Assets/Games/10 Games You can play with/PhysicalGameManager.cs"
+"Assets/Games/Conversation With A Rock/Scripts/RockConversation.cs"
+"Assets/Games/Dead Guy/DeadGuy.cs"
+"Assets/Games/Dead Guy/DeadGuyText_D.cs"
+"Assets/Games/Drawing Game/DrawingGameLogic.cs"
+"Assets/Games/Drawing Game/DrawingLevel.cs"
+"Assets/Games/Drawing Game/DrawingLevelManager.cs"
+"Assets/Games/Guessing Game/AudioManager.cs"
+"Assets/Games/Guessing Game/Data/DataManager.cs"
+"Assets/Games/Guessing Game/Data/Data_Level.cs"
+"Assets/Games/Guessing Game/Data/Data_World.cs"
+"Assets/Games/Guessing Game/SaveSystem/PlayerData.cs"
+"Assets/Games/Guessing Game/SaveSystem/SaveSystem.cs"
+"Assets/Games/Guessing Game/Scripts/CalculatorInput.cs"
+"Assets/Games/Guessing Game/Scripts/EndFrame.cs"
+"Assets/Games/Guessing Game/Scripts/FrameBase.cs"
+"Assets/Games/Guessing Game/Scripts/GameLogic.cs"
+"Assets/Games/Guessing Game/Scripts/LevelBarScript.cs"
+"Assets/Games/Guessing Game/Scripts/LevelLogic.cs"
+"Assets/Games/Guessing Game/Scripts/LevelSelect.cs"
+"Assets/Games/Guessing Game/Scripts/Promotions.cs"
+"Assets/Games/Guessing Game/Scripts/TrackerBar.cs"
+"Assets/Games/Guessing Game/Scripts/TrackerFrame.cs"
+"Assets/Games/Guessing Game/Scripts/VarWindowScript.cs"
+"Assets/Games/Guessing Game/Scripts/WorldSelect.cs"
+"Assets/Games/Jigsaw/Level Data/Sandbox Mode/Tinted/ColorChange.cs"
+"Assets/Games/Jigsaw/Level Data/Werid Mode/Jump Scene/Scripts/BlockerControl.cs"
+"Assets/Games/Jigsaw/Level Data/Werid Mode/Jump Scene/Scripts/GameLogicJump.cs"
+"Assets/Games/Jigsaw/Level Data/Werid Mode/Jump Scene/Scripts/MovingGround.cs"
+"Assets/Games/Jigsaw/Level Data/Werid Mode/Jump Scene/Scripts/PlayerController.cs"
+"Assets/Games/Jigsaw/Level Data/Werid Mode/Jump Scene/Scripts/SpawnEnemy.cs"
+"Assets/Games/Jigsaw/MusicManager.cs"
+"Assets/Games/Jigsaw/Scripts/AnimationStart.cs"
+"Assets/Games/Jigsaw/Scripts/ButtonClickSoundSystemLink.cs"
+"Assets/Games/Jigsaw/Scripts/ChangeScreenMode.cs"
+"Assets/Games/Jigsaw/Scripts/DeleteSave.cs"
+"Assets/Games/Jigsaw/Scripts/DragSelection.cs"
+"Assets/Games/Jigsaw/Scripts/Ios Specifc/ChangePhoneOrientationMode.cs"
+"Assets/Games/Jigsaw/Scripts/JigLevelManager.cs"
+"Assets/Games/Jigsaw/Scripts/JigLevelScriptObject.cs"
+"Assets/Games/Jigsaw/Scripts/JigSave.cs"
+"Assets/Games/Jigsaw/Scripts/JigWorldText.cs"
+"Assets/Games/Jigsaw/Scripts/JigsawGameLogic.cs"
+"Assets/Games/Jigsaw/Scripts/JigsawLevel.cs"
+"Assets/Games/Jigsaw/Scripts/JigsawMenu.cs"
+"Assets/Games/Jigsaw/Scripts/JigsawPieceDrag.cs"
+"Assets/Games/Jigsaw/Scripts/JigsawPieceScript.cs"
+"Assets/Games/Jigsaw/Scripts/JigsawRezLevel.cs"
+"Assets/Games/Jigsaw/Scripts/JigsawSceneObject.cs"
+"Assets/Games/Jigsaw/Scripts/JigsawScriptObject.cs"
+"Assets/Games/Jigsaw/Scripts/PuzzleEnviromentStuff.cs"
+"Assets/Games/Jigsaw/Scripts/ScreenShotControl.cs"
+"Assets/Games/Jigsaw/Scripts/SnapPiece.cs"
+"Assets/Games/Jigsaw/Scripts/Utils.cs"
+"Assets/Games/Jigsaw/Scripts/VideoPathScript.cs"
+"Assets/Games/Jigsaw/Scripts/YoutubeLink.cs"
+"Assets/Games/Jigsaw/Scripts/old/YoutubeDownload.cs"
+"Assets/Games/Knock Knock/Scripts/Character.cs"
+"Assets/Games/Knock Knock/Scripts/CharacterManager.cs"
+"Assets/Games/Knock Knock/Scripts/KnockGameLogic.cs"
+"Assets/Games/Knock Knock/Scripts/Knocking.cs"
+"Assets/Games/Knock Knock/Scripts/Moved to diffrent project/KnockKnockGameLogicMobile.cs"
+"Assets/Games/LowFI-3D/Models/WavingGrass/Scripts/GrassController.cs"
+"Assets/Games/LowFI-3D/Models/WavingGrass/Scripts/Player.cs"
+"Assets/Games/LowFI-3D/Prefabs/FirstPersonAIO/FirstPersonAIO.cs"
+"Assets/Games/LowFI-3D/Scripts/GoalTrigger.cs"
+"Assets/Games/LowFI-3D/Scripts/SightGameLogic.cs"
+"Assets/Games/LowFI-3D/Scripts/SightLevel.cs"
+"Assets/Games/LowFI-3D/Scripts/SightLevelManager.cs"
+"Assets/Games/LowFI-3D/Scripts/SimpleKeyboardLook.cs"
+"Assets/Games/LowFI-3D/living birds/demo/livingBirdsDemoScript.cs"
+"Assets/Games/LowFI-3D/living birds/scripts/lb_Bird.cs"
+"Assets/Games/LowFI-3D/living birds/scripts/lb_BirdController.cs"
+"Assets/Games/LowFI-3D/living birds/scripts/lb_CrowProximity.cs"
+"Assets/Games/Overworld/First Person Drifter Controller/Scripts/FirstPersonDrifter.cs"
+"Assets/Games/Overworld/First Person Drifter Controller/Scripts/LockMouse.cs"
+"Assets/Games/Overworld/First Person Drifter Controller/Scripts/MouseLook.cs"
+"Assets/Games/Overworld/Scripts/LinkObject.cs"
+"Assets/Games/Overworld/Scripts/TextObject.cs"
+"Assets/Games/Overworld/Scripts/WebsiteUI.cs"
+"Assets/Games/Raycast check/3D Movement/CameraRotation.cs"
+"Assets/Games/Raycast check/3D Movement/MoveCamToPostion.cs"
+"Assets/Games/Raycast check/3D Movement/PlayerMovement.cs"
+"Assets/Games/Raycast check/RayCastManager.cs"
+"Assets/Games/StartUp Menu/BackToGameMenu.cs"
+"Assets/Games/StartUp Menu/GameSwitcher.cs"
+"Assets/Games/TestScript.cs"
+"Assets/Games/The Way Down/Scripts/CamTest.cs"
+"Assets/Games/The Way Down/Scripts/WDLevel.cs"
+"Assets/Games/The Way Down/Scripts/WDLevelManager.cs"
+"Assets/Games/The Way Down/Scripts/WDRefrences.cs"
+"Assets/Games/The Way Down/Scripts/WayDownGame.cs"
+"Assets/Games/The Way Down/Scripts/WayDownInk.cs"
+"Assets/Games/To Be Finished In next Collection/Cafe/Scripts/CafeCharacterScriptObject.cs"
+"Assets/Games/To Be Finished In next Collection/Cafe/Scripts/CafeConvoScriptObject.cs"
+"Assets/Games/To Be Finished In next Collection/Cafe/Scripts/CafeDialogScript.cs"
+"Assets/Games/To Be Finished In next Collection/Cafe/Scripts/CafeManager.cs"
+"Assets/Games/To Be Finished In next Collection/Cafe/Scripts/CafeOverWorldFrame.cs"
+"Assets/Games/To Be Finished In next Collection/Cafe/Scripts/CafeTrackedVaribles.cs"
+"Assets/Games/To Be Finished In next Collection/Cafe/Scripts/Cafe_GameLogic.cs"
+"Assets/Games/To Be Finished In next Collection/Cafe/Scripts/legacy/CafeInkScript.cs"
+"Assets/Games/To Be Finished In next Collection/Treasure Sweeper/TwoDMovement.cs"
+"Assets/Ink/Example/Scripts/BasicInkExample.cs"
+"Assets/Ink/Example/Scripts/QuitGameOnKeypress.cs"
+"Assets/LightShaft/Scripts/CustomTools/DrawIfAttribute.cs"
+"Assets/LightShaft/Scripts/CustomTools/PlayerPrefsX.cs"
+"Assets/LightShaft/Scripts/CustomTools/SliderDrag.cs"
+"Assets/LightShaft/Scripts/DemoCustomPlayerScript.cs"
+"Assets/LightShaft/Scripts/ReactingLights.cs"
+"Assets/LightShaft/Scripts/SimpleJSON.cs"
+"Assets/LightShaft/Scripts/UIExtensions.cs"
+"Assets/LightShaft/Scripts/VideoController/LoadVideoTitleToText.cs"
+"Assets/LightShaft/Scripts/VideoController/PauseIcon.cs"
+"Assets/LightShaft/Scripts/VideoController/VideoProgressBar.cs"
+"Assets/LightShaft/Scripts/VideoController/YT_RotateCamera.cs"
+"Assets/LightShaft/Scripts/VideoPlayerController.cs"
+"Assets/LightShaft/Scripts/YoutubeDemoScript.cs"
+"Assets/LightShaft/Scripts/YoutubeLogo.cs"
+"Assets/LightShaft/Scripts/YoutubePlayer.cs"
+"Assets/LightShaft/Scripts/YoutubePlayerLivestream.cs"
+"Assets/LightShaft/Scripts/YoutubeSettings.cs"
+"Assets/LightShaft/Scripts/YoutubeSimplified.cs"
+"Assets/LightShaft/Scripts/YoutubeVideoController.cs"
+"Assets/LightShaft/Scripts/YoutubeVideoEvents.cs"
+"Assets/LightShaft/YoutubeAPI/Scripts/Demos/ChannelSearchDemo.cs"
+"Assets/LightShaft/YoutubeAPI/Scripts/Demos/CommentsDemo.cs"
+"Assets/LightShaft/YoutubeAPI/Scripts/Demos/IndividualVideoDataDemo.cs"
+"Assets/LightShaft/YoutubeAPI/Scripts/Demos/PlaylistDemo.cs"
+"Assets/LightShaft/YoutubeAPI/Scripts/Demos/VideoSearchDemo.cs"
+"Assets/LightShaft/YoutubeAPI/Scripts/Demos/YoutubeApiGetUnlimitedVideos.cs"
+"Assets/LightShaft/YoutubeAPI/Scripts/Demos/YoutubeChannelUI.cs"
+"Assets/LightShaft/YoutubeAPI/Scripts/Demos/YoutubeVideoUi.cs"
+"Assets/LightShaft/YoutubeAPI/Scripts/Src/YoutubeAPIManager.cs"
+"Assets/LightShaft/YoutubeAPI/Scripts/Src/YoutubeContentDetails.cs"
+"Assets/LightShaft/YoutubeAPI/Scripts/Src/YoutubeSnippet.cs"
+"Assets/LightShaft/YoutubeAPI/Scripts/Src/YoutubeStatistics.cs"
+"Assets/LightShaft/YoutubeAPI/Scripts/YoutubeDemoUsage.cs"
+"Assets/LightShaft/YoutubeAPI/Scripts/YoutubeSubtitlesReader.cs"
+"Assets/LightShaft/YoutubeSrc/Exceptions.cs"
+"Assets/LightShaft/YoutubeSrc/HTTPHelperYoutube.cs"
+"Assets/LightShaft/YoutubeSrc/MagicHands.cs"
+"Assets/LightShaft/YoutubeSrc/Types.cs"
+"Assets/LightShaft/YoutubeSrc/VideoInfo.cs"
+"Assets/LightShaft/YoutubeSrc/VideoRequest.cs"
+"Assets/LogoEyeAnimation.cs"
+"Assets/MainMenuMusicController.cs"
+"Assets/ScribbleDrivel/RateScribbleDrivel.cs"
+"Assets/ScribbleDrivel/Scripts/ChangeBrushSettings.cs"
+"Assets/ScribbleDrivel/Scripts/DrawScript.cs"
+"Assets/Scripts1/Steamworks.NET/SteamManager.cs"
+"Assets/Shared/Dialog System/DialogLogicBasic.cs"
+"Assets/Shared/Dialog System/Emotion System/EmoteLogic.cs"
+"Assets/Shared/Dialog System/Emotion System/Emotion.cs"
+"Assets/Shared/Dialog System/Emotion System/EmotionManager.cs"
+"Assets/Shared/Dialog System/EndGameLogic.cs"
+"Assets/Shared/Sound System/Sound.cs"
+"Assets/Shared/SoundSystem.cs"
+"Assets/Shared/UI Frame System/UI Code/MoveFrame.cs"
+"Assets/Shared/UI Frame System/UI Code/UIMaster.cs"
+"Assets/Shared/WebScript.cs"
+"Assets/UniFileBrowser/Demo/UniFileBrowserExample.cs"
+"Assets/YouTubeLinkButton.cs"
+"Assets/YoutubeLinksFrameUI.cs"
+/reference:"/Applications/2020.1.5f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Net.Http.dll"
+/reference:"/Applications/2020.1.5f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netfx/System.Web.dll"

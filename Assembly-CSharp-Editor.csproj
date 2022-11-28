@@ -709,6 +709,10 @@
       <Project>{3671FE4B-4236-6727-BF71-C2427BDF57C3}</Project>
       <Name>Cinemachine</Name>
     </ProjectReference>
+    <ProjectReference Include="UnityEngine.Monetization.csproj">
+      <Project>{BC46B9F1-FA31-875E-9A1C-029DF1C4980E}</Project>
+      <Name>UnityEngine.Monetization</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.RenderPipelines.Universal.Shaders.csproj">
       <Project>{6BE1CFCC-0AFE-BB75-D4AE-96079D78ED4B}</Project>
       <Name>Unity.RenderPipelines.Universal.Shaders</Name>
@@ -720,6 +724,10 @@
     <ProjectReference Include="Unity.ProBuilder.csproj">
       <Project>{788643C8-F5C9-F0C7-AB04-9E13E317FD01}</Project>
       <Name>Unity.ProBuilder</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityEngine.Advertisements.csproj">
+      <Project>{F8EC02B0-2434-7CB5-C273-6C02DBD3AEBA}</Project>
+      <Name>UnityEngine.Advertisements</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.RenderPipelines.Core.Editor.csproj">
       <Project>{F88315CC-6603-52FC-0FD0-19995A138490}</Project>
@@ -781,6 +789,10 @@
       <Project>{B65AF317-3ED8-295C-DD35-1F4AF00699DE}</Project>
       <Name>Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary</Name>
     </ProjectReference>
+    <ProjectReference Include="Unity.DeviceSimulator.Editor.csproj">
+      <Project>{4E4001A1-9851-2D34-3D83-7B34D11892C8}</Project>
+      <Name>Unity.DeviceSimulator.Editor</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.Postprocessing.Runtime.csproj">
       <Project>{3B34CC4C-08B4-F4F7-E5A7-883DF43791DC}</Project>
       <Name>Unity.Postprocessing.Runtime</Name>
@@ -828,18 +840,6 @@
     <ProjectReference Include="UnityEditor.XR.LegacyInputHelpers.csproj">
       <Project>{843532A4-EEBD-AC9F-3927-39ADC6621080}</Project>
       <Name>UnityEditor.XR.LegacyInputHelpers</Name>
-    </ProjectReference>
-    <ProjectReference Include="UnityEngine.Monetization.csproj">
-      <Project>{BC46B9F1-FA31-875E-9A1C-029DF1C4980E}</Project>
-      <Name>UnityEngine.Monetization</Name>
-    </ProjectReference>
-    <ProjectReference Include="UnityEngine.Advertisements.csproj">
-      <Project>{F8EC02B0-2434-7CB5-C273-6C02DBD3AEBA}</Project>
-      <Name>UnityEngine.Advertisements</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.DeviceSimulator.Editor.csproj">
-      <Project>{4E4001A1-9851-2D34-3D83-7B34D11892C8}</Project>
-      <Name>Unity.DeviceSimulator.Editor</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
