@@ -15,7 +15,7 @@ public class YoutubePlayerLivestream : MonoBehaviour {
     public string _livestreamUrl;
 
     //AVPRO
-    //public MediaPlayer mplayer;
+   // public MediaPlayer mplayer;
     
 	void Start () {
         GetLivestreamUrl(_livestreamUrl);
@@ -38,26 +38,26 @@ public class YoutubePlayerLivestream : MonoBehaviour {
         //Some examples: I recommend you to put that script in the same object that the player script that you are using.
         //If you are using some of that players you can uncomment the player part.
 
-        //AVPRO Part
-        // if(mplayer == null)
-        //     mplayer = GetComponent<MediaPlayer>();
-        //
-        // MediaPath mpath = new MediaPath(url, MediaPathType.AbsolutePathOrURL);
-        // mplayer.OpenMedia(mpath, true);
-
-        //Easy Movie Texture (Good for mobile only[sometimes stuck in editor])
-        //MediaPlayerCtrl easyPlayer = GetComponent<MediaPlayerCtrl>();
-        //easyPlayer.m_strFileName = url;
-        //easyPlayer.Play();
-
-        //MPMP
-        //MPMP mpPlayer = GetComponent<MPMP>();
-        //mpPlayer.videoPath = url;
-        //mpPlayer.Load();
-        //mpPlayer.Play();
-
-        Debug.Log("You can check how to use double clicking in that log");
-        Debug.Log("This is the live url, pass to the player: " + url);
+     //  // AVPRO Part
+     //    if(mplayer == null)
+     //        mplayer = GetComponent<MediaPlayer>();
+     //   
+     //    MediaPath mpath = new MediaPath(url, MediaPathType.AbsolutePathOrURL);
+     //    mplayer.OpenMedia(mpath, true);
+     //
+     //   Easy Movie Texture (Good for mobile only[sometimes stuck in editor])
+     //   MediaPlayerCtrl easyPlayer = GetComponent<MediaPlayerCtrl>();
+     //   easyPlayer.m_strFileName = url;
+     //   easyPlayer.Play();
+     //
+     //   MPMP
+     //   MPMP mpPlayer = GetComponent<MPMP>();
+     //   mpPlayer.videoPath = url;
+     //   mpPlayer.Load();
+     //   mpPlayer.Play();
+     //
+     //   Debug.Log("You can check how to use double clicking in that log");
+     //   Debug.Log("This is the live url, pass to the player: " + url);
     }
 
     IEnumerator DownloadYoutubeUrl(string url, System.Action<string> callback)

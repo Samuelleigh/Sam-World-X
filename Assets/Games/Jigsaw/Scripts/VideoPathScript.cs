@@ -59,8 +59,9 @@ namespace MovingJigsaw
                 }
                 else if (File.Exists(field.text))
                 {
+                    //Path.GetExtension(field.text) == ".png"
 
-                    if (Path.GetExtension(field.text) == ".mp4" || Path.GetExtension(field.text) == ".png")
+                    if (Path.GetExtension(field.text) == ".mp4")
                     {
 
                         tick.color = Color.green;
