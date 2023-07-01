@@ -22,7 +22,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>Temp\Bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE;UNITY_2020_1_5;UNITY_2020_1;UNITY_2020;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;UNITY_2020_1_OR_NEWER;PLATFORM_ARCH_64;UNITY_64;UNITY_INCLUDE_TESTS;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_EVENT_QUEUE;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_VIRTUALTEXTURING;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;INCLUDE_DYNAMIC_GI;ENABLE_MONO_BDWGC;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;ENABLE_VIDEO;PLATFORM_STANDALONE;PLATFORM_STANDALONE_WIN;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_OUT_OF_PROCESS_CRASH_HANDLER;ENABLE_CLUSTER_SYNC;ENABLE_CLUSTERINPUT;GFXDEVICE_WAITFOREVENT_MESSAGEPUMP;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_STANDARD_2_0;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_LEGACY_INPUT_MANAGER;_FPAIO;UNITY_POST_PROCESSING_STACK_V2;STEAMWORKS_NET;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
+    <DefineConstants>UNITY_2020_1_5;UNITY_2020_1;UNITY_2020;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;UNITY_2020_1_OR_NEWER;PLATFORM_ARCH_64;UNITY_64;UNITY_INCLUDE_TESTS;UNITY_ANALYTICS;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_EVENT_QUEUE;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_VIRTUALTEXTURING;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;INCLUDE_DYNAMIC_GI;ENABLE_MONO_BDWGC;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;ENABLE_VIDEO;PLATFORM_STANDALONE;PLATFORM_STANDALONE_WIN;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_OUT_OF_PROCESS_CRASH_HANDLER;ENABLE_CLUSTER_SYNC;ENABLE_CLUSTERINPUT;GFXDEVICE_WAITFOREVENT_MESSAGEPUMP;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_STANDARD_2_0;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_LEGACY_INPUT_MANAGER;_FPAIO;UNITY_POST_PROCESSING_STACK_V2;STEAMWORKS_NET;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169</NoWarn>
@@ -47,6 +47,7 @@
   <PropertyGroup>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <UnityProjectGenerator>Package</UnityProjectGenerator>
+    <UnityProjectGeneratorVersion>2.0.15</UnityProjectGeneratorVersion>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows64:19</UnityBuildTarget>
     <UnityVersion>2020.1.5f1</UnityVersion>
@@ -248,71 +249,77 @@
     <Compile Include="Assets\Games\Drawing Game\DrawingGameLogic.cs" />
   </ItemGroup>
   <ItemGroup>
-     <None Include="Assets\Shared\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
-     <None Include="Assets\Shared\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
-     <None Include="Assets\Games\Knock Knock\Mobile To Do.txt" />
-     <None Include="Assets\FirstPersion AIO Pack\DemoScene\Working Materials\GlassBumpedDistort.shader" />
-     <None Include="Assets\FirstPersion AIO Pack\README.txt" />
-     <None Include="Assets\Games\The Way Down\Misc\Todo 3.txt" />
-     <None Include="Assets\com.rlabrecque.steamworks.net\Plugins\steam_api.dll" />
-     <None Include="Assets\Shared\TextMesh Pro\Resources\Shaders\TMP_Bitmap.shader" />
-     <None Include="Assets\Doodle Studio 95\Assets\Scripts\LICENSES.txt" />
-     <None Include="Assets\LightShaft\YoutubeAPI\Readme.txt" />
-     <None Include="Assets\Games\To Be Finished In next Collection\Cafe\Todo.txt" />
-     <None Include="Assets\Doodle Studio 95\Assets\Textures\Walter_Turncoat\LICENSE.txt" />
-     <None Include="Assets\Games\Jigsaw\Videos\Normal Mode\9_Dream\Special.txt" />
-     <None Include="Assets\ScribbleDrivel\Readme.txt" />
-     <None Include="Assets\Shared\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
-     <None Include="Assets\UniFileBrowser\Extras\Source.txt" />
-     <None Include="Assets\LightShaft\YoutubeAPI\link.xml" />
-     <None Include="Assets\LightShaft\CustomYoutubePlayer\Readme-License.txt" />
-     <None Include="Assets\com.rlabrecque.steamworks.net\Plugins\steam_api64.dll" />
-     <None Include="Assets\LightShaft\EACSkyboxShader\EACPanorama.shader" />
-     <None Include="Assets\LightShaft\Readme.txt" />
-     <None Include="Assets\Games\To Be Finished In next Collection\Cafe\Todo 2.txt" />
-     <None Include="Assets\Games\The Way Down\Misc\Todo 4 - Soundtrack.txt" />
-     <None Include="Assets\UniFileBrowser\Documentation\UniFileBrowser 2.0 Upgrade Guide.txt" />
-     <None Include="Assets\Games\The Way Down\Misc\Todo.txt" />
-     <None Include="Assets\Shared\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />
-     <None Include="Assets\UniFileBrowser\Plugins\UniFileBrowser.dll" />
-     <None Include="Assets\Shared\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
-     <None Include="Assets\Shared\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
-     <None Include="Assets\Shared\TextMesh Pro\Resources\Shaders\TMP_SDF.shader" />
-     <None Include="Assets\Games\LowFI-3D\Models\WavingGrass\Shader\GrassWind.shader" />
-     <None Include="Assets\Games\Jigsaw\Todo2.txt" />
-     <None Include="Assets\Shared\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
-     <None Include="Assets\Doodle Studio 95\Assets\Shaders\Sprite-ShadowCasting.shader" />
-     <None Include="Assets\Doodle Studio 95\Assets\Shaders\Standard-DoubleSided.shader" />
-     <None Include="Assets\ScribbleDrivel\Fonts\Fontdiner_Swanky\FontdinerSwanky_LICENSE.txt" />
-     <None Include="Assets\Shared\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
-     <None Include="Assets\Shared\TextMesh Pro\Resources\Shaders\TMPro_Surface.cginc" />
-     <None Include="Assets\LightShaft\Shaders\EAC\EACPanorama.cginc" />
-     <None Include="Assets\LightShaft\EACSkyboxShader\EACPanorama.cginc" />
-     <None Include="Assets\Doodle Studio 95\Examples\Assets\2D Environment\Parchment_source.txt" />
-     <None Include="Assets\Games\LowFI-3D\Models\WavingGrass\readme.txt" />
-     <None Include="Assets\Shared\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
-     <None Include="Assets\Games\Overworld\First Person Drifter Controller\info.txt" />
-     <None Include="Assets\Doodle Studio 95\Plugins\DoodleStudio95.dll" />
-     <None Include="Assets\UniFileBrowser\Documentation\UniFileBrowser changelog.txt" />
-     <None Include="Assets\LightShaft\Shaders\EAC-sphere.shader" />
-     <None Include="Assets\Games\Jigsaw\Level Idea Bucket.txt" />
-     <None Include="Assets\Doodle Studio 95\Assets\Shaders\DrawPreview.shader" />
-     <None Include="Assets\Doodle Studio 95\Assets\Shaders\JitterTextShader.shader" />
-     <None Include="Assets\Shared\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Masking.shader" />
-     <None Include="Assets\Games\LowFI-3D\Todo.txt" />
-     <None Include="Assets\Games\LowFI-3D\Old\POLYGON city pack\Read_me.txt" />
-     <None Include="Assets\Games\Overworld\Todo.txt" />
-     <None Include="Assets\Shared\TextMesh Pro\Resources\Shaders\TMP_SDF Overlay.shader" />
-     <None Include="Assets\Games\Jigsaw\Todo.txt" />
-     <None Include="Assets\Shared\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Mobile.shader" />
-     <None Include="Assets\Shared\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
-     <None Include="Assets\LightShaft\Shaders\ViewInside.shader" />
-     <None Include="Assets\Shared\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile.shader" />
-     <None Include="Assets\LightShaft\Shaders\EAC\EACPanorama.shader" />
-     <None Include="Assets\Games\The Way Down\Misc\Todo 2.txt" />
-     <None Include="Assets\Games\LowFI-3D\VertexColorFarmAnimals\Shaders\VertexColorUnlit.shader" />
-     <None Include="Assets\Games\Jigsaw\Todo3.txt" />
-     <None Include="Assets\Shared\TextMesh Pro\Resources\Shaders\TMP_Sprite.shader" />
+    <None Include="Assets\Shared\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
+    <None Include="Assets\Shared\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
+    <None Include="Assets\Games\Knock Knock\Mobile To Do.txt" />
+    <None Include="Assets\FirstPersion AIO Pack\DemoScene\Working Materials\GlassBumpedDistort.shader" />
+    <None Include="Assets\LightShaft\Shaders\ViewInsideShader.shader" />
+    <None Include="Assets\FirstPersion AIO Pack\README.txt" />
+    <None Include="Assets\Games\The Way Down\Misc\Todo 3.txt" />
+    <None Include="Assets\com.rlabrecque.steamworks.net\Plugins\steam_api.dll" />
+    <None Include="Assets\Shared\TextMesh Pro\Resources\Shaders\TMP_Bitmap.shader" />
+    <None Include="Assets\Doodle Studio 95\Assets\Scripts\LICENSES.txt" />
+    <None Include="Assets\LightShaft\YoutubeAPI\Readme.txt" />
+    <None Include="Assets\Games\To Be Finished In next Collection\Cafe\Todo.txt" />
+    <None Include="Assets\Doodle Studio 95\Assets\Textures\Walter_Turncoat\LICENSE.txt" />
+    <None Include="Assets\Games\Jigsaw\Videos\Normal Mode\9_Dream\Special.txt" />
+    <None Include="Assets\ScribbleDrivel\Readme.txt" />
+    <None Include="Assets\Shared\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
+    <None Include="Assets\UniFileBrowser\Extras\Source.txt" />
+    <None Include="Assets\LightShaft\YoutubeAPI\link.xml" />
+    <None Include="Assets\LightShaft\CustomYoutubePlayer\Readme-License.txt" />
+    <None Include="Assets\com.rlabrecque.steamworks.net\Plugins\steam_api64.dll" />
+    <None Include="Assets\LightShaft\EACSkyboxShader\EACPanorama.shader" />
+    <None Include="Assets\LightShaft\Readme.txt" />
+    <None Include="Assets\Games\To Be Finished In next Collection\Cafe\Todo 2.txt" />
+    <None Include="Assets\Games\The Way Down\Misc\Todo 4 - Soundtrack.txt" />
+    <None Include="Assets\UniFileBrowser\Documentation\UniFileBrowser 2.0 Upgrade Guide.txt" />
+    <None Include="Assets\Games\The Way Down\Misc\Todo.txt" />
+    <None Include="Assets\Shared\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />
+    <None Include="Assets\UniFileBrowser\Plugins\UniFileBrowser.dll" />
+    <None Include="Assets\Shared\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
+    <None Include="Assets\Shared\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
+    <None Include="Assets\Shared\TextMesh Pro\Resources\Shaders\TMP_SDF.shader" />
+    <None Include="Assets\Games\LowFI-3D\Models\WavingGrass\Shader\GrassWind.shader" />
+    <None Include="Assets\Games\Jigsaw\Todo2.txt" />
+    <None Include="Assets\Shared\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
+    <None Include="Assets\Doodle Studio 95\Assets\Shaders\Sprite-ShadowCasting.shader" />
+    <None Include="Assets\Doodle Studio 95\Assets\Shaders\Standard-DoubleSided.shader" />
+    <None Include="Assets\ScribbleDrivel\Fonts\Fontdiner_Swanky\FontdinerSwanky_LICENSE.txt" />
+    <None Include="Assets\Shared\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
+    <None Include="Assets\Shared\TextMesh Pro\Resources\Shaders\TMPro_Surface.cginc" />
+    <None Include="Assets\LightShaft\Shaders\EAC\EACPanorama.cginc" />
+    <None Include="Assets\LightShaft\EACSkyboxShader\EACPanorama.cginc" />
+    <None Include="Assets\Doodle Studio 95\Examples\Assets\2D Environment\Parchment_source.txt" />
+    <None Include="Assets\Games\LowFI-3D\Models\WavingGrass\readme.txt" />
+    <None Include="Assets\Shared\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+    <None Include="Assets\Games\Overworld\First Person Drifter Controller\info.txt" />
+    <None Include="Assets\Doodle Studio 95\Plugins\DoodleStudio95.dll" />
+    <None Include="Assets\UniFileBrowser\Documentation\UniFileBrowser changelog.txt" />
+    <None Include="Assets\LightShaft\Shaders\EAC-sphere.shader" />
+    <None Include="Assets\Games\Jigsaw\Level Idea Bucket.txt" />
+    <None Include="Assets\Doodle Studio 95\Assets\Shaders\DrawPreview.shader" />
+    <None Include="Assets\Doodle Studio 95\Assets\Shaders\JitterTextShader.shader" />
+    <None Include="Assets\Shared\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Masking.shader" />
+    <None Include="Assets\LightShaft\NewtonsoftJsonIssue.txt" />
+    <None Include="Assets\Games\LowFI-3D\Todo.txt" />
+    <None Include="Assets\Games\LowFI-3D\Old\POLYGON city pack\Read_me.txt" />
+    <None Include="Assets\Games\Overworld\Todo.txt" />
+    <None Include="Assets\Shared\TextMesh Pro\Resources\Shaders\TMP_SDF Overlay.shader" />
+    <None Include="Assets\Games\Jigsaw\Todo.txt" />
+    <None Include="Assets\Shared\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Mobile.shader" />
+    <None Include="Assets\Shared\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
+    <None Include="Assets\LightShaft\Shaders\SkyboxEqui.shader" />
+    <None Include="Assets\LightShaft\Shaders\ViewInside.shader" />
+    <None Include="Assets\Shared\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile.shader" />
+    <None Include="Assets\LightShaft\Shaders\EAC\EACPanorama.shader" />
+    <None Include="Assets\Games\The Way Down\Misc\Todo 2.txt" />
+    <None Include="Assets\Games\LowFI-3D\VertexColorFarmAnimals\Shaders\VertexColorUnlit.shader" />
+    <None Include="Assets\Games\Jigsaw\Todo3.txt" />
+    <None Include="Assets\Shared\TextMesh Pro\Resources\Shaders\TMP_Sprite.shader" />
+    <None Include="Assets\LightShaft\Shaders\Equirectangular.shader" />
+  </ItemGroup>
+  <ItemGroup>
     <Reference Include="UnityEngine">
       <HintPath>C:\Program Files\2020.1.5f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
@@ -518,7 +525,7 @@
       <HintPath>Library\PackageCache\com.unity.analytics@3.3.2\Unity.Analytics.Tracker.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">
-      <HintPath>Library\PackageCache\com.unity.nuget.newtonsoft-json@2.0.0\Runtime\Newtonsoft.Json.dll</HintPath>
+      <HintPath>Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.2\Runtime\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
       <HintPath>C:\Program Files\2020.1.5f1\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
@@ -899,21 +906,9 @@
       <Project>{4DD0F2E7-0484-18FE-C8C0-0EBBCC5A5672}</Project>
       <Name>Unity.VSCode.Editor</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.ProBuilder.csproj">
-      <Project>{788643C8-F5C9-F0C7-AB04-9E13E317FD01}</Project>
-      <Name>Unity.ProBuilder</Name>
-    </ProjectReference>
     <ProjectReference Include="Unity.RenderPipelines.Core.Editor.csproj">
       <Project>{F88315CC-6603-52FC-0FD0-19995A138490}</Project>
       <Name>Unity.RenderPipelines.Core.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.ProBuilder.Editor.csproj">
-      <Project>{86610D0E-34B3-9657-E47D-241D8A9EEC96}</Project>
-      <Name>Unity.ProBuilder.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.ProBuilder.AssetIdRemapUtility.csproj">
-      <Project>{94963576-ED66-5BD9-E840-356ED75FD33F}</Project>
-      <Name>Unity.ProBuilder.AssetIdRemapUtility</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.RenderPipelines.Core.Runtime.csproj">
       <Project>{5DE6E3F6-083D-567A-FFF6-7DBA1DDF95FD}</Project>
@@ -998,10 +993,6 @@
     <ProjectReference Include="Unity.VisualStudio.Editor.csproj">
       <Project>{2B57C6F0-145B-8486-7801-B5375050CD04}</Project>
       <Name>Unity.VisualStudio.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.ProBuilder.AddOns.Editor.csproj">
-      <Project>{50389C79-9DBA-CC2D-284A-976338C7E182}</Project>
-      <Name>Unity.ProBuilder.AddOns.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.ShaderGraph.Editor.csproj">
       <Project>{E7E76264-41C7-2915-C1BC-5F536575A8D4}</Project>

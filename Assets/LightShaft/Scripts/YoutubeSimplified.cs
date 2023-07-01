@@ -1,9 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using LightShaft.Scripts;
+using MovingJigsaw;
 using UnityEngine;
 using UnityEngine.Video;
-using MovingJigsaw;
 
 public class YoutubeSimplified : MonoBehaviour
 {
@@ -13,6 +13,7 @@ public class YoutubeSimplified : MonoBehaviour
     public bool autoPlay = true;
     public bool fullscreen = true;
     private VideoPlayer videoPlayer;
+
     public VideoPlayer audioPlayer;
 
     public JigLevelManager manager;
@@ -30,11 +31,11 @@ public class YoutubeSimplified : MonoBehaviour
         videoPlayer = GetComponentInChildren<VideoPlayer>();
         player = GetComponentInChildren<YoutubePlayer>();
         player.videoPlayer = videoPlayer;
-        
     }
 
     private void Start()
     {
+
         if (manager)
         {
 
@@ -56,9 +57,12 @@ public class YoutubeSimplified : MonoBehaviour
 
         if (test) { Play(); }
 
-        Invoke("ForceOnSkipOnDrop",2f);
-        
+        Invoke("ForceOnSkipOnDrop", 2f);
 
+
+
+        player.dontForceFullscreen = true;
+      //  Play();
     }
 
     public void Play()
@@ -66,17 +70,15 @@ public class YoutubeSimplified : MonoBehaviour
         if (fullscreen)
         {
             videoPlayer.renderMode = VideoRenderMode.CameraNearPlane;
+            videoPlayer.aspectRatio = VideoAspectRatio.FitInside;
+            videoPlayer.targetCamera = player.mainCamera;
+            
         }
         player.autoPlayOnStart = autoPlay;
         player.videoQuality = YoutubePlayer.YoutubeVideoQuality.STANDARD;
-        
 
-        if (autoPlay)
-        {
-            
+        if(autoPlay)
             player.Play(url);
-            
-        }
     }
 
     public void ForceOnSkipOnDrop()

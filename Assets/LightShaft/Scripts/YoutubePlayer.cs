@@ -3,7 +3,6 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Video;
-using LightShaft.Scripts;
 
 namespace LightShaft.Scripts
 {
@@ -48,6 +47,7 @@ namespace LightShaft.Scripts
         ///<summary>Load the url only, dont play!.</summary>
         public void LoadUrl(string url)
         {
+            Debug.Log(url);
             logTest = "Getting URL";
             Stop();
             loadYoutubeUrlsOnly = true;
@@ -94,12 +94,10 @@ namespace LightShaft.Scripts
                 }
                 else
                 {
-                    videoPlayer.time = startFromSecondTime;
                     audioPlayer.time = startFromSecondTime;
+                    videoPlayer.time = startFromSecondTime;
                 }
             }
-
-            
 
         }
 
@@ -136,6 +134,11 @@ namespace LightShaft.Scripts
             {
                 videoPlayer.Play();
                 audioPlayer.GetTargetAudioSource(0).volume = _controller.volumeSlider.value;
+                if (_controller.volumeSlider != null)
+                    audioPlayer.GetTargetAudioSource(0).volume = _controller.volumeSlider.value;
+                else
+                    audioPlayer.GetTargetAudioSource(0).volume = 1;
+
                 if (!noAudioAtacched)
                 {
                     //audioPlayer.Play(); //TODO check other unity versions
@@ -152,8 +155,6 @@ namespace LightShaft.Scripts
             startFromSecondTime = startFrom;
             Stop();
             PlayYoutubeVideo(url);
-
-            Debug.Log("Player Starts playing");
         }
 
         ///<summary>Play or Pause the active videoplayer.</summary>
@@ -210,7 +211,6 @@ namespace LightShaft.Scripts
                             Debug.Log("Finished");
                         if (videoPlayer.isLooping)
                         {
-                            
                             videoPlayer.time = 0;
                             videoPlayer.frame = 0;
                             audioPlayer.time = 0;
@@ -325,6 +325,13 @@ namespace LightShaft.Scripts
 
         private void OnApplicationQuit()
         {
+            if(videoPlayer != null)
+            {
+                if (videoPlayer.targetTexture != null)
+                    videoPlayer.targetTexture.Release();
+            }
+            
+
             if (!playUsingInternalDevicePlayer)
             {
                 _events.OnYoutubeUrlAreReady.RemoveListener(UrlReadyToUse);
