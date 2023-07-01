@@ -1,21 +1,24 @@
 ﻿<Properties StartupConfiguration="{F26AA553-FFBA-354F-FEDB-5F4136F53EC1}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Knock Knock/KnockGameLogic.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Games/Jigsaw/Scripts/VideoPathScript.cs">
     <Files>
-      <File FileName="Assets/Shared/Dialog System/EmoteLogic.cs" Line="36" Column="14" />
-      <File FileName="Assets/Knock Knock/KnockGameLogic.cs" Line="295" Column="52" />
+      <File FileName="Assets/FirstPersonClicking.cs" Line="1" Column="1" />
+      <File FileName="Assets/Games/Jigsaw/Scripts/JigsawGameLogic.cs" Line="114" Column="1" />
+      <File FileName="Assets/Games/Jigsaw/Scripts/VideoPathScript.cs" Line="62" Column="62" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Sam-World-X" expanded="True">
-            <Node name="Assets" expanded="True">
+            <Node name="Assets" expanded="True" selected="True">
+              <Node name="Games" expanded="True">
+                <Node name="Jigsaw" expanded="True">
+                  <Node name="Scripts" expanded="True" />
+                </Node>
+              </Node>
               <Node name="Ink" expanded="True">
                 <Node name="Example" expanded="True">
                   <Node name="Scripts" expanded="True" />
                 </Node>
-              </Node>
-              <Node name="Knock Knock" expanded="True">
-                <Node name="KnockGameLogic.cs" selected="True" />
               </Node>
               <Node name="Shared" expanded="True">
                 <Node name="Dialog System" expanded="True" />
@@ -27,8 +30,13 @@
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <DisabledProjects>
+    <String>Unity.DeviceSimulator.Editor.csproj</String>
+    <String>UnityEngine.Advertisements.csproj</String>
+    <String>UnityEngine.Monetization.csproj</String>
+  </DisabledProjects>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="6c430b88-335f-4bfc-8736-4c47612bf9ab" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="58457e76-33b7-4765-b2c0-591e3bd6d1a6" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
